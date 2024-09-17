@@ -1,41 +1,131 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #002f4b, #006699, #0099cc, #33ccff);
-    color: white;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background: #f0f8ff; /* Light blue background */
+    min-height: 100vh;
+    color: #333;
 }
 
-/* Header styling */
 header {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 47, 75, 0.8);
+    background-color: #0056b3; /* Darker blue for header */
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Main content styling */
-main {
-    flex: 1;
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-wrapper {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 0 20px;
 }
 
-section {
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 102, 153, 0.8);
-    border-radius: 10px;
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 0;
 }
 
-/* Footer styling */
+.main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-menu li {
+    margin-left: 20px;
+}
+
+.main-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.main-menu li a:hover {
+    background-color: #003d82; /* Slightly darker blue on hover */
+}
+
+.intro, .highlights, .cta {
+    margin-bottom: 2rem;
+}
+
+.highlights ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.highlights li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.highlights li::before {
+    content: "•";
+    color: #0056b3;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.cta {
+    background-color: #f0f8ff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #003366; /* Darker blue for better visibility */
+}
+
+h3 {
+    color: #0056b3; /* Slightly lighter blue for subheadings */
+}
+
 footer {
     text-align: center;
-    padding: 10px;
-    background: rgba(0, 47, 75, 0.8);
+    padding: 1rem;
+    background-color: #0056b3;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .nav-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-menu {
+        margin-top: 10px;
+    }
+
+    .main-menu li {
+        margin-left: 0;
+        margin-right: 20px;
+    }
 }
