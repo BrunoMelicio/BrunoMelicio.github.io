@@ -1,4 +1,41 @@
----
----
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #002f4b, #006699, #0099cc, #33ccff);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-@import "{{ site.theme }}";
+/* Header styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 47, 75, 0.8);
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 102, 153, 0.8);
+    border-radius: 10px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 47, 75, 0.8);
+}
