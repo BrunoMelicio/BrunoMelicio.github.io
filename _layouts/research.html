@@ -7,19 +7,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="default.html" class="logo">BM</a>
-                <ul class="main-menu">
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+        <div id="menu-placeholder"></div>
     <main>
         <h1>Research</h1>
         <section>
@@ -55,5 +43,14 @@
     <footer>
         <p>&copy; 2024 BM. All rights reserved.</p>
     </footer>
+
+    <script>
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-placeholder').innerHTML = data;
+            });
+    </script>
+
 </body>
 </html>

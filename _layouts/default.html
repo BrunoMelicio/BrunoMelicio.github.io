@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BM - Home</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruno Melício</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="default.html" class="logo">BM</a>
-                <ul class="main-menu">
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <h1>Welcome to BM's Academic Portfolio</h1>
-        <section class="intro">
-            <p>Hello and welcome! I'm BM, a [Your Position] at [Your Institution]. My work focuses on [Your Main Research Areas]. On this site, you'll find information about my research, courses, and upcoming events.</p>
-        </section>
-        <section class="highlights">
-            <h2>Highlights</h2>
-            <ul>
-                <li>Latest Publication: "[Title of Your Latest Paper]"</li>
-                <li>Upcoming Course: [Name of Your Next Course]</li>
-                <li>Recent Award: [Name of Recent Award or Achievement]</li>
-            </ul>
-        </section>
-        <section class="cta">
-            <h2>Get in Touch</h2>
-            <p>Interested in collaborating or have questions about my work? Don't hesitate to <a href="about.html#contact">reach out</a>.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 BM. All rights reserved.</p>
-    </footer>
+  <header>
+    <nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-list">
+        <li><a href="default.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h1 class="hero-title">Bruno <br><span>Melício</span></h1>
+    <p class="hero-subtitle">AI Lecturer & Researcher</p>
+    <button class="hero-button">View Courses</button>
+    <div class="hero-icons">
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-solid fa-map-location-dot"></i>
+      <i class="fa-solid fa-xmark"></i>
+      <i class="fa-brands fa-github"></i>
+      <i class="fa-solid fa-robot"></i>
+    </div>
+    <div class="overlay-box"></div>
+  </main>
+
+  <!-- Fullscreen Notice Overlay -->
+  <div id="overlay">
+    <div class="overlay-content">
+      <h2>🚧 Website Under Development</h2>
+      <p>Please come back at the end of May.</p>
+      <button onclick="dismissOverlay()">Got it</button>
+    </div>
+  </div>
+
+  <script>
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navList = document.querySelector(".nav-list");
+    mobileMenu.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+
+    function dismissOverlay() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+
+    // Optional: uncomment below to auto-hide after 5 seconds
+    // setTimeout(dismissOverlay, 5000);
+  </script>
 </body>
 </html>
