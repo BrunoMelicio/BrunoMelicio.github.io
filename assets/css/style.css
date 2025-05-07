@@ -56,6 +56,7 @@
     font-size: 1.5rem;
   }
   
+
   .hero {
     height: 100vh;
     width: 100vw;
@@ -66,6 +67,24 @@
     padding-top: 80px;
   }
   
+  /* Dark overlay for mobile readability */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+    z-index: 1;
+    display: none;
+  }
+  
+  .hero-title,
+  .hero-subtitle,
+  .hero-button,
+  .hero-icons {
+    z-index: 3;
+    position: relative;
+  }
+  
   .hero-title {
     position: absolute;
     top: 37%;
@@ -74,7 +93,6 @@
     font-size: 12rem;
     color: white;
     font-weight: bold;
-    z-index: 3;
     line-height: 1;
     text-align: center;
     white-space: nowrap;
@@ -89,7 +107,6 @@
     font-style: italic;
     font-size: 2rem;
     color: white;
-    z-index: 3;
   }
   
   .hero-button {
@@ -97,14 +114,21 @@
     top: 74%;
     left: 68%;
     transform: translate(-10%, -50%);
-    background-color: #d1a8a8;
+    background-color: #ffd1dc;
     border: none;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     border-radius: 2rem;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     cursor: pointer;
     z-index: 3;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hero-button:hover {
+    background-color: #f9b5c7;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
   }
   
   .hero-icons {
@@ -113,14 +137,51 @@
     left: 68%;
     transform: translate(-10%, -50%);
     display: flex;
-    gap: 1rem;
-    z-index: 3;
+    gap: 1.2rem;
   }
   
-  .hero-icons i {
-    font-size: 1.8rem;
+  .hero-icons a {
     color: white;
+    font-size: 1.8rem;
+    transition: transform 0.2s ease, color 0.2s ease;
   }
+  
+  .hero-icons a:hover {
+    transform: scale(1.2);
+    color: #f4dada;
+  }
+  
+  .hero-icons .huggingface-icon img {
+    height: 24px;
+    vertical-align: middle;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease;
+  }
+  
+  .hero-icons .huggingface-icon img:hover {
+    transform: scale(1.2);
+    filter: brightness(0.9) invert(1);
+  }
+  
+  /* Red angled shape (desktop only) */
+  .overlay-box {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 40vw;
+    right: 5vw;
+    background-color: #682e2e;
+    color: white;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+    clip-path: polygon(30% 0, 100% 0, 70% 100%, 0% 100%);
+  }
+  
   
   .overlay-box {
     position: absolute;
@@ -184,7 +245,6 @@
     cursor: pointer;
   }
   
-  /* Responsive */
   @media (max-width: 768px) {
     .menu-toggle {
       display: block;
@@ -203,6 +263,14 @@
   
     .nav-list.active {
       display: flex;
+    }
+  
+    .hero::before {
+      display: block;
+    }
+  
+    .overlay-box {
+      display: none;
     }
   
     .hero {
@@ -229,7 +297,8 @@
       top: 60%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 1rem;
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
     }
   
     .hero-icons {
@@ -239,11 +308,6 @@
       flex-wrap: wrap;
       justify-content: center;
     }
-  
-    .overlay-box {
-      display: none;
-    }
-  
   }
   
   .about-hero {
