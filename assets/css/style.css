@@ -11,17 +11,30 @@
   
   header {
     background-color: #682e2e;
-    padding: 1rem 2rem;
+    height: 80px; /* Explicit height */
+    padding: 0 2rem; /* Horizontal only */
     position: fixed;
     width: 100%;
     z-index: 1000;
     top: 0;
+    display: flex;
+    align-items: center;
   }
   
+  /* ✅ NAVIGATION + LOGO */
   nav {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .logo img {
+    height: 80px;        /* Size of the logo */
+    display: block;      /* Remove extra vertical spacing */
+    object-fit: contain; /* Ensure logo fits inside height */
+    margin: 0;           /* Remove any margins */
+    padding: 0;
   }
   
   .menu-toggle {
@@ -46,7 +59,7 @@
   .hero {
     height: 100vh;
     width: 100vw;
-    background-image: url('images/background.png');
+    background-image: url('../images/background.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -193,7 +206,7 @@
     }
   
     .hero {
-      background-position: 20% center; /* Focus on the left for mobile */
+      background-position: 20% center;
     }
   
     .hero-title {
@@ -230,5 +243,6 @@
     .overlay-box {
       display: none;
     }
+  
   }
   
