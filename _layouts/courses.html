@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BM - Courses</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses - Bruno Melício</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-        <div id="menu-placeholder"></div>
-    <main>
-        <h1>Courses</h1>
-        <section>
-            <h2>Current Semester</h2>
-            <ul>
-                <li>
-                    <h3>CS301: Introduction to Artificial Intelligence</h3>
-                    <p>An overview of AI concepts, including machine learning, neural networks, and natural language processing.</p>
-                    <p><strong>Schedule:</strong> Mondays and Wednesdays, 10:00 AM - 11:30 AM</p>
-                </li>
-                <li>
-                    <h3>CS405: Advanced Algorithms</h3>
-                    <p>In-depth study of complex algorithms and their applications in solving real-world problems.</p>
-                    <p><strong>Schedule:</strong> Tuesdays and Thursdays, 2:00 PM - 3:30 PM</p>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Upcoming Courses</h2>
-            <ul>
-                <li>
-                    <h3>CS502: Quantum Computing (Next Semester)</h3>
-                    <p>Introduction to quantum computing principles and their potential applications.</p>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Office Hours</h2>
-            <p>Fridays, 1:00 PM - 3:00 PM, or by appointment</p>
-            <p>Location: Science Building, Room 305</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 BM. All rights reserved.</p>
-    </footer>
+  <header>
+    <nav>
+      <a href="default.html" class="logo">
+        <img src="../assets/images/logo.png" alt="Bruno Melício logo" />
+      </a>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-list">
+        <li><a href="default.html">Home</a></li>
+        <li><a href="courses.html" class="active">Courses</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <script>
-        fetch('menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu-placeholder').innerHTML = data;
-            });
-    </script>
+  <main class="courses-hero">
+    <section class="courses-content">
+      <h1>Courses & Learning</h1>
+      <p class="courses-tagline">Explore how I teach and share AI — from university lectures to one-on-one sessions.</p>
 
+      <div class="courses-grid">
+        <!-- University Course -->
+        <div class="course-card">
+          <h3>🧠 Deep Network Developments</h3>
+          <p><strong>Where:</strong> Eötvös Loránd University (ELTE), Faculty of Informatics</p>
+          <p><strong>Who:</strong> Co-taught with a colleague</p>
+          <p><strong>What:</strong> Supervised deep learning with real-world applications</p>
+          <p class="course-note">🎓 Available only to ELTE students</p>
+        </div>
+
+        <!-- YouTube Channel -->
+        <div class="course-card">
+          <h3>📺 AI with Bruno – YouTube (Coming Soon)</h3>
+          <p>Launching a practical YouTube series to explore AI with code, concepts, and career guidance.</p>
+          <p class="coming-soon">🚧 Launching soon – stay tuned!</p>
+        </div>
+
+        <!-- Private Tutoring -->
+        <div class="course-card">
+          <h3>🎓 1-on-1 AI Tutoring</h3>
+          <p>Personalized AI lessons — online or in-person — tailored to your learning pace and goals.</p>
+          <ul>
+            <li>💡 Beginner to advanced levels</li>
+            <li>🧪 Learn with real-world projects</li>
+            <li>📍 Flexible schedule</li>
+          </ul>
+          <a href="mailto:your.email@example.com" class="tutor-btn">Book a Session</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navList = document.querySelector(".nav-list");
+    mobileMenu.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>

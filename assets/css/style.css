@@ -246,3 +246,361 @@
   
   }
   
+  .about-hero {
+    height: 100vh;
+    width: 100vw;
+    background-color: #682e2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    color: white;
+    position: relative;
+  }
+  
+  .about-content {
+    max-width: 1200px;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .about-content h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-content h2 {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-summary {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .about-highlights {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .highlight-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .highlight-box h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #f4dada;
+  }
+  
+  .highlight-box ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .about-highlights {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .highlight-box {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  
+    .about-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-content h2 {
+      font-size: 1.3rem;
+    }
+  
+    .about-summary {
+      font-size: 1rem;
+    }
+  }
+
+  .quote-block {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    color: #ffffffcc;
+    font-style: italic;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .quote-block .quote {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  .signature {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #f4dada;
+    text-align: right;
+  }
+  
+
+  .research-hero {
+    height: 100vh;
+    width: 100vw;
+    background-color: #682e2e;
+    color: white;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .research-content {
+    max-width: 1200px;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .research-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .research-tagline {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  
+  .paper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .paper-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .paper-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #f4dada;
+  }
+  
+  .paper-card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #e2e2e2;
+  }
+  
+  .paper-card a {
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-decoration: underline;
+    word-break: break-word;
+  }
+  
+  @media (max-width: 768px) {
+    .research-content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .paper-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .courses-hero {
+    height: 100vh;
+    width: 100vw;
+    background-color: #682e2e;
+    color: white;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .courses-content {
+    max-width: 1200px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .courses-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .courses-tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .course-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #f4dada;
+  }
+  
+  .course-card p,
+  .course-card ul {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #e2e2e2;
+  }
+  
+  .course-note {
+    font-style: italic;
+    color: #ffdada;
+  }
+  
+  .coming-soon {
+    font-weight: bold;
+    color: #ffefc5;
+  }
+  
+  .course-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .tutor-btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #f4dada;
+    color: #682e2e;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+  }
+  
+  @media (max-width: 768px) {
+    .courses-content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .courses-tagline {
+      font-size: 1rem;
+    }
+  
+    .courses-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .events-hero {
+    height: 100vh;
+    width: 100vw;
+    background-color: #682e2e;
+    color: white;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .events-content {
+    max-width: 1200px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .events-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .events-tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  
+  .event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .event-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .event-card h3 {
+    font-size: 1.2rem;
+    color: #f4dada;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-meta {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #ffdada;
+    margin-bottom: 0.8rem;
+  }
+  
+  .event-card p {
+    font-size: 1rem;
+    color: #e2e2e2;
+  }
+  
+  @media (max-width: 768px) {
+    .events-content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .event-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

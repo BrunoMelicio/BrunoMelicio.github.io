@@ -1,56 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BM - Research</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research - Bruno Melício</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-        <div id="menu-placeholder"></div>
-    <main>
-        <h1>Research</h1>
-        <section>
-            <h2>Current Projects</h2>
-            <ul>
-                <li>
-                    <h3>Quantum Computing Applications in Cryptography</h3>
-                    <p>Exploring the potential of quantum algorithms to enhance encryption methods and develop quantum-resistant cryptographic systems.</p>
-                </li>
-                <li>
-                    <h3>Machine Learning for Climate Prediction</h3>
-                    <p>Developing advanced neural network models to improve long-term climate forecasting and understand climate change patterns.</p>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Recent Publications</h2>
-            <ul>
-                <li>Smith, J., & BM. (2023). "Quantum-Enhanced Encryption: A New Frontier in Cybersecurity." Journal of Quantum Information, 15(2), 45-62.</li>
-                <li>BM, Johnson, A., & Lee, S. (2022). "Deep Learning Approaches to Climate Modeling: A Comparative Study." Environmental Data Science, 8(4), 301-318.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Research Interests</h2>
-            <ul>
-                <li>Quantum Computing</li>
-                <li>Artificial Intelligence and Machine Learning</li>
-                <li>Climate Modeling</li>
-                <li>Cybersecurity</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 BM. All rights reserved.</p>
-    </footer>
+  <header>
+    <nav>
+      <a href="default.html" class="logo">
+        <img src="../assets/images/logo.png" alt="Bruno Melício logo" />
+      </a>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-list">
+        <li><a href="default.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <script>
-        fetch('menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu-placeholder').innerHTML = data;
-            });
-    </script>
+  <main class="research-hero">
+    <section class="research-content">
+      <h1>Research</h1>
+      <p class="research-tagline">Selected publications in AI for healthcare and behavior analysis.</p>
 
+      <div class="paper-grid">
+        <div class="paper-card">
+          <h3>Object Play Initiation Delays during ADOS-2</h3>
+          <p>INSAR 2025 (Accepted)</p>
+          <a href="#">Link (coming soon)</a>
+        </div>
+
+        <div class="paper-card">
+          <h3>Composite AI for Behavior Analysis in Social Interactions</h3>
+          <p>ICMI 2023</p>
+          <a href="https://doi.org/10.1145/3610661.3616237" target="_blank">https://doi.org/10.1145/3610661.3616237</a>
+        </div>
+
+        <div class="paper-card">
+          <h3>AI Technologies for Supervision in Rehab Scenarios</h3>
+          <p>MTI Journal, 2022</p>
+          <a href="https://doi.org/10.3390/mti6070048" target="_blank">https://doi.org/10.3390/mti6070048</a>
+        </div>
+
+        <div class="paper-card">
+          <h3>DeepRehab: Pose Estimation for Knee Injury</h3>
+          <p>ICANN 2021</p>
+          <a href="https://doi.org/10.1007/978-3-030-86365-4_31" target="_blank">https://doi.org/10.1007/978-3-030-86365-4_31</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navList = document.querySelector(".nav-list");
+    mobileMenu.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>

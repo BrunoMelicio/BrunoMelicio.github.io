@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BM - Events</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events - Bruno Melício</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-        <div id="menu-placeholder"></div>
-    <main>
-        <h1>Events</h1>
-        <section class="upcoming-events">
-            <h2>Upcoming Events</h2>
-            <ul>
-                <li>
-                    <h3>Conference Presentation: [Conference Name]</h3>
-                    <p>Date: [Date]</p>
-                    <p>Location: [Location]</p>
-                    <p>Topic: [Brief description of your presentation]</p>
-                </li>
-                <li>
-                    <h3>Guest Lecture: [Institution Name]</h3>
-                    <p>Date: [Date]</p>
-                    <p>Topic: [Brief description of the lecture]</p>
-                </li>
-            </ul>
-        </section>
-        <section class="past-events">
-            <h2>Past Events</h2>
-            <ul>
-                <li>
-                    <h3>Workshop: [Workshop Name]</h3>
-                    <p>Date: [Date]</p>
-                    <p>Summary: [Brief summary of the workshop and your role]</p>
-                </li>
-                <!-- Add more past events as needed -->
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 BM. All rights reserved.</p>
-    </footer>
+  <header>
+    <nav>
+      <a href="default.html" class="logo">
+        <img src="../assets/images/logo.png" alt="Bruno Melício logo" />
+      </a>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-list">
+        <li><a href="default.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="events.html" class="active">Events</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <script>
-        fetch('menu.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('menu-placeholder').innerHTML = data;
-            });
-    </script>
+  <main class="events-hero">
+    <section class="events-content">
+      <h1>Events & Talks</h1>
+      <p class="events-tagline">Conferences, lectures, interviews, and research workshops I've participated in.</p>
 
+      <div class="event-grid">
+        <div class="event-card">
+          <h3>🎤 TV Interview – Record Cabo Verde</h3>
+          <p class="event-meta">Ponto de Vista · 2024</p>
+          <p>I was invited to discuss Artificial Intelligence on national TV, sharing my perspective on its current and future impact.</p>
+        </div>
+
+        <div class="event-card">
+          <h3>📚 Research Workshop – JSALT 2023</h3>
+          <p class="event-meta">Johns Hopkins University</p>
+          <p>Joined international researchers for 6 weeks of collaborative work in speech and language technology.</p>
+        </div>
+
+        <div class="event-card">
+          <h3>🎓 Guest Lecture – BOSCH Best/PhD Conference</h3>
+          <p class="event-meta">November 18 · BOSCH Hungary</p>
+          <p>Presented my research on Autism alongside ELTE PhD students and BOSCH engineers.</p>
+        </div>
+
+        <div class="event-card">
+          <h3>📰 Interview – A Nação Journal</h3>
+          <p class="event-meta">Print & Web · 2023</p>
+          <p>Shared insights on my academic path, research ambitions, and AI's role in society.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const mobileMenu = document.getElementById("mobile-menu");
+    const navList = document.querySelector(".nav-list");
+    mobileMenu.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
