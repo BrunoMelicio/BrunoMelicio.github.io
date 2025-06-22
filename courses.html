@@ -4,93 +4,127 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Courses - Bruno Melício</title>
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Academicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/navigation.css" />
+  <link rel="stylesheet" href="assets/css/pages/courses.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html" class="logo">
-        <img src="../assets/images/logo.png" alt="Bruno Melício logo" />
-      </a>
-      <div class="menu-toggle" id="mobile-menu">
-        <i class="fas fa-bars"></i>
+  <!-- Navigation will be loaded here by navigation.js -->
+
+  <main class="courses-layout">
+    <!-- Hero Section with Background Image -->
+    <section class="courses-hero">
+      <div class="courses-hero-content">
+        <h1>My Courses</h1>
+        <p>Explore my teaching materials and course offerings in Machine Learning and Data Science</p>
       </div>
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="courses.html" class="active">Courses</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="about.html">About Me</a></li>
-      </ul>
-    </nav>
-  </header>
+    </section>
 
-  <main class="courses-hero">
+    <!-- Courses Content -->
     <section class="courses-content">
-      <h1>Courses & Learning</h1>
-      <p class="courses-tagline">Explore how I teach and share AI — from university lectures to one-on-one sessions.</p>
-
       <div class="courses-grid">
         <!-- University Course -->
-        <div class="course-card">
-          <h3>🧠 Deep Network Developments</h3>
-          <p><strong>Where:</strong> Eötvös Loránd University (ELTE), Faculty of Informatics</p>
-          <p><strong>Who:</strong> Co-taught with a colleague</p>
-          <p><strong>What:</strong> Supervised deep learning with real-world applications</p>
-          <p class="course-note">🎓 Available only to ELTE students</p>
-        </div>
+        <article class="course-card">
+          <div class="course-icon">
+            <i class="fas fa-university"></i>
+          </div>
+          <div class="course-info">
+            <h3>University Course</h3>
+            <p>Deep Network Developments at Eötvös Loránd University (ELTE), Faculty of Informatics.</p>
+            <ul class="course-features">
+              <li><i class="fas fa-check"></i> Co-taught with a colleague</li>
+              <li><i class="fas fa-check"></i> Supervised deep learning</li>
+              <li><i class="fas fa-check"></i> Real-world applications</li>
+            </ul>
+            <div class="course-meta">
+              <span class="course-tag">ELTE Students Only</span>
+            </div>
+          </div>
+        </article>
 
-        <!-- YouTube Channel -->
-        <div class="course-card">
-          <h3>📺 AI with Bruno – YouTube (Coming Soon)</h3>
-          <p>Launching a practical YouTube series to explore AI with code, concepts, and career guidance.</p>
-          <p class="coming-soon">🚧 Launching soon – stay tuned!</p>
-        </div>
+        <!-- AI with Bruno -->
+        <article class="course-card">
+          <div class="course-icon">
+            <i class="fab fa-youtube"></i>
+          </div>
+          <div class="course-info">
+            <h3>AI with Bruno</h3>
+            <p>Practical YouTube series exploring AI concepts, coding tutorials, and career guidance.</p>
+            <ul class="course-features">
+              <li><i class="fas fa-check"></i> Beginner to advanced content</li>
+              <li><i class="fas fa-check"></i> Hands-on coding examples</li>
+              <li><i class="fas fa-check"></i> Latest AI trends</li>
+            </ul>
+            <div class="course-meta">
+              <span class="course-tag coming-soon">Coming Soon</span>
+            </div>
+          </div>
+        </article>
 
-        <!-- Private Tutoring -->
-        <div class="course-card">
-          <h3>🎓 1-on-1 AI Tutoring</h3>
-          <p>Personalized AI lessons — online or in-person — tailored to your learning pace and goals.</p>
-          <ul>
-            <li>💡 Beginner to advanced levels</li>
-            <li>🧪 Learn with real-world projects</li>
-            <li>📍 Flexible schedule</li>
-          </ul>
-          <a href="mailto:your.email@example.com" class="tutor-btn">Book a Session</a>
-        </div>
+        <!-- 1-on-1 Tutoring -->
+        <article class="course-card">
+          <div class="course-icon">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div class="course-info">
+            <h3>1-on-1 Tutoring</h3>
+            <p>Personalized AI lessons tailored to your learning goals and schedule.</p>
+            <ul class="course-features">
+              <li><i class="fas fa-check"></i> Custom learning path</li>
+              <li><i class="fas fa-check"></i> Project-based learning</li>
+              <li><i class="fas fa-check"></i> Flexible scheduling</li>
+            </ul>
+            <div class="course-meta">
+              <a href="mailto:contact@brunomelicio.com" class="course-button">Book a Session</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
   </main>
 
-  <script>
-    const mobileMenu = document.getElementById("mobile-menu");
-    const navList = document.querySelector(".nav-list");
-    mobileMenu.addEventListener("click", () => {
-      navList.classList.toggle("active");
-    });
-  </script>
   <footer>
-    <div class="footer-copyright">
-      &copy; 2025 Bruno Melício. All rights reserved.
-    </div>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/brunomelicio/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://www.instagram.com/brunomelicio.ai" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://github.com/BrunoMelicio" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" aria-label="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://huggingface.co/BrunoAI" target="_blank" class="huggingface-icon" aria-label="Hugging Face">
-        <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" />
-      </a>
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="https://github.com/BrunoMelicio" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/bruno-melicio/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+        <a href="https://www.instagram.com/brunomelicio.ai" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://huggingface.co/BrunoAI" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face">
+          <i class="fas fa-robot"></i>
+        </a>
+      </div>
+      <div class="footer-copyright">
+        &copy; <span id="current-year"></span> Bruno Melício. All rights reserved.
+      </div>
     </div>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/navigation.js"></script>
+  <script>
+    // Update current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

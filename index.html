@@ -4,52 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bruno Melício</title>
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Academicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/navigation.css" />
+  <link rel="stylesheet" href="assets/css/pages/index.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <!-- Logo added here -->
-      <a href="index.html" class="logo">
-        <img src="../assets/images/logo.png" alt="Bruno Melício logo" />
-      </a>
-
-      <div class="menu-toggle" id="mobile-menu">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="about.html">About Me</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Navigation will be loaded here by navigation.js -->
 
   <main class="hero">
-    <h1 class="hero-title">Bruno <br><span>Melício</span></h1>
-    <p class="hero-subtitle">AI Lecturer & Researcher</p>
-    <button class="hero-button">View Courses</button>
-    <div class="hero-icons">
-        <a href="https://www.instagram.com/your_username" target="_blank" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/your_username" target="_blank" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/your_username" target="_blank" aria-label="GitHub">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://youtube.com/@your_channel" target="_blank" aria-label="YouTube">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://huggingface.co/your_username" target="_blank" class="huggingface-icon" aria-label="Hugging Face">
-          <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" />
-        </a>
+    <div class="hero-content">
+      <div class="content-box">
+        <h1 class="hero-title">
+          <span class="full-name">Bruno Melício</span>
+        </h1>
+        <p class="hero-subtitle">AI Lecturer & Researcher</p>
+        <div class="hero-cta">
+          <a href="#courses" class="cta-button">Explore Courses</a>
+        </div>
       </div>
-    <div class="overlay-box"></div>
+    </div>
   </main>
 
   <!-- Fullscreen Notice Overlay -->
@@ -61,38 +43,34 @@
     </div>
   </div>
 
-  <script>
-    const mobileMenu = document.getElementById("mobile-menu");
-    const navList = document.querySelector(".nav-list");
-    mobileMenu.addEventListener("click", () => {
-      navList.classList.toggle("active");
-    });
-
-    function dismissOverlay() {
-      document.getElementById('overlay').style.display = 'none';
-    }
-  </script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/main.js"></script>
   
   <footer>
-    <div class="footer-copyright">
-      &copy; 2025 Bruno Melício. All rights reserved.
-    </div>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/brunomelicio/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://www.instagram.com/brunomelicio.ai" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://github.com/BrunoMelicio" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" aria-label="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://huggingface.co/BrunoAI" target="_blank" class="huggingface-icon" aria-label="Hugging Face">
-        <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" />
-      </a>
+    <div class="footer-content">
+      <div class="footer-copyright">
+        &copy; 2025 Bruno Melício. All rights reserved.
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/brunomelicio/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/brunomelicio.ai" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/BrunoMelicio" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=fRrxUhsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" class="huggingface-icon">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+        <a href="https://huggingface.co/BrunoAI" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face" class="huggingface-icon">
+          <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" />
+        </a>
+      </div>
     </div>
   </footer>
 </body>

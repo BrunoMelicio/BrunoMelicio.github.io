@@ -1,103 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me - Bruno Melício</title>
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Signature Font -->
+  <meta name="description" content="Bruno Melício - AI Researcher and Lecturer specializing in AI for early detection and diagnosis of neurodevelopmental disorders">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/navigation.css">
+  <link rel="stylesheet" href="assets/css/pages/about.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html" class="logo">
-        <img src="../assets/images/logo.png" alt="Bruno Melício logo" />
-      </a>
-      <div class="menu-toggle" id="mobile-menu">
-        <i class="fas fa-bars"></i>
+  <!-- Navigation will be loaded here by navigation.js -->
+
+  <main class="about-layout">
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <div class="about-hero-content">
+        <img src="assets/images/about.jpg" alt="Bruno Melício" class="profile-image">
+        <h1>Bruno Melício</h1>
+        <h2>AI Researcher | Lecturer | PhD Candidate</h2>
+        <p class="about-summary">
+          Specializing in AI for Early Detection and Diagnosis of Neurodevelopmental Disorders
+        </p>
       </div>
-      <ul class="nav-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="about.html" class="active">About Me</a></li>
-      </ul>
-    </nav>
-  </header>
+    </section>
 
-  <main class="about-hero">
-    <section class="about-content">
-      <h1>Bruno Melício</h1>
-      <h2>AI Lecturer & Researcher</h2>
-      <p class="about-summary">
-        I specialize in applying Artificial Intelligence (AI) methods, including Generative AI, to improve detection and diagnosis of neurodevelopmental disorders. As a lecturer, I emphasize ethical and responsible AI education. I'm also an award-winning student, passionate about bridging AI research with real-world healthcare outcomes.
-      </p>
+    <!-- About Content -->
+    <div class="about-content">
+      <!-- Professional Summary -->
+      <section class="about-section">
+        <h2>About Me</h2>
+        <p>
+          As a researcher, I specialize in applying Artificial Intelligence (AI) methods, including Generative AI (Gen AI), to the detection and diagnosis of neurodevelopmental disorders. My work aims to improve outcomes and provide better support for both patients and professionals.
+        </p>
+        <p>
+          I'm passionate about bridging the gap between cutting-edge AI research and real-world healthcare applications, with a strong emphasis on ethical considerations and responsible AI development.
+        </p>
+      </section>
 
-      <div class="about-highlights">
-        <div class="highlight-box">
-          <h3>🔬 Research</h3>
-          <ul>
-            <li>AI for behavior analysis in ASD</li>
-            <li>Leading a team of 4 researchers</li>
-            <li>Supervising MSc students in AI & health</li>
-          </ul>
+      <!-- Research Focus -->
+      <section class="about-section">
+        <h2>Research Focus</h2>
+        <div class="about-highlights">
+          <div class="highlight-box">
+            <h3><i class="fas fa-brain"></i> AI for ASD</h3>
+            <ul>
+              <li>AI for behavior analysis in children with Autism Spectrum Disorder</li>
+              <li>Early detection and improved diagnostic accuracy</li>
+              <li>Multimodal data analysis using computer vision and machine learning</li>
+            </ul>
+          </div>
+          <div class="highlight-box">
+            <h3><i class="fas fa-users"></i> Leadership</h3>
+            <ul>
+              <li>Leading a team of four researchers</li>
+              <li>Supervising two MSc students in AI-driven healthcare research</li>
+              <li>Collaborating with healthcare professionals and institutions</li>
+            </ul>
+          </div>
+          <div class="highlight-box">
+            <h3><i class="fas fa-medal"></i> Recognition</h3>
+            <ul>
+              <li>1st Place - Scientific Student Conference (TDK) at ELTE</li>
+              <li>Special Award - Hungarian National Students Conference (OTDK)</li>
+              <li>Recipient of multiple academic excellence awards</li>
+            </ul>
+          </div>
         </div>
-        <div class="highlight-box">
-          <h3>🎓 Teaching</h3>
-          <ul>
-            <li>Lecturing on AI & Ethics</li>
-            <li>Focus on responsible development</li>
-            <li>Mentoring students on real-world AI</li>
-          </ul>
-        </div>
-        <div class="highlight-box">
-          <h3>🏆 Recognition</h3>
-          <ul>
-            <li>1st Place - TDK (ELTE)</li>
-            <li>Special Award - OTDK Hungary</li>
-            <li>Academic excellence & innovation</li>
-          </ul>
-        </div>
-      </div>
+      </section>
 
-      <!-- ✨ QUOTE SECTION -->
+      <!-- Teaching Philosophy -->
+      <section class="about-section">
+        <h2>Teaching Philosophy</h2>
+        <p>
+          As a lecturer, I am committed to advancing the field of AI through education. My teaching approach combines theoretical foundations with practical applications, ensuring students understand both the capabilities and limitations of AI technologies.
+        </p>
+        <p>
+          I emphasize ethical and societal considerations in all my courses, preparing the next generation of AI professionals to develop and deploy AI systems responsibly.
+        </p>
+      </section>
+
+      <!-- Quote Section -->
       <div class="quote-block">
         <p class="quote">"The future of AI is a reflection of what we teach it today"</p>
         <p class="signature">Bruno Melício</p>
       </div>
-    </section>
+
+      <!-- Contact Section -->
+      <section class="about-section contact-section">
+        <h2>Get In Touch</h2>
+        <p>I'm always interested in discussing research collaborations, speaking engagements, or potential projects. Feel free to reach out through any of the following channels:</p>
+        
+        <div class="contact-grid">
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:bruno@example.com">bruno@example.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <div class="contact-details">
+              <h4>LinkedIn</h4>
+              <a href="https://linkedin.com/in/brunomelicio" target="_blank">linkedin.com/in/brunomelicio</a>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>Budapest, Hungary</p>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Institution</h4>
+              <p>Eötvös Loránd University (ELTE)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
-  <script>
-    const mobileMenu = document.getElementById("mobile-menu");
-    const navList = document.querySelector(".nav-list");
-    mobileMenu.addEventListener("click", () => {
-      navList.classList.toggle("active");
-    });
-  </script>
+  <!-- Footer -->
   <footer>
-    <div class="footer-copyright">
-      &copy; 2025 Bruno Melício. All rights reserved.
-    </div>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/brunomelicio/" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://www.instagram.com/brunomelicio.ai" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://github.com/BrunoMelicio" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" aria-label="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-      <a href="https://huggingface.co/BrunoAI" target="_blank" class="huggingface-icon" aria-label="Hugging Face">
-        <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face" />
-      </a>
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/brunomelicio/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/BrunoMelicio" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" aria-label="Google Scholar">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+        <a href="https://www.researchgate.net/profile/Bruno-Melicio" target="_blank" aria-label="ResearchGate">
+          <i class="ai ai-researchgate"></i>
+        </a>
+      </div>
+      <p class="footer-copyright">&copy; <span id="current-year">2025</span> Bruno Melício. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Update current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
