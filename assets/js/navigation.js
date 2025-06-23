@@ -9,6 +9,23 @@ document.addEventListener('DOMContentLoaded', function() {
     .catch(error => {
       console.error('Error loading navigation:', error);
     });
+  
+  // Load footer
+  fetch('/includes/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      const footer = document.querySelector('footer');
+      if (footer) {
+        footer.outerHTML = html;
+      } else {
+        document.body.insertAdjacentHTML('beforeend', html);
+      }
+      // Update current year in footer
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    })
+    .catch(error => {
+      console.error('Error loading footer:', error);
+    });
 
   function initializeNavigation() {
     const menuToggle = document.querySelector('.menu-toggle');
