@@ -20,19 +20,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Check if we're on the home page to handle the overlay
-    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
-        // Check if the user has already dismissed the overlay
-        if (!localStorage.getItem('overlayDismissed')) {
-            document.getElementById('overlay').style.display = 'flex';
-        }
-    }
 });
-
-// Function to dismiss the overlay
-function dismissOverlay() {
-    document.getElementById('overlay').style.display = 'none';
-    // Remember that the user dismissed the overlay
-    localStorage.setItem('overlayDismissed', 'true');
-}

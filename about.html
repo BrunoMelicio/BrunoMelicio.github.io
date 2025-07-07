@@ -47,7 +47,10 @@
           As a researcher, I specialize in applying Artificial Intelligence (AI) methods, including Generative AI (Gen AI), to the detection and diagnosis of neurodevelopmental disorders. My work aims to improve outcomes and provide better support for both patients and professionals.
         </p>
         <p>
-          I'm passionate about bridging the gap between cutting-edge AI research and real-world healthcare applications, with a strong emphasis on ethical considerations and responsible AI development.
+          I'm passionate about bridging the gap between cutting-edge AI research and real-world healthcare applications, with a strong emphasis on ethical considerations and responsible AI development. 
+        </p>
+        <p>
+          I lead a team of four researchers and supervise two MSc students in AI-driven healthcare research, while collaborating with healthcare professionals and institutions to translate research into practical solutions.
         </p>
       </section>
 
@@ -56,27 +59,26 @@
         <h2>Research Focus</h2>
         <div class="about-highlights">
           <div class="highlight-box">
-            <h3><i class="fas fa-brain"></i> AI for ASD</h3>
+            <h3><i class="fas fa-brain"></i> AI for Autism Spectrum Disorder</h3>
             <ul>
               <li>AI for behavior analysis in children with Autism Spectrum Disorder</li>
               <li>Early detection and improved diagnostic accuracy</li>
-              <li>Multimodal data analysis using computer vision and machine learning</li>
+              <li>Multimodal data analysis using Composite AI</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <!-- Awards & Recognition -->
+      <section class="about-section">
+        <h2>Awards & Recognition</h2>
+        <div class="about-highlights">
           <div class="highlight-box">
-            <h3><i class="fas fa-users"></i> Leadership</h3>
-            <ul>
-              <li>Leading a team of four researchers</li>
-              <li>Supervising two MSc students in AI-driven healthcare research</li>
-              <li>Collaborating with healthcare professionals and institutions</li>
-            </ul>
-          </div>
-          <div class="highlight-box">
-            <h3><i class="fas fa-medal"></i> Recognition</h3>
+            <h3><i class="fas fa-award"></i> Academic Achievements</h3>
             <ul>
               <li>1st Place - Scientific Student Conference (TDK) at ELTE</li>
               <li>Special Award - Hungarian National Students Conference (OTDK)</li>
-              <li>Recipient of multiple academic excellence awards</li>
+              <li>Recipient of multiple academic awards and scholarships</li>
             </ul>
           </div>
         </div>
@@ -100,48 +102,84 @@
       </div>
 
       <!-- Contact Section -->
-      <section class="about-section contact-section">
+      <section id="contact" class="about-section contact-section">
         <h2>Get In Touch</h2>
-        <p>I'm always interested in discussing research collaborations, speaking engagements, or potential projects. Feel free to reach out through any of the following channels:</p>
+        <p>I'm always interested in discussing research collaborations, speaking engagements, or potential projects.</p>
         
-        <div class="contact-grid">
-          <div class="contact-method">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-details">
-              <h4>Email</h4>
-              <a href="mailto:bruno@example.com">bruno@example.com</a>
-            </div>
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-group">
+            <label for="reason">Reason for Contact</label>
+            <select id="reason" name="reason" required>
+              <option value="" disabled selected>Select a reason</option>
+              <option value="course_booking">Book a Course</option>
+              <option value="speaking_engagement">Speaking Engagement</option>
+              <option value="student_supervision">Student Supervision</option>
+              <option value="research_collaboration">Research Collaboration</option>
+              <option value="other">Other Inquiry</option>
+            </select>
           </div>
           
-          <div class="contact-method">
-            <div class="contact-icon">
-              <i class="fab fa-linkedin-in"></i>
-            </div>
-            <div class="contact-details">
-              <h4>LinkedIn</h4>
-              <a href="https://linkedin.com/in/brunomelicio" target="_blank">linkedin.com/in/brunomelicio</a>
-            </div>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
           </div>
           
-          <div class="contact-method">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-details">
-              <h4>Location</h4>
-              <p>Budapest, Hungary</p>
-            </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
           </div>
           
-          <div class="contact-method">
-            <div class="contact-icon">
-              <i class="fas fa-university"></i>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        
+        <div class="contact-info">
+          <h3>Or reach out directly:</h3>
+          <div class="contact-grid">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <a href="mailto:brunomelicio.ai@gmail.com">brunomelicio.ai@gmail.com</a>
+              </div>
             </div>
-            <div class="contact-details">
-              <h4>Institution</h4>
-              <p>Eötvös Loránd University (ELTE)</p>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <a href="https://linkedin.com/in/brunomelicio" target="_blank">linkedin.com/in/brunomelicio</a>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Location</h4>
+                <p>Budapest, Hungary</p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="contact-details">
+                <h4>Institution</h4>
+                <p>Eötvös Loránd University (ELTE)</p>
+              </div>
             </div>
           </div>
         </div>

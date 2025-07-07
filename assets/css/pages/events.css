@@ -30,7 +30,7 @@
   width: 100%;
   height: 40vh;
   min-height: 300px;
-  background-image: url('../../../images/teaching.jpeg');
+  background-image: url('../../images/event.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -67,6 +67,7 @@
 .events-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: white !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -260,6 +261,7 @@
 .cta-content h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  color: white !important;
 }
 
 .cta-content p {
