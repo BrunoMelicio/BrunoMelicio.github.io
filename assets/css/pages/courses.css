@@ -1,322 +1,242 @@
-/* Courses Page Styles */
-:root {
-  --theme-color: #682e2e;
-  --theme-light: rgba(104, 46, 46, 0.1);
-  --text-color: #333;
-  --light-text: #666;
-  --background: #f9f9f9;
-  --white: #ffffff;
-  --border-radius: 12px;
-  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --transition: all 0.3s ease;
-}
+/* ============================================
+   COURSES PAGE
+   ============================================ */
 
-/* Base Layout */
-.courses-layout {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  min-height: calc(100vh - 60px);
-  padding-top: 60px; /* Match header height */
-  box-sizing: border-box;
-  position: relative;
-  background: #682e2e;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Hero Section with Image */
-.courses-hero {
-  width: 100%;
-  height: 40vh;
-  min-height: 300px;
-  background-image: url('../../images/teaching.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.courses-hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, 
-    rgba(104, 46, 46, 0.7) 0%,
-    rgba(104, 46, 46, 0.9) 100%);
-  z-index: 1;
-}
-
-.courses-hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.courses-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: white !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.courses-hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  margin: 0 auto;
-  max-width: 600px;
-  line-height: 1.6;
-}
-
-/* Courses Content Section */
-.courses-content {
-  position: relative;
-  background: #682e2e;
-  padding: 3rem 1rem;
-  z-index: 2;
-  flex: 1;
-}
-
-/* Courses Grid */
-.courses-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  box-sizing: border-box;
+/* Courses section */
+.courses-section {
+  padding: var(--space-section) 0;
 }
 
 /* Course Card */
-.course-card {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card-course {
+  padding: var(--space-2xl);
+}
+
+.course-header {
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.course-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.course-icon {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: var(--theme-color);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  margin: 2rem auto 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.course-card:hover .course-icon {
-  transform: scale(1.1) rotate(5deg);
-}
-
-.course-info {
-  padding: 0 1.5rem 1.5rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.course-info h3 {
-  margin: 0 0 1rem 0;
-  color: var(--theme-color);
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.course-info p {
-  color: var(--light-text);
-  margin: 0 0 1.5rem 0;
-  line-height: 1.6;
-  flex: 1;
-}
-
-.course-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem 0;
-}
-
-.course-features li {
-  padding: 0.4rem 0;
-  color: var(--text-color);
-  display: flex;
+  gap: var(--space-lg);
   align-items: flex-start;
-  line-height: 1.5;
+  margin-bottom: var(--space-xl);
 }
 
-.course-features i {
-  color: var(--theme-color);
-  margin-right: 0.8rem;
-  margin-top: 0.2rem;
-  font-size: 0.9rem;
+.course-title {
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
 }
 
 .course-meta {
-  margin-top: auto;
   display: flex;
-  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.course-description {
+  color: var(--text-secondary);
+  font-size: var(--text-body);
+  line-height: 1.8;
+  margin-bottom: var(--space-xl);
+}
+
+.course-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.course-detail {
+  display: flex;
   align-items: center;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  gap: var(--space-sm);
+  font-size: var(--text-small);
+  color: var(--text-secondary);
 }
 
-.course-tag {
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
-  background-color: var(--theme-light);
-  color: var(--theme-color);
-  border-radius: 50px;
-  font-size: 0.85rem;
+.course-detail i {
+  color: var(--accent-primary);
+}
+
+.course-topics-title {
+  font-size: var(--text-body);
   font-weight: 600;
-  transition: all 0.3s ease;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
 }
 
-.course-tag.coming-soon {
-  background-color: #f0f0f0;
-  color: #888;
+.course-topics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
 }
 
-.course-button {
-  display: inline-block;
-  padding: 0.7rem 1.5rem;
-  background-color: var(--theme-color);
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 2px solid var(--theme-color);
+.course-topics li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-secondary);
+  font-size: var(--text-small);
+}
+
+.course-topics li i {
+  color: var(--accent-secondary);
+  font-size: 0.75rem;
+}
+
+/* Philosophy grid */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.philosophy-card {
   text-align: center;
+  padding: var(--space-2xl);
 }
 
-.course-button:hover {
-  background-color: transparent;
-  color: var(--theme-color);
+.philosophy-card .card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  background: var(--accent-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  margin: 0 auto var(--space-lg);
 }
 
-/* Footer */
-footer {
-  background-color: var(--theme-color);
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
+.philosophy-card h3 {
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
 }
 
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+.philosophy-card p {
+  color: var(--text-secondary);
+  font-size: var(--text-small);
+}
+
+/* Reviews */
+.reviews-list {
+  display: grid;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.review-card {
+  padding: var(--space-xl);
+}
+
+.review-stars {
+  display: flex;
+  gap: 0.2rem;
+  margin-bottom: var(--space-md);
+}
+
+.review-stars i {
+  color: #f5a623;
+  font-size: 1rem;
+}
+
+.review-text {
+  color: var(--text-secondary);
+  font-size: var(--text-body);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: var(--space-md);
+}
+
+.review-author {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.2rem;
 }
 
-.footer-social {
+.review-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: var(--text-small);
+}
+
+.review-course {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* Review Form */
+.review-form-wrapper {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+}
+
+.review-form-title {
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+}
+
+.star-rating {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
+  gap: 0.35rem;
 }
 
-.footer-social a {
-  color: white;
+.star-rating i {
   font-size: 1.5rem;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.8;
+  color: #f5a623;
+  cursor: pointer;
+  transition: transform 0.15s ease;
 }
 
-.footer-social a:hover {
-  transform: translateY(-3px);
-  opacity: 1;
+.star-rating i:hover {
+  transform: scale(1.2);
 }
 
-.footer-copyright {
-  font-size: 0.9rem;
-  opacity: 0.8;
+/* CTA Section */
+.section-cta {
+  padding: var(--space-section) 0;
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+  position: relative;
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-  .courses-grid {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 0 2rem;
-  }
-  
-  .courses-hero {
-    height: 50vh;
-  }
-  
-  .courses-hero h1 {
-    font-size: 3rem;
-  }
+.section-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(30, 58, 95, 0.04) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-@media (min-width: 1024px) {
-  .courses-layout {
-    flex-direction: row;
-    min-height: calc(100vh - 60px);
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .course-header {
+    flex-direction: column;
   }
-  
-  .courses-hero {
-    width: 50%;
-    height: auto;
-    min-height: calc(100vh - 60px);
-    position: sticky;
-    top: 60px;
-  }
-  
-  .courses-hero::after {
-    background: linear-gradient(to right, 
-      rgba(104, 46, 46, 0.7) 0%,
-      rgba(104, 46, 46, 0.9) 100%);
-  }
-  
-  .courses-content {
-    width: 50%;
-    padding: 3rem 2rem;
-    overflow-y: auto;
-    max-height: calc(100vh - 60px);
-  }
-  
-  .courses-grid {
+
+  .course-topics {
     grid-template-columns: 1fr;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0;
   }
-  
-  .course-card {
-    max-width: 100%;
-  }
-}
 
-@media (min-width: 1440px) {
-  .courses-grid {
-    max-width: 700px;
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-details {
+    flex-direction: column;
+    gap: var(--space-md);
   }
 }

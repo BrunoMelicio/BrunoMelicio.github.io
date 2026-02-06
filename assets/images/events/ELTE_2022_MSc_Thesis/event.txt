@@ -1,0 +1,4 @@
+Type: Msc Thesis Presentation
+Title: DeepRehab: Real Time Deep Pose Refinement on the Edge
+Date: 25/06/2021
+Location: Eötvös Loránd University, Budapest, Hungary

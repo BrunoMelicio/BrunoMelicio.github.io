@@ -1,0 +1,4 @@
+Type: BOSCH Conference
+Title: DeepRehab: Robot-Assisted Physical Rehabilitation
+Date: 01/10/2022
+Location: Eötvös Loránd University, Budapest, Hungary

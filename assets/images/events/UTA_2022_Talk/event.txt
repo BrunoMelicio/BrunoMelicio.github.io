@@ -1,0 +1,4 @@
+Type: Talk
+Title: Modern AI
+Date: 21/07/2022
+Location: Atlantic Technical University, Mindelo, Cape Verde

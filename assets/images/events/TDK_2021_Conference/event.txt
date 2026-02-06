@@ -1,0 +1,4 @@
+Type: Student Conference
+Title: DeepRehab: Real-Time Pose Estimation on the Edge
+Date: 16/12/2020
+Location: Eötvös Loránd University, Budapest, Hungary

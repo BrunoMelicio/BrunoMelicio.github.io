@@ -1,0 +1,4 @@
+Type: BOSCH Conference
+Title: Automated Detection and Analysis of Delayed Object Play in ADOS-2 Make-Believe Play Task
+Date: 10/12/2024
+Location: Robert Bosch Kft, Budapest, Hungary

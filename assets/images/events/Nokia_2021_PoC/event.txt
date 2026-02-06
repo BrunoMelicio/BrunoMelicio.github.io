@@ -1,0 +1,4 @@
+Type: Proof of Concept
+Title: Face Mask Detector for the Safety of Nokia employees during COVID-19
+Date: 25/01/2020
+Location: Nokia Sky Park, Budapest, Hungary

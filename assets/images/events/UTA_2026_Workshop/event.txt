@@ -1,0 +1,4 @@
+Type: Workshop
+Title: Hands-on Deep Learning Workshop
+Date: 03/02/2026
+Location: Atlantic Technical University, Mindelo, Cape Verde

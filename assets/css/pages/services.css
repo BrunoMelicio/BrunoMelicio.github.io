@@ -1,0 +1,45 @@
+/* ============================================
+   SERVICES PAGE
+   ============================================ */
+
+/* Services Grid */
+.services-full-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+.card-muted {
+  opacity: 0.6;
+}
+
+.card-muted:hover {
+  opacity: 0.8;
+}
+
+/* CTA Section */
+.section-cta {
+  padding: var(--space-section) 0;
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+  position: relative;
+}
+
+.section-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(30, 58, 95, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-full-grid {
+    grid-template-columns: 1fr;
+  }
+}

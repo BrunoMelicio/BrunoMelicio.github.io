@@ -1,0 +1,4 @@
+Type: Bsc Thesis Presentation
+Title: GDNet: Gaze Direction Network
+Date: 24/07/2019
+Location: University of Cape Verde, Mindelo, Cape Verde

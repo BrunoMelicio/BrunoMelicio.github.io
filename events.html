@@ -1,80 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events & Talks - Bruno Melício</title>
-  <meta name="description" content="Upcoming and past events, talks, and presentations by Bruno Melício">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/navigation.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
-  <link rel="stylesheet" href="assets/css/pages/events.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | Bruno Melício</title>
+  <meta name="description" content="Upcoming and past events, talks, and presentations by Bruno Melício." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="Events | Bruno Melício" />
+  <meta property="og:description" content="Talks, conferences, workshops, and media appearances." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/navigation.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/pages/events.css" />
 </head>
 <body>
-  <!-- Navigation will be loaded here by navigation.js -->
 
-  <main class="events-layout">
-    <!-- Hero Section with Image -->
-    <section class="events-hero">
-      <div class="events-hero-content">
-        <h1>Events & Talks</h1>
-        <p>Explore my talks, conference presentations and media appearances where I share my expertise in AI.</p>
+  <main class="has-hero">
+
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <span class="overline hero-animate">Talks & Conferences</span>
+        <h1 class="page-hero-title hero-animate">Events</h1>
+        <p class="page-hero-subtitle hero-animate">Talks, conference presentations, workshops, and media appearances where I share my expertise in AI.</p>
       </div>
     </section>
 
-    <!-- Events Content -->
-    <section class="events-content">
-      <div class="events-grid">
-        <!-- Upcoming Events -->
-        <h2 class="section-title">Upcoming Events</h2>
-        
-        <!-- Event 1 -->
-        <article class="event-card">
-          <div class="event-card-content" style="text-align: center; padding: 2rem;">
-            <h3>Under Development</h3>
-            <p>This section is currently being updated. Please check back soon for upcoming events and talks.</p>
+    <!-- Upcoming Events -->
+    <section class="events-section bg-secondary">
+      <div class="container container--narrow">
+        <div class="section-label animate-on-scroll fade-up">
+          <span class="overline">Coming Up</span>
+          <h2 class="section-title">Upcoming Events</h2>
+        </div>
+
+        <!-- NTNU 2026 Talk - Feb 11, 2026 -->
+        <article class="card card-event animate-on-scroll fade-up stagger-1">
+          <div class="event-date">
+            <span class="day">11</span>
+            <span class="month">Feb</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Composite AI for Automated Detection of Behavioral Markers in Children with Autism During ADOS-2</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Norwegian University of Science and Technology, Trondheim, Norway</span>
+              <span><i class="fas fa-tag"></i> Talk</span>
+            </div>
+            <p class="event-description">Invited talk on Composite AI methods for automated detection of behavioral markers in children with Autism Spectrum Disorder during ADOS-2 assessments.</p>
+            <div class="event-gallery" data-gallery="ntnu2026">
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/NTNU_2026_Talk/ntnu-2026-1.png"><img src="assets/images/events/NTNU_2026_Talk/ntnu-2026-1.png" alt="NTNU 2026 Talk" loading="lazy" /></div>
+            </div>
           </div>
         </article>
 
-        <!-- Past Events -->
-        <h2 class="section-title">Past Events</h2>
-        
-        <!-- Past Event 1 -->
-        <article class="event-card past-event">
-          <div class="event-card-content" style="text-align: center; padding: 2rem;">
-            <h3>Under Development</h3>
-            <p>This section is currently being updated. Past events and talks will be listed here soon.</p>
-          </div>
-        </article>
       </div>
+    </section>
 
-      <!-- CTA Section -->
-      <section class="cta-section">
-        <div class="cta-content">
-          <h2>Interested in Having Me Speak at Your Event?</h2>
-          <p>I'm available for panels, keynotes, and interviews to discuss AI and machine learning, with a focus on applications for detecting neurodevelopmental disorders like autism.</p>
-          <a href="about.html#contact" class="btn-primary" style="background-color: white; color: var(--theme-color);">
+    <!-- Past Events -->
+    <section class="events-section bg-primary">
+      <div class="container container--narrow">
+        <div class="section-label animate-on-scroll fade-up">
+          <span class="overline">Previous</span>
+          <h2 class="section-title">Past Events</h2>
+        </div>
+
+        <!-- ===== 2026 ===== -->
+        <h3 class="year-header animate-on-scroll fade-up">2026</h3>
+
+        <!-- UTA 2026 Workshop - Feb 3, 2026 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">03</span>
+            <span class="month">Feb</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Hands-on Deep Learning Workshop</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Atlantic Technical University, Mindelo, Cape Verde</span>
+              <span><i class="fas fa-tag"></i> Workshop</span>
+            </div>
+            <p class="event-description">Conducted a hands-on deep learning workshop covering practical implementation of neural networks, from fundamentals to real-world applications.</p>
+            <div class="event-gallery" data-gallery="uta2026">
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-1.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-1.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-2.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-2.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-3.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-3.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-4.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-4.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-5.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-5.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-6.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-6.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-7.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-7.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-8.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-8.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-9.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-9.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-10.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-10.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-11.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-11.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-12.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-12.jpg" alt="Workshop photo" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2026_Workshop/uta-2026-13.jpg"><img src="assets/images/events/UTA_2026_Workshop/uta-2026-13.jpg" alt="Workshop photo" loading="lazy" /></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== 2025 ===== -->
+        <h3 class="year-header animate-on-scroll fade-up">2025</h3>
+
+        <!-- INSAR 2025 - May 7, 2025 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">07</span>
+            <span class="month">May</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">INSAR 2025 Annual Meeting</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Denver, USA</span>
+              <span><i class="fas fa-tag"></i> Conference Presentation</span>
+            </div>
+            <p class="event-description">Presented two papers on automated behavior analysis during ADOS-2 assessments using Composite AI: "Examining Object Play Initiation Delays" and "Automated Detection of Play Behavior."</p>
+          </div>
+        </article>
+
+        <!-- ===== 2024 ===== -->
+        <h3 class="year-header animate-on-scroll fade-up">2024</h3>
+
+        <!-- BOSCH Best 2024 Meetup - Dec 10, 2024 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">10</span>
+            <span class="month">Dec</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Automated Detection and Analysis of Delayed Object Play in ADOS-2</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Robert Bosch Kft, Budapest, Hungary</span>
+              <span><i class="fas fa-tag"></i> BOSCH Conference</span>
+            </div>
+            <p class="event-description">Presented research on automated detection and analysis of delayed object play during the ADOS-2 Make-Believe Play Task at the BOSCH Best meetup.</p>
+            <div class="event-gallery" data-gallery="bosch2024">
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/BOSCH_Best_2023_Meetup/bosch-best-2024-1.png"><img src="assets/images/events/BOSCH_Best_2023_Meetup/bosch-best-2024-1.png" alt="BOSCH Best meetup" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/BOSCH_Best_2023_Meetup/bosch-best-2024-2.png"><img src="assets/images/events/BOSCH_Best_2023_Meetup/bosch-best-2024-2.png" alt="BOSCH Best meetup" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/BOSCH_Best_2023_Meetup/bosch-best-2024-3.png"><img src="assets/images/events/BOSCH_Best_2023_Meetup/bosch-best-2024-3.png" alt="BOSCH Best meetup" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="video" data-src="assets/images/events/BOSCH_Best_2023_Meetup/2.mp4">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+                <video src="assets/images/events/BOSCH_Best_2023_Meetup/2.mp4" preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- MILAB 2024 - Jun 22, 2024 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">22</span>
+            <span class="month">Jun</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Detecting Hand-Object Interaction and Child Play in ADOS-2 Videos</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> European Youth Centre Budapest, Hungary</span>
+              <span><i class="fas fa-tag"></i> AI Hungarian National Conference</span>
+            </div>
+            <p class="event-description">Presented research on detecting hand-object interaction and child play behaviors in ADOS-2 assessment videos at the Hungarian National AI Conference (MILAB).</p>
+            <div class="event-gallery" data-gallery="milab2024">
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/MILAB_2024_Conference/milab-2024-1.jpg"><img src="assets/images/events/MILAB_2024_Conference/milab-2024-1.jpg" alt="MILAB 2024" loading="lazy" /></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== 2023 ===== -->
+        <h3 class="year-header animate-on-scroll fade-up">2023</h3>
+
+        <!-- TDK at ELTE - Nov 15, 2023 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">15</span>
+            <span class="month">Nov</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Scientific Student Conference (TDK) - ELTE</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Eötvös Loránd University, Budapest, Hungary</span>
+              <span><i class="fas fa-tag"></i> Competition</span>
+            </div>
+            <p class="event-description">Won 1st Place for research on AI-driven behavior analysis in children with Autism Spectrum Disorder during ADOS-2 assessments.</p>
+          </div>
+        </article>
+
+        <!-- ICMI 2023 - Oct 9, 2023 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">09</span>
+            <span class="month">Oct</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">ICMI 2023 - International Conference on Multimodal Interaction</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Sorbonne University, Paris, France</span>
+              <span><i class="fas fa-tag"></i> Conference Presentation</span>
+            </div>
+            <p class="event-description">Presented "Composite AI for Behavior Analysis in Social Interactions" at the companion proceedings of the 25th International Conference on Multimodal Interaction.</p>
+            <div class="event-gallery" data-gallery="icmi2023">
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/ICMI_2023_Conference/icmi-2023-1.jpg"><img src="assets/images/events/ICMI_2023_Conference/icmi-2023-1.jpg" alt="ICMI 2023" loading="lazy" /></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- JSALT 2023 - Aug 1, 2023 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">01</span>
+            <span class="month">Aug</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Jelinek Summer Workshop on Speech and Language Technology (JSALT)</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> University of Le Mans, Le Mans, France</span>
+              <span><i class="fas fa-tag"></i> Workshop</span>
+            </div>
+            <p class="event-description">Participated in the Jelinek Summer Workshop focused on "Automatic design of conversational models from observation of human-to-human conversation."</p>
+            <div class="event-gallery" data-gallery="jsalt2023">
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-1.jpg"><img src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-1.jpg" alt="JSALT 2023" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-2.jpg"><img src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-2.jpg" alt="JSALT 2023" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-3.jpg"><img src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-3.jpg" alt="JSALT 2023" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-4.jpg"><img src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-4.jpg" alt="JSALT 2023" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-5.jpg"><img src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-5.jpg" alt="JSALT 2023" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-6.jpg"><img src="assets/images/events/JSALT_2023_Workshop/jsalt-2023-6.jpg" alt="JSALT 2023" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="video" data-src="assets/images/events/JSALT_2023_Workshop/5.mp4">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+                <video src="assets/images/events/JSALT_2023_Workshop/5.mp4" preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- OTDK - Apr 12, 2023 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">12</span>
+            <span class="month">Apr</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Hungarian National Students Conference (OTDK)</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Hungary</span>
+              <span><i class="fas fa-tag"></i> Competition</span>
+            </div>
+            <p class="event-description">Received a Special Award for research presentation on AI applications in neurodevelopmental disorder detection.</p>
+          </div>
+        </article>
+
+        <!-- ===== 2022 ===== -->
+        <h3 class="year-header animate-on-scroll fade-up">2022</h3>
+
+        <!-- BOSCH 2022 Conference - Oct 1, 2022 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">01</span>
+            <span class="month">Oct</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">DeepRehab: Robot-Assisted Physical Rehabilitation</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Eötvös Loránd University, Budapest, Hungary</span>
+              <span><i class="fas fa-tag"></i> BOSCH Conference</span>
+            </div>
+            <p class="event-description">Presented the DeepRehab project on robot-assisted physical rehabilitation using real-time pose estimation at the BOSCH Conference.</p>
+            <div class="event-gallery" data-gallery="bosch2022">
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/BOSCH_2022_Conference/bosch-2022-1.jpg"><img src="assets/images/events/BOSCH_2022_Conference/bosch-2022-1.jpg" alt="BOSCH 2022" loading="lazy" /></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- UTA 2022 Talk - Jul 21, 2022 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">21</span>
+            <span class="month">Jul</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Modern AI</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Atlantic Technical University, Mindelo, Cape Verde</span>
+              <span><i class="fas fa-tag"></i> Talk</span>
+            </div>
+            <p class="event-description">Delivered a talk on Modern AI, covering the latest developments and real-world applications of artificial intelligence.</p>
+            <div class="event-gallery" data-gallery="uta2022">
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2022_Talk/uta-2022-1.jpg"><img src="assets/images/events/UTA_2022_Talk/uta-2022-1.jpg" alt="UTA 2022" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2022_Talk/uta-2022-2.jpg"><img src="assets/images/events/UTA_2022_Talk/uta-2022-2.jpg" alt="UTA 2022" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2022_Talk/uta-2022-3.jpg"><img src="assets/images/events/UTA_2022_Talk/uta-2022-3.jpg" alt="UTA 2022" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2022_Talk/uta-2022-4.jpg"><img src="assets/images/events/UTA_2022_Talk/uta-2022-4.jpg" alt="UTA 2022" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2022_Talk/uta-2022-5.jpg"><img src="assets/images/events/UTA_2022_Talk/uta-2022-5.jpg" alt="UTA 2022" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2022_Talk/uta-2022-6.jpg"><img src="assets/images/events/UTA_2022_Talk/uta-2022-6.jpg" alt="UTA 2022" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2022_Talk/uta-2022-7.jpg"><img src="assets/images/events/UTA_2022_Talk/uta-2022-7.jpg" alt="UTA 2022" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UTA_2022_Talk/uta-2022-8.jpg"><img src="assets/images/events/UTA_2022_Talk/uta-2022-8.jpg" alt="UTA 2022" loading="lazy" /></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== 2021 ===== -->
+        <h3 class="year-header animate-on-scroll fade-up">2021</h3>
+
+        <!-- ICANN 2021 - Sep 14, 2021 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">14</span>
+            <span class="month">Sep</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">ICANN 2021 - International Conference on Artificial Neural Networks</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Bratislava, Slovakia</span>
+              <span><i class="fas fa-tag"></i> Conference Presentation</span>
+            </div>
+            <p class="event-description">Presented "DeepRehab: Real Time Pose Estimation on the Edge for Knee Injury Rehabilitation" at the 30th International Conference on Artificial Neural Networks.</p>
+          </div>
+        </article>
+
+        <!-- ELTE MSc Thesis - Jun 25, 2021 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">25</span>
+            <span class="month">Jun</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">MSc Thesis: DeepRehab - Real Time Deep Pose Refinement on the Edge</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Eötvös Loránd University, Budapest, Hungary</span>
+              <span><i class="fas fa-tag"></i> MSc Thesis Presentation</span>
+            </div>
+            <p class="event-description">Defended MSc thesis on real-time deep pose refinement on edge devices for physical rehabilitation applications.</p>
+            <div class="event-gallery" data-gallery="elte2021">
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/ELTE_2022_MSc_Thesis/elte-msc-2021-1.jpg"><img src="assets/images/events/ELTE_2022_MSc_Thesis/elte-msc-2021-1.jpg" alt="ELTE MSc Thesis" loading="lazy" /></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== 2020 ===== -->
+        <h3 class="year-header animate-on-scroll fade-up">2020</h3>
+
+        <!-- Nokia 2020 PoC - Jan 25, 2020 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">25</span>
+            <span class="month">Jan</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">Face Mask Detector for Nokia Employee Safety During COVID-19</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> Nokia Sky Park, Budapest, Hungary</span>
+              <span><i class="fas fa-tag"></i> Proof of Concept</span>
+            </div>
+            <p class="event-description">Developed and demonstrated a proof of concept for a face mask detector system to ensure the safety of Nokia employees during the COVID-19 pandemic.</p>
+            <div class="event-gallery" data-gallery="nokia2020">
+              <div class="event-gallery-thumb" data-type="video" data-src="assets/images/events/Nokia_2021_PoC/nokia-2020-video.mp4">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+                <video src="assets/images/events/Nokia_2021_PoC/nokia-2020-video.mp4" preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== 2019 ===== -->
+        <h3 class="year-header animate-on-scroll fade-up">2019</h3>
+
+        <!-- UNICV 2019 BSc Thesis - Jul 24, 2019 -->
+        <article class="card card-event past-event animate-on-scroll fade-up">
+          <div class="event-date">
+            <span class="day">24</span>
+            <span class="month">Jul</span>
+          </div>
+          <div class="event-info">
+            <h3 class="event-title">BSc Thesis: GDNet - Gaze Direction Network</h3>
+            <div class="event-meta">
+              <span><i class="fas fa-map-marker-alt"></i> University of Cape Verde, Mindelo, Cape Verde</span>
+              <span><i class="fas fa-tag"></i> BSc Thesis Presentation</span>
+            </div>
+            <p class="event-description">Defended BSc thesis on GDNet, a gaze direction network for eye tracking and attention estimation using deep learning.</p>
+            <div class="event-gallery" data-gallery="unicv2019">
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UNICV_2019_BSc_Thesis/unicv-2019-1.jpg"><img src="assets/images/events/UNICV_2019_BSc_Thesis/unicv-2019-1.jpg" alt="UNICV BSc Thesis" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="image" data-src="assets/images/events/UNICV_2019_BSc_Thesis/unicv-2019-2.jpg"><img src="assets/images/events/UNICV_2019_BSc_Thesis/unicv-2019-2.jpg" alt="UNICV BSc Thesis" loading="lazy" /></div>
+              <div class="event-gallery-thumb" data-type="video" data-src="assets/images/events/UNICV_2019_BSc_Thesis/unicv-2019-video.mp4">
+                <div class="video-play-overlay"><i class="fas fa-play"></i></div>
+                <video src="assets/images/events/UNICV_2019_BSc_Thesis/unicv-2019-video.mp4" preload="metadata"></video>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Speaking CTA -->
+    <section class="section-cta">
+      <div class="container text-center">
+        <div class="cta-content animate-on-scroll scale-in">
+          <h2 class="section-title">Interested in Having Me Speak?</h2>
+          <p class="section-subtitle" style="margin: 0 auto var(--space-2xl);">I'm available for panels, keynotes, and interviews on AI, machine learning, and neurodevelopmental disorder detection.</p>
+          <a href="about.html#contact" class="btn-primary">
             <i class="fas fa-paper-plane"></i> Book Me as a Speaker
           </a>
         </div>
-      </section>
+      </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
-  <!-- JavaScript -->
+  <!-- Lightbox overlay -->
+  <div class="event-lightbox" id="eventLightbox">
+    <button class="lightbox-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    <button class="lightbox-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+
   <script src="assets/js/navigation.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    (function() {
+      var lightbox = document.getElementById('eventLightbox');
+      var content = document.getElementById('lightboxContent');
+      var counter = document.getElementById('lightboxCounter');
+      var currentItems = [];
+      var currentIndex = 0;
+
+      function showItem(index) {
+        currentIndex = index;
+        content.innerHTML = '';
+        var item = currentItems[index];
+        if (item.type === 'video') {
+          var video = document.createElement('video');
+          video.src = item.src;
+          video.controls = true;
+          video.autoplay = true;
+          video.className = 'lightbox-media';
+          content.appendChild(video);
+        } else {
+          var img = document.createElement('img');
+          img.src = item.src;
+          img.alt = 'Event photo';
+          img.className = 'lightbox-media';
+          content.appendChild(img);
+        }
+        counter.textContent = (index + 1) + ' / ' + currentItems.length;
+        lightbox.querySelector('.lightbox-prev').style.display = currentItems.length > 1 ? '' : 'none';
+        lightbox.querySelector('.lightbox-next').style.display = currentItems.length > 1 ? '' : 'none';
+        counter.style.display = currentItems.length > 1 ? '' : 'none';
+      }
+
+      function openLightbox(gallery, startIndex) {
+        var thumbs = gallery.querySelectorAll('.event-gallery-thumb');
+        currentItems = [];
+        thumbs.forEach(function(t) {
+          currentItems.push({
+            type: t.getAttribute('data-type') || 'image',
+            src: t.getAttribute('data-src')
+          });
+        });
+        showItem(startIndex);
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        var video = content.querySelector('video');
+        if (video) video.pause();
+        content.innerHTML = '';
+      }
+
+      function prevItem() {
+        if (currentItems.length < 2) return;
+        var video = content.querySelector('video');
+        if (video) video.pause();
+        showItem((currentIndex - 1 + currentItems.length) % currentItems.length);
+      }
+
+      function nextItem() {
+        if (currentItems.length < 2) return;
+        var video = content.querySelector('video');
+        if (video) video.pause();
+        showItem((currentIndex + 1) % currentItems.length);
+      }
+
+      document.querySelectorAll('.event-gallery-thumb').forEach(function(thumb) {
+        thumb.addEventListener('click', function() {
+          var gallery = this.closest('.event-gallery');
+          var thumbs = Array.from(gallery.querySelectorAll('.event-gallery-thumb'));
+          var idx = thumbs.indexOf(this);
+          openLightbox(gallery, idx);
+        });
+      });
+
+      lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+      lightbox.querySelector('.lightbox-prev').addEventListener('click', function(e) { e.stopPropagation(); prevItem(); });
+      lightbox.querySelector('.lightbox-next').addEventListener('click', function(e) { e.stopPropagation(); nextItem(); });
+
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox || e.target === content) closeLightbox();
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') prevItem();
+        if (e.key === 'ArrowRight') nextItem();
+      });
+    })();
+  </script>
 </body>
 </html>

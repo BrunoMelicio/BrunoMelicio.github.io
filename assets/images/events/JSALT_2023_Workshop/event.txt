@@ -1,0 +1,4 @@
+Type: Jelinek Summer Workshop on Speech and Language Technology
+Title: Automatic design of conversational models from observation of human-to-human conversation
+Date: 01/08/2023
+Location: University of Le Mans, Le Mans, France

@@ -1,0 +1,4 @@
+Type: Talk
+Title: Composite AI for Automated Detection of Behavioral Markers in Children with Autism During ADOS-2
+Date: 11/02/2026
+Location: Norwegian University of Science and Technology, Trondheim, Norway
