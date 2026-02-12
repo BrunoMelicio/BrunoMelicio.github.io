@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Stylist | AI Lab | Bruno Melício</title>
+  <meta name="description" content="Upload a selfie and pick a hairstyle. AI transforms your hair while keeping your appearance intact." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="AI Stylist | Bruno Melício" />
+  <meta property="og:description" content="AI-powered hairstyle transformation." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/navigation.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/pages/ai-lab.css" />
+</head>
+<body>
+
+  <main>
+
+    <section class="stylist-section">
+      <div class="container">
+
+        <a href="ai-lab.html" class="demo-back-link">
+          <i class="fas fa-arrow-left"></i> Back to AI Lab
+        </a>
+
+        <!-- Header -->
+        <div class="stylist-header">
+          <h1>
+            <i class="fas fa-wand-magic-sparkles"></i>
+            AI Stylist
+            <span class="badge-beta">Beta</span>
+          </h1>
+          <p>Upload a selfie and pick a hairstyle. AI transforms your hair while keeping your appearance intact.</p>
+        </div>
+
+        <!-- Upload Zone -->
+        <div class="stylist-upload" id="upload-zone">
+          <input type="file" id="file-input" accept="image/*" hidden />
+          <div class="stylist-upload-content" id="upload-content">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <h3>Drop your photo here</h3>
+            <p>or <button type="button" class="stylist-browse-btn" id="browse-btn">browse files</button></p>
+            <span class="stylist-upload-hint">JPG, PNG up to 10 MB</span>
+          </div>
+          <div class="stylist-preview" id="preview-container" style="display:none">
+            <img id="preview-img" alt="Your uploaded photo" />
+            <button type="button" class="stylist-change-btn" id="change-btn" title="Change photo">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hairstyle Presets -->
+        <div class="stylist-presets">
+          <h3 class="stylist-presets-title">Choose a hairstyle</h3>
+
+          <!-- Gender Tabs -->
+          <div class="stylist-gender-tabs" id="gender-tabs">
+            <button class="stylist-gender-tab active" data-gender="men">
+              <i class="fas fa-male"></i> Men
+            </button>
+            <button class="stylist-gender-tab" data-gender="women">
+              <i class="fas fa-female"></i> Women
+            </button>
+          </div>
+
+          <!-- Men's Presets -->
+          <div class="stylist-presets-grid" id="presets-men">
+            <button class="stylist-preset" data-style="Buzz Cut">
+              <span>Buzz Cut</span>
+            </button>
+            <button class="stylist-preset" data-style="Classic Fade">
+              <span>Classic Fade</span>
+            </button>
+            <button class="stylist-preset" data-style="Curly Top Fade">
+              <span>Curly Top Fade</span>
+            </button>
+            <button class="stylist-preset" data-style="Taper Fade">
+              <span>Taper Fade</span>
+            </button>
+            <button class="stylist-preset" data-style="High Top Fade">
+              <span>High Top Fade</span>
+            </button>
+            <button class="stylist-preset" data-style="Braided Top">
+              <span>Braided Top</span>
+            </button>
+            <button class="stylist-preset" data-style="Dreadlocks">
+              <span>Dreadlocks</span>
+            </button>
+            <button class="stylist-preset" data-style="Man Bun">
+              <span>Man Bun</span>
+            </button>
+            <button class="stylist-preset" data-style="Afro">
+              <span>Afro</span>
+            </button>
+            <button class="stylist-preset" data-style="Faux Hawk">
+              <span>Faux Hawk</span>
+            </button>
+          </div>
+
+          <!-- Women's Presets -->
+          <div class="stylist-presets-grid" id="presets-women" style="display:none">
+            <button class="stylist-preset" data-style="Natural Curls">
+              <span>Natural Curls</span>
+            </button>
+            <button class="stylist-preset" data-style="Sleek & Straight">
+              <span>Sleek &amp; Straight</span>
+            </button>
+            <button class="stylist-preset" data-style="Box Braids">
+              <span>Box Braids</span>
+            </button>
+            <button class="stylist-preset" data-style="Classic Bob">
+              <span>Classic Bob</span>
+            </button>
+            <button class="stylist-preset" data-style="Natural Afro">
+              <span>Natural Afro</span>
+            </button>
+            <button class="stylist-preset" data-style="Pixie Cut">
+              <span>Pixie Cut</span>
+            </button>
+            <button class="stylist-preset" data-style="Long Layers">
+              <span>Long Layers</span>
+            </button>
+            <button class="stylist-preset" data-style="High Ponytail">
+              <span>High Ponytail</span>
+            </button>
+            <button class="stylist-preset" data-style="Butterfly Cut">
+              <span>Butterfly Cut</span>
+            </button>
+            <button class="stylist-preset" data-style="Hollywood Waves">
+              <span>Hollywood Waves</span>
+            </button>
+            <button class="stylist-preset" data-style="Space Buns">
+              <span>Space Buns</span>
+            </button>
+            <button class="stylist-preset" data-style="Locs">
+              <span>Locs</span>
+            </button>
+            <button class="stylist-preset" data-style="Bantu Knots">
+              <span>Bantu Knots</span>
+            </button>
+            <button class="stylist-preset" data-style="Micro Braids">
+              <span>Micro Braids</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Generate Button -->
+        <button class="stylist-submit" id="generate-btn" disabled>
+          <span class="stylist-submit-text"><i class="fas fa-wand-magic-sparkles"></i> Transform Hair</span>
+          <span class="stylist-submit-loading" style="display:none">
+            <i class="fas fa-circle-notch fa-spin"></i> Generating... this may take 15-30s
+          </span>
+        </button>
+
+        <!-- Error message -->
+        <div class="stylist-error" id="error-msg" style="display:none"></div>
+
+        <!-- Result Section -->
+        <div class="stylist-result" id="result-section" style="display:none">
+          <h3 class="stylist-result-title">Result</h3>
+          <div class="stylist-comparison">
+            <div class="stylist-comparison-panel">
+              <span class="stylist-comparison-label">Before</span>
+              <img id="before-img" alt="Original photo" />
+            </div>
+            <div class="stylist-comparison-panel">
+              <span class="stylist-comparison-label">After</span>
+              <img id="after-img" alt="AI-generated result" />
+            </div>
+          </div>
+          <div class="stylist-result-actions">
+            <button class="btn-primary" id="download-btn">
+              <i class="fas fa-download"></i> Download Result
+            </button>
+            <button class="btn-outline" id="retry-btn">
+              <i class="fas fa-redo"></i> Try Another Style
+            </button>
+          </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <p class="stylist-disclaimer">
+          <i class="fas fa-info-circle"></i>
+          AI-powered image editing — results may vary. Best with clear, front-facing photos.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Beta Disclaimer Popup -->
+    <div class="beta-popup" id="beta-popup">
+      <div class="beta-popup-card">
+        <div class="beta-popup-icon"><i class="fas fa-flask"></i></div>
+        <h3 class="beta-popup-title">Beta Feature</h3>
+        <p class="beta-popup-text">
+          This AI stylist is experimental. It works best with clear, front-facing
+          photos with good lighting. Results may vary depending on the photo.
+        </p>
+        <p class="beta-popup-text">
+          Images are processed by Google's Gemini AI and are not stored.
+        </p>
+        <button class="beta-popup-close" id="beta-popup-close">Got it</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const API_URL = 'https://us-central1-smooth-drive-246720.cloudfunctions.net/ai-stylist';
+      const MAX_FILE_SIZE = 10 * 1024 * 1024;
+      const MAX_DIMENSION = 1536;
+
+      // --- DOM ---
+      const uploadZone = document.getElementById('upload-zone');
+      const fileInput = document.getElementById('file-input');
+      const browseBtn = document.getElementById('browse-btn');
+      const uploadContent = document.getElementById('upload-content');
+      const previewContainer = document.getElementById('preview-container');
+      const previewImg = document.getElementById('preview-img');
+      const changeBtn = document.getElementById('change-btn');
+      const genderTabs = document.getElementById('gender-tabs');
+      const presetsMen = document.getElementById('presets-men');
+      const presetsWomen = document.getElementById('presets-women');
+      const generateBtn = document.getElementById('generate-btn');
+      const errorMsg = document.getElementById('error-msg');
+      const resultSection = document.getElementById('result-section');
+      const beforeImg = document.getElementById('before-img');
+      const afterImg = document.getElementById('after-img');
+      const downloadBtn = document.getElementById('download-btn');
+      const retryBtn = document.getElementById('retry-btn');
+
+      let uploadedImageB64 = null;
+      let uploadedImageDataURI = null;
+      let selectedStyle = null;
+
+      // --- Upload handling ---
+      browseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        fileInput.click();
+      });
+
+      uploadZone.addEventListener('click', () => {
+        if (!uploadedImageB64) fileInput.click();
+      });
+
+      uploadZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadZone.classList.add('drag-over');
+      });
+
+      uploadZone.addEventListener('dragleave', () => {
+        uploadZone.classList.remove('drag-over');
+      });
+
+      uploadZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadZone.classList.remove('drag-over');
+        const file = e.dataTransfer.files[0];
+        if (file) handleFile(file);
+      });
+
+      fileInput.addEventListener('change', () => {
+        if (fileInput.files[0]) handleFile(fileInput.files[0]);
+      });
+
+      function handleFile(file) {
+        if (!file.type.startsWith('image/')) {
+          showError('Please upload an image file (JPG, PNG).');
+          return;
+        }
+        if (file.size > MAX_FILE_SIZE) {
+          showError('Image is too large. Please use a photo under 10 MB.');
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          resizeImage(e.target.result, MAX_DIMENSION, (resizedDataURI) => {
+            uploadedImageDataURI = resizedDataURI;
+            uploadedImageB64 = resizedDataURI.split(',')[1];
+            showPreview(resizedDataURI);
+            updateGenerateBtn();
+            hideError();
+          });
+        };
+        reader.readAsDataURL(file);
+      }
+
+      function resizeImage(dataURI, maxDim, callback) {
+        const img = new Image();
+        img.onload = () => {
+          let { width, height } = img;
+          if (Math.max(width, height) > maxDim) {
+            const ratio = maxDim / Math.max(width, height);
+            width = Math.round(width * ratio);
+            height = Math.round(height * ratio);
+          }
+          const canvas = document.createElement('canvas');
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, width, height);
+          callback(canvas.toDataURL('image/jpeg', 0.85));
+        };
+        img.src = dataURI;
+      }
+
+      function showPreview(dataURI) {
+        previewImg.src = dataURI;
+        uploadContent.style.display = 'none';
+        previewContainer.style.display = '';
+        uploadZone.style.cursor = 'default';
+        uploadZone.style.borderStyle = 'solid';
+      }
+
+      function resetUpload() {
+        uploadedImageB64 = null;
+        uploadedImageDataURI = null;
+        fileInput.value = '';
+        previewContainer.style.display = 'none';
+        uploadContent.style.display = '';
+        uploadZone.style.cursor = 'pointer';
+        uploadZone.style.borderStyle = 'dashed';
+        updateGenerateBtn();
+      }
+
+      changeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        resetUpload();
+      });
+
+      // --- Gender tabs ---
+      genderTabs.addEventListener('click', (e) => {
+        const btn = e.target.closest('.stylist-gender-tab');
+        if (!btn) return;
+        genderTabs.querySelectorAll('.stylist-gender-tab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const gender = btn.dataset.gender;
+        presetsMen.style.display = gender === 'men' ? '' : 'none';
+        presetsWomen.style.display = gender === 'women' ? '' : 'none';
+        // Clear selection when switching gender
+        document.querySelectorAll('.stylist-preset').forEach(b => b.classList.remove('active'));
+        selectedStyle = null;
+        updateGenerateBtn();
+      });
+
+      // --- Preset selection ---
+      function handlePresetClick(e) {
+        const btn = e.target.closest('.stylist-preset');
+        if (!btn) return;
+        document.querySelectorAll('.stylist-preset').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedStyle = btn.dataset.style;
+        updateGenerateBtn();
+      }
+      presetsMen.addEventListener('click', handlePresetClick);
+      presetsWomen.addEventListener('click', handlePresetClick);
+
+      // --- Generate button state ---
+      function updateGenerateBtn() {
+        generateBtn.disabled = !(uploadedImageB64 && selectedStyle);
+      }
+
+      // --- API call ---
+      async function doGenerate() {
+        if (!uploadedImageB64 || !selectedStyle) return;
+
+        hideError();
+        resultSection.style.display = 'none';
+
+        generateBtn.querySelector('.stylist-submit-text').style.display = 'none';
+        generateBtn.querySelector('.stylist-submit-loading').style.display = '';
+        generateBtn.disabled = true;
+
+        try {
+          const res = await fetch(API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              image: uploadedImageB64,
+              hairstyle: selectedStyle,
+            }),
+          });
+
+          const data = await res.json();
+
+          if (!res.ok) {
+            throw new Error(data.error || 'Generation failed');
+          }
+
+          if (!data.image) {
+            throw new Error('No image returned. Try a different photo or hairstyle.');
+          }
+
+          beforeImg.src = uploadedImageDataURI;
+          afterImg.src = data.image;
+          resultSection.style.display = '';
+          resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        } catch (err) {
+          showError(err.message || 'Something went wrong. Please try again.');
+        } finally {
+          generateBtn.querySelector('.stylist-submit-text').style.display = '';
+          generateBtn.querySelector('.stylist-submit-loading').style.display = 'none';
+          updateGenerateBtn();
+        }
+      }
+
+      generateBtn.addEventListener('click', doGenerate);
+
+      // --- Download ---
+      downloadBtn.addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = afterImg.src;
+        link.download = 'ai-stylist-' + selectedStyle.toLowerCase().replace(/[^a-z0-9]/g, '-') + '.png';
+        link.click();
+      });
+
+      // --- Retry ---
+      retryBtn.addEventListener('click', () => {
+        resultSection.style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // --- Error handling ---
+      function showError(msg) {
+        errorMsg.textContent = msg;
+        errorMsg.style.display = '';
+      }
+
+      function hideError() {
+        errorMsg.style.display = 'none';
+      }
+
+      // --- Beta popup ---
+      const popup = document.getElementById('beta-popup');
+      const popupClose = document.getElementById('beta-popup-close');
+      if (!sessionStorage.getItem('stylist-beta-seen')) {
+        popup.classList.add('visible');
+      }
+      popupClose.addEventListener('click', () => {
+        popup.classList.remove('visible');
+        sessionStorage.setItem('stylist-beta-seen', '1');
+      });
+      popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+          popup.classList.remove('visible');
+          sessionStorage.setItem('stylist-beta-seen', '1');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

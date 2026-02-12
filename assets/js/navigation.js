@@ -26,12 +26,14 @@ document.addEventListener('DOMContentLoaded', function () {
   function initNavigation() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const path = window.location.pathname;
 
     // Active page
     document.querySelectorAll('.nav-list a').forEach(link => {
       const href = link.getAttribute('href');
-      if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      if (href === path || (href === '/' && (path === '/' || path === '/index.html'))) {
+        link.classList.add('active');
+      } else if (href !== '/' && path.startsWith(href.replace('.html', ''))) {
         link.classList.add('active');
       }
     });

@@ -1,0 +1,110 @@
+/* ============================================
+   RESOURCES PAGE
+   ============================================ */
+
+.resources-section {
+  padding: var(--space-section) 0;
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.resource-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xl);
+  text-decoration: none;
+  color: inherit;
+  padding: var(--space-xl) var(--space-2xl);
+}
+
+.resource-item:hover {
+  transform: translateY(-2px);
+}
+
+.resource-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  background: var(--accent-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--accent-primary);
+}
+
+.resource-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.resource-title {
+  font-size: var(--text-body);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.resource-source {
+  font-size: var(--text-small);
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.resource-description {
+  font-size: var(--text-small);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.resource-link-icon {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  font-size: var(--text-small);
+  margin-top: var(--space-sm);
+  transition: color var(--transition-base);
+}
+
+.resource-item:hover .resource-link-icon {
+  color: var(--accent-primary);
+}
+
+/* See more link */
+.resources-see-more {
+  margin-top: var(--space-xl);
+  font-size: var(--text-small);
+  color: var(--text-muted);
+}
+
+.resources-see-more a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.resources-see-more a:hover {
+  color: var(--accent-primary-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resource-item {
+    padding: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .resource-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+
+  .resource-link-icon {
+    display: none;
+  }
+}

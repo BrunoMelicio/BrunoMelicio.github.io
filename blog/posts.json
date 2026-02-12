@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "train-neural-network-mnist-pytorch",
+    "title": "How to Train a Neural Network from Scratch with PyTorch",
+    "date": "2026-02-09",
+    "excerpt": "Step-by-step guide to building and training your first neural network using PyTorch and the MNIST dataset. Includes complete runnable code.",
+    "tags": ["PyTorch", "Deep Learning", "Tutorial"],
+    "readTime": "12 min read"
+  },
+  {
+    "slug": "getting-started-with-gemini-api",
+    "title": "Getting Started with the Gemini API: A Practical Guide",
+    "date": "2026-02-09",
+    "excerpt": "A hands-on guide to building your first AI app with Google's Gemini API. From setup to deployment, everything you need to know to get started.",
+    "tags": ["Gemini", "API", "Tutorial"],
+    "readTime": "8 min read"
+  }
+]

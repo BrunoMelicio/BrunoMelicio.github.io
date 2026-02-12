@@ -1,0 +1,210 @@
+/* ============================================
+   BLOG PAGES
+   ============================================ */
+
+/* --- Hub Page: Post Cards --- */
+.blog-posts-section {
+  padding: var(--space-section) 0;
+}
+
+.blog-posts-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.blog-post-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: var(--space-2xl);
+}
+
+.blog-post-card:hover {
+  transform: translateY(-2px);
+}
+
+.blog-post-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.blog-post-card-title {
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  line-height: 1.3;
+}
+
+.blog-post-card-excerpt {
+  color: var(--text-secondary);
+  font-size: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.blog-post-card-tags {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.blog-no-posts {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--text-body);
+  padding: var(--space-4xl) 0;
+}
+
+/* --- Post Page --- */
+.blog-post-section {
+  padding: var(--space-3xl) 0 var(--space-section);
+}
+
+.blog-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: var(--space-xl);
+  transition: color var(--transition-base);
+}
+
+.blog-back-link:hover {
+  color: var(--accent-primary);
+}
+
+.blog-back-link i {
+  transition: transform var(--transition-base);
+}
+
+.blog-back-link:hover i {
+  transform: translateX(-4px);
+}
+
+.blog-post-header {
+  margin-bottom: var(--space-3xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.blog-post-header h1 {
+  font-size: var(--text-h1);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+.blog-post-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--text-small);
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.blog-post-read-time::before {
+  content: "\00b7";
+  margin-right: var(--space-md);
+}
+
+.blog-post-tags {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* --- Post Body (Article Content) --- */
+.blog-post-body {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.blog-post-body h2 {
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: var(--space-3xl);
+  margin-bottom: var(--space-md);
+}
+
+.blog-post-body h3 {
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-sm);
+}
+
+.blog-post-body p {
+  margin-bottom: var(--space-lg);
+}
+
+.blog-post-body a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-post-body a:hover {
+  color: var(--accent-primary-hover);
+}
+
+.blog-post-body ul,
+.blog-post-body ol {
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-xl);
+}
+
+.blog-post-body li {
+  margin-bottom: var(--space-sm);
+}
+
+.blog-post-body code {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.9em;
+  background: var(--bg-secondary);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-sm);
+  color: var(--accent-primary);
+}
+
+.blog-post-body pre {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  overflow-x: auto;
+}
+
+.blog-post-body pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.85em;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.blog-post-body strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-post-header h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+}

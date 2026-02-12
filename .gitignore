@@ -1,2 +1,12 @@
 .DS_Store
 *.MOV
+
+# Claude Code internals
+.claude/
+
+# Reference / temp files
+AIBarber/
+cloudflare-workers/
+gradio-apps/
+assets/images/new.jpeg
+assets/images/new\ Background\ Removed.png

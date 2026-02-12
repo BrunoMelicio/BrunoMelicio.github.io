@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Bruno Melício</title>
+  <meta name="description" content="Articles on AI, machine learning, and building practical AI applications by Bruno Melício." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="Blog | Bruno Melício" />
+  <meta property="og:description" content="Articles on AI, machine learning, and building practical AI applications." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/navigation.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/pages/blog.css" />
+</head>
+<body>
+
+  <main class="has-hero">
+
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <span class="overline hero-animate">Articles & Insights</span>
+        <h1 class="page-hero-title hero-animate">Blog</h1>
+        <p class="page-hero-subtitle hero-animate">Thoughts on AI, machine learning, and building practical applications.</p>
+      </div>
+    </section>
+
+    <!-- Posts -->
+    <section class="blog-posts-section bg-secondary">
+      <div class="container container--narrow">
+        <div id="blog-posts-grid" class="blog-posts-grid">
+          <!-- Posts loaded from posts.json -->
+        </div>
+        <p id="blog-no-posts" class="blog-no-posts" style="display:none;">No posts yet. Check back soon!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (async function loadBlogPosts() {
+      try {
+        const res = await fetch('blog/posts.json');
+        const posts = await res.json();
+        const grid = document.getElementById('blog-posts-grid');
+
+        if (!posts.length) {
+          document.getElementById('blog-no-posts').style.display = 'block';
+          return;
+        }
+
+        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        grid.innerHTML = posts.map(post => {
+          const date = new Date(post.date).toLocaleDateString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric'
+          });
+          const tags = post.tags.map(t => `<span class="badge">${t}</span>`).join('');
+
+          return `
+            <a href="blog/${post.slug}.html" class="blog-post-card card">
+              <div class="blog-post-card-meta">
+                <time datetime="${post.date}">${date}</time>
+                <span>${post.readTime}</span>
+              </div>
+              <h3 class="blog-post-card-title">${post.title}</h3>
+              <p class="blog-post-card-excerpt">${post.excerpt}</p>
+              <div class="blog-post-card-tags">${tags}</div>
+            </a>
+          `;
+        }).join('');
+
+      } catch (e) {
+        document.getElementById('blog-no-posts').style.display = 'block';
+      }
+    })();
+  </script>
+</body>
+</html>

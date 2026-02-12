@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started with the Gemini API | Blog | Bruno Melício</title>
+  <meta name="description" content="A hands-on guide to building your first AI app with Google's Gemini API." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="Getting Started with the Gemini API | Bruno Melício" />
+  <meta property="og:description" content="A hands-on guide to building your first AI app with Google's Gemini API." />
+  <meta property="og:type" content="article" />
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
+  <link rel="stylesheet" href="../assets/css/navigation.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="stylesheet" href="../assets/css/pages/blog.css" />
+</head>
+<body>
+
+  <main>
+
+    <article class="blog-post-section">
+      <div class="container container--narrow">
+
+        <a href="../blog.html" class="blog-back-link">
+          <i class="fas fa-arrow-left"></i> Back to Blog
+        </a>
+
+        <header class="blog-post-header">
+          <div class="blog-post-meta">
+            <time datetime="2026-02-09">February 9, 2026</time>
+            <span class="blog-post-read-time">8 min read</span>
+          </div>
+          <h1>Getting Started with the Gemini API: A Practical Guide</h1>
+          <div class="blog-post-tags">
+            <span class="badge">Gemini</span>
+            <span class="badge">API</span>
+            <span class="badge badge--muted">Tutorial</span>
+          </div>
+        </header>
+
+        <div class="blog-post-body">
+
+          <p>If you've been wanting to integrate AI into your projects but didn't know where to start, Google's Gemini API is one of the most accessible and powerful options available today. In this guide, I'll walk you through everything from getting your API key to deploying a working app.</p>
+
+          <h2>Why Gemini?</h2>
+
+          <p>Gemini stands out for several reasons. It's multimodal — meaning it can process text, images, audio, and video in a single request. The free tier is generous enough for personal projects and prototyping. And the Python SDK (<code>google-genai</code>) makes integration straightforward.</p>
+
+          <p>Whether you want to build a chatbot, analyze images, generate content, or create something entirely new, Gemini gives you the building blocks without requiring a PhD in machine learning.</p>
+
+          <h2>Step 1: Get Your API Key</h2>
+
+          <p>Head to <strong>Google AI Studio</strong> and sign in with your Google account. Navigate to the API keys section and create a new key. That's it — no billing setup required for the free tier.</p>
+
+          <p>Store your key securely. Never commit it to version control. Use environment variables or a secrets manager:</p>
+
+          <pre><code>export GOOGLE_API_KEY="your-key-here"</code></pre>
+
+          <h2>Step 2: Install the SDK</h2>
+
+          <p>The official Python SDK is lightweight and well-documented:</p>
+
+          <pre><code>pip install google-genai</code></pre>
+
+          <h2>Step 3: Your First API Call</h2>
+
+          <p>Here's the simplest possible example — a text generation request:</p>
+
+          <pre><code>from google import genai
+
+client = genai.Client(api_key="your-key")
+
+response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    contents="Explain quantum computing in simple terms."
+)
+
+print(response.text)</code></pre>
+
+          <p>That's all it takes. The response comes back as structured text that you can use however you need.</p>
+
+          <h2>Step 4: Working with Images</h2>
+
+          <p>Gemini's vision capabilities are where things get really interesting. You can send an image alongside a text prompt and get intelligent analysis back:</p>
+
+          <pre><code>from google.genai import types
+from PIL import Image
+import io
+
+# Load your image
+image = Image.open("food.jpg")
+img_buffer = io.BytesIO()
+image.save(img_buffer, format="JPEG")
+
+image_part = types.Part.from_bytes(
+    data=img_buffer.getvalue(),
+    mime_type="image/jpeg"
+)
+
+response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    contents=["What food is in this image?", image_part]
+)
+
+print(response.text)</code></pre>
+
+          <p>This is exactly the pattern I used to build the <a href="../ai-lab-food.html">AI Food Scanner</a> in my AI Lab — upload a photo, get nutritional estimates back.</p>
+
+          <h2>Step 5: Building a UI with Gradio</h2>
+
+          <p>An API call in a terminal isn't very impressive to show others. Gradio lets you wrap your AI logic in a clean web interface with just a few lines of Python:</p>
+
+          <pre><code>import gradio as gr
+
+def ask_gemini(question):
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=question
+    )
+    return response.text
+
+demo = gr.Interface(fn=ask_gemini, inputs="text", outputs="markdown")
+demo.launch()</code></pre>
+
+          <p>Deploy this to <strong>Hugging Face Spaces</strong> for free hosting, and you have a live AI demo anyone can try.</p>
+
+          <h2>What's Next?</h2>
+
+          <p>Once you're comfortable with the basics, explore:</p>
+
+          <ul>
+            <li><strong>System prompts</strong> — give the model a persona or specific instructions</li>
+            <li><strong>Multi-turn conversations</strong> — build chatbots with memory</li>
+            <li><strong>Image generation</strong> — use models like Gemini 3 Pro Image for editing photos</li>
+            <li><strong>Streaming responses</strong> — for real-time output in chat interfaces</li>
+          </ul>
+
+          <p>The best way to learn is to build something. Pick a small project, keep it simple, and iterate. You'll be surprised how quickly you can create something useful.</p>
+
+        </div>
+
+      </div>
+    </article>
+
+  </main>
+
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
