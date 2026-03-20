@@ -85,6 +85,127 @@
   object-position: top center;
 }
 
+/* --- Social Proof Stats Bar --- */
+.home-stats {
+  padding: var(--space-3xl) 0;
+}
+
+.home-stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3xl);
+}
+
+.home-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.home-stat-number {
+  font-size: var(--text-h2);
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+.home-stat-label {
+  font-size: var(--text-caption);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* --- Three Paths --- */
+.home-paths {
+  padding: var(--space-section) 0;
+}
+
+.home-paths-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.home-path-card {
+  text-align: center;
+  padding: var(--space-2xl);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-path-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.home-path-card .card-icon {
+  margin-bottom: var(--space-lg);
+}
+
+.home-path-card h3 {
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.home-path-card p {
+  color: var(--text-secondary);
+  font-size: var(--text-small);
+  margin: 0;
+}
+
+/* --- Testimonials --- */
+.home-testimonials {
+  padding: var(--space-section) 0;
+}
+
+.home-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+/* Review card styles (shared with learn page) */
+.review-card {
+  padding: var(--space-2xl);
+}
+
+.review-stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: var(--space-md);
+  color: #f5a623;
+  font-size: 1rem;
+}
+
+.review-text {
+  font-size: var(--text-body);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: var(--space-lg);
+}
+
+.review-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.review-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: var(--text-small);
+}
+
+.review-course {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+}
+
 /* --- Responsive --- */
 @media (max-width: 1024px) {
   .hero-text {
@@ -126,5 +247,24 @@
   .hero-buttons .btn-outline {
     width: 100%;
     justify-content: center;
+  }
+
+  .home-stats-grid {
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: center;
+  }
+
+  .home-stat {
+    flex-direction: row;
+    gap: var(--space-sm);
+  }
+
+  .home-paths-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-testimonials-grid {
+    grid-template-columns: 1fr;
   }
 }
