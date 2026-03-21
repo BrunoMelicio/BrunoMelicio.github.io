@@ -22,7 +22,16 @@
   <link rel="stylesheet" href="assets/css/footer.css" />
   <link rel="stylesheet" href="assets/css/pages/courses.css" />
 </head>
-<body>
+<body class="theme-light glass-theme">
+
+  <!-- Looping Video Background -->
+  <div class="video-background-container">
+    <div class="video-overlay"></div>
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="assets/videos/abstract-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+
 
   <main class="has-hero">
 
@@ -36,14 +45,14 @@
     </section>
 
     <!-- Active Course -->
-    <section id="courses" class="learn-section bg-secondary">
+    <section id="courses" class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Current</span>
           <h2 class="section-title">Active Courses</h2>
         </div>
 
-        <article class="card card-course animate-on-scroll fade-up stagger-1">
+        <article class="card card-course animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
           <div class="course-header">
             <div class="card-icon"><i class="fas fa-brain"></i></div>
             <div>
@@ -83,14 +92,14 @@
     </section>
 
     <!-- Private Tutoring -->
-    <section class="learn-section bg-primary">
+    <section class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">1-on-1</span>
           <h2 class="section-title">Private Tutoring</h2>
         </div>
 
-        <article class="card card-course animate-on-scroll fade-up stagger-1">
+        <article class="card card-course animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
           <div class="course-header">
             <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
             <div>
@@ -129,14 +138,14 @@
     </section>
 
     <!-- AI with Bruno -->
-    <section class="learn-section bg-secondary">
+    <section class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">YouTube</span>
           <h2 class="section-title">AI with Bruno</h2>
         </div>
 
-        <article class="card card-course card-muted animate-on-scroll fade-up stagger-1">
+        <article class="card card-course card-muted animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
           <div class="course-header">
             <div class="card-icon"><i class="fab fa-youtube"></i></div>
             <div>
@@ -173,24 +182,24 @@
     </section>
 
     <!-- Teaching Philosophy -->
-    <section class="learn-section bg-secondary">
+    <section class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Approach</span>
           <h2 class="section-title">Teaching Philosophy</h2>
         </div>
         <div class="philosophy-grid">
-          <div class="card philosophy-card animate-on-scroll fade-up stagger-1">
+          <div class="card philosophy-card animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
             <h3>Hands-On Learning</h3>
             <p>Theory paired with practical exercises using real datasets, ensuring students can apply concepts immediately.</p>
           </div>
-          <div class="card philosophy-card animate-on-scroll fade-up stagger-2">
+          <div class="card philosophy-card animate-on-scroll fade-up stagger-2 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
             <h3>Ethics First</h3>
             <p>Every course emphasizes ethical and societal considerations, preparing responsible AI professionals.</p>
           </div>
-          <div class="card philosophy-card animate-on-scroll fade-up stagger-3">
+          <div class="card philosophy-card animate-on-scroll fade-up stagger-3 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
             <h3>Research-Driven</h3>
             <p>Course content reflects the latest research, keeping students at the forefront of AI developments.</p>
@@ -200,7 +209,7 @@
     </section>
 
     <!-- Student Reviews -->
-    <section id="reviews" class="learn-section bg-primary">
+    <section id="reviews" class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Feedback</span>
@@ -208,7 +217,7 @@
         </div>
 
         <div class="reviews-list" id="reviewsList">
-          <div class="card review-card animate-on-scroll fade-up stagger-1">
+          <div class="card review-card animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
             <div class="review-stars">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
@@ -219,7 +228,7 @@
             </div>
           </div>
 
-          <div class="card review-card animate-on-scroll fade-up stagger-2">
+          <div class="card review-card animate-on-scroll fade-up stagger-2 glass-panel glass-hover">
             <div class="review-stars">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
@@ -230,7 +239,7 @@
             </div>
           </div>
 
-          <div class="card review-card animate-on-scroll fade-up stagger-3">
+          <div class="card review-card animate-on-scroll fade-up stagger-3 glass-panel glass-hover">
             <div class="review-stars">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
             </div>
@@ -245,7 +254,7 @@
         <!-- Submit Review Form -->
         <div class="review-form-wrapper animate-on-scroll fade-up">
           <h3 class="review-form-title">Leave a Review</h3>
-          <form id="reviewForm" class="review-form" action="https://formsubmit.co/brunomelicio.ai@gmail.com" method="POST">
+          <form id="reviewForm" class="review-form" action="https://formsubmit.co/7023869b5c2ad23d444cf4b6e23ea329" method="POST">
             <input type="hidden" name="_subject" value="New Course Review" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="text" name="_honey" style="display:none" />
@@ -290,7 +299,7 @@
     <!-- CTA -->
     <section class="section-cta">
       <div class="container text-center">
-        <div class="cta-content animate-on-scroll scale-in">
+        <div class="cta-content animate-on-scroll scale-in card glass-panel glass-hover">
           <h2 class="section-title">Interested in Private Tutoring?</h2>
           <p class="section-subtitle" style="margin: 0 auto var(--space-2xl);">Personalized 1-on-1 AI and deep learning instruction tailored to your learning goals.</p>
           <a href="services.html#contact" class="btn-primary">
@@ -335,6 +344,11 @@
       });
 
       function renderSavedReviews() {
+        // Clear old test review caching for the user
+        if (localStorage.getItem('brunoReviews')) {
+            const hasTest = localStorage.getItem('brunoReviews').toLowerCase().includes('test');
+            if (hasTest) localStorage.removeItem('brunoReviews');
+        }
         var saved = JSON.parse(localStorage.getItem('brunoReviews') || '[]');
         var list = document.getElementById('reviewsList');
         saved.forEach(function(r) {

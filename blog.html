@@ -22,7 +22,16 @@
   <link rel="stylesheet" href="assets/css/footer.css" />
   <link rel="stylesheet" href="assets/css/pages/blog.css" />
 </head>
-<body>
+<body class="theme-light glass-theme">
+
+  <!-- Looping Video Background -->
+  <div class="video-background-container">
+    <div class="video-overlay"></div>
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="assets/videos/abstract-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+
 
   <main class="has-hero">
 
@@ -36,7 +45,7 @@
     </section>
 
     <!-- Posts -->
-    <section class="blog-posts-section bg-secondary">
+    <section class="blog-posts-section transparent-section">
       <div class="container container--narrow">
         <div id="blog-posts-grid" class="blog-posts-grid">
           <!-- Posts loaded from posts.json -->
@@ -70,7 +79,7 @@
           const tags = post.tags.map(t => `<span class="badge">${t}</span>`).join('');
 
           return `
-            <a href="blog/${post.slug}.html" class="blog-post-card card">
+            <a href="blog/${post.slug}.html" class="blog-post-card card glass-panel glass-hover">
               <div class="blog-post-card-meta">
                 <time datetime="${post.date}">${date}</time>
                 <span>${post.readTime}</span>

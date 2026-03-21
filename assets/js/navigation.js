@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
       menuToggle.addEventListener('click', function () {
         this.classList.toggle('active');
         navMenu.classList.toggle('active');
+        document.body.classList.toggle('no-scroll');
       });
 
       // Close on link click
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
           if (window.innerWidth <= 768) {
             menuToggle.classList.remove('active');
             navMenu.classList.remove('active');
+            document.body.classList.remove('no-scroll');
           }
         });
       });
@@ -62,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
           !e.target.closest('.menu-toggle')) {
           menuToggle.classList.remove('active');
           navMenu.classList.remove('active');
+          document.body.classList.remove('no-scroll');
         }
       });
     }

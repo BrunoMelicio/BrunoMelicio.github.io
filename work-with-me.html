@@ -22,7 +22,16 @@
   <link rel="stylesheet" href="assets/css/footer.css" />
   <link rel="stylesheet" href="assets/css/pages/work-with-me.css" />
 </head>
-<body>
+<body class="theme-light glass-theme">
+
+  <!-- Looping Video Background -->
+  <div class="video-background-container">
+    <div class="video-overlay"></div>
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="assets/videos/abstract-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+
 
   <main class="has-hero">
 
@@ -36,7 +45,7 @@
     </section>
 
     <!-- Professional Services -->
-    <section class="bg-secondary" style="padding: var(--space-section) 0;">
+    <section class="transparent-section" style="padding: var(--space-section) 0;">
       <div class="container">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Services</span>
@@ -46,7 +55,7 @@
         <div class="services-full-grid">
 
           <!-- Workshops -->
-          <article class="card card-service animate-on-scroll fade-up stagger-1">
+          <article class="card card-service animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-users-cog"></i></div>
             <div>
               <h3 class="card-title">Workshops & Corporate Training</h3>
@@ -61,7 +70,7 @@
           </article>
 
           <!-- Seminars -->
-          <article class="card card-service animate-on-scroll fade-up stagger-2">
+          <article class="card card-service animate-on-scroll fade-up stagger-2 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
             <div>
               <h3 class="card-title">Seminars & Guest Lectures</h3>
@@ -76,7 +85,7 @@
           </article>
 
           <!-- Keynote -->
-          <article class="card card-service animate-on-scroll fade-up stagger-3">
+          <article class="card card-service animate-on-scroll fade-up stagger-3 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-microphone-alt"></i></div>
             <div>
               <h3 class="card-title">Keynote Speaking</h3>
@@ -91,7 +100,7 @@
           </article>
 
           <!-- Private Tutoring -->
-          <article class="card card-service animate-on-scroll fade-up stagger-4">
+          <article class="card card-service animate-on-scroll fade-up stagger-4 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
             <div>
               <h3 class="card-title">Private Tutoring</h3>
@@ -110,7 +119,7 @@
     </section>
 
     <!-- AI Content Creation -->
-    <section id="ai-content" class="bg-primary" style="padding: var(--space-section) 0;">
+    <section id="ai-content" class="transparent-section" style="padding: var(--space-section) 0;">
       <div class="container">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Creative Services</span>
@@ -120,7 +129,7 @@
         <div class="ai-content-services-grid">
 
           <!-- Custom AI Content -->
-          <article class="card card-service animate-on-scroll fade-up stagger-1">
+          <article class="card card-service animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-palette"></i></div>
             <div>
               <h3 class="card-title">Custom AI Videos & Images</h3>
@@ -136,7 +145,7 @@
           </article>
 
           <!-- AI Masterclass -->
-          <article class="card card-service animate-on-scroll fade-up stagger-2">
+          <article class="card card-service animate-on-scroll fade-up stagger-2 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
             <div>
               <h3 class="card-title">AI Masterclass</h3>
@@ -152,7 +161,7 @@
           </article>
 
           <!-- Brand Collaborations -->
-          <article class="card card-service animate-on-scroll fade-up stagger-3">
+          <article class="card card-service animate-on-scroll fade-up stagger-3 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-handshake"></i></div>
             <div>
               <h3 class="card-title">Brand Collaborations</h3>
@@ -172,14 +181,14 @@
     </section>
 
     <!-- How It Works -->
-    <section class="bg-secondary" style="padding: var(--space-section) 0;">
+    <section class="transparent-section" style="padding: var(--space-section) 0;">
       <div class="container">
         <div class="section-label text-center animate-on-scroll fade-up">
           <span class="overline">Process</span>
           <h2 class="section-title">How It Works</h2>
         </div>
 
-        <div class="ai-content-steps">
+        <div class="ai-content-steps card glass-panel glass-hover" style="padding: var(--space-4xl) var(--space-xl); max-width: 1000px; margin: 0 auto; display: flex; gap: var(--space-xl); justify-content: space-between;">
           <div class="ai-content-step animate-on-scroll fade-up stagger-1">
             <div class="ai-content-step-number">1</div>
             <h3 class="ai-content-step-title">Reach Out</h3>
@@ -200,7 +209,7 @@
     </section>
 
     <!-- Portfolio Teaser -->
-    <section class="bg-primary" style="padding: var(--space-section) 0;">
+    <section class="transparent-section" style="padding: var(--space-section) 0;">
       <div class="container">
         <div class="section-label text-center animate-on-scroll fade-up">
           <span class="overline">My Work</span>
@@ -223,7 +232,7 @@
     </section>
 
     <!-- Contact Form -->
-    <section id="contact" class="bg-secondary" style="padding: var(--space-section) 0;">
+    <section id="contact" class="transparent-section" style="padding: var(--space-section) 0;">
       <div class="container container--narrow">
         <div class="section-label text-center animate-on-scroll fade-up">
           <span class="overline">Contact</span>
@@ -231,7 +240,7 @@
           <p class="section-subtitle">I'm always interested in discussing collaborations, speaking engagements, or potential projects.</p>
         </div>
 
-        <form id="contactForm" class="contact-form animate-on-scroll fade-up" action="https://formsubmit.co/brunomelicio.ai@gmail.com" method="POST">
+        <form id="contactForm" class="contact-form animate-on-scroll fade-up card glass-panel glass-hover" action="https://formsubmit.co/7023869b5c2ad23d444cf4b6e23ea329" method="POST">
           <input type="hidden" name="_subject" value="New Inquiry from Website" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="text" name="_honey" style="display:none" />
@@ -288,8 +297,8 @@
           <div id="contactStatus" class="form-status" style="display:none;"></div>
         </form>
 
-        <div class="contact-info animate-on-scroll fade-up">
-          <h3 class="contact-info-title">Or reach out directly</h3>
+        <div class="contact-info animate-on-scroll fade-up card glass-panel glass-hover">
+          <h3 class="contact-info-title card glass-panel glass-hover">Or reach out directly</h3>
           <div class="contact-grid">
             <div class="contact-method">
               <i class="fas fa-envelope"></i>
@@ -326,9 +335,9 @@
     </section>
 
     <!-- Instagram CTA -->
-    <section class="ai-content-instagram bg-primary">
+    <section class="ai-content-instagram transparent-section">
       <div class="container">
-        <div class="ai-content-instagram-inner animate-on-scroll fade-up">
+        <div class="ai-content-instagram-inner animate-on-scroll fade-up card glass-panel glass-hover">
           <div class="ai-content-instagram-icon">
             <i class="fab fa-instagram"></i>
           </div>

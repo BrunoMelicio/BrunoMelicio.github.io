@@ -22,7 +22,16 @@
   <link rel="stylesheet" href="assets/css/footer.css" />
   <link rel="stylesheet" href="assets/css/pages/learn.css" />
 </head>
-<body>
+<body class="theme-light glass-theme">
+
+  <!-- Looping Video Background -->
+  <div class="video-background-container">
+    <div class="video-overlay"></div>
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="assets/videos/abstract-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+
 
   <main class="has-hero">
 
@@ -36,14 +45,14 @@
     </section>
 
     <!-- Active Course -->
-    <section id="courses" class="learn-section bg-secondary">
+    <section id="courses" class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Current</span>
           <h2 class="section-title">Active Courses</h2>
         </div>
 
-        <article class="card card-course animate-on-scroll fade-up stagger-1">
+        <article class="card card-course animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
           <div class="course-header">
             <div class="card-icon"><i class="fas fa-brain"></i></div>
             <div>
@@ -83,14 +92,14 @@
     </section>
 
     <!-- Private Tutoring -->
-    <section class="learn-section bg-primary">
+    <section class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">1-on-1</span>
           <h2 class="section-title">Private Tutoring</h2>
         </div>
 
-        <article class="card card-course animate-on-scroll fade-up stagger-1">
+        <article class="card card-course animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
           <div class="course-header">
             <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
             <div>
@@ -129,14 +138,14 @@
     </section>
 
     <!-- AI with Bruno -->
-    <section class="learn-section bg-secondary">
+    <section class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">YouTube</span>
           <h2 class="section-title">AI with Bruno</h2>
         </div>
 
-        <article class="card card-course card-muted animate-on-scroll fade-up stagger-1">
+        <article class="card card-course card-muted animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
           <div class="course-header">
             <div class="card-icon"><i class="fab fa-youtube"></i></div>
             <div>
@@ -173,7 +182,7 @@
     </section>
 
     <!-- Blog -->
-    <section id="blog" class="learn-section bg-primary">
+    <section id="blog" class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Articles</span>
@@ -187,7 +196,7 @@
     </section>
 
     <!-- Resources -->
-    <section id="resources" class="learn-section bg-secondary">
+    <section id="resources" class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Resources</span>
@@ -197,7 +206,7 @@
         <!-- Videos & Talks -->
         <h3 class="resources-subsection-title animate-on-scroll fade-up">Videos & Talks</h3>
         <div class="resources-list">
-          <a href="https://youtu.be/IsqRVK3UZPA?si=LgxjHxityK0fQi5G&t=2893" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up">
+          <a href="https://youtu.be/IsqRVK3UZPA?si=LgxjHxityK0fQi5G&t=2893" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fab fa-youtube"></i>
             </div>
@@ -208,7 +217,7 @@
             </div>
             <i class="fas fa-external-link-alt resource-link-icon"></i>
           </a>
-          <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up">
+          <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fab fa-youtube"></i>
             </div>
@@ -224,7 +233,7 @@
         <!-- Presentations -->
         <h3 class="resources-subsection-title animate-on-scroll fade-up">Presentations</h3>
         <div class="resources-list">
-          <a href="#" class="resource-item card animate-on-scroll fade-up">
+          <a href="#" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fas fa-chalkboard-teacher"></i>
             </div>
@@ -235,7 +244,7 @@
             </div>
             <i class="fas fa-external-link-alt resource-link-icon"></i>
           </a>
-          <a href="#" class="resource-item card animate-on-scroll fade-up">
+          <a href="#" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fas fa-chalkboard-teacher"></i>
             </div>
@@ -251,7 +260,7 @@
         <!-- Course Materials -->
         <h3 class="resources-subsection-title animate-on-scroll fade-up">Course Materials</h3>
         <div class="resources-list">
-          <a href="#courses" class="resource-item card animate-on-scroll fade-up">
+          <a href="#courses" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fas fa-graduation-cap"></i>
             </div>
@@ -267,7 +276,7 @@
         <!-- Recommended -->
         <h3 class="resources-subsection-title animate-on-scroll fade-up">Recommended Reading</h3>
         <div class="resources-list">
-          <a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up">
+          <a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fab fa-youtube"></i>
             </div>
@@ -278,7 +287,7 @@
             </div>
             <i class="fas fa-external-link-alt resource-link-icon"></i>
           </a>
-          <a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up">
+          <a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fas fa-book"></i>
             </div>
@@ -289,7 +298,7 @@
             </div>
             <i class="fas fa-external-link-alt resource-link-icon"></i>
           </a>
-          <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up">
+          <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fas fa-file-pdf"></i>
             </div>
@@ -305,24 +314,24 @@
     </section>
 
     <!-- Teaching Philosophy -->
-    <section class="learn-section bg-primary">
+    <section class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Approach</span>
           <h2 class="section-title">Teaching Philosophy</h2>
         </div>
         <div class="philosophy-grid">
-          <div class="card philosophy-card animate-on-scroll fade-up stagger-1">
+          <div class="card philosophy-card animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
             <h3>Hands-On Learning</h3>
             <p>Theory paired with practical exercises using real datasets, ensuring students can apply concepts immediately.</p>
           </div>
-          <div class="card philosophy-card animate-on-scroll fade-up stagger-2">
+          <div class="card philosophy-card animate-on-scroll fade-up stagger-2 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
             <h3>Ethics First</h3>
             <p>Every course emphasizes ethical and societal considerations, preparing responsible AI professionals.</p>
           </div>
-          <div class="card philosophy-card animate-on-scroll fade-up stagger-3">
+          <div class="card philosophy-card animate-on-scroll fade-up stagger-3 glass-panel glass-hover">
             <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
             <h3>Research-Driven</h3>
             <p>Course content reflects the latest research, keeping students at the forefront of AI developments.</p>
@@ -332,7 +341,7 @@
     </section>
 
     <!-- Student Reviews -->
-    <section id="reviews" class="learn-section bg-secondary">
+    <section id="reviews" class="learn-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Feedback</span>
@@ -340,7 +349,7 @@
         </div>
 
         <div class="reviews-list" id="reviewsList">
-          <div class="card review-card animate-on-scroll fade-up stagger-1">
+          <div class="card review-card animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
             <div class="review-stars">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
@@ -351,7 +360,7 @@
             </div>
           </div>
 
-          <div class="card review-card animate-on-scroll fade-up stagger-2">
+          <div class="card review-card animate-on-scroll fade-up stagger-2 glass-panel glass-hover">
             <div class="review-stars">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
@@ -362,7 +371,7 @@
             </div>
           </div>
 
-          <div class="card review-card animate-on-scroll fade-up stagger-3">
+          <div class="card review-card animate-on-scroll fade-up stagger-3 glass-panel glass-hover">
             <div class="review-stars">
               <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
             </div>
@@ -377,7 +386,7 @@
         <!-- Submit Review Form -->
         <div class="review-form-wrapper animate-on-scroll fade-up">
           <h3 class="review-form-title">Leave a Review</h3>
-          <form id="reviewForm" class="review-form" action="https://formsubmit.co/brunomelicio.ai@gmail.com" method="POST">
+          <form id="reviewForm" class="review-form" action="https://formsubmit.co/7023869b5c2ad23d444cf4b6e23ea329" method="POST">
             <input type="hidden" name="_subject" value="New Course Review" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="text" name="_honey" style="display:none" />
@@ -422,7 +431,7 @@
     <!-- CTA -->
     <section class="section-cta">
       <div class="container text-center">
-        <div class="cta-content animate-on-scroll scale-in">
+        <div class="cta-content animate-on-scroll scale-in card glass-panel glass-hover">
           <h2 class="section-title">Interested in Private Tutoring?</h2>
           <p class="section-subtitle" style="margin: 0 auto var(--space-2xl);">Personalized 1-on-1 AI and deep learning instruction tailored to your learning goals.</p>
           <a href="services.html#contact" class="btn-primary">
@@ -458,7 +467,7 @@
           const tags = post.tags.map(t => `<span class="badge">${t}</span>`).join('');
 
           return `
-            <a href="blog/${post.slug}.html" class="blog-post-card card">
+            <a href="blog/${post.slug}.html" class="blog-post-card card glass-panel glass-hover">
               <div class="blog-post-card-meta">
                 <time datetime="${post.date}">${date}</time>
                 <span>${post.readTime}</span>

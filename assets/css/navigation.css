@@ -10,6 +10,10 @@
   width: 100%;
   height: var(--nav-height);
   z-index: 1000;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   transition: background var(--transition-base), box-shadow var(--transition-base);
 }
 
@@ -58,8 +62,8 @@
 .nav-list a {
   color: var(--text-primary);
   text-decoration: none;
-  font-size: var(--text-caption);
-  font-weight: 500;
+  font-size: 0.9rem; /* Increased size for readability */
+  font-weight: 700; /* Bolded for massive readability */
   text-transform: uppercase;
   letter-spacing: 0.12em;
   padding: var(--space-sm) 0;
@@ -173,4 +177,9 @@
   .menu-toggle.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.no-scroll {
+  overflow: hidden;
 }

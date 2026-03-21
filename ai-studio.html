@@ -21,7 +21,16 @@
   <link rel="stylesheet" href="assets/css/footer.css" />
   <link rel="stylesheet" href="assets/css/pages/ai-studio.css" />
 </head>
-<body>
+<body class="theme-light glass-theme">
+
+  <!-- Looping Video Background -->
+  <div class="video-background-container">
+    <div class="video-overlay"></div>
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="assets/videos/abstract-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+
 
   <main class="has-hero">
 
@@ -35,7 +44,7 @@
     </section>
 
     <!-- Featured -->
-    <section class="studio-featured bg-secondary">
+    <section class="studio-featured transparent-section">
       <div class="container">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Highlights</span>
@@ -80,7 +89,7 @@
     </section>
 
     <!-- Collaborations & Products -->
-    <section class="studio-collabs bg-primary">
+    <section class="studio-collabs transparent-section">
       <div class="container">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Client Work</span>
@@ -90,7 +99,7 @@
         <div class="studio-collabs-grid" data-gallery="collabs">
 
           <!-- Collab 1 -->
-          <div class="studio-collab-card animate-on-scroll fade-up stagger-1" data-type="image" data-src="assets/images/ai-studio/collabs/collab-1.jpg">
+          <div class="studio-collab-card animate-on-scroll fade-up stagger-1 glass-panel glass-hover" data-type="image" data-src="assets/images/ai-studio/collabs/collab-1.jpg">
             <div class="studio-placeholder"><i class="fas fa-handshake"></i></div>
             <!-- Replace placeholder with: <img src="assets/images/ai-studio/collabs/collab-1.jpg" alt="Collaboration" loading="lazy" /> -->
             <div class="studio-collab-overlay">
@@ -101,7 +110,7 @@
           </div>
 
           <!-- Collab 2 -->
-          <div class="studio-collab-card animate-on-scroll fade-up stagger-2" data-type="image" data-src="assets/images/ai-studio/collabs/collab-2.jpg">
+          <div class="studio-collab-card animate-on-scroll fade-up stagger-2 glass-panel glass-hover" data-type="image" data-src="assets/images/ai-studio/collabs/collab-2.jpg">
             <div class="studio-placeholder"><i class="fas fa-handshake"></i></div>
             <div class="studio-collab-overlay">
               <span class="studio-badge"><i class="fas fa-image"></i> Image</span>
@@ -111,7 +120,7 @@
           </div>
 
           <!-- Collab 3 -->
-          <div class="studio-collab-card animate-on-scroll fade-up stagger-3" data-type="image" data-src="assets/images/ai-studio/collabs/collab-3.jpg">
+          <div class="studio-collab-card animate-on-scroll fade-up stagger-3 glass-panel glass-hover" data-type="image" data-src="assets/images/ai-studio/collabs/collab-3.jpg">
             <div class="studio-placeholder"><i class="fas fa-handshake"></i></div>
             <div class="studio-collab-overlay">
               <span class="studio-badge"><i class="fas fa-image"></i> Image</span>
@@ -125,7 +134,7 @@
     </section>
 
     <!-- Full Gallery -->
-    <section class="studio-gallery bg-secondary">
+    <section class="studio-gallery transparent-section">
       <div class="container">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Browse</span>
@@ -205,7 +214,7 @@
     </section>
 
     <!-- Instagram CTA -->
-    <section class="studio-instagram bg-primary">
+    <section class="studio-instagram transparent-section">
       <div class="container">
         <div class="studio-instagram-inner animate-on-scroll fade-up">
           <div class="studio-instagram-icon">

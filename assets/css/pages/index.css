@@ -1,127 +1,114 @@
 /* ============================================
-   HOMEPAGE
-   Full-screen split hero (text + photo)
+   APPLE LIQUID GLASS REDESIGN - HOMEPAGE
+   BRAND COLORS THEME
+   Primary: Deep navy — #0F172A
+   Secondary: Slate blue — #334155
+   Accent: Teal — #14B8A6
+   Light background: Off-white — #F8FAFC
+   Neutral text: Charcoal — #111827
    ============================================ */
 
-/* --- Hero --- */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: stretch;
-  position: relative;
-  background: var(--gradient-hero);
-  overflow: hidden;
+
+/* Light Theme Base */
+body.glass-theme {
+  color: #111827;
+  /* Charcoal */
+  background: transparent;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 30% 50%, rgba(30, 58, 95, 0.04) 0%, transparent 60%);
-  pointer-events: none;
+
+/* Typography Enhancements */
+.display-title {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, #0F172A 0%, #334155 100%);
+  /* Deep Navy to Slate Blue */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--space-xs);
+  line-height: 1.1;
 }
 
-.hero-split {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: stretch;
-  width: 100%;
-}
-
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--space-lg);
-  padding: var(--nav-height) var(--space-2xl) var(--space-xl);
-  padding-left: max((100vw - var(--max-width)) / 2 + var(--space-xl), var(--space-xl));
-}
-
-.hero-name {
-  font-size: var(--text-hero);
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
-  color: var(--text-primary);
-  margin: 0;
-}
-
-.hero-role {
-  font-size: var(--text-h2);
-  font-weight: 400;
-  color: var(--text-secondary);
-  margin: 0;
+.subtitle-text {
+  font-size: var(--text-h3);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #334155;
+  /* Slate blue */
+  margin-bottom: var(--space-md);
+  text-transform: uppercase;
 }
 
 .hero-tagline {
   font-size: var(--text-body);
-  color: var(--text-muted);
-  max-width: 450px;
-  margin: 0;
+  color: #111827;
+  /* Charcoal */
+  line-height: 1.6;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: var(--space-md);
-  margin-top: var(--space-sm);
+
+/* Hero Section Specifics */
+.hero {
+  min-height: 100vh;
+  padding: calc(var(--nav-height) + var(--space-2xl)) var(--space-md) var(--space-2xl);
 }
 
-.hero-text .social-links {
-  margin-top: var(--space-sm);
+.hero-glass-card {
+  padding: var(--space-3xl) var(--space-xl);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Hero image - fills entire right half */
-.hero-image {
-  position: relative;
+.hero-image-profile {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
   overflow: hidden;
+  margin: 0 auto var(--space-lg);
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
 }
 
-.hero-image img {
+.hero-image-profile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
 }
 
-/* --- Social Proof Stats Bar --- */
-.home-stats {
-  padding: var(--space-3xl) 0;
-}
 
-.home-stats-grid {
+/* Stats Section */
+.home-stats-grid.glass-panel {
   display: flex;
-  justify-content: center;
-  gap: var(--space-3xl);
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: var(--space-2xl) var(--space-xl);
+  gap: var(--space-xl);
 }
 
 .home-stat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.5rem;
 }
 
 .home-stat-number {
-  font-size: var(--text-h2);
+  font-size: var(--text-h1);
   font-weight: 800;
-  color: var(--accent-primary);
 }
 
 .home-stat-label {
   font-size: var(--text-caption);
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  color: #334155;
 }
 
-/* --- Three Paths --- */
-.home-paths {
-  padding: var(--space-section) 0;
-}
-
+/* Paths Grid */
 .home-paths-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -129,142 +116,130 @@
 }
 
 .home-path-card {
+  padding: var(--space-2xl) var(--space-lg);
   text-align: center;
-  padding: var(--space-2xl);
   text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.home-path-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-}
-
-.home-path-card .card-icon {
+.card-icon.liquid-icon {
+  font-size: 2.5rem;
   margin-bottom: var(--space-lg);
+  background: rgba(255, 255, 255, 0.4);
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(51, 65, 85, 0.2);
+  color: #334155;
+  /* Slate Blue icon */
+  box-shadow: 0 10px 30px rgba(51, 65, 85, 0.1);
 }
 
 .home-path-card h3 {
   font-size: var(--text-h3);
   font-weight: 700;
-  color: var(--text-primary);
+  color: #334155;
   margin-bottom: var(--space-sm);
 }
 
 .home-path-card p {
-  color: var(--text-secondary);
-  font-size: var(--text-small);
+  color: #111827;
+  /* Charcoal */
+  font-size: var(--text-body);
   margin: 0;
+  line-height: 1.6;
 }
 
-/* --- Testimonials --- */
-.home-testimonials {
-  padding: var(--space-section) 0;
-}
-
+/* Testimonials */
 .home-testimonials-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-xl);
 }
 
-/* Review card styles (shared with learn page) */
 .review-card {
   padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .review-stars {
+  color: #FFD700;
+  /* Yellow stars */
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
   display: flex;
   gap: 0.25rem;
-  margin-bottom: var(--space-md);
-  color: #f5a623;
-  font-size: 1rem;
 }
 
 .review-text {
   font-size: var(--text-body);
   line-height: 1.7;
-  color: var(--text-secondary);
+  color: #111827;
   font-style: italic;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  flex-grow: 1;
 }
 
 .review-author {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  padding-top: var(--space-md);
 }
 
 .review-name {
   font-weight: 600;
-  color: var(--text-primary);
+  color: #0F172A;
   font-size: var(--text-small);
 }
 
 .review-course {
   font-size: var(--text-caption);
-  color: var(--text-muted);
+  color: #334155;
 }
 
-/* --- Responsive --- */
+/* Responsive */
 @media (max-width: 1024px) {
-  .hero-text {
-    padding-right: var(--space-xl);
+  .home-paths-grid {
+    gap: var(--space-lg);
+  }
+
+  .display-title {
+    font-size: 4rem;
   }
 }
 
 @media (max-width: 768px) {
-  .hero {
-    align-items: center;
+  .hero-glass-card {
+    padding: var(--space-2xl) var(--space-md);
   }
 
-  .hero-split {
+  .home-paths-grid,
+  .home-testimonials-grid {
     grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-image {
-    order: -1;
-    max-height: 50vh;
-  }
-
-  .hero-text {
-    align-items: center;
-    padding: var(--space-xl) var(--space-md) var(--space-2xl);
-  }
-
-  .hero-tagline {
-    max-width: 100%;
   }
 
   .hero-buttons {
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
   }
 
-  .hero-buttons .btn-primary,
-  .hero-buttons .btn-outline {
+  .glass-btn,
+  .glass-btn-outline {
     width: 100%;
     justify-content: center;
   }
 
-  .home-stats-grid {
-    flex-direction: column;
-    gap: var(--space-lg);
-    align-items: center;
-  }
-
   .home-stat {
-    flex-direction: row;
-    gap: var(--space-sm);
-  }
-
-  .home-paths-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-testimonials-grid {
-    grid-template-columns: 1fr;
+    width: 45%;
+    margin-bottom: var(--space-md);
   }
 }

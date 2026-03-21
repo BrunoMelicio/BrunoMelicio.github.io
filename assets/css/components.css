@@ -419,10 +419,29 @@
   pointer-events: none;
 }
 
-.page-hero-inner {
+.page-hero-inner, .about-hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 700px;
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-2xl);
+  
+  /* Natively making all top headers floating glass cards */
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+  border-radius: 36px !important;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.5s ease, background 0.5s ease !important;
+}
+
+.page-hero-inner:hover, .about-hero-inner:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  background: rgba(255, 255, 255, 0.25) !important;
 }
 
 .page-hero-title {
@@ -500,4 +519,154 @@
   border-color: var(--accent-primary);
   background: var(--accent-glow);
   transform: translateY(-3px);
+}
+
+/* ============================================
+   GLASSMORPHISM BASE & VIDEO BACKGROUND
+   Moved from index.css for sitewide use
+   ============================================ */
+
+/* Video Background */
+.video-background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #F8FAFC, #e2e8f0, #f1f5f9, #F8FAFC);
+  background-size: 400% 400%;
+  animation: liquidGradient 15s ease infinite alternate;
+}
+
+@keyframes liquidGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.4) 0%, rgba(248, 250, 252, 0.8) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bg-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.35;
+}
+
+/* Light Theme Base */
+body.glass-theme {
+  color: #111827;
+  background: transparent;
+}
+.transparent-section {
+  background: transparent !important;
+  padding: var(--space-section) 0;
+}
+.pb-3xl { padding-bottom: var(--space-3xl); }
+.text-center { text-align: center; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.max-w-lg { max-width: 650px; }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+
+/* Liquid Glass Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+  border-radius: 28px !important;
+  position: relative;
+  overflow: hidden;
+}
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.glass-hover {
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.5s ease, background 0.5s ease;
+  will-change: transform, box-shadow;
+}
+.glass-hover:hover {
+  transform: translateY(-12px) scale(1.02) !important;
+  box-shadow: 0 40px 80px rgba(15, 23, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.liquid-text {  color: #334155; }
+.text-glow { color: #0F172A; text-shadow: none; }
+
+.hero-buttons { gap: var(--space-md); }
+.glass-btn {
+  background: #334155;
+  backdrop-filter: blur(10px);
+  border: 1px solid transparent;
+  color: #F8FAFC;
+  transition: all 0.3s ease;
+}
+.glass-btn:hover {
+  background: #1e293b;
+  color: #F8FAFC;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(51, 65, 85, 0.3);
+}
+.glass-btn-outline {
+  border: 1px solid #0F172A;
+  color: #0F172A;
+  transition: all 0.3s ease;
+}
+.glass-btn-outline:hover {
+  border-color: #334155;
+  color: #0F172A;
+  background: rgba(15, 23, 42, 0.05);
+  transform: translateY(-2px);
+}
+
+.glass-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  color: #334155;
+  font-size: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-icon:hover {
+  background: #fff;
+  border-color: #14B8A6;
+  color: #14B8A6;
+  transform: translateY(-4px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(20, 184, 166, 0.15);
+}
+
+/* Overriding legacy section backgrounds and SVG patterns to prioritize the global video */
+.section-cta, .page-hero, .about-hero {
+  background: transparent !important;
+}
+.section-cta::before, .page-hero::before, .about-hero::before {
+  display: none !important;
 }

@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bruno Melício | AI Researcher & Lecturer</title>
-  <meta name="description" content="Bruno Melício - AI Researcher and Lecturer specializing in early detection and diagnosis of neurodevelopmental disorders." />
+  <meta name="description"
+    content="Bruno Melício - AI Researcher and Lecturer specializing in early detection and diagnosis of neurodevelopmental disorders." />
   <meta name="theme-color" content="#ffffff" />
   <meta property="og:title" content="Bruno Melício | AI Researcher & Lecturer" />
-  <meta property="og:description" content="Specializing in AI for early detection and diagnosis of neurodevelopmental disorders." />
+  <meta property="og:description"
+    content="Specializing in AI for early detection and diagnosis of neurodevelopmental disorders." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/images/profile.jpeg" />
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
   <link rel="stylesheet" href="assets/css/base.css" />
@@ -23,55 +27,68 @@
   <link rel="stylesheet" href="assets/css/footer.css" />
   <link rel="stylesheet" href="assets/css/pages/index.css" />
 </head>
-<body>
+
+<body class="theme-light glass-theme">
+
+  <!-- Looping Video Background -->
+  <div class="video-background-container">
+    <div class="video-overlay"></div>
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="assets/videos/abstract-bg.mp4" type="video/mp4">
+    </video>
+  </div>
 
   <main class="has-hero">
-    <section class="hero">
-      <div class="hero-split">
-        <div class="hero-text">
-          <h1 class="hero-name hero-animate">Bruno<br/>Melício</h1>
-          <p class="hero-role hero-animate">AI Researcher & Lecturer</p>
-          <p class="hero-tagline hero-animate">Bridging AI research and real-world healthcare to improve the detection and diagnosis of neurodevelopmental disorders.</p>
-          <div class="hero-buttons hero-animate">
-            <a href="services.html" class="btn-primary">Explore Services</a>
-            <a href="courses.html" class="btn-outline">Start Learning</a>
+
+    <!-- Hero Redesign -->
+    <section class="hero flex-center">
+      <div class="container" style="width: 100%; position: relative; z-index: 5;">
+        <div class="hero-glass-card glass-panel glass-hover">
+          <div class="hero-content text-center hero-animate">
+            <div class="hero-image-profile animate-on-scroll fade-up">
+              <img src="assets/images/profile.jpeg" alt="Bruno Melício" />
+            </div>
+            <h1 class="hero-name display-title">Bruno Melício</h1>
+            <p class="hero-role subtitle-text">AI Researcher & Lecturer</p>
+            <p class="hero-tagline max-w-lg mx-auto">Bridging AI research and real-world healthcare to improve the
+              detection and diagnosis of neurodevelopmental disorders.</p>
+
+            <div class="hero-buttons flex-center mt-xl">
+              <a href="services.html" class="btn-primary glass-btn">Explore Services</a>
+              <a href="courses.html" class="btn-outline glass-btn-outline">Start Learning</a>
+            </div>
+
+            <div class="social-links flex-center mt-lg">
+              <a href="https://www.linkedin.com/in/brunomelicio/" class="glass-icon" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://scholar.google.com/citations?user=fRrxUhsAAAAJ" class="glass-icon" target="_blank"
+                rel="noopener noreferrer" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+              <a href="https://github.com/BrunoMelicio" class="glass-icon" target="_blank" rel="noopener noreferrer"
+                aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </div>
           </div>
-          <div class="social-links hero-animate">
-            <a href="https://www.linkedin.com/in/brunomelicio/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://scholar.google.com/citations?user=fRrxUhsAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-              <i class="ai ai-google-scholar"></i>
-            </a>
-            <a href="https://github.com/BrunoMelicio" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-        </div>
-        <div class="hero-image hero-animate">
-          <img src="assets/images/profile.jpeg" alt="Bruno Melício" />
         </div>
       </div>
     </section>
 
-    <!-- Social Proof Stats -->
-    <section class="home-stats bg-secondary">
-      <div class="container">
-        <div class="home-stats-grid animate-on-scroll fade-up">
-          <div class="home-stat">
-            <span class="home-stat-number">15+</span>
+    <!-- Social Proof Stats (Floating Glass) -->
+    <section class="home-stats transparent-section">
+      <div class="container" style="position: relative; z-index: 5;">
+        <div class="home-stats-grid glass-panel glass-hover">
+          <div class="home-stat animate-on-scroll fade-up">
+            <span class="home-stat-number liquid-text">15+</span>
             <span class="home-stat-label">Events & Talks</span>
           </div>
-          <div class="home-stat">
-            <span class="home-stat-number">5+</span>
+          <div class="home-stat animate-on-scroll fade-up">
+            <span class="home-stat-number liquid-text">5+</span>
             <span class="home-stat-label">Years Teaching</span>
           </div>
-          <div class="home-stat">
-            <span class="home-stat-number">6</span>
+          <div class="home-stat animate-on-scroll fade-up">
+            <span class="home-stat-number liquid-text">6</span>
             <span class="home-stat-label">Publications</span>
           </div>
-          <div class="home-stat">
-            <span class="home-stat-number">40+</span>
+          <div class="home-stat animate-on-scroll fade-up">
+            <span class="home-stat-number liquid-text">40+</span>
             <span class="home-stat-label">Citations</span>
           </div>
         </div>
@@ -79,25 +96,28 @@
     </section>
 
     <!-- Three Paths -->
-    <section class="home-paths bg-primary">
-      <div class="container">
+    <section class="home-paths transparent-section">
+      <div class="container" style="position: relative; z-index: 5;">
         <div class="section-label text-center animate-on-scroll fade-up">
-          <span class="overline">Explore</span>
-          <h2 class="section-title">What Can I Help You With?</h2>
+          <span class="overline"
+            style="margin-bottom: 0.5rem; display: block; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">Explore</span>
+          <h2 class="section-title text-glow">What Can I Help You With?</h2>
         </div>
         <div class="home-paths-grid">
-          <a href="services.html" class="card home-path-card animate-on-scroll fade-up stagger-1">
-            <div class="card-icon"><i class="fas fa-handshake"></i></div>
+          <a href="services.html"
+            class="card home-path-card glass-panel glass-hover animate-on-scroll fade-up stagger-1">
+            <div class="card-icon liquid-icon"><i class="fas fa-handshake"></i></div>
             <h3>Services</h3>
             <p>Workshops, Corporate Trainings, Talks, and AI content creation.</p>
           </a>
-          <a href="courses.html" class="card home-path-card animate-on-scroll fade-up stagger-2">
-            <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+          <a href="courses.html"
+            class="card home-path-card glass-panel glass-hover animate-on-scroll fade-up stagger-2">
+            <div class="card-icon liquid-icon"><i class="fas fa-graduation-cap"></i></div>
             <h3>Courses</h3>
             <p>University courses, private tutoring, and resources to master AI.</p>
           </a>
-          <a href="ai-lab.html" class="card home-path-card animate-on-scroll fade-up stagger-3">
-            <div class="card-icon"><i class="fas fa-flask"></i></div>
+          <a href="ai-lab.html" class="card home-path-card glass-panel glass-hover animate-on-scroll fade-up stagger-3">
+            <div class="card-icon liquid-icon"><i class="fas fa-flask"></i></div>
             <h3>AI Lab</h3>
             <p>Try interactive AI demos and explore my creative AI portfolio.</p>
           </a>
@@ -106,28 +126,35 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="home-testimonials bg-secondary">
-      <div class="container">
+    <section class="home-testimonials transparent-section pb-3xl">
+      <div class="container" style="position: relative; z-index: 5;">
         <div class="section-label text-center animate-on-scroll fade-up">
-          <span class="overline">Feedback</span>
-          <h2 class="section-title">What People Say</h2>
+          <span class="overline"
+            style="margin-bottom: 0.5rem; display: block; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));">Feedback</span>
+          <h2 class="section-title text-glow">What People Say</h2>
         </div>
         <div class="home-testimonials-grid">
-          <div class="card review-card animate-on-scroll fade-up stagger-1">
+          <div class="card review-card glass-panel glass-hover animate-on-scroll fade-up stagger-1">
             <div class="review-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
-            <p class="review-text">"Bruno's Deep Network Developments course was incredibly well-structured. The hands-on exercises with real datasets made the theory come alive. Highly recommended for anyone serious about deep learning."</p>
+            <p class="review-text">"Bruno's Deep Network Developments course was incredibly well-structured. The
+              hands-on exercises with real datasets made the theory come alive. Highly recommended for anyone serious
+              about deep learning."</p>
             <div class="review-author">
               <span class="review-name">Anonymous Student</span>
               <span class="review-course">Deep Network Developments, 2024</span>
             </div>
           </div>
-          <div class="card review-card animate-on-scroll fade-up stagger-2">
+          <div class="card review-card glass-panel glass-hover animate-on-scroll fade-up stagger-2">
             <div class="review-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
-            <p class="review-text">"The private tutoring sessions were exactly what I needed. Bruno adapted the content to my level and helped me build a solid foundation in AI. The project-based approach made learning engaging and practical."</p>
+            <p class="review-text">"The private tutoring sessions were exactly what I needed. Bruno adapted the content
+              to my level and helped me build a solid foundation in AI. The project-based approach made learning
+              engaging and practical."</p>
             <div class="review-author">
               <span class="review-name">Anonymous Student</span>
               <span class="review-course">Private Tutoring, 2024</span>
@@ -135,14 +162,22 @@
           </div>
         </div>
         <div class="text-center" style="margin-top: var(--space-2xl);">
-          <a href="courses.html#reviews" class="btn-outline">See All Reviews</a>
+          <a href="courses.html#reviews" class="btn-outline glass-btn-outline">See All Reviews</a>
         </div>
       </div>
     </section>
 
   </main>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const bgVideo = document.querySelector('.bg-video');
+      if (bgVideo) bgVideo.playbackRate = 0.5; // Smooth slow motion
+    });
+  </script>
+
   <script src="assets/js/navigation.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

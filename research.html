@@ -22,7 +22,16 @@
   <link rel="stylesheet" href="assets/css/footer.css" />
   <link rel="stylesheet" href="assets/css/pages/research.css" />
 </head>
-<body>
+<body class="theme-light glass-theme">
+
+  <!-- Looping Video Background -->
+  <div class="video-background-container">
+    <div class="video-overlay"></div>
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="assets/videos/abstract-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+
 
   <main class="has-hero">
 
@@ -37,9 +46,9 @@
 
     <!-- Scholar Stats -->
     <!-- Update these values from your Google Scholar profile: https://scholar.google.com/citations?user=fRrxUhsAAAAJ -->
-    <section class="scholar-stats-section bg-secondary">
+    <section class="scholar-stats-section transparent-section card glass-panel glass-hover">
       <div class="container container--narrow">
-        <div class="scholar-stats animate-on-scroll fade-up">
+        <div class="scholar-stats animate-on-scroll fade-up card glass-panel glass-hover">
           <div class="scholar-stat">
             <span class="scholar-stat-number">6</span>
             <span class="scholar-stat-label">Publications</span>
@@ -60,7 +69,7 @@
     </section>
 
     <!-- Publications -->
-    <section class="publications-section bg-primary">
+    <section class="publications-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Publications</span>
@@ -71,7 +80,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2025</h3>
 
         <!-- Publication 1 -->
-        <article class="card card-publication animate-on-scroll fade-up">
+        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
           <span class="pub-year"><i class="fas fa-book"></i> Journal Article</span>
           <h3 class="pub-title">Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2</h3>
           <p class="pub-authors">Bruno Carlos Dos Santos Melicio, Kaan Karakose, Adam Fodor, Linyun Xiang, Viktor Varga, Latha Soorya, Emily Dillon, Peter Kun, Andras Sarkany, Mohamed Chetouani, Kristian Fenech, Andras Lorincz</p>
@@ -84,7 +93,7 @@
         </article>
 
         <!-- Publication 2 -->
-        <article class="card card-publication animate-on-scroll fade-up">
+        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
           <span class="pub-year"><i class="fas fa-book-open"></i> Conference</span>
           <h3 class="pub-title">Examining Object Play Initiation Delays during ADOS-2 Make-Believe Play Task</h3>
           <p class="pub-authors">Bruno Carlos Dos Santos Melicio, Kaan Karakose, Peter Gergo Molnar, Khaleel Kamal, Andras Sarkany, Fouad Alshaban, Iman Ghazal, Fatema Al-Faraj, Latha Valluripalli Soorya, Kristian Fenech, Andras Lorincz</p>
@@ -97,7 +106,7 @@
         </article>
 
         <!-- Publication 3 -->
-        <article class="card card-publication animate-on-scroll fade-up">
+        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
           <span class="pub-year"><i class="fas fa-book-open"></i> Conference</span>
           <h3 class="pub-title">Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI</h3>
           <p class="pub-authors">Kaan Karakose, Peter Gergo Molnar, Bruno Carlos Dos Santos Melicio, Khaleel Kamal, Andras Sarkany, Latha Valluripalli Soorya, Kristian Fenech, Andras Lorincz</p>
@@ -113,7 +122,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2023</h3>
 
         <!-- Publication 4 -->
-        <article class="card card-publication animate-on-scroll fade-up">
+        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
           <span class="pub-year"><i class="fas fa-book"></i> Conference</span>
           <h3 class="pub-title">Composite AI for Behavior Analysis in Social Interactions</h3>
           <p class="pub-authors">Bruno Carlos Dos Santos Melicio, Linyun Xiang, Emily Dillon, Latha Soorya, Mohamed Chetouani, Andras Sarkany, Peter Kun, Kristian Fenech, Andras Lorincz</p>
@@ -129,7 +138,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2022</h3>
 
         <!-- Publication 5 -->
-        <article class="card card-publication animate-on-scroll fade-up">
+        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
           <span class="pub-year"><i class="fas fa-book"></i> Journal Article</span>
           <h3 class="pub-title">AI Technologies for Machine Supervision and Help in a Rehabilitation Scenario</h3>
           <p class="pub-authors">Gabor Baranyi, Bruno Carlos Dos Santos Melicio, Zsofia Gaal, Levente Hajder, Andras Simonyi, Daniel Sindely, Joul Skaf, Ondrej Dusek, Tomas Nekvinda, Andras Lorincz</p>
@@ -148,7 +157,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2021</h3>
 
         <!-- Publication 6 -->
-        <article class="card card-publication animate-on-scroll fade-up">
+        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
           <span class="pub-year"><i class="fas fa-book"></i> Conference</span>
           <h3 class="pub-title">DeepRehab: Real Time Pose Estimation on the Edge for Knee Injury Rehabilitation</h3>
           <p class="pub-authors">Bruno Carlos Dos Santos Melicio, Gabor Baranyi, Zsofia Gaal, Sohil Zidan, Andras Lorincz</p>
@@ -164,7 +173,7 @@
     </section>
 
     <!-- Projects -->
-    <section class="projects-section bg-secondary">
+    <section class="projects-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Ongoing</span>
@@ -173,7 +182,7 @@
 
         <div class="projects-grid">
 
-          <article class="card card-project animate-on-scroll fade-up stagger-1">
+          <article class="card card-project animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
             <div class="project-thumb placeholder-thumb">
               <i class="fas fa-brain"></i>
             </div>
@@ -189,7 +198,7 @@
             </div>
           </article>
 
-          <article class="card card-project animate-on-scroll fade-up stagger-2">
+          <article class="card card-project animate-on-scroll fade-up stagger-2 glass-panel glass-hover">
             <div class="project-thumb placeholder-thumb">
               <i class="fas fa-child"></i>
             </div>
@@ -205,7 +214,7 @@
             </div>
           </article>
 
-          <article class="card card-project animate-on-scroll fade-up stagger-3">
+          <article class="card card-project animate-on-scroll fade-up stagger-3 glass-panel glass-hover">
             <div class="project-thumb placeholder-thumb">
               <i class="fas fa-running"></i>
             </div>

@@ -22,7 +22,16 @@
   <link rel="stylesheet" href="assets/css/footer.css" />
   <link rel="stylesheet" href="assets/css/pages/events.css" />
 </head>
-<body>
+<body class="theme-light glass-theme">
+
+  <!-- Looping Video Background -->
+  <div class="video-background-container">
+    <div class="video-overlay"></div>
+    <video autoplay loop muted playsinline class="bg-video">
+      <source src="assets/videos/abstract-bg.mp4" type="video/mp4">
+    </video>
+  </div>
+
 
   <main class="has-hero">
 
@@ -36,15 +45,61 @@
     </section>
 
     <!-- Upcoming Events -->
-    <section class="events-section bg-secondary">
+    <section class="events-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Coming Up</span>
           <h2 class="section-title">Upcoming Events</h2>
         </div>
 
+        <!-- Event Subscription Form -->
+        <div class="card glass-panel glass-hover animate-on-scroll fade-up" style="max-width: 600px; margin: 0 auto; text-align: center; padding: var(--space-3xl) var(--space-2xl);">
+          <div class="card-icon" style="margin: 0 auto var(--space-lg);"><i class="fas fa-envelope-open-text"></i></div>
+          <h3 style="margin-bottom: var(--space-sm);">No active events at the moment</h3>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-2xl);">Subscribe to get instantly notified when new workshops, talks, and courses are announced.</p>
+          
+          <form class="contact-form" action="https://formsubmit.co/7023869b5c2ad23d444cf4b6e23ea329" method="POST" style="text-align: left; margin: 0;">
+            <input type="hidden" name="_subject" value="New Event Subscription" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display:none" />
+            
+            <div class="form-group">
+              <label for="sub-name">Full Name</label>
+              <input type="text" id="sub-name" name="name" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="sub-email">Email Address</label>
+              <input type="email" id="sub-email" name="email" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="sub-country">Country of Residence</label>
+              <input type="text" id="sub-country" name="country" required />
+            </div>
+            
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: var(--space-md);">
+              <i class="fas fa-bell"></i> Get Updates
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Past Events -->
+    <section class="events-section transparent-section">
+      <div class="container container--narrow">
+        <div class="section-label animate-on-scroll fade-up">
+          <span class="overline">Previous</span>
+          <h2 class="section-title">Past Events</h2>
+        </div>
+
+        <!-- ===== 2026 ===== -->
+        <h3 class="year-header animate-on-scroll fade-up">2026</h3>
+
         <!-- Webinar: Feb 28, 2026 -->
-        <article class="card card-event upcoming-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">28</span>
             <span class="month">Feb</span>
@@ -56,37 +111,17 @@
               <span><i class="fas fa-clock"></i> 3 Hours</span>
               <span><i class="fas fa-calendar"></i> February 28, 2026</span>
             </div>
-            <p class="event-description">Learn how to create stunning AI-generated images and videos for your social media, brand, or business. In this hands-on 3-hour workshop, you'll go from zero to creating professional visual content using the latest AI tools — no design or coding skills required.</p>
+            <p class="event-description">Conducted a hands-on 3-hour workshop teaching participants how to create stunning AI-generated images and videos for social media, transitioning from zero to professional visual content using the latest AI tools.</p>
             <ul class="event-highlights">
               <li><i class="fas fa-check"></i> Generate scroll-stopping images for Instagram, TikTok & more</li>
               <li><i class="fas fa-check"></i> Create AI videos for product showcases and brand storytelling</li>
-              <li><i class="fas fa-check"></i> Real tools, real workflows — everything you can use right away</li>
+              <li><i class="fas fa-check"></i> Real tools, real workflows — practical applicability</li>
             </ul>
-            <div class="event-actions">
-              <a href="#" class="btn-primary" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-ticket-alt"></i> Register Now
-              </a>
-              <span class="event-price">Tickets available on Eventbrite</span>
-            </div>
           </div>
         </article>
 
-      </div>
-    </section>
-
-    <!-- Past Events -->
-    <section class="events-section bg-primary">
-      <div class="container container--narrow">
-        <div class="section-label animate-on-scroll fade-up">
-          <span class="overline">Previous</span>
-          <h2 class="section-title">Past Events</h2>
-        </div>
-
-        <!-- ===== 2026 ===== -->
-        <h3 class="year-header animate-on-scroll fade-up">2026</h3>
-
         <!-- NTNU 2026 Talk - Feb 11, 2026 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">11</span>
             <span class="month">Feb</span>
@@ -105,7 +140,7 @@
         </article>
 
         <!-- UTA 2026 Workshop - Feb 3, 2026 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">03</span>
             <span class="month">Feb</span>
@@ -139,7 +174,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2025</h3>
 
         <!-- INSAR 2025 - May 7, 2025 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">07</span>
             <span class="month">May</span>
@@ -158,7 +193,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2024</h3>
 
         <!-- BOSCH Best 2024 Meetup - Dec 10, 2024 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">10</span>
             <span class="month">Dec</span>
@@ -183,7 +218,7 @@
         </article>
 
         <!-- MILAB 2024 - Jun 22, 2024 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">22</span>
             <span class="month">Jun</span>
@@ -205,7 +240,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2023</h3>
 
         <!-- TDK at ELTE - Nov 15, 2023 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">15</span>
             <span class="month">Nov</span>
@@ -221,7 +256,7 @@
         </article>
 
         <!-- ICMI 2023 - Oct 9, 2023 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">09</span>
             <span class="month">Oct</span>
@@ -240,7 +275,7 @@
         </article>
 
         <!-- JSALT 2023 - Aug 1, 2023 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">01</span>
             <span class="month">Aug</span>
@@ -268,7 +303,7 @@
         </article>
 
         <!-- OTDK - Apr 12, 2023 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">12</span>
             <span class="month">Apr</span>
@@ -287,7 +322,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2022</h3>
 
         <!-- BOSCH 2022 Conference - Oct 1, 2022 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">01</span>
             <span class="month">Oct</span>
@@ -306,7 +341,7 @@
         </article>
 
         <!-- UTA 2022 Talk - Jul 21, 2022 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">21</span>
             <span class="month">Jul</span>
@@ -335,7 +370,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2021</h3>
 
         <!-- ICANN 2021 - Sep 14, 2021 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">14</span>
             <span class="month">Sep</span>
@@ -351,7 +386,7 @@
         </article>
 
         <!-- ELTE MSc Thesis - Jun 25, 2021 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">25</span>
             <span class="month">Jun</span>
@@ -373,7 +408,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2020</h3>
 
         <!-- Nokia 2020 PoC - Jan 25, 2020 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">25</span>
             <span class="month">Jan</span>
@@ -398,7 +433,7 @@
         <h3 class="year-header animate-on-scroll fade-up">2019</h3>
 
         <!-- UNICV 2019 BSc Thesis - Jul 24, 2019 -->
-        <article class="card card-event past-event animate-on-scroll fade-up">
+        <article class="card card-event past-event animate-on-scroll fade-up glass-panel glass-hover">
           <div class="event-date">
             <span class="day">24</span>
             <span class="month">Jul</span>
@@ -425,7 +460,7 @@
     </section>
 
     <!-- Talks & Presentations -->
-    <section id="media" class="events-section bg-secondary">
+    <section id="media" class="events-section transparent-section">
       <div class="container container--narrow">
         <div class="section-label animate-on-scroll fade-up">
           <span class="overline">Media</span>
@@ -434,7 +469,7 @@
 
         <h3 class="resources-subsection-title animate-on-scroll fade-up">Videos & Talks</h3>
         <div class="resources-list">
-          <a href="https://youtu.be/IsqRVK3UZPA?si=LgxjHxityK0fQi5G&t=2893" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up">
+          <a href="https://youtu.be/IsqRVK3UZPA?si=LgxjHxityK0fQi5G&t=2893" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fab fa-youtube"></i>
             </div>
@@ -445,7 +480,7 @@
             </div>
             <i class="fas fa-external-link-alt resource-link-icon"></i>
           </a>
-          <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up">
+          <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fab fa-youtube"></i>
             </div>
@@ -460,7 +495,7 @@
 
         <h3 class="resources-subsection-title animate-on-scroll fade-up">Conference Presentations</h3>
         <div class="resources-list">
-          <a href="#" class="resource-item card animate-on-scroll fade-up">
+          <a href="#" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fas fa-chalkboard-teacher"></i>
             </div>
@@ -471,7 +506,7 @@
             </div>
             <i class="fas fa-external-link-alt resource-link-icon"></i>
           </a>
-          <a href="#" class="resource-item card animate-on-scroll fade-up">
+          <a href="#" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
             <div class="resource-icon">
               <i class="fas fa-chalkboard-teacher"></i>
             </div>
@@ -489,7 +524,7 @@
     <!-- Speaking CTA -->
     <section class="section-cta">
       <div class="container text-center">
-        <div class="cta-content animate-on-scroll scale-in">
+        <div class="cta-content animate-on-scroll scale-in card glass-panel glass-hover">
           <h2 class="section-title">Interested in Having Me Speak?</h2>
           <p class="section-subtitle" style="margin: 0 auto var(--space-2xl);">I'm available for panels, keynotes, and interviews on AI, machine learning, and neurodevelopmental disorder detection.</p>
           <a href="services.html#contact" class="btn-primary">
