@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.body.insertAdjacentHTML('afterbegin', html);
       initNavigation();
       initScrolledNav();
+      initThemeToggle();
     })
     .catch(error => console.error('Error loading navigation:', error));
 
@@ -68,6 +69,33 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     }
+  }
+
+  // --- Dark Mode Toggle ---
+  function initThemeToggle() {
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (!themeToggle) return;
+
+    const icon = themeToggle.querySelector('i');
+    
+    // Check saved theme - default is light
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.replace('theme-light', 'theme-dark');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      if (document.body.classList.contains('theme-light')) {
+        document.body.classList.replace('theme-light', 'theme-dark');
+        icon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.replace('theme-dark', 'theme-light');
+        icon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
   }
 
   // --- Transparent → solid nav on scroll ---

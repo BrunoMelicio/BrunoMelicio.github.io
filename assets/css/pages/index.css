@@ -243,3 +243,25 @@ body.glass-theme {
     margin-bottom: var(--space-md);
   }
 }
+
+/* DARK MODE OVERRIDES */
+body.theme-dark.glass-theme { color: #f8fafc; }
+body.theme-dark .display-title {
+  background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body.theme-dark .subtitle-text,
+body.theme-dark .home-path-card h3,
+body.theme-dark .review-name { color: #ffffff; }
+body.theme-dark .hero-tagline,
+body.theme-dark .home-path-card p,
+body.theme-dark .review-text { color: #e2e8f0; }
+body.theme-dark .home-stat-label,
+body.theme-dark .review-course { color: #a1a1aa; }
+body.theme-dark .card-icon.liquid-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}

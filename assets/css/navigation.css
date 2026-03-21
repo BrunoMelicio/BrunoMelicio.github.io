@@ -183,3 +183,25 @@
 body.no-scroll {
   overflow: hidden;
 }
+
+/* DARK MODE OVERRIDES */
+body.theme-dark .site-header {
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+body.theme-dark .site-header.nav-scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+}
+body.theme-dark .nav-list a {
+  color: #f8fafc;
+}
+body.theme-dark .menu-toggle span {
+  background-color: #f8fafc;
+}
+@media (max-width: 768px) {
+  body.theme-dark .nav-menu {
+    background: rgba(0, 0, 0, 0.98);
+  }
+}
