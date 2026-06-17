@@ -18,4 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
       panel.style.setProperty('--mouse-y', `${y}px`);
     });
   });
+
+  // --- Minimal Global Loading Screen ---
+  const removeLoader = () => document.body.classList.add('page-loaded');
+  if (document.readyState === 'complete') {
+    removeLoader();
+  } else {
+    window.addEventListener('load', removeLoader);
+    // Fallback timeout in case video stalls
+    setTimeout(removeLoader, 2500);
+  }
 });

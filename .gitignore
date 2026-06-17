@@ -10,3 +10,4 @@ cloudflare-workers/
 gradio-apps/
 assets/images/new.jpeg
 assets/images/new\ Background\ Removed.png
+assets/videos/*.mp4
