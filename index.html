@@ -18,140 +18,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=3.2" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css?v=3.2" />
-  <link rel="stylesheet" href="assets/css/base.css?v=3.2" />
-  <link rel="stylesheet" href="assets/css/components.css?v=3.2" />
-  <link rel="stylesheet" href="assets/css/animations.css?v=3.2" />
-  <link rel="stylesheet" href="assets/css/navigation.css?v=3.2" />
-  <link rel="stylesheet" href="assets/css/footer.css?v=3.2" />
-  <link rel="stylesheet" href="assets/css/pages/index.css?v=3.2" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=5.1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css?v=5.1" />
+  <link rel="stylesheet" href="assets/css/base.css?v=5.1" />
+  <link rel="stylesheet" href="assets/css/components.css?v=5.1" />
+  <link rel="stylesheet" href="assets/css/animations.css?v=5.1" />
+  <link rel="stylesheet" href="assets/css/navigation.css?v=5.1" />
+  <link rel="stylesheet" href="assets/css/footer.css?v=5.1" />
+  <link rel="stylesheet" href="assets/css/pages/index.css?v=5.1" />
 </head>
 
-<body class="theme-light">
+<body class="theme-light home-page">
 
-  <main class="has-hero">
+  <main class="home-main">
+    
+    <div class="portal-viewport">
+      
+      <!-- Path 1: AI Research -->
+      <a href="research.html" class="portal-card card-academic">
+        <div class="portal-card-content">
+          <span class="portal-badge badge-blue">Neural Labs</span>
+          <h2 class="portal-title">AI Research</h2>
+          <p class="portal-description">Advancing machine learning through rigorous neural optimization and foundational model architecture.</p>
+          <span class="portal-link">Explore Research <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
 
-    <!-- Hero Redesign -->
-    <section class="hero">
-      <div class="container hero-container">
-        <div class="hero-text-side animate-on-scroll fade-up">
-          <span class="overline hero-overline">AI Researcher & Lecturer</span>
-          <h1 class="hero-name display-title">Bruno Melício</h1>
-          <p class="hero-tagline">Bridging AI research and real-world healthcare to improve the detection and diagnosis of neurodevelopmental disorders.</p>
-          
-          <div class="hero-buttons">
-            <a href="services.html" class="btn-primary">Explore Services</a>
-            <a href="courses.html" class="btn-outline">Start Learning</a>
-          </div>
+      <!-- Path 2: AI Content Creation -->
+      <a href="services.html" class="portal-card card-creative">
+        <div class="portal-card-content">
+          <span class="portal-badge badge-orange">Creative Studio</span>
+          <h2 class="portal-title">AI Content Creation</h2>
+          <p class="portal-description">Bridging technology and culture through digital storytelling and generative media synthesis.</p>
+          <span class="portal-link">Explore Studio <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>
 
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/brunomelicio/" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://scholar.google.com/citations?user=fRrxUhsAAAAJ" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
-            <a href="https://github.com/BrunoMelicio" class="social-icon-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-        
-        <div class="hero-image-side animate-on-scroll fade-up">
-          <div class="hero-portrait-frame">
-            <img src="assets/images/profile.jpeg" alt="Bruno Melício" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Social Proof Stats -->
-    <section class="home-stats transparent-section">
-      <div class="container" style="position: relative; z-index: 5;">
-        <div class="home-stats-grid">
-          <div class="home-stat animate-on-scroll fade-up">
-            <span class="home-stat-number">15+</span>
-            <span class="home-stat-label">Events & Talks</span>
-          </div>
-          <div class="home-stat animate-on-scroll fade-up">
-            <span class="home-stat-number">5+</span>
-            <span class="home-stat-label">Years Teaching</span>
-          </div>
-          <div class="home-stat animate-on-scroll fade-up">
-            <span class="home-stat-number">6</span>
-            <span class="home-stat-label">Publications</span>
-          </div>
-          <div class="home-stat animate-on-scroll fade-up">
-            <span class="home-stat-number">40+</span>
-            <span class="home-stat-label">Citations</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Three Paths -->
-    <section class="home-paths transparent-section">
-      <div class="container" style="position: relative; z-index: 5;">
-        <div class="section-label text-center animate-on-scroll fade-up">
-          <span class="overline" style="margin-bottom: 0.5rem; display: block;">Explore</span>
-          <h2 class="section-title">What Can I Help You With?</h2>
-        </div>
-        <div class="home-paths-grid">
-          <a href="services.html" class="home-path-card animate-on-scroll fade-up stagger-1">
-            <div class="card-icon liquid-icon"><i class="fas fa-handshake"></i></div>
-            <h3>Services</h3>
-            <p>Workshops, Corporate Trainings, Talks, and AI content creation.</p>
-          </a>
-          <a href="courses.html" class="home-path-card animate-on-scroll fade-up stagger-2">
-            <div class="card-icon liquid-icon"><i class="fas fa-graduation-cap"></i></div>
-            <h3>Courses</h3>
-            <p>University courses, private tutoring, and resources to master AI.</p>
-          </a>
-          <a href="ai-lab.html" class="home-path-card animate-on-scroll fade-up stagger-3">
-            <div class="card-icon liquid-icon"><i class="fas fa-flask"></i></div>
-            <h3>AI Lab</h3>
-            <p>Try interactive AI demos and explore my creative AI portfolio.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="home-testimonials transparent-section pb-3xl">
-      <div class="container" style="position: relative; z-index: 5;">
-        <div class="section-label text-center animate-on-scroll fade-up">
-          <span class="overline" style="margin-bottom: 0.5rem; display: block;">Feedback</span>
-          <h2 class="section-title">What People Say</h2>
-        </div>
-        <div class="home-testimonials-grid">
-          <div class="review-card animate-on-scroll fade-up stagger-1">
-            <div class="review-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p class="review-text">"Bruno's Deep Network Developments course was incredibly well-structured. The
-              hands-on exercises with real datasets made the theory come alive. Highly recommended for anyone serious
-              about deep learning."</p>
-            <div class="review-author">
-              <span class="review-name">Anonymous Student</span>
-              <span class="review-course">Deep Network Developments, 2024</span>
-            </div>
-          </div>
-          <div class="review-card animate-on-scroll fade-up stagger-2">
-            <div class="review-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p class="review-text">"The private tutoring sessions were exactly what I needed. Bruno adapted the content
-              to my level and helped me build a solid foundation in AI. The project-based approach made learning
-              engaging and practical."</p>
-            <div class="review-author">
-              <span class="review-name">Anonymous Student</span>
-              <span class="review-course">Private Tutoring, 2024</span>
-            </div>
-          </div>
-        </div>
-        <div class="text-center" style="margin-top: var(--space-2xl);">
-          <a href="courses.html#reviews" class="btn-outline">See All Reviews</a>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
