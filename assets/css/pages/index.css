@@ -61,13 +61,13 @@ body.home-page .site-footer {
 
 /* Light Theme Card Backgrounds with Soft-Focus Glass Textures */
 .card-academic {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.85) 100%), 
-                    url("../../images/research_card_bg.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.96) 100%), 
+                    url("../../images/background2.png");
 }
 
 .card-creative {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.85) 100%), 
-                    url("../../images/creative_card_bg.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.96) 100%), 
+                    url("../../images/artist.png");
 }
 
 /* Dark Theme Adjustments for Cards */
@@ -77,13 +77,13 @@ body.theme-dark .portal-card {
 }
 
 body.theme-dark .card-academic {
-  background-image: linear-gradient(180deg, rgba(22, 22, 23, 0.75) 0%, rgba(22, 22, 23, 0.95) 100%), 
-                    url("../../images/research_card_bg.jpg");
+  background-image: linear-gradient(180deg, rgba(22, 22, 23, 0.85) 0%, rgba(22, 22, 23, 0.96) 100%), 
+                    url("../../images/background2.png");
 }
 
 body.theme-dark .card-creative {
-  background-image: linear-gradient(180deg, rgba(22, 22, 23, 0.75) 0%, rgba(22, 22, 23, 0.95) 100%), 
-                    url("../../images/creative_card_bg.jpg");
+  background-image: linear-gradient(180deg, rgba(22, 22, 23, 0.85) 0%, rgba(22, 22, 23, 0.96) 100%), 
+                    url("../../images/artist.png");
 }
 
 /* Hover effects for Cards */
