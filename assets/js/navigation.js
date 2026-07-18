@@ -78,22 +78,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const icon = themeToggle.querySelector('i');
     
-    // Check saved theme - default is light
+    // Respect an explicit choice. The redesigned homepage defaults to its
+    // approved dark presentation; the rest of the site remains light-first.
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      document.body.classList.replace('theme-light', 'theme-dark');
-      icon.classList.replace('fa-moon', 'fa-sun');
-    }
+    const defaultTheme = document.body.classList.contains('home-page') ? 'dark' : 'light';
+    const initialTheme = savedTheme || defaultTheme;
+
+    document.body.classList.toggle('theme-dark', initialTheme === 'dark');
+    document.body.classList.toggle('theme-light', initialTheme === 'light');
+    icon.className = initialTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    themeToggle.setAttribute('aria-label', initialTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeMeta) themeMeta.setAttribute('content', initialTheme === 'dark' ? '#000000' : '#ffffff');
 
     themeToggle.addEventListener('click', () => {
       if (document.body.classList.contains('theme-light')) {
         document.body.classList.replace('theme-light', 'theme-dark');
         icon.classList.replace('fa-moon', 'fa-sun');
         localStorage.setItem('theme', 'dark');
+        themeToggle.setAttribute('aria-label', 'Switch to light mode');
+        if (themeMeta) themeMeta.setAttribute('content', '#000000');
       } else {
         document.body.classList.replace('theme-dark', 'theme-light');
         icon.classList.replace('fa-sun', 'fa-moon');
         localStorage.setItem('theme', 'light');
+        themeToggle.setAttribute('aria-label', 'Switch to dark mode');
+        if (themeMeta) themeMeta.setAttribute('content', '#ffffff');
       }
     });
   }

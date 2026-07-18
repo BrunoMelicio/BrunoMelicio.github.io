@@ -4,61 +4,143 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bruno Melício | AI Researcher & Lecturer</title>
+  <title>Bruno Melício | AI Researcher &amp; Lecturer</title>
   <meta name="description"
-    content="Bruno Melício - AI Researcher and Lecturer specializing in early detection and diagnosis of neurodevelopmental disorders." />
-  <meta name="theme-color" content="#ffffff" />
-  <meta property="og:title" content="Bruno Melício | AI Researcher & Lecturer" />
-  <meta property="og:description"
-    content="Specializing in AI for early detection and diagnosis of neurodevelopmental disorders." />
+    content="Bruno Melício is an AI researcher and lecturer working on human-centered artificial intelligence, behavior analysis and AI education." />
+  <meta name="theme-color" content="#000000" />
+  <meta property="og:title" content="Bruno Melício | AI Researcher &amp; Lecturer" />
+  <meta property="og:description" content="Human-centered AI research, teaching and knowledge." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/images/profile.jpeg" />
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <meta property="og:image" content="assets/images/removed_2.png" />
+  <link rel="icon" type="image/png" href="assets/images/logo2.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=5.1" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/base.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/components.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/animations.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/navigation.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/footer.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/pages/index.css?v=5.1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=7.0" />
+  <link rel="stylesheet" href="assets/css/base.css?v=7.0" />
+  <link rel="stylesheet" href="assets/css/components.css?v=7.0" />
+  <link rel="stylesheet" href="assets/css/animations.css?v=7.0" />
+  <link rel="stylesheet" href="assets/css/navigation.css?v=7.0" />
+  <link rel="stylesheet" href="assets/css/footer.css?v=7.0" />
+  <link rel="stylesheet" href="assets/css/pages/index.css?v=7.0" />
 </head>
 
-<body class="theme-light home-page">
-
+<body class="theme-dark home-page">
   <main class="home-main">
-    
-    <div class="portal-viewport">
-      
-      <!-- Path 1: AI Research -->
-      <a href="research.html" class="portal-card card-academic">
-        <div class="portal-card-content">
-          <h2 class="portal-title">AI Research &amp; Teaching</h2>
-          <p class="portal-description">Advancing machine learning through rigorous neural optimization and foundational model architecture.</p>
-          <span class="portal-link">Explore Research <span class="arrow">&rarr;</span></span>
-        </div>
-      </a>
+    <section class="home-hero" id="home" aria-labelledby="home-title">
+      <div class="home-hero-inner">
+        <div class="home-hero-copy">
+          <p class="home-eyebrow">Bruno Melício</p>
+          <h1 id="home-title">AI Researcher<br />&amp; Lecturer.</h1>
+          <p class="home-intro">Human-centered AI research, teaching and knowledge.</p>
 
-      <!-- Path 2: AI Content Creation -->
-      <a href="services.html" class="portal-card card-creative">
-        <div class="portal-card-content">
-          <h2 class="portal-title">AI Creative Studio</h2>
-          <p class="portal-description">Bridging technology and culture through digital storytelling and generative media synthesis.</p>
-          <span class="portal-link">Explore Studio <span class="arrow">&rarr;</span></span>
+          <div class="home-actions" aria-label="Explore Bruno Melício's work">
+            <a href="research.html" class="home-primary-action">
+              <span>Explore My Research</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="about.html" class="home-secondary-action">About Me</a>
+          </div>
         </div>
-      </a>
 
-    </div>
+        <figure class="home-portrait" aria-label="Portrait of Bruno Melício">
+          <div class="home-portrait-halo" aria-hidden="true"></div>
+          <img src="assets/images/removed_2.png"
+            alt="Bruno Melício, AI researcher and lecturer"
+            fetchpriority="high" />
+        </figure>
+      </div>
+
+      <a href="#research" class="home-scroll-cue" aria-label="Scroll to featured research">
+        <span class="home-scroll-mouse" aria-hidden="true"><span></span></span>
+        <span>Scroll to explore</span>
+      </a>
+    </section>
+
+    <section class="research-showcase" id="research" aria-labelledby="research-title">
+      <div class="research-shell">
+        <div class="research-heading home-reveal">
+          <div>
+            <p class="research-kicker">Selected work</p>
+            <h2 id="research-title">Research</h2>
+          </div>
+
+          <div class="research-filters" role="group" aria-label="Filter featured publications">
+            <button class="research-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="research-filter" type="button" data-filter="journal" aria-pressed="false">Journal Articles</button>
+            <button class="research-filter" type="button" data-filter="conference" aria-pressed="false">Conference Papers</button>
+          </div>
+        </div>
+
+        <div class="publication-grid" aria-live="polite">
+          <article class="publication-card home-reveal" data-type="journal">
+            <a href="https://doi.org/10.1007/s12559-025-10481-7" target="_blank" rel="noopener noreferrer" aria-label="Read Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2">
+              <div class="publication-image publication-image-wave">
+                <img src="assets/images/research-card-01.png" alt="Abstract monochrome particle wave" loading="lazy" />
+              </div>
+              <div class="publication-content">
+                <div class="publication-meta"><span>Journal Article</span><span>2025</span></div>
+                <h3>Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2</h3>
+                <p>Cognitive Computation</p>
+                <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="publication-card home-reveal" data-type="conference">
+            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50833" target="_blank" rel="noopener noreferrer" aria-label="Read Examining Object Play Initiation Delays during ADOS-2 Make-Believe Play Task">
+              <div class="publication-image publication-image-photo">
+                <img src="assets/images/research.JPG" alt="Bruno Melício presenting autism behavior research" loading="lazy" />
+              </div>
+              <div class="publication-content">
+                <div class="publication-meta"><span>Conference Paper</span><span>2025</span></div>
+                <h3>Examining Object Play Initiation Delays during ADOS-2 Make-Believe Play Task</h3>
+                <p>INSAR Annual Meeting</p>
+                <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="publication-card home-reveal" data-type="conference">
+            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50927" target="_blank" rel="noopener noreferrer" aria-label="Read Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI">
+              <div class="publication-image publication-image-network">
+                <img src="assets/images/research_card_bg.jpg" alt="Abstract neural network structure" loading="lazy" />
+              </div>
+              <div class="publication-content">
+                <div class="publication-meta"><span>Conference Paper</span><span>2025</span></div>
+                <h3>Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI</h3>
+                <p>INSAR Annual Meeting</p>
+                <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="publication-card home-reveal" data-type="conference">
+            <a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer" aria-label="Read Composite AI for Behavior Analysis in Social Interactions">
+              <div class="publication-image publication-image-brain">
+                <img src="assets/images/research_portal_bg.png" alt="Abstract illuminated brain network" loading="lazy" />
+              </div>
+              <div class="publication-content">
+                <div class="publication-meta"><span>Conference Paper</span><span>2023</span></div>
+                <h3>Composite AI for Behavior Analysis in Social Interactions</h3>
+                <p>ACM ICMI</p>
+                <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="research-footer home-reveal">
+          <a href="research.html" class="research-all-link">View all publications <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="assets/js/navigation.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/navigation.js?v=7.0"></script>
+  <script src="assets/js/main.js?v=7.0"></script>
+  <script src="assets/js/homepage.js?v=7.0"></script>
 </body>
 
 </html>
