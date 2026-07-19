@@ -62,11 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
       hero.addEventListener('pointermove', event => {
         const x = event.clientX / window.innerWidth - 0.5;
         const y = event.clientY / window.innerHeight - 0.5;
-        portrait.style.transform = `translate3d(${(x * 5).toFixed(1)}px, ${(y * 3).toFixed(1)}px, 0)`;
+        portrait.style.setProperty('--portrait-x', `${(x * 5).toFixed(1)}px`);
+        portrait.style.setProperty('--portrait-y', `${(y * 3).toFixed(1)}px`);
       });
 
       hero.addEventListener('pointerleave', () => {
-        portrait.style.transform = 'translate3d(0, 0, 0)';
+        portrait.style.setProperty('--portrait-x', '0px');
+        portrait.style.setProperty('--portrait-y', '0px');
       });
     }
   }

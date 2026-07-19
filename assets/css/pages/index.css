@@ -144,17 +144,13 @@ body.home-page .theme-toggle:hover {
   display: flex;
   min-height: 100svh;
   padding: 76px clamp(1.4rem, 4.2vw, 5.5rem) 0;
-  background:
-    radial-gradient(circle at 73% 42%, rgba(255, 255, 255, 0.055), transparent 27%),
-    var(--home-bg);
+  background: var(--home-bg);
   border-bottom: 1px solid var(--home-line);
   isolation: isolate;
 }
 
 body.theme-light .home-hero {
-  background:
-    radial-gradient(circle at 73% 42%, rgba(0, 0, 0, 0.035), transparent 27%),
-    var(--home-bg);
+  background: var(--home-bg);
 }
 
 .home-hero-inner {
@@ -261,34 +257,25 @@ body.theme-light .home-hero {
   height: calc(100svh - 77px);
   margin: 0;
   overflow: hidden;
+  background: var(--home-bg);
 }
 
 .home-portrait-halo {
-  position: absolute;
-  right: -2%;
-  bottom: -12%;
-  width: min(49vw, 780px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.025) 47%, transparent 70%);
-  filter: blur(4px);
-}
-
-body.theme-light .home-portrait-halo {
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.055) 0%, rgba(0, 0, 0, 0.015) 47%, transparent 70%);
+  display: none;
 }
 
 .home-portrait img {
   position: absolute;
-  right: max(-1.25rem, -1.2vw);
-  bottom: 0;
+  inset: 0;
   z-index: 1;
-  width: min(49vw, 800px);
-  height: auto;
-  max-height: 96%;
-  object-fit: contain;
-  object-position: right bottom;
-  filter: saturate(0.88) contrast(1.03);
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center 18%;
+  filter: none;
+  transform: translate3d(var(--portrait-x, 0), var(--portrait-y, 0), 0) scale(1.002);
   will-change: transform;
 }
 
@@ -650,10 +637,6 @@ body.home-page .footer-bottom p {
     height: calc(100svh - var(--nav-height));
   }
 
-  .home-portrait img {
-    width: min(54vw, 700px);
-  }
-
   .research-heading {
     align-items: flex-start;
     flex-direction: column;
@@ -720,18 +703,11 @@ body.home-page .footer-bottom p {
     border-bottom: 1px solid var(--home-line);
   }
 
-  .home-portrait-halo {
-    right: 50%;
-    bottom: -25%;
-    width: min(115vw, 600px);
-    transform: translateX(50%);
-  }
-
   .home-portrait img {
-    right: 50%;
-    width: min(108vw, 610px);
-    max-height: 100%;
-    transform: translateX(50%);
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-position: center 20%;
   }
 
   .home-hero-copy {
@@ -823,10 +799,6 @@ body.home-page .footer-bottom p {
   .home-portrait {
     height: 43svh;
     min-height: 285px;
-  }
-
-  .home-portrait img {
-    width: min(116vw, 550px);
   }
 
   .home-hero-copy {

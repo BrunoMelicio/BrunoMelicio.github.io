@@ -78,16 +78,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const icon = themeToggle.querySelector('i');
     
-    // Respect an explicit choice. The redesigned homepage defaults to its
-    // approved dark presentation; the rest of the site remains light-first.
+    // The homepage always opens in its light presentation. Other pages can
+    // continue to respect a visitor's explicit theme choice.
     const savedTheme = localStorage.getItem('theme');
-    const defaultTheme = document.body.classList.contains('home-page') ? 'dark' : 'light';
-    const initialTheme = savedTheme || defaultTheme;
+    const isHomepage = document.body.classList.contains('home-page');
+    const initialTheme = isHomepage ? 'light' : (savedTheme || 'light');
+
+    const portrait = document.querySelector('.home-portrait img[data-light-src]');
+    const syncThemeAssets = theme => {
+      if (!portrait) return;
+      portrait.src = theme === 'dark' ? portrait.dataset.darkSrc : portrait.dataset.lightSrc;
+    };
 
     document.body.classList.toggle('theme-dark', initialTheme === 'dark');
     document.body.classList.toggle('theme-light', initialTheme === 'light');
     icon.className = initialTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     themeToggle.setAttribute('aria-label', initialTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    syncThemeAssets(initialTheme);
+
+    if (portrait?.dataset.darkSrc) {
+      const darkPortrait = new Image();
+      darkPortrait.src = portrait.dataset.darkSrc;
+    }
 
     const themeMeta = document.querySelector('meta[name="theme-color"]');
     if (themeMeta) themeMeta.setAttribute('content', initialTheme === 'dark' ? '#000000' : '#ffffff');
@@ -99,12 +111,14 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('theme', 'dark');
         themeToggle.setAttribute('aria-label', 'Switch to light mode');
         if (themeMeta) themeMeta.setAttribute('content', '#000000');
+        syncThemeAssets('dark');
       } else {
         document.body.classList.replace('theme-dark', 'theme-light');
         icon.classList.replace('fa-sun', 'fa-moon');
         localStorage.setItem('theme', 'light');
         themeToggle.setAttribute('aria-label', 'Switch to dark mode');
         if (themeMeta) themeMeta.setAttribute('content', '#ffffff');
+        syncThemeAssets('light');
       }
     });
   }
