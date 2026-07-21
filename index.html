@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="assets/css/animations.css?v=7.0" />
   <link rel="stylesheet" href="assets/css/navigation.css?v=7.0" />
   <link rel="stylesheet" href="assets/css/footer.css?v=7.0" />
-  <link rel="stylesheet" href="assets/css/pages/index.css?v=7.1" />
+  <link rel="stylesheet" href="assets/css/pages/index.css?v=7.3" />
 </head>
 
 <body class="theme-light home-page">
@@ -33,14 +33,14 @@
         <div class="home-hero-copy">
           <p class="home-eyebrow">Bruno Melício</p>
           <h1 id="home-title">AI Researcher<br />&amp; Lecturer.</h1>
-          <p class="home-intro">Human-centered AI research, teaching and knowledge.</p>
+          <p class="home-intro">Human-centered AI research and teaching. Advancing healthcare and neurodevelopmental diagnosis.</p>
 
           <div class="home-actions" aria-label="Explore Bruno Melício's work">
-            <a href="research.html" class="home-primary-action">
-              <span>Explore My Research</span>
+            <a href="#services" class="home-primary-action">
+              <span>Explore My Services</span>
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <a href="about.html" class="home-secondary-action">About Me</a>
+            <a href="#research" class="home-secondary-action">My Research</a>
           </div>
         </div>
 
@@ -54,10 +54,64 @@
         </figure>
       </div>
 
-      <a href="#research" class="home-scroll-cue" aria-label="Scroll to featured research">
+      <a href="#services" class="home-scroll-cue" aria-label="Scroll to services">
         <span class="home-scroll-mouse" aria-hidden="true"><span></span></span>
         <span>Scroll to explore</span>
       </a>
+    </section>
+
+    <section class="services-showcase" id="services" aria-labelledby="services-title">
+      <div class="home-section-shell">
+        <div class="showcase-heading home-reveal">
+          <div>
+            <p class="showcase-kicker">Work with me</p>
+            <h2 id="services-title">Services</h2>
+          </div>
+          <p class="showcase-summary">Research depth translated into practical guidance, education and public expertise.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card home-reveal">
+            <a href="services.html" aria-label="Explore AI education and training services">
+              <span class="service-number" aria-hidden="true">01</span>
+              <div class="service-content">
+                <p class="service-type">Education</p>
+                <h3>AI Education &amp; Training</h3>
+                <p>Courses, workshops and practical learning for universities, teams and professionals.</p>
+                <span class="service-link">Explore service <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="service-card home-reveal">
+            <a href="services.html" aria-label="Explore AI research and advisory services">
+              <span class="service-number" aria-hidden="true">02</span>
+              <div class="service-content">
+                <p class="service-type">Advisory</p>
+                <h3>Research &amp; AI Advisory</h3>
+                <p>Evidence-led guidance on human-centered AI, healthcare applications and responsible adoption.</p>
+                <span class="service-link">Explore service <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="service-card home-reveal">
+            <a href="services.html" aria-label="Explore talks and keynote services">
+              <span class="service-number" aria-hidden="true">03</span>
+              <div class="service-content">
+                <p class="service-type">Speaking</p>
+                <h3>Talks &amp; Keynotes</h3>
+                <p>Clear, insightful talks on AI research, healthcare, ethics and innovation.</p>
+                <span class="service-link">Explore service <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="services-footer home-reveal">
+          <a href="services.html" class="research-all-link">Explore all services <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
     </section>
 
     <section class="research-showcase" id="research" aria-labelledby="research-title">
@@ -138,11 +192,65 @@
         </div>
       </div>
     </section>
+
+    <section class="profile-showcase" id="more" aria-labelledby="more-title">
+      <div class="home-section-shell profile-layout">
+        <div class="profile-introduction home-reveal">
+          <p class="showcase-kicker">Beyond the publications</p>
+          <h2 id="more-title">Research translated into knowledge people can use.</h2>
+          <p>Explore my teaching, public talks and the experience behind my work.</p>
+        </div>
+
+        <nav class="profile-pathways" aria-label="Explore more of Bruno Melício's work">
+          <a href="learn.html" class="profile-pathway home-reveal">
+            <span class="profile-pathway-number">01</span>
+            <span class="profile-pathway-copy">
+              <strong>Teaching</strong>
+              <small>Courses, tutorials and learning resources.</small>
+            </span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="events.html" class="profile-pathway home-reveal">
+            <span class="profile-pathway-number">02</span>
+            <span class="profile-pathway-copy">
+              <strong>Talks</strong>
+              <small>Keynotes, conferences and public conversations.</small>
+            </span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="about.html" class="profile-pathway home-reveal">
+            <span class="profile-pathway-number">03</span>
+            <span class="profile-pathway-copy">
+              <strong>About</strong>
+              <small>Background, experience and research focus.</small>
+            </span>
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </nav>
+      </div>
+    </section>
   </main>
+
+  <div class="studio-disclosure" id="studio-disclosure" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="studio-disclosure-title" hidden>
+    <div class="studio-disclosure-panel">
+      <button class="studio-disclosure-close" type="button" data-studio-close aria-label="Close Creative AI Studio notice">
+        <i class="fas fa-xmark" aria-hidden="true"></i>
+      </button>
+      <p class="studio-disclosure-kicker">Creative AI Studio</p>
+      <h2 id="studio-disclosure-title">A separate creative practice.</h2>
+      <p>Creative AI Studio is my independent commercial practice for AI-generated imagery, video and brand work. It is separate from my academic research and teaching; my primary professional role is AI researcher and lecturer.</p>
+      <div class="studio-disclosure-actions">
+        <a href="https://www.instagram.com/brunomelicio.ai" target="_blank" rel="noopener noreferrer" class="studio-disclosure-primary">
+          Continue to Studio <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+        <button type="button" data-studio-close class="studio-disclosure-secondary">Stay on this site</button>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/navigation.js?v=7.1"></script>
   <script src="assets/js/main.js?v=7.0"></script>
-  <script src="assets/js/homepage.js?v=7.1"></script>
+  <script src="assets/js/homepage.js?v=7.4"></script>
 </body>
 
 </html>

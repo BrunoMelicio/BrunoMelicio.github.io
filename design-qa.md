@@ -1,30 +1,47 @@
-# Homepage portrait and responsive QA
+# Homepage services, Studio disclosure and content flow QA
 
-## Source comparison
+## Accepted design sources
 
-- Problem references: `Screenshot 2026-07-19 at 13.12.45.png` (laptop) and `Screenshot 2026-07-19 at 13.12.57.png` (mobile).
-- Final desktop: `homepage-profile-light-desktop.png` at 1432 × 895.
-- Final laptop: `homepage-profile-light-laptop.png` at 812 × 900.
-- Final mobile: `homepage-profile-light-mobile.png` at 382 × 827.
-- Final dark states: `homepage-profile-dark-desktop.png` and `homepage-profile-dark-mobile.png`.
-- Side-by-side review inputs: `homepage-profile-desktop-comparison.png` and `homepage-profile-mobile-comparison.png`.
+- Approved hero system: `homepage-profile-light-desktop.png` at 1432 × 895.
+- Approved research-card system: `homepage-research-dark-final.png` at 1586 × 992.
+- Hero comparison: `homepage-hero-copy-comparison.png`.
+- Card-system comparison: `homepage-services-research-style-comparison.png`.
 
-## Visible findings
+## Latest implementation evidence
 
-- The portrait now fills its full visual column instead of starting partway down the hero.
-- The light and dark portrait backgrounds visually merge with their respective page backgrounds; no rectangular background edge remains.
-- Fine hair detail is preserved in both generated theme portraits.
-- On mobile, the portrait spans the full viewport width and remains centered; the previous half-width image/blank-column failure is gone.
-- Desktop, narrow-laptop and mobile crops keep the face, hair and jacket readable without stretching the subject.
+- Hero desktop: `homepage-adjusted-hero-desktop.png`.
+- Hero mobile: `homepage-adjusted-hero-mobile.png`.
+- Services light desktop: `homepage-services-desktop.png`.
+- Services dark desktop: `homepage-services-dark-desktop.png`.
+- Services mobile: `homepage-services-mobile.png`.
+- Studio disclosure: `homepage-studio-disclosure-desktop.png` and `homepage-studio-disclosure-mobile.png`.
+- Combined teaching/talks/about section: `homepage-more-desktop.png`.
 
-## Functional verification
+## Fidelity ledger
 
-- The homepage initializes in light mode on every load, including after dark mode was selected in the same session.
-- The theme toggle swaps between `profile_new_light.png` and `profile_new_dark.png` and updates its accessible label.
-- Desktop was checked at 1440 × 900, narrow laptop at 820 × 900, and mobile at 390 × 844.
-- Mobile image and portrait-container dimensions differ by less than one pixel, with no horizontal overflow.
-- Navigation, hero copy and CTAs remain visible and aligned at every tested breakpoint.
+- Hero layout, portrait treatment, typography and white/black palette remain unchanged; only the user-requested intro and CTA labels changed.
+- The primary CTA is now `Explore My Services`; the secondary CTA is `My Research`, with both scrolling to the correct section.
+- The services cards reuse the approved research-card radius, border, shadow, monochrome palette and subtle tilt motion while remaining simpler and text-led.
+- The section order is now hero, services, research, then one compact teaching/talks/about section.
+- The final section deliberately changes from cards to three editorial rows, preventing a repetitive card grid and shortening the page.
+- The Studio disclosure uses the same typography, pill-button and border system; it clearly separates commercial creative work from the primary researcher and lecturer identity.
+- Light and dark states retain exact white and black backgrounds with no new accent palette.
+
+## Browser verification
+
+- Flow: homepage loads -> `Explore My Services` scrolls to services -> `My Research` scrolls to research -> Studio navigation opens disclosure -> visitor can stay or continue externally.
+- Desktop checked at 1440 × 900; mobile checked at 390 × 844.
+- Mobile services use a horizontal snap rail with zero page-level horizontal overflow.
+- Studio disclosure is centered at 610 × 451 on desktop and fits at 359 × 450 on mobile; opening it closes the mobile menu.
+- Studio disclosure receives focus on open, traps keyboard focus, closes with Escape and restores focus to the Studio link.
+- Conference filter still reports three visible publications and updates the active state.
+- Page identity, meaningful DOM content and section links passed.
 - Browser console returned no warnings or errors.
 - JavaScript syntax checks and `git diff --check` pass.
+
+## Above-the-fold copy diff
+
+- Intentional, requested changes only: the supporting line now merges the human-centered AI and healthcare focus; CTAs changed from research/about to services/research.
+- No additional hero labels, badges, decorative graphics or competing actions were added.
 
 final result: passed

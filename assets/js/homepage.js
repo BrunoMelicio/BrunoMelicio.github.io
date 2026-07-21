@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const filters = document.querySelectorAll('.research-filter');
   const cards = document.querySelectorAll('.publication-card');
+  const interactiveCards = document.querySelectorAll('.publication-card, .service-card');
 
   filters.forEach(filter => {
     filter.addEventListener('click', () => {
@@ -41,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    cards.forEach(card => {
+    interactiveCards.forEach(card => {
       card.addEventListener('pointermove', event => {
         const bounds = card.getBoundingClientRect();
         const x = (event.clientX - bounds.left) / bounds.width - 0.5;
@@ -71,5 +72,64 @@ document.addEventListener('DOMContentLoaded', () => {
         portrait.style.setProperty('--portrait-y', '0px');
       });
     }
+  }
+
+  const studioDisclosure = document.getElementById('studio-disclosure');
+  if (studioDisclosure) {
+    let studioTrigger = null;
+    const closeStudioDisclosure = () => {
+      studioDisclosure.hidden = true;
+      studioDisclosure.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('studio-modal-open');
+      studioTrigger?.focus();
+    };
+
+    document.addEventListener('click', event => {
+      const studioEntry = event.target.closest('.studio-entry');
+      if (!studioEntry) return;
+
+      event.preventDefault();
+      studioTrigger = studioEntry;
+      document.querySelector('.menu-toggle')?.classList.remove('active');
+      document.querySelector('.nav-menu')?.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+      document.body.classList.add('studio-modal-open');
+      studioDisclosure.hidden = false;
+      studioDisclosure.setAttribute('aria-hidden', 'false');
+      studioDisclosure.querySelector('.studio-disclosure-close')?.focus();
+    });
+
+    studioDisclosure.querySelectorAll('[data-studio-close]').forEach(control => {
+      control.addEventListener('click', closeStudioDisclosure);
+    });
+
+    studioDisclosure.addEventListener('click', event => {
+      if (event.target === studioDisclosure) closeStudioDisclosure();
+    });
+
+    studioDisclosure.querySelector('.studio-disclosure-primary')?.addEventListener('click', closeStudioDisclosure);
+
+    document.addEventListener('keydown', event => {
+      if (studioDisclosure.hidden) return;
+
+      if (event.key === 'Escape') {
+        closeStudioDisclosure();
+        return;
+      }
+
+      if (event.key === 'Tab') {
+        const focusable = [...studioDisclosure.querySelectorAll('a[href], button:not([disabled])')];
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
   }
 });
