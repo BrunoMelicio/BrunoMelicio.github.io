@@ -1,236 +1,302 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | Bruno Melício</title>
-  <meta name="description" content="Research publications by Bruno Melício on AI, computer vision, and neurodevelopmental disorder detection." />
+  <meta name="description"
+    content="Research by Bruno Melício on human-centered AI, behavior understanding and neurodevelopmental assessment." />
   <meta name="theme-color" content="#ffffff" />
   <meta property="og:title" content="Research | Bruno Melício" />
-  <meta property="og:description" content="Publications on AI for behavior analysis and neurodevelopmental disorder detection." />
+  <meta property="og:description"
+    content="Human-centered AI research for behavior understanding, healthcare and neurodevelopmental assessment." />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <meta property="og:image" content="assets/images/event.png" />
+  <link rel="icon" type="image/png" href="assets/images/logo2.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=5.1" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/base.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/components.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/animations.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/navigation.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/footer.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/pages/research.css?v=5.1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=8.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/base.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/components.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/animations.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/navigation.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/footer.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/pages/research.css?v=8.0" />
 </head>
-<body class="theme-light glass-theme">
 
+<body class="theme-light research-page">
+  <main class="research-main">
+    <section class="research-intro" aria-labelledby="research-page-title">
+      <div class="research-shell research-intro-grid">
+        <div class="research-intro-copy research-reveal">
+          <h1 id="research-page-title"><span>Research for</span><span>better human</span><span>outcomes.</span></h1>
+          <p>I develop human-centered AI methods for understanding behavior and supporting earlier, more informed
+            neurodevelopmental assessment.</p>
 
+          <div class="research-intro-actions" aria-label="Explore the research page">
+            <a href="#publications" class="research-primary-action">
+              <span>Explore publications</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#profiles" class="research-secondary-action">View research profiles</a>
+          </div>
+        </div>
 
-
-  <main class="has-hero">
-
-    <!-- Hero -->
-    <section class="page-hero research-hero">
-      <div class="page-hero-inner">
-        <span class="overline hero-animate">Publications</span>
-        <h1 class="page-hero-title hero-animate">Research</h1>
-        <p class="page-hero-subtitle hero-animate">Exploring the intersection of AI, computer vision, and human behavior analysis.</p>
+        <div class="research-intro-visual research-reveal">
+          <figure>
+            <img src="assets/images/event.png" alt="Bruno Melício presenting autism research at a scientific event"
+              fetchpriority="high" decoding="async" />
+          </figure>
+          <p aria-label="Research areas">AI <span>·</span> behavior <span>·</span> healthcare</p>
+        </div>
       </div>
     </section>
 
-    <!-- Scholar Stats -->
-    <!-- Update these values from your Google Scholar profile: https://scholar.google.com/citations?user=fRrxUhsAAAAJ -->
-    <section class="scholar-stats-section transparent-section card glass-panel glass-hover">
-      <div class="container container--narrow">
-        <div class="scholar-stats animate-on-scroll fade-up card glass-panel glass-hover">
-          <div class="scholar-stat">
-            <span class="scholar-stat-number">6</span>
-            <span class="scholar-stat-label">Publications</span>
-          </div>
-          <div class="scholar-stat">
-            <span class="scholar-stat-number">45</span>
-            <span class="scholar-stat-label">Citations</span>
-          </div>
-          <div class="scholar-stat">
-            <span class="scholar-stat-number">3</span>
-            <span class="scholar-stat-label">h-index</span>
-          </div>
-          <a href="https://scholar.google.com/citations?user=fRrxUhsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="scholar-link">
-            <i class="ai ai-google-scholar"></i> Google Scholar
+    <section class="research-metrics" aria-labelledby="research-metrics-title">
+      <div class="research-shell">
+        <h2 id="research-metrics-title" class="visually-hidden">Current research metrics</h2>
+        <div class="research-metrics-grid research-reveal" aria-live="polite">
+          <article class="research-metric">
+            <strong data-research-metric="publications">6</strong>
+            <span>Publications</span>
+            <small>Unique works</small>
+          </article>
+          <article class="research-metric">
+            <strong data-research-metric="citations">49</strong>
+            <span>Citations</span>
+            <small data-research-citation-sources>Google Scholar · 45 on ResearchGate</small>
+          </article>
+          <article class="research-metric">
+            <strong data-research-metric="hIndex">3</strong>
+            <span>h-index</span>
+            <small>Google Scholar</small>
+          </article>
+          <article class="research-metric">
+            <strong data-research-metric="reads">601</strong>
+            <span>Reads</span>
+            <small>ResearchGate</small>
+          </article>
+        </div>
+        <p class="research-metrics-note research-reveal">
+          Source-backed profile snapshot <span aria-hidden="true">·</span>
+          <span data-research-verified>Verified 21 July 2026</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="research-focus" aria-labelledby="research-focus-title">
+      <div class="research-shell">
+        <h2 id="research-focus-title" class="visually-hidden">Research focus</h2>
+        <div class="research-focus-grid">
+          <article class="research-focus-item research-reveal">
+            <span class="research-focus-number" aria-hidden="true">01</span>
+            <h3>Behavior<br />understanding.</h3>
+            <p>Studying human interaction through visual, temporal and contextual signals.</p>
+          </article>
+
+          <article class="research-focus-item research-reveal">
+            <span class="research-focus-number" aria-hidden="true">02</span>
+            <h3>Neurodevelopmental<br />assessment.</h3>
+            <p>Building methods that support earlier, more informed and accessible assessment.</p>
+          </article>
+
+          <article class="research-focus-item research-reveal">
+            <span class="research-focus-number" aria-hidden="true">03</span>
+            <h3>Multimodal<br />AI.</h3>
+            <p>Combining complementary signals and expert knowledge to improve real-world outcomes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="research-publications" id="publications" aria-labelledby="publications-title">
+      <div class="research-shell">
+        <div class="research-section-heading research-reveal">
+          <h2 id="publications-title">Publications</h2>
+          <p>A curated record of peer-reviewed papers and conference work.</p>
+        </div>
+
+        <div class="publication-filters research-reveal" role="group" aria-label="Filter publications">
+          <button type="button" class="publication-filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="publication-filter" data-filter="journal" aria-pressed="false">Journal
+            articles</button>
+          <button type="button" class="publication-filter" data-filter="conference" aria-pressed="false">Conference
+            papers</button>
+          <span class="publication-filter-divider" aria-hidden="true"></span>
+          <button type="button" class="publication-filter" data-filter="2025" aria-pressed="false">2025</button>
+          <button type="button" class="publication-filter" data-filter="earlier" aria-pressed="false">Earlier</button>
+        </div>
+
+        <div class="research-publication-grid" aria-live="polite">
+          <article class="research-publication-card is-featured research-reveal" data-type="journal" data-year="2025">
+            <a href="https://doi.org/10.1007/s12559-025-10481-7" target="_blank" rel="noopener noreferrer">
+              <div class="research-publication-image research-publication-image--photo">
+                <img src="assets/images/research.JPG" alt="Bruno Melício with research colleagues at a scientific poster"
+                  loading="lazy" />
+              </div>
+              <div class="research-publication-content">
+                <div class="research-publication-meta"><span>2025</span><span>Journal article</span></div>
+                <h3>Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2</h3>
+                <p class="research-publication-venue">Cognitive Computation, 17(4), 137</p>
+                <p class="research-publication-authors">B. C. D. S. Melício, K. Karakose, A. Fodor, L. Xiang, V. Varga,
+                  L. Soorya, E. Dillon, P. Kun, A. Sarkany, M. Chetouani, K. Fenech &amp; A. Lorincz</p>
+                <span class="research-publication-link">View paper <i class="fas fa-arrow-up-right-from-square"
+                    aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="research-publication-card research-reveal" data-type="conference" data-year="2025">
+            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50833" target="_blank"
+              rel="noopener noreferrer">
+              <div class="research-publication-image">
+                <img src="assets/images/event.png" alt="Bruno Melício presenting research on autism spectrum disorder"
+                  loading="lazy" />
+              </div>
+              <div class="research-publication-content">
+                <div class="research-publication-meta"><span>2025</span><span>Conference paper</span></div>
+                <h3>Examining Object Play Initiation Delays during ADOS-2 Make-Believe Play Task</h3>
+                <p class="research-publication-venue">International Society for Autism Research (INSAR)</p>
+                <p class="research-publication-authors">B. C. D. S. Melício, K. Karakose, P. G. Molnar, K. Kamal and
+                  collaborators</p>
+                <span class="research-publication-link">View abstract <i class="fas fa-arrow-up-right-from-square"
+                    aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="research-publication-card research-reveal" data-type="conference" data-year="2025">
+            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50927" target="_blank"
+              rel="noopener noreferrer">
+              <div class="research-publication-image research-publication-image--dark">
+                <img src="assets/images/research-card-01.png" alt="Abstract monochrome particle wave" loading="lazy" />
+              </div>
+              <div class="research-publication-content">
+                <div class="research-publication-meta"><span>2025</span><span>Conference paper</span></div>
+                <h3>Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI</h3>
+                <p class="research-publication-venue">International Society for Autism Research (INSAR)</p>
+                <p class="research-publication-authors">K. Karakose, P. G. Molnar, B. C. D. S. Melício, K. Kamal and
+                  collaborators</p>
+                <span class="research-publication-link">View abstract <i class="fas fa-arrow-up-right-from-square"
+                    aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="research-publication-card research-reveal" data-type="conference" data-year="2023">
+            <a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer">
+              <div class="research-publication-image research-publication-image--photo">
+                <img src="assets/images/presentation1.JPG" alt="Bruno Melício presenting Composite AI research"
+                  loading="lazy" />
+              </div>
+              <div class="research-publication-content">
+                <div class="research-publication-meta"><span>2023</span><span>Conference paper</span></div>
+                <h3>Composite AI for Behavior Analysis in Social Interactions</h3>
+                <p class="research-publication-venue">Companion Publication of the 25th ACM International Conference on
+                  Multimodal Interaction</p>
+                <p class="research-publication-authors">B. C. D. S. Melício, L. Xiang, E. Dillon, L. Soorya, M.
+                  Chetouani and collaborators</p>
+                <span class="research-publication-link">View paper <i class="fas fa-arrow-up-right-from-square"
+                    aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="research-publication-card research-reveal" data-type="journal" data-year="2022">
+            <a href="https://www.mdpi.com/2414-4088/6/7/48" target="_blank" rel="noopener noreferrer">
+              <div class="research-publication-image research-publication-image--light">
+                <img src="assets/images/research_card_bg.jpg" alt="Abstract interconnected neural structure"
+                  loading="lazy" />
+              </div>
+              <div class="research-publication-content">
+                <div class="research-publication-meta"><span>2022</span><span>Journal article</span></div>
+                <h3>AI Technologies for Machine Supervision and Help in a Rehabilitation Scenario</h3>
+                <p class="research-publication-venue">Multimodal Technologies and Interaction, 6(7), 48</p>
+                <p class="research-publication-authors">G. Baranyi, B. C. D. S. Melício, Z. Gaal, L. Hajder, A.
+                  Simonyi and collaborators</p>
+                <span class="research-publication-link">View paper <i class="fas fa-arrow-up-right-from-square"
+                    aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="research-publication-card research-reveal" data-type="conference" data-year="2021">
+            <a href="https://link.springer.com/chapter/10.1007/978-3-030-86365-4_31" target="_blank"
+              rel="noopener noreferrer">
+              <div class="research-publication-image research-publication-image--photo">
+                <img src="assets/images/teaching.jpeg" alt="Bruno Melício in front of an artificial intelligence lecture"
+                  loading="lazy" />
+              </div>
+              <div class="research-publication-content">
+                <div class="research-publication-meta"><span>2021</span><span>Conference paper</span></div>
+                <h3>DeepRehab: Real Time Pose Estimation on the Edge for Knee Injury Rehabilitation</h3>
+                <p class="research-publication-venue">International Conference on Artificial Neural Networks (ICANN)</p>
+                <p class="research-publication-authors">B. C. D. S. Melício, G. Baranyi, Z. Gaal, S. Zidan &amp; A.
+                  Lorincz</p>
+                <span class="research-publication-link">View paper <i class="fas fa-arrow-up-right-from-square"
+                    aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <p class="publication-empty" role="status" hidden>No publications match this filter.</p>
+      </div>
+    </section>
+
+    <section class="research-profiles" id="profiles" aria-labelledby="profiles-title">
+      <div class="research-shell research-profiles-layout">
+        <div class="research-profiles-copy research-reveal">
+          <h2 id="profiles-title">Research profiles</h2>
+          <p>Complete records and platform-specific metrics.</p>
+        </div>
+
+        <div class="research-profile-links research-reveal">
+          <a href="https://scholar.google.com/citations?user=fRrxUhsAAAAJ&amp;hl=en" target="_blank"
+            rel="noopener noreferrer">
+            <span><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</span>
+            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.researchgate.net/profile/Bruno-Carlos-Dos-Santos-Melicio" target="_blank"
+            rel="noopener noreferrer">
+            <span><i class="ai ai-researchgate" aria-hidden="true"></i>ResearchGate</span>
+            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </a>
         </div>
+
+        <p class="research-source-note research-reveal">Metrics can differ because each platform indexes and updates
+          research independently.</p>
       </div>
     </section>
-
-    <!-- Publications -->
-    <section class="publications-section transparent-section">
-      <div class="container container--narrow">
-        <div class="section-label animate-on-scroll fade-up">
-          <span class="overline">Publications</span>
-          <h2 class="section-title">Published Work</h2>
-        </div>
-
-        <!-- ===== 2025 ===== -->
-        <h3 class="year-header animate-on-scroll fade-up">2025</h3>
-
-        <!-- Publication 1 -->
-        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
-          <span class="pub-year"><i class="fas fa-book"></i> Journal Article</span>
-          <h3 class="pub-title">Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2</h3>
-          <p class="pub-authors">Bruno Carlos Dos Santos Melicio, Kaan Karakose, Adam Fodor, Linyun Xiang, Viktor Varga, Latha Soorya, Emily Dillon, Peter Kun, Andras Sarkany, Mohamed Chetouani, Kristian Fenech, Andras Lorincz</p>
-          <p class="pub-venue">Cognitive Computation, 17(4), 137, 2025</p>
-          <div class="pub-links">
-            <a href="https://doi.org/10.1007/s12559-025-10481-7" target="_blank" rel="noopener noreferrer" class="pub-link">
-              <i class="fas fa-external-link-alt"></i> View Paper
-            </a>
-          </div>
-        </article>
-
-        <!-- Publication 2 -->
-        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
-          <span class="pub-year"><i class="fas fa-book-open"></i> Conference</span>
-          <h3 class="pub-title">Examining Object Play Initiation Delays during ADOS-2 Make-Believe Play Task</h3>
-          <p class="pub-authors">Bruno Carlos Dos Santos Melicio, Kaan Karakose, Peter Gergo Molnar, Khaleel Kamal, Andras Sarkany, Fouad Alshaban, Iman Ghazal, Fatema Al-Faraj, Latha Valluripalli Soorya, Kristian Fenech, Andras Lorincz</p>
-          <p class="pub-venue">International Society for Autism Research (INSAR) 2025</p>
-          <div class="pub-links">
-            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50833" target="_blank" rel="noopener noreferrer" class="pub-link">
-              <i class="fas fa-external-link-alt"></i> View Abstract
-            </a>
-          </div>
-        </article>
-
-        <!-- Publication 3 -->
-        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
-          <span class="pub-year"><i class="fas fa-book-open"></i> Conference</span>
-          <h3 class="pub-title">Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI</h3>
-          <p class="pub-authors">Kaan Karakose, Peter Gergo Molnar, Bruno Carlos Dos Santos Melicio, Khaleel Kamal, Andras Sarkany, Latha Valluripalli Soorya, Kristian Fenech, Andras Lorincz</p>
-          <p class="pub-venue">International Society for Autism Research (INSAR) 2025</p>
-          <div class="pub-links">
-            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50927" target="_blank" rel="noopener noreferrer" class="pub-link">
-              <i class="fas fa-external-link-alt"></i> View Abstract
-            </a>
-          </div>
-        </article>
-
-        <!-- ===== 2023 ===== -->
-        <h3 class="year-header animate-on-scroll fade-up">2023</h3>
-
-        <!-- Publication 4 -->
-        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
-          <span class="pub-year"><i class="fas fa-book"></i> Conference</span>
-          <h3 class="pub-title">Composite AI for Behavior Analysis in Social Interactions</h3>
-          <p class="pub-authors">Bruno Carlos Dos Santos Melicio, Linyun Xiang, Emily Dillon, Latha Soorya, Mohamed Chetouani, Andras Sarkany, Peter Kun, Kristian Fenech, Andras Lorincz</p>
-          <p class="pub-venue">Companion Publication of the 25th International Conference on Multimodal Interaction (ICMI) 2023</p>
-          <div class="pub-links">
-            <a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer" class="pub-link">
-              <i class="fas fa-external-link-alt"></i> View Paper
-            </a>
-          </div>
-        </article>
-
-        <!-- ===== 2022 ===== -->
-        <h3 class="year-header animate-on-scroll fade-up">2022</h3>
-
-        <!-- Publication 5 -->
-        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
-          <span class="pub-year"><i class="fas fa-book"></i> Journal Article</span>
-          <h3 class="pub-title">AI Technologies for Machine Supervision and Help in a Rehabilitation Scenario</h3>
-          <p class="pub-authors">Gabor Baranyi, Bruno Carlos Dos Santos Melicio, Zsofia Gaal, Levente Hajder, Andras Simonyi, Daniel Sindely, Joul Skaf, Ondrej Dusek, Tomas Nekvinda, Andras Lorincz</p>
-          <p class="pub-venue">Multimodal Technologies and Interaction (MTI), 2022</p>
-          <div class="pub-links">
-            <a href="https://www.mdpi.com/2414-4088/6/7/48" target="_blank" rel="noopener noreferrer" class="pub-link">
-              <i class="fas fa-external-link-alt"></i> View Paper
-            </a>
-            <a href="https://www.mdpi.com/2414-4088/6/7/48/pdf" target="_blank" rel="noopener noreferrer" class="pub-link">
-              <i class="fas fa-file-pdf"></i> PDF
-            </a>
-          </div>
-        </article>
-
-        <!-- ===== 2021 ===== -->
-        <h3 class="year-header animate-on-scroll fade-up">2021</h3>
-
-        <!-- Publication 6 -->
-        <article class="card card-publication animate-on-scroll fade-up glass-panel glass-hover">
-          <span class="pub-year"><i class="fas fa-book"></i> Conference</span>
-          <h3 class="pub-title">DeepRehab: Real Time Pose Estimation on the Edge for Knee Injury Rehabilitation</h3>
-          <p class="pub-authors">Bruno Carlos Dos Santos Melicio, Gabor Baranyi, Zsofia Gaal, Sohil Zidan, Andras Lorincz</p>
-          <p class="pub-venue">International Conference on Artificial Neural Networks (ICANN), 2021</p>
-          <div class="pub-links">
-            <a href="https://link.springer.com/chapter/10.1007/978-3-030-86365-4_31" target="_blank" rel="noopener noreferrer" class="pub-link">
-              <i class="fas fa-external-link-alt"></i> View Paper
-            </a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="projects-section transparent-section">
-      <div class="container container--narrow">
-        <div class="section-label animate-on-scroll fade-up">
-          <span class="overline">Ongoing</span>
-          <h2 class="section-title">Research Projects</h2>
-        </div>
-
-        <div class="projects-grid">
-
-          <article class="card card-project animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
-            <div class="project-thumb placeholder-thumb">
-              <i class="fas fa-brain"></i>
-            </div>
-            <div class="project-body">
-              <span class="badge badge--success">Active</span>
-              <h3 class="project-title">Composite AI for ADOS-2 Behavior Analysis</h3>
-              <p class="project-description">Developing multimodal AI systems to automatically analyze behavioral markers in children during ADOS-2 diagnostic assessments for Autism Spectrum Disorder.</p>
-              <div class="project-tags">
-                <span>Computer Vision</span>
-                <span>Multimodal AI</span>
-                <span>Healthcare</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card card-project animate-on-scroll fade-up stagger-2 glass-panel glass-hover">
-            <div class="project-thumb placeholder-thumb">
-              <i class="fas fa-child"></i>
-            </div>
-            <div class="project-body">
-              <span class="badge badge--success">Active</span>
-              <h3 class="project-title">Early Detection of Neurodevelopmental Disorders</h3>
-              <p class="project-description">Leveraging AI and machine learning to enable earlier and more accurate detection of neurodevelopmental disorders, improving outcomes for children and families.</p>
-              <div class="project-tags">
-                <span>Machine Learning</span>
-                <span>Early Detection</span>
-                <span>Clinical AI</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card card-project animate-on-scroll fade-up stagger-3 glass-panel glass-hover">
-            <div class="project-thumb placeholder-thumb">
-              <i class="fas fa-running"></i>
-            </div>
-            <div class="project-body">
-              <span class="badge badge--muted">Completed</span>
-              <h3 class="project-title">DeepRehab: AI-Assisted Physical Rehabilitation</h3>
-              <p class="project-description">Real-time pose estimation on edge devices for knee injury rehabilitation, enabling remote physiotherapy guidance with AI-powered feedback.</p>
-              <div class="project-tags">
-                <span>Pose Estimation</span>
-                <span>Edge Computing</span>
-                <span>Rehabilitation</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <script src="assets/js/navigation.js"></script>
-  <script src="assets/js/main.js"></script>
+  <div class="studio-disclosure" id="studio-disclosure" role="dialog" aria-modal="true" aria-hidden="true"
+    aria-labelledby="studio-disclosure-title" hidden>
+    <div class="studio-disclosure-panel">
+      <button class="studio-disclosure-close" type="button" data-studio-close
+        aria-label="Close Creative AI Studio notice">
+        <i class="fas fa-xmark" aria-hidden="true"></i>
+      </button>
+      <p class="studio-disclosure-kicker">Creative AI Studio</p>
+      <h2 id="studio-disclosure-title">A separate creative practice.</h2>
+      <p>Creative AI Studio is my independent commercial practice for AI-generated imagery, video and brand work. It is
+        separate from my academic research and teaching; my primary professional role is AI researcher and lecturer.</p>
+      <div class="studio-disclosure-actions">
+        <a href="/studio/" class="studio-disclosure-primary">
+          Continue to Studio <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+        <button type="button" data-studio-close class="studio-disclosure-secondary">Stay on this site</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/navigation.js?v=8.0"></script>
+  <script src="assets/js/main.js?v=8.0"></script>
+  <script src="assets/js/research.js?v=8.0"></script>
 </body>
+
 </html>
