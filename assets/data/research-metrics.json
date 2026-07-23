@@ -1,0 +1,26 @@
+{
+  "verifiedOn": "2026-07-21",
+  "display": {
+    "publications": 6,
+    "citations": 49,
+    "hIndex": 3,
+    "reads": 601
+  },
+  "sources": {
+    "googleScholar": {
+      "citations": 49,
+      "hIndex": 3,
+      "i10Index": 3,
+      "indexedRows": 7,
+      "uniquePublications": 6,
+      "url": "https://scholar.google.com/citations?user=fRrxUhsAAAAJ&hl=en"
+    },
+    "researchGate": {
+      "publications": 6,
+      "citations": 45,
+      "reads": 601,
+      "url": "https://www.researchgate.net/profile/Bruno-Carlos-Dos-Santos-Melicio"
+    }
+  },
+  "note": "Six unique works are shown; Google Scholar currently includes a duplicate record for one 2025 paper."
+}

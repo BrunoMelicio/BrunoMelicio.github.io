@@ -1,588 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learn | Bruno Melício</title>
-  <meta name="description" content="AI courses, tutorials, blog posts, and resources by Bruno Melício. Master deep learning and artificial intelligence." />
+  <title>Teaching | Bruno Melício</title>
+  <meta name="description"
+    content="University teaching, self-paced AI courses and professional workshops by AI researcher and lecturer Bruno Melício." />
   <meta name="theme-color" content="#ffffff" />
-  <meta property="og:title" content="Learn | Bruno Melício" />
-  <meta property="og:description" content="Courses, tutorials, and resources to master AI and deep learning." />
+  <meta property="og:title" content="Teaching | Bruno Melício" />
+  <meta property="og:description"
+    content="Artificial intelligence taught from first principles, connecting theory, code and responsible practice." />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <meta property="og:image" content="assets/images/teaching.jpeg" />
+  <link rel="icon" type="image/png" href="assets/images/logo2.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=5.1" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/base.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/components.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/animations.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/navigation.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/footer.css?v=5.1" />
-  <link rel="stylesheet" href="assets/css/pages/learn.css?v=5.1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=8.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/base.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/components.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/animations.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/navigation.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/footer.css?v=8.0" />
+  <link rel="stylesheet" href="assets/css/pages/learn.css?v=8.0" />
 </head>
-<body class="theme-light glass-theme">
 
+<body class="theme-light teaching-page">
+  <main class="teaching-main">
+    <section class="teaching-intro" aria-labelledby="teaching-page-title">
+      <div class="teaching-shell teaching-intro-grid">
+        <div class="teaching-intro-copy teaching-reveal">
+          <h1 id="teaching-page-title"><span>Teaching AI</span><span>to understand.</span><span>To build.</span></h1>
+          <p>I teach artificial intelligence from first principles, connecting theory, code, current research and
+            responsible real-world use.</p>
 
+          <div class="teaching-intro-actions" aria-label="Explore teaching">
+            <a href="#teaching-catalog" class="teaching-primary-action">
+              <span>Explore teaching</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#teaching-approach" class="teaching-secondary-action">My approach</a>
+          </div>
+        </div>
 
-
-  <main class="has-hero">
-
-    <!-- Hero -->
-    <section class="page-hero">
-      <div class="page-hero-inner">
-        <span class="overline hero-animate">Education</span>
-        <h1 class="page-hero-title hero-animate">Learn</h1>
-        <p class="page-hero-subtitle hero-animate">Courses, tutorials, and resources to help you master AI and deep learning.</p>
+        <div class="teaching-intro-visual teaching-reveal">
+          <figure>
+            <img src="assets/images/teaching.jpeg" alt="Bruno Melício teaching Deep Network Developments at ELTE"
+              fetchpriority="high" decoding="async" />
+          </figure>
+          <p aria-label="Teaching principles">theory <span>·</span> code <span>·</span> judgment</p>
+        </div>
       </div>
     </section>
 
-    <!-- Active Course -->
-    <section id="courses" class="learn-section transparent-section">
-      <div class="container container--narrow">
-        <div class="section-label animate-on-scroll fade-up">
-          <span class="overline">Current</span>
-          <h2 class="section-title">Active Courses</h2>
-        </div>
-
-        <article class="card card-course animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
-          <div class="course-header">
-            <div class="card-icon"><i class="fas fa-brain"></i></div>
-            <div>
-              <h3 class="course-title">Deep Network Developments</h3>
-              <div class="course-meta">
-                <span class="badge">ELTE</span>
-                <span class="badge badge--success">Active</span>
-              </div>
-            </div>
-          </div>
-          <p class="course-description">An advanced course covering the latest developments in deep learning, from theoretical foundations to practical implementation. Students gain hands-on experience with modern architectures and real-world applications.</p>
-          <div class="course-details">
-            <div class="course-detail">
-              <i class="fas fa-university"></i>
-              <span>Faculty of Informatics, ELTE</span>
-            </div>
-            <div class="course-detail">
-              <i class="fas fa-users"></i>
-              <span>MSc-level students</span>
-            </div>
-            <div class="course-detail">
-              <i class="fas fa-clock"></i>
-              <span>Semester-long course</span>
-            </div>
-          </div>
-          <h4 class="course-topics-title">Topics Covered</h4>
-          <ul class="course-topics">
-            <li><i class="fas fa-check"></i> Supervised deep learning architectures</li>
-            <li><i class="fas fa-check"></i> Convolutional Neural Networks (CNNs)</li>
-            <li><i class="fas fa-check"></i> Recurrent Neural Networks & Transformers</li>
-            <li><i class="fas fa-check"></i> Generative AI & Large Language Models</li>
-            <li><i class="fas fa-check"></i> Real-world AI applications in healthcare</li>
-            <li><i class="fas fa-check"></i> Ethical considerations in AI development</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- Private Tutoring -->
-    <section class="learn-section transparent-section">
-      <div class="container container--narrow">
-        <div class="section-label animate-on-scroll fade-up">
-          <span class="overline">1-on-1</span>
-          <h2 class="section-title">Private Tutoring</h2>
-        </div>
-
-        <article class="card card-course animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
-          <div class="course-header">
-            <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
-            <div>
-              <h3 class="course-title">Personalized AI & Deep Learning Instruction</h3>
-              <div class="course-meta">
-                <span class="badge badge--success">Available</span>
-              </div>
-            </div>
-          </div>
-          <p class="course-description">Tailored 1-on-1 sessions designed around your learning goals, whether you're starting from scratch or advancing your expertise in AI and deep learning.</p>
-          <div class="course-details">
-            <div class="course-detail">
-              <i class="fas fa-laptop-code"></i>
-              <span>Project-based learning</span>
-            </div>
-            <div class="course-detail">
-              <i class="fas fa-clock"></i>
-              <span>Flexible scheduling</span>
-            </div>
-            <div class="course-detail">
-              <i class="fas fa-layer-group"></i>
-              <span>Beginner to advanced</span>
-            </div>
-          </div>
-          <h4 class="course-topics-title">What You Can Learn</h4>
-          <ul class="course-topics">
-            <li><i class="fas fa-check"></i> Custom learning path tailored to your goals</li>
-            <li><i class="fas fa-check"></i> Deep learning fundamentals & architectures</li>
-            <li><i class="fas fa-check"></i> Hands-on coding with real datasets</li>
-            <li><i class="fas fa-check"></i> Research methodology & paper writing</li>
-            <li><i class="fas fa-check"></i> Career guidance in AI</li>
-          </ul>
-          <a href="services.html#contact" class="btn-primary" style="margin-top: var(--space-lg);">Book a Session</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- AI with Bruno -->
-    <section class="learn-section transparent-section">
-      <div class="container container--narrow">
-        <div class="section-label animate-on-scroll fade-up">
-          <span class="overline">YouTube</span>
-          <h2 class="section-title">AI with Bruno</h2>
-        </div>
-
-        <article class="card card-course card-muted animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
-          <div class="course-header">
-            <div class="card-icon"><i class="fab fa-youtube"></i></div>
-            <div>
-              <h3 class="course-title">AI with Bruno - YouTube Series</h3>
-              <div class="course-meta">
-                <span class="badge badge--muted">Coming Soon</span>
-              </div>
-            </div>
-          </div>
-          <p class="course-description">A YouTube series exploring AI concepts, coding tutorials, and career guidance in artificial intelligence. Free educational content for everyone.</p>
-          <div class="course-details">
-            <div class="course-detail">
-              <i class="fas fa-play-circle"></i>
-              <span>Video tutorials</span>
-            </div>
-            <div class="course-detail">
-              <i class="fas fa-code"></i>
-              <span>Hands-on coding examples</span>
-            </div>
-            <div class="course-detail">
-              <i class="fas fa-trending-up"></i>
-              <span>Latest AI trends</span>
-            </div>
-          </div>
-          <h4 class="course-topics-title">Planned Content</h4>
-          <ul class="course-topics">
-            <li><i class="fas fa-check"></i> Beginner to advanced AI concepts</li>
-            <li><i class="fas fa-check"></i> Practical coding walkthroughs</li>
-            <li><i class="fas fa-check"></i> Research paper breakdowns</li>
-            <li><i class="fas fa-check"></i> AI career advice and tips</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- Blog -->
-    <section id="blog" class="learn-section transparent-section">
-      <div class="container container--narrow">
-        <div class="section-label animate-on-scroll fade-up">
-          <span class="overline">Articles</span>
-          <h2 class="section-title">Blog</h2>
-        </div>
-        <div id="blog-posts-grid" class="blog-posts-grid">
-          <!-- Posts loaded from posts.json -->
-        </div>
-        <p id="blog-no-posts" class="blog-no-posts" style="display:none;">No posts yet. Check back soon!</p>
-      </div>
-    </section>
-
-    <!-- Resources -->
-    <section id="resources" class="learn-section transparent-section">
-      <div class="container container--narrow">
-        <div class="section-label animate-on-scroll fade-up">
-          <span class="overline">Resources</span>
-          <h2 class="section-title">Videos, Materials & Recommended Reading</h2>
-        </div>
-
-        <!-- Videos & Talks -->
-        <h3 class="resources-subsection-title animate-on-scroll fade-up">Videos & Talks</h3>
-        <div class="resources-list">
-          <a href="https://youtu.be/IsqRVK3UZPA?si=LgxjHxityK0fQi5G&t=2893" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
-            <div class="resource-icon">
-              <i class="fab fa-youtube"></i>
-            </div>
-            <div class="resource-body">
-              <h4 class="resource-title">JSALT 2023 Workshop Presentation</h4>
-              <p class="resource-source">Johns Hopkins University — JSALT Workshop</p>
-              <p class="resource-description">My presentation at the Frederick Jelinek Memorial Summer Workshop on Speech and Language Technology, covering our work on composite AI for behavior analysis.</p>
-            </div>
-            <i class="fas fa-external-link-alt resource-link-icon"></i>
+    <section class="teaching-paths" aria-labelledby="teaching-paths-title">
+      <div class="teaching-shell">
+        <h2 id="teaching-paths-title" class="visually-hidden">Ways to learn</h2>
+        <div class="teaching-paths-grid">
+          <a class="teaching-path teaching-reveal" href="#university-course">
+            <span class="teaching-path-number" aria-hidden="true">01</span>
+            <h3>University<br />teaching.</h3>
+            <p>Master's-level deep learning grounded in theory, implementation and critical thinking.</p>
           </a>
-          <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
-            <div class="resource-icon">
-              <i class="fab fa-youtube"></i>
-            </div>
-            <div class="resource-body">
-              <h4 class="resource-title">AI with Bruno — YouTube Channel</h4>
-              <p class="resource-source">YouTube</p>
-              <p class="resource-description">My channel where I break down AI concepts, share tutorials, and discuss the latest in machine learning and computer vision.</p>
-            </div>
-            <i class="fas fa-external-link-alt resource-link-icon"></i>
-          </a>
-        </div>
 
-        <!-- Presentations -->
-        <h3 class="resources-subsection-title animate-on-scroll fade-up">Presentations</h3>
-        <div class="resources-list">
-          <a href="#" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
-            <div class="resource-icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="resource-body">
-              <h4 class="resource-title">Composite AI for Behavior Analysis in Social Interactions</h4>
-              <p class="resource-source">ICMI 2023, Paris</p>
-              <p class="resource-description">Presentation from the 25th International Conference on Multimodal Interaction.</p>
-            </div>
-            <i class="fas fa-external-link-alt resource-link-icon"></i>
+          <a class="teaching-path teaching-reveal" href="#self-paced-course">
+            <span class="teaching-path-number" aria-hidden="true">02</span>
+            <h3>Self-paced<br />learning.</h3>
+            <p>Public courses and videos designed to make serious AI knowledge more accessible.</p>
           </a>
-          <a href="#" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
-            <div class="resource-icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="resource-body">
-              <h4 class="resource-title">DeepRehab: Real Time Pose Estimation on the Edge</h4>
-              <p class="resource-source">ICANN 2021</p>
-              <p class="resource-description">Real-time pose estimation for knee injury rehabilitation on edge devices.</p>
-            </div>
-            <i class="fas fa-external-link-alt resource-link-icon"></i>
-          </a>
-        </div>
 
-        <!-- Course Materials -->
-        <h3 class="resources-subsection-title animate-on-scroll fade-up">Course Materials</h3>
-        <div class="resources-list">
-          <a href="#courses" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
-            <div class="resource-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="resource-body">
-              <h4 class="resource-title">Introduction to Artificial Intelligence</h4>
-              <p class="resource-source">Eötvös Loránd University (ELTE)</p>
-              <p class="resource-description">Lecture slides, assignments, and supplementary materials from my AI course at ELTE.</p>
-            </div>
-            <i class="fas fa-arrow-right resource-link-icon"></i>
-          </a>
-        </div>
-
-        <!-- Recommended -->
-        <h3 class="resources-subsection-title animate-on-scroll fade-up">Recommended Reading</h3>
-        <div class="resources-list">
-          <a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
-            <div class="resource-icon">
-              <i class="fab fa-youtube"></i>
-            </div>
-            <div class="resource-body">
-              <h4 class="resource-title">But what is a neural network?</h4>
-              <p class="resource-source">3Blue1Brown</p>
-              <p class="resource-description">The best visual introduction to neural networks.</p>
-            </div>
-            <i class="fas fa-external-link-alt resource-link-icon"></i>
-          </a>
-          <a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
-            <div class="resource-icon">
-              <i class="fas fa-book"></i>
-            </div>
-            <div class="resource-body">
-              <h4 class="resource-title">Deep Learning</h4>
-              <p class="resource-source">Ian Goodfellow, Yoshua Bengio, Aaron Courville</p>
-              <p class="resource-description">The definitive textbook on deep learning. Available free online.</p>
-            </div>
-            <i class="fas fa-external-link-alt resource-link-icon"></i>
-          </a>
-          <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener noreferrer" class="resource-item card animate-on-scroll fade-up glass-panel glass-hover">
-            <div class="resource-icon">
-              <i class="fas fa-file-pdf"></i>
-            </div>
-            <div class="resource-body">
-              <h4 class="resource-title">Attention Is All You Need</h4>
-              <p class="resource-source">Vaswani et al., 2017</p>
-              <p class="resource-description">The paper that introduced the Transformer architecture.</p>
-            </div>
-            <i class="fas fa-external-link-alt resource-link-icon"></i>
+          <a class="teaching-path teaching-reveal" href="#professional-teaching">
+            <span class="teaching-path-number" aria-hidden="true">03</span>
+            <h3>Workshops &amp;<br />guest teaching.</h3>
+            <p>Focused live learning for universities, organizations and professional audiences.</p>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Teaching Philosophy -->
-    <section class="learn-section transparent-section">
-      <div class="container container--narrow">
-        <div class="section-label animate-on-scroll fade-up">
-          <span class="overline">Approach</span>
-          <h2 class="section-title">Teaching Philosophy</h2>
-        </div>
-        <div class="philosophy-grid">
-          <div class="card philosophy-card animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
-            <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
-            <h3>Hands-On Learning</h3>
-            <p>Theory paired with practical exercises using real datasets, ensuring students can apply concepts immediately.</p>
-          </div>
-          <div class="card philosophy-card animate-on-scroll fade-up stagger-2 glass-panel glass-hover">
-            <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
-            <h3>Ethics First</h3>
-            <p>Every course emphasizes ethical and societal considerations, preparing responsible AI professionals.</p>
-          </div>
-          <div class="card philosophy-card animate-on-scroll fade-up stagger-3 glass-panel glass-hover">
-            <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
-            <h3>Research-Driven</h3>
-            <p>Course content reflects the latest research, keeping students at the forefront of AI developments.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Student Reviews -->
-    <section id="reviews" class="learn-section transparent-section">
-      <div class="container container--narrow">
-        <div class="section-label animate-on-scroll fade-up">
-          <span class="overline">Feedback</span>
-          <h2 class="section-title">Student Reviews</h2>
+    <section class="teaching-catalog" id="teaching-catalog" aria-labelledby="teaching-catalog-title">
+      <div class="teaching-shell">
+        <div class="teaching-section-heading teaching-reveal">
+          <h2 id="teaching-catalog-title">Ways to learn.</h2>
+          <p>Formal university education, future self-paced courses and selected professional engagements.</p>
         </div>
 
-        <div class="reviews-list" id="reviewsList">
-          <div class="card review-card animate-on-scroll fade-up stagger-1 glass-panel glass-hover">
-            <div class="review-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <div class="teaching-card-grid">
+          <article class="teaching-card teaching-card--featured teaching-reveal" id="university-course">
+            <div class="teaching-card-media teaching-card-media--university">
+              <img src="assets/images/teaching.jpeg" alt="Deep Network Developments lecture at ELTE" loading="lazy" />
             </div>
-            <p class="review-text">"Bruno's Deep Network Developments course was incredibly well-structured. The hands-on exercises with real datasets made the theory come alive. Highly recommended for anyone serious about deep learning."</p>
-            <div class="review-author">
-              <span class="review-name">Anonymous Student</span>
-              <span class="review-course">Deep Network Developments, 2024</span>
+            <div class="teaching-card-content">
+              <div class="teaching-card-meta"><span>University</span><span>2021–2024</span></div>
+              <h3>Deep Network Developments</h3>
+              <p class="teaching-card-institution">Eötvös Loránd University · Faculty of Informatics</p>
+              <p class="teaching-card-description">A six-credit MSc course on the foundations of deep neural networks,
+                with a strong focus on supervised learning and the connection between mathematical ideas and working
+                systems.</p>
+              <ul class="teaching-topic-list" aria-label="Course focus">
+                <li>Deep learning foundations</li>
+                <li>Convolutional networks</li>
+                <li>Sequence models and transformers</li>
+                <li>Generative AI and large language models</li>
+                <li>Responsible real-world application</li>
+              </ul>
+              <p class="teaching-card-footnote">MSc level <span>·</span> 6 ECTS <span>·</span> Semester course</p>
             </div>
-          </div>
+          </article>
 
-          <div class="card review-card animate-on-scroll fade-up stagger-2 glass-panel glass-hover">
-            <div class="review-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          <article class="teaching-card teaching-reveal" id="self-paced-course">
+            <div class="teaching-card-media teaching-card-media--portrait">
+              <img src="assets/images/profile_new_light.png" alt="Bruno Melício, presenter of the upcoming AI with Bruno series"
+                loading="lazy" />
             </div>
-            <p class="review-text">"The private tutoring sessions were exactly what I needed. Bruno adapted the content to my level and helped me build a solid foundation in AI. The project-based approach made learning engaging and practical."</p>
-            <div class="review-author">
-              <span class="review-name">Anonymous Student</span>
-              <span class="review-course">Private Tutoring, 2024</span>
+            <div class="teaching-card-content">
+              <div class="teaching-card-meta"><span>Self-paced</span><span>Coming soon</span></div>
+              <h3>AI with Bruno</h3>
+              <p class="teaching-card-description">A growing library of concise video courses, practical walkthroughs
+                and research explainers—from beginner concepts to modern AI methods.</p>
+              <a class="teaching-card-action" href="https://www.youtube.com/@brunomelicio2248" target="_blank"
+                rel="noopener noreferrer">
+                Visit YouTube <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
             </div>
-          </div>
+          </article>
 
-          <div class="card review-card animate-on-scroll fade-up stagger-3 glass-panel glass-hover">
-            <div class="review-stars">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+          <article class="teaching-card teaching-reveal" id="professional-teaching">
+            <div class="teaching-card-media teaching-card-media--classroom">
+              <img src="assets/images/events/UTA_2026_Workshop/uta-2026-5.jpg"
+                alt="Bruno Melício leading an applied artificial intelligence class" loading="lazy" />
             </div>
-            <p class="review-text">"Great course covering modern deep learning topics. Bruno brings real research experience to the classroom which makes the content feel relevant and up to date. Would love more time on transformers."</p>
-            <div class="review-author">
-              <span class="review-name">Anonymous Student</span>
-              <span class="review-course">Deep Network Developments, 2023</span>
+            <div class="teaching-card-content">
+              <div class="teaching-card-meta"><span>Professional</span><span>Selected engagements</span></div>
+              <h3>Workshops &amp; guest teaching</h3>
+              <p class="teaching-card-description">Research-led workshops and guest lectures for universities, teams
+                and professional audiences who need a clear, rigorous route through modern AI.</p>
+              <a class="teaching-card-action" href="services.html#invite">
+                Explore live engagements <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </a>
             </div>
-          </div>
-        </div>
-
-        <!-- Submit Review Form -->
-        <div class="review-form-wrapper animate-on-scroll fade-up">
-          <h3 class="review-form-title">Leave a Review</h3>
-          <form id="reviewForm" class="review-form" action="https://formsubmit.co/7023869b5c2ad23d444cf4b6e23ea329" method="POST">
-            <input type="hidden" name="_subject" value="New Course Review" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="text" name="_honey" style="display:none" />
-            <div class="form-group">
-              <label for="review-course">Course / Service</label>
-              <select id="review-course" name="course" required>
-                <option value="" disabled selected>Select a course or service</option>
-                <option value="Deep Network Developments">Deep Network Developments (ELTE)</option>
-                <option value="Private Tutoring">Private Tutoring</option>
-                <option value="Workshop">Workshop</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Your Rating</label>
-              <div class="star-rating" id="starRating">
-                <input type="hidden" name="rating" id="ratingValue" value="" required />
-                <i class="far fa-star" data-value="1"></i>
-                <i class="far fa-star" data-value="2"></i>
-                <i class="far fa-star" data-value="3"></i>
-                <i class="far fa-star" data-value="4"></i>
-                <i class="far fa-star" data-value="5"></i>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="review-name">Your Name (optional)</label>
-              <input type="text" id="review-name" name="name" placeholder="Anonymous" />
-            </div>
-            <div class="form-group">
-              <label for="review-text">Your Review</label>
-              <textarea id="review-text" name="review" rows="4" required placeholder="Share your experience..."></textarea>
-            </div>
-            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
-              <i class="fas fa-paper-plane"></i> Submit Review
-            </button>
-            <div id="reviewStatus" class="form-status" style="display:none;"></div>
-          </form>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section-cta">
-      <div class="container text-center">
-        <div class="cta-content animate-on-scroll scale-in card glass-panel glass-hover">
-          <h2 class="section-title">Interested in Private Tutoring?</h2>
-          <p class="section-subtitle" style="margin: 0 auto var(--space-2xl);">Personalized 1-on-1 AI and deep learning instruction tailored to your learning goals.</p>
-          <a href="services.html#contact" class="btn-primary">
-            <i class="fas fa-paper-plane"></i> Get in Touch
-          </a>
+    <section class="teaching-approach" id="teaching-approach" aria-labelledby="teaching-approach-title">
+      <div class="teaching-shell">
+        <div class="teaching-section-heading teaching-reveal">
+          <h2 id="teaching-approach-title">How I teach.</h2>
+          <p>Strong foundations first, then the judgment required to use AI well.</p>
+        </div>
+
+        <div class="teaching-approach-grid">
+          <article class="teaching-approach-item teaching-reveal">
+            <span aria-hidden="true">01</span>
+            <h3>First principles.</h3>
+            <p>Understand why a method works before relying on a framework or tool.</p>
+          </article>
+          <article class="teaching-approach-item teaching-reveal">
+            <span aria-hidden="true">02</span>
+            <h3>Build to understand.</h3>
+            <p>Turn theory into code, experiments and decisions using meaningful examples.</p>
+          </article>
+          <article class="teaching-approach-item teaching-reveal">
+            <span aria-hidden="true">03</span>
+            <h3>Use AI responsibly.</h3>
+            <p>Question limitations, data, impact and ethics—not only performance.</p>
+          </article>
         </div>
       </div>
     </section>
 
+    <section class="teaching-workshops" aria-labelledby="teaching-workshops-title">
+      <div class="teaching-shell teaching-workshops-layout">
+        <div class="teaching-workshops-copy teaching-reveal">
+          <h2 id="teaching-workshops-title">For universities and teams</h2>
+          <p>Guest teaching, intensive workshops and tailored learning formats are available as professional services.</p>
+        </div>
+        <a class="teaching-workshops-link teaching-reveal" href="services.html#invite">
+          <span>Explore workshops and teaching engagements</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
   </main>
 
-  <script src="assets/js/navigation.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script>
-    // Blog posts loader
-    (async function loadBlogPosts() {
-      try {
-        const res = await fetch('blog/posts.json');
-        const posts = await res.json();
-        const grid = document.getElementById('blog-posts-grid');
+  <div class="studio-disclosure" id="studio-disclosure" role="dialog" aria-modal="true" aria-hidden="true"
+    aria-labelledby="studio-disclosure-title" hidden>
+    <div class="studio-disclosure-panel">
+      <button class="studio-disclosure-close" type="button" data-studio-close
+        aria-label="Close Creative AI Studio notice">
+        <i class="fas fa-xmark" aria-hidden="true"></i>
+      </button>
+      <p class="studio-disclosure-kicker">Creative AI Studio</p>
+      <h2 id="studio-disclosure-title">A separate creative practice.</h2>
+      <p>Creative AI Studio is my independent commercial practice for AI-generated imagery, video and brand work. It is
+        separate from my academic research and teaching; my primary professional role is AI researcher and lecturer.</p>
+      <div class="studio-disclosure-actions">
+        <a href="/studio/" class="studio-disclosure-primary">
+          Continue to Studio <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+        <button type="button" data-studio-close class="studio-disclosure-secondary">Stay on this site</button>
+      </div>
+    </div>
+  </div>
 
-        if (!posts.length) {
-          document.getElementById('blog-no-posts').style.display = 'block';
-          return;
-        }
-
-        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        grid.innerHTML = posts.map(post => {
-          const date = new Date(post.date).toLocaleDateString('en-US', {
-            year: 'numeric', month: 'long', day: 'numeric'
-          });
-          const tags = post.tags.map(t => `<span class="badge">${t}</span>`).join('');
-
-          return `
-            <a href="blog/${post.slug}.html" class="blog-post-card card glass-panel glass-hover">
-              <div class="blog-post-card-meta">
-                <time datetime="${post.date}">${date}</time>
-                <span>${post.readTime}</span>
-              </div>
-              <h3 class="blog-post-card-title">${post.title}</h3>
-              <p class="blog-post-card-excerpt">${post.excerpt}</p>
-              <div class="blog-post-card-tags">${tags}</div>
-            </a>
-          `;
-        }).join('');
-
-      } catch (e) {
-        document.getElementById('blog-no-posts').style.display = 'block';
-      }
-    })();
-
-    // Star rating widget + review form
-    (function() {
-      var stars = document.querySelectorAll('#starRating i');
-      var ratingInput = document.getElementById('ratingValue');
-      stars.forEach(function(star) {
-        star.addEventListener('click', function() {
-          var val = this.getAttribute('data-value');
-          ratingInput.value = val;
-          stars.forEach(function(s) {
-            var sv = s.getAttribute('data-value');
-            s.className = sv <= val ? 'fas fa-star' : 'far fa-star';
-          });
-        });
-        star.addEventListener('mouseenter', function() {
-          var val = this.getAttribute('data-value');
-          stars.forEach(function(s) {
-            var sv = s.getAttribute('data-value');
-            s.className = sv <= val ? 'fas fa-star' : 'far fa-star';
-          });
-        });
-      });
-      document.getElementById('starRating').addEventListener('mouseleave', function() {
-        var current = ratingInput.value;
-        stars.forEach(function(s) {
-          var sv = s.getAttribute('data-value');
-          s.className = (current && sv <= current) ? 'fas fa-star' : 'far fa-star';
-        });
-      });
-
-      function renderSavedReviews() {
-        var saved = JSON.parse(localStorage.getItem('brunoReviews') || '[]');
-        var list = document.getElementById('reviewsList');
-        saved.forEach(function(r) {
-          var card = document.createElement('div');
-          card.className = 'card review-card';
-          var starsHtml = '';
-          for (var i = 1; i <= 5; i++) {
-            starsHtml += '<i class="' + (i <= r.rating ? 'fas' : 'far') + ' fa-star"></i>';
-          }
-          card.innerHTML =
-            '<div class="review-stars">' + starsHtml + '</div>' +
-            '<p class="review-text">"' + r.review.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '"</p>' +
-            '<div class="review-author">' +
-              '<span class="review-name">' + (r.name || 'Anonymous').replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</span>' +
-              '<span class="review-course">' + r.course.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</span>' +
-            '</div>';
-          list.appendChild(card);
-        });
-      }
-      renderSavedReviews();
-
-      var form = document.getElementById('reviewForm');
-      var status = document.getElementById('reviewStatus');
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        if (!ratingInput.value) {
-          status.textContent = 'Please select a star rating.';
-          status.className = 'form-status form-status--error';
-          status.style.display = 'block';
-          return;
-        }
-        var btn = form.querySelector('button[type="submit"]');
-        btn.disabled = true;
-        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
-
-        var formData = new FormData(form);
-        var review = {
-          course: formData.get('course'),
-          rating: parseInt(ratingInput.value),
-          name: formData.get('name') || 'Anonymous',
-          review: formData.get('review'),
-          date: new Date().toISOString()
-        };
-        var saved = JSON.parse(localStorage.getItem('brunoReviews') || '[]');
-        saved.push(review);
-        localStorage.setItem('brunoReviews', JSON.stringify(saved));
-
-        fetch(form.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        }).then(function(res) {
-          status.textContent = 'Thank you for your review! It has been submitted successfully.';
-          status.className = 'form-status form-status--success';
-          status.style.display = 'block';
-          form.reset();
-          ratingInput.value = '';
-          stars.forEach(function(s) { s.className = 'far fa-star'; });
-          var list = document.getElementById('reviewsList');
-          var existingUserReviews = list.querySelectorAll('.user-review');
-          existingUserReviews.forEach(function(el) { el.remove(); });
-          renderSavedReviews();
-        }).catch(function() {
-          status.textContent = 'Review saved locally. Email delivery may have failed, but your review is visible on this page.';
-          status.className = 'form-status form-status--success';
-          status.style.display = 'block';
-          form.reset();
-          ratingInput.value = '';
-          stars.forEach(function(s) { s.className = 'far fa-star'; });
-        }).finally(function() {
-          btn.disabled = false;
-          btn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Review';
-        });
-      });
-    })();
-  </script>
+  <script src="assets/js/navigation.js?v=8.0"></script>
+  <script src="assets/js/main.js?v=8.0"></script>
+  <script src="assets/js/teaching.js?v=8.0"></script>
 </body>
+
 </html>
