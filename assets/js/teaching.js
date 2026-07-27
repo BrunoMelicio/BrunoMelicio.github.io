@@ -1,5 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const teachingMain = document.querySelector('.teaching-main');
+  const freeLearning = document.getElementById('free-learning');
+  const universityTeaching = document.getElementById('university-teaching');
+  const courseCatalog = document.getElementById('online-courses');
+  const materialsLibrary = document.getElementById('materials');
+  const privateIntensive = document.querySelector('.private-intensive');
+
+  if (teachingMain && freeLearning && universityTeaching && courseCatalog && materialsLibrary && privateIntensive) {
+    teachingMain.insertBefore(freeLearning, courseCatalog);
+    teachingMain.insertBefore(universityTeaching, courseCatalog);
+    teachingMain.insertBefore(materialsLibrary, privateIntensive);
+  }
+
   const revealItems = document.querySelectorAll('.teaching-reveal');
 
   if (reduceMotion || !('IntersectionObserver' in window)) {
@@ -11,31 +25,44 @@ document.addEventListener('DOMContentLoaded', () => {
         entry.target.classList.add('is-visible');
         observer.unobserve(entry.target);
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -6% 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
 
     revealItems.forEach((item, index) => {
-      item.style.transitionDelay = `${Math.min(index * 45, 225)}ms`;
+      item.style.transitionDelay = `${Math.min(index * 35, 175)}ms`;
       revealObserver.observe(item);
     });
   }
 
-  const cards = [...document.querySelectorAll('.teaching-card')];
-  if (!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    cards.forEach(card => {
-      card.addEventListener('pointermove', event => {
-        const bounds = card.getBoundingClientRect();
-        const x = (event.clientX - bounds.left) / bounds.width - 0.5;
-        const y = (event.clientY - bounds.top) / bounds.height - 0.5;
-        card.style.setProperty('--card-rx', `${(-y * 2.4).toFixed(2)}deg`);
-        card.style.setProperty('--card-ry', `${(x * 2.4).toFixed(2)}deg`);
+  const courseRail = document.querySelector('[data-course-rail]');
+  document.querySelectorAll('[data-course-direction]').forEach(control => {
+    control.addEventListener('click', () => {
+      if (!courseRail) return;
+      const direction = Number(control.dataset.courseDirection) || 1;
+      const card = courseRail.querySelector('.course-product');
+      const distance = card ? card.getBoundingClientRect().width + 16 : 320;
+      courseRail.scrollBy({ left: direction * distance, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  });
+
+  const materialFilters = [...document.querySelectorAll('[data-material-filter]')];
+  const materials = [...document.querySelectorAll('[data-material-access]')];
+
+  materialFilters.forEach(filter => {
+    filter.addEventListener('click', () => {
+      const selected = filter.dataset.materialFilter;
+
+      materialFilters.forEach(button => {
+        const active = button === filter;
+        button.classList.toggle('is-active', active);
+        button.setAttribute('aria-pressed', String(active));
       });
 
-      card.addEventListener('pointerleave', () => {
-        card.style.setProperty('--card-rx', '0deg');
-        card.style.setProperty('--card-ry', '0deg');
+      materials.forEach(material => {
+        const visible = selected === 'all' || material.dataset.materialAccess === selected;
+        material.classList.toggle('is-filtered-out', !visible);
       });
     });
-  }
+  });
 
   const studioDisclosure = document.getElementById('studio-disclosure');
   if (!studioDisclosure) return;

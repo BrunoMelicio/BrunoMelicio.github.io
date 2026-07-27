@@ -253,9 +253,9 @@ body.theme-light .home-hero {
 .home-portrait {
   position: relative;
   align-self: end;
-  width: 100%;
+  width: calc(100% + clamp(1.4rem, 4.2vw, 5.5rem));
   height: calc(100svh - 77px);
-  margin: 0;
+  margin: 0 calc(clamp(1.4rem, 4.2vw, 5.5rem) * -1) 0 0;
   overflow: hidden;
   background: var(--home-bg);
 }
@@ -266,14 +266,15 @@ body.theme-light .home-hero {
 
 .home-portrait img {
   position: absolute;
-  inset: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
   width: 100%;
   height: 100%;
   max-width: none;
   max-height: none;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center center;
   filter: none;
   transform: translate3d(var(--portrait-x, 0), var(--portrait-y, 0), 0) scale(1.002);
   will-change: transform;
@@ -505,6 +506,10 @@ body.theme-light .home-hero {
   font-weight: 600;
   line-height: 0.95;
   letter-spacing: -0.065em;
+}
+
+.research-rail-controls {
+  display: none;
 }
 
 .research-filters {
@@ -991,7 +996,9 @@ body.home-page .footer-bottom p {
   }
 
   .home-portrait {
+    width: 100%;
     height: calc(100svh - var(--nav-height));
+    margin-right: 0;
   }
 
   .research-heading {
@@ -1060,14 +1067,16 @@ body.home-page .footer-bottom p {
   .home-hero-inner {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: minmax(330px, 48svh) auto;
+    grid-template-rows: auto minmax(330px, 48svh);
     min-height: calc(100svh - var(--nav-height));
   }
 
   .home-portrait {
-    grid-row: 1;
+    grid-row: 2;
+    width: 100%;
     height: 48svh;
     min-height: 330px;
+    margin-right: 0;
     border-bottom: 1px solid var(--home-line);
   }
 
@@ -1075,11 +1084,12 @@ body.home-page .footer-bottom p {
     inset: 0;
     width: 100%;
     height: 100%;
-    object-position: center 20%;
+    object-fit: cover;
+    object-position: center center;
   }
 
   .home-hero-copy {
-    grid-row: 2;
+    grid-row: 1;
     justify-content: flex-start;
     padding: 2.25rem 1.35rem 5.7rem;
   }
@@ -1155,7 +1165,34 @@ body.home-page .footer-bottom p {
   }
 
   .research-heading {
+    position: relative;
+    flex-wrap: wrap;
     gap: 1.75rem;
+  }
+
+  .research-rail-controls {
+    position: absolute;
+    top: 0.35rem;
+    right: 0;
+    display: flex;
+    gap: 0.55rem;
+  }
+
+  .research-rail-controls button {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    color: var(--home-ink);
+    background: var(--home-bg);
+    border: 1px solid var(--home-line-strong);
+    border-radius: 50%;
+    font-size: 0.72rem;
+  }
+
+  .research-rail-controls button:active {
+    color: var(--home-button-ink);
+    background: var(--home-button-bg);
   }
 
   .research-heading h2 {
@@ -1211,7 +1248,7 @@ body.home-page .footer-bottom p {
 
 @media (max-width: 420px) {
   .home-hero-inner {
-    grid-template-rows: minmax(285px, 43svh) auto;
+    grid-template-rows: auto minmax(285px, 43svh);
   }
 
   .home-portrait {
