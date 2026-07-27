@@ -22,6 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const filters = document.querySelectorAll('.research-filter');
   const cards = document.querySelectorAll('.publication-card');
   const interactiveCards = document.querySelectorAll('.publication-card, .service-card');
+  const publicationRail = document.querySelector('.publication-grid');
+
+  document.querySelectorAll('[data-publication-direction]').forEach(control => {
+    control.addEventListener('click', () => {
+      if (!publicationRail) return;
+      const direction = Number(control.dataset.publicationDirection) || 1;
+      const visibleCard = publicationRail.querySelector('.publication-card:not(.is-filtered-out)');
+      const distance = visibleCard ? visibleCard.getBoundingClientRect().width + 16 : 320;
+      publicationRail.scrollBy({
+        left: direction * distance,
+        behavior: reduceMotion ? 'auto' : 'smooth'
+      });
+    });
+  });
 
   filters.forEach(filter => {
     filter.addEventListener('click', () => {
@@ -37,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const visible = selected === 'all' || card.dataset.type === selected;
         card.classList.toggle('is-filtered-out', !visible);
         if (visible) card.classList.add('is-visible');
+      });
+
+      publicationRail?.scrollTo({
+        left: 0,
+        behavior: reduceMotion ? 'auto' : 'smooth'
       });
     });
   });

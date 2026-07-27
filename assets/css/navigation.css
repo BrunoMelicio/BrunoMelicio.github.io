@@ -68,6 +68,10 @@
   align-items: center;
 }
 
+.nav-home-item {
+  display: none;
+}
+
 .nav-list a {
   color: var(--text-secondary);
   text-decoration: none;
@@ -166,6 +170,10 @@
     flex-direction: column;
     gap: var(--space-xl);
     height: auto;
+  }
+
+  .nav-home-item {
+    display: list-item;
   }
 
   .nav-list a {

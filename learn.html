@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teaching | Bruno Melício</title>
+  <title>Courses | Bruno Melício</title>
   <meta name="description"
-    content="University teaching, self-paced AI courses and professional workshops by AI researcher and lecturer Bruno Melício." />
+    content="Learn artificial intelligence with researcher and lecturer Bruno Melício through paid online courses, free videos, practical materials and selected private teaching." />
   <meta name="theme-color" content="#ffffff" />
-  <meta property="og:title" content="Teaching | Bruno Melício" />
+  <meta property="og:title" content="Courses | Bruno Melício" />
   <meta property="og:description"
-    content="Artificial intelligence taught from first principles, connecting theory, code and responsible practice." />
+    content="AI courses grounded in first principles, practical code, modern tools and real-world applications." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/images/teaching.jpeg" />
   <link rel="icon" type="image/png" href="assets/images/logo2.png" />
@@ -18,14 +18,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=8.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css?v=8.0" />
-  <link rel="stylesheet" href="assets/css/base.css?v=8.0" />
-  <link rel="stylesheet" href="assets/css/components.css?v=8.0" />
-  <link rel="stylesheet" href="assets/css/animations.css?v=8.0" />
-  <link rel="stylesheet" href="assets/css/navigation.css?v=8.0" />
-  <link rel="stylesheet" href="assets/css/footer.css?v=8.0" />
-  <link rel="stylesheet" href="assets/css/pages/learn.css?v=8.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/base.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/components.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/animations.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/navigation.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/footer.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/pages/learn.css?v=9.1" />
 </head>
 
 <body class="theme-light teaching-page">
@@ -33,16 +32,15 @@
     <section class="teaching-intro" aria-labelledby="teaching-page-title">
       <div class="teaching-shell teaching-intro-grid">
         <div class="teaching-intro-copy teaching-reveal">
-          <h1 id="teaching-page-title"><span>Teaching AI</span><span>to understand.</span><span>To build.</span></h1>
-          <p>I teach artificial intelligence from first principles, connecting theory, code, current research and
-            responsible real-world use.</p>
+          <h1 id="teaching-page-title">The future of AI reflects what we teach it today.</h1>
+          <p>I teach artificial intelligence foundations with real-world applications.</p>
 
-          <div class="teaching-intro-actions" aria-label="Explore teaching">
-            <a href="#teaching-catalog" class="teaching-primary-action">
-              <span>Explore teaching</span>
+          <div class="teaching-intro-actions" aria-label="Explore courses and free learning">
+            <a href="#free-learning" class="teaching-primary-action">
+              <span>Start free</span>
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <a href="#teaching-approach" class="teaching-secondary-action">My approach</a>
+            <a href="#online-courses" class="teaching-secondary-action">Browse courses</a>
           </div>
         </div>
 
@@ -51,98 +49,261 @@
             <img src="assets/images/teaching.jpeg" alt="Bruno Melício teaching Deep Network Developments at ELTE"
               fetchpriority="high" decoding="async" />
           </figure>
-          <p aria-label="Teaching principles">theory <span>·</span> code <span>·</span> judgment</p>
+          <p aria-label="Teaching principles">theory <span>·</span> code <span>·</span> application</p>
         </div>
       </div>
     </section>
 
-    <section class="teaching-paths" aria-labelledby="teaching-paths-title">
+    <section class="course-catalog" id="online-courses" aria-labelledby="online-courses-title">
       <div class="teaching-shell">
-        <h2 id="teaching-paths-title" class="visually-hidden">Ways to learn</h2>
-        <div class="teaching-paths-grid">
-          <a class="teaching-path teaching-reveal" href="#university-course">
-            <span class="teaching-path-number" aria-hidden="true">01</span>
-            <h3>University<br />teaching.</h3>
-            <p>Master's-level deep learning grounded in theory, implementation and critical thinking.</p>
-          </a>
+        <div class="catalog-heading teaching-reveal">
+          <div>
+            <h2 id="online-courses-title">Online courses</h2>
+            <p>Structured, self-paced learning. Buy once and return whenever you need.</p>
+          </div>
+          <div class="catalog-controls" aria-label="Scroll course catalog">
+            <button type="button" data-course-direction="-1" aria-label="Previous courses">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button type="button" data-course-direction="1" aria-label="Next courses">
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
 
-          <a class="teaching-path teaching-reveal" href="#self-paced-course">
-            <span class="teaching-path-number" aria-hidden="true">02</span>
-            <h3>Self-paced<br />learning.</h3>
-            <p>Public courses and videos designed to make serious AI knowledge more accessible.</p>
-          </a>
+        <!-- Placeholder catalog: replace titles, prices and destinations as products become available. -->
+        <div class="course-rail" data-course-rail>
+          <article class="course-product teaching-reveal">
+            <div class="course-status">Paid course</div>
+            <div class="course-product-body">
+              <p class="course-level">Beginner · Foundations</p>
+              <h3>AI Foundations</h3>
+              <p>Understand the ideas, language and methods behind modern artificial intelligence.</p>
+              <div class="course-product-footer">
+                <div><strong>€49</strong><span>One-time access</span></div>
+                <button type="button" disabled>Coming soon</button>
+              </div>
+            </div>
+          </article>
 
-          <a class="teaching-path teaching-reveal" href="#professional-teaching">
-            <span class="teaching-path-number" aria-hidden="true">03</span>
-            <h3>Workshops &amp;<br />guest teaching.</h3>
-            <p>Focused live learning for universities, organizations and professional audiences.</p>
-          </a>
+          <article class="course-product teaching-reveal">
+            <div class="course-status">Paid course</div>
+            <div class="course-product-body">
+              <p class="course-level">Beginner · Practical</p>
+              <h3>Practical AI for Work</h3>
+              <p>Use AI tools to research, communicate, organize knowledge and work more effectively.</p>
+              <div class="course-product-footer">
+                <div><strong>€59</strong><span>One-time access</span></div>
+                <button type="button" disabled>Coming soon</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-product teaching-reveal">
+            <div class="course-status">Paid course</div>
+            <div class="course-product-body">
+              <p class="course-level">Beginner–Intermediate · Tools</p>
+              <h3>Master ChatGPT</h3>
+              <p>Move beyond basic prompts into reliable workflows, research and advanced GPT use.</p>
+              <div class="course-product-footer">
+                <div><strong>€79</strong><span>One-time access</span></div>
+                <button type="button" disabled>Coming soon</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-product teaching-reveal">
+            <div class="course-status">Paid course</div>
+            <div class="course-product-body">
+              <p class="course-level">Intermediate · Tools</p>
+              <h3>Claude for Deep Work</h3>
+              <p>Develop stronger analysis, writing and long-context workflows with Claude.</p>
+              <div class="course-product-footer">
+                <div><strong>€79</strong><span>One-time access</span></div>
+                <button type="button" disabled>Coming soon</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-product teaching-reveal">
+            <div class="course-status">Paid course</div>
+            <div class="course-product-body">
+              <p class="course-level">Intermediate · Coding</p>
+              <h3>Build with AI: Python &amp; Agents</h3>
+              <p>Build practical AI systems using Python, APIs, tools and agent workflows.</p>
+              <div class="course-product-footer">
+                <div><strong>€99</strong><span>One-time access</span></div>
+                <button type="button" disabled>Coming soon</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-product course-product--creative teaching-reveal">
+            <div class="course-status">Creative Studio course</div>
+            <div class="course-product-body">
+              <p class="course-level">All levels · Creative AI</p>
+              <h3>AI Image &amp; Video Creation</h3>
+              <p>Create realistic visuals, cinematic videos and repeatable creative workflows.</p>
+              <div class="course-product-footer">
+                <div><strong>€69</strong><span>One-time access</span></div>
+                <a href="https://studio.brunomelicio.com/" class="studio-entry">
+                  View studio <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="teaching-catalog" id="teaching-catalog" aria-labelledby="teaching-catalog-title">
+    <section class="free-learning" id="free-learning" aria-labelledby="free-learning-title">
       <div class="teaching-shell">
-        <div class="teaching-section-heading teaching-reveal">
-          <h2 id="teaching-catalog-title">Ways to learn.</h2>
-          <p>Formal university education, future self-paced courses and selected professional engagements.</p>
+        <div class="free-learning-panel teaching-reveal">
+          <div class="free-learning-lead">
+            <strong>FREE</strong>
+            <h2 id="free-learning-title">Learn. Explore. Build.</h2>
+            <p>Open resources for anyone ready to begin.</p>
+          </div>
+
+          <div class="free-learning-options">
+            <article>
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+              <h3>AI Foundations for Everyone</h3>
+              <p>A clear introduction to the concepts shaping modern AI.</p>
+              <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </article>
+            <article>
+              <i class="fas fa-shapes" aria-hidden="true"></i>
+              <p class="free-learning-age">Ages 8–15</p>
+              <h3>AI for the Next Generation</h3>
+              <p>Clear, engaging lessons that introduce young learners to artificial intelligence.</p>
+              <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </article>
+            <article>
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+              <h3>Practical AI Tutorials</h3>
+              <p>Short lessons that turn AI concepts into useful, real-world applications.</p>
+              <a href="https://www.youtube.com/@brunomelicio2248" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              </a>
+            </article>
+            <article>
+              <i class="far fa-pen-to-square" aria-hidden="true"></i>
+              <h3>AI Notes &amp; Explainers</h3>
+              <p>A future collection of concise articles, practical examples and research-informed insights.</p>
+              <span>Blog coming soon</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="materials-library" id="materials" aria-labelledby="materials-title">
+      <div class="teaching-shell">
+        <div class="materials-heading teaching-reveal">
+          <div>
+            <h2 id="materials-title">Digital materials</h2>
+            <p>PDFs, study packs, worksheets, prompt guides and practical notebooks.</p>
+          </div>
+          <div class="material-filters" role="group" aria-label="Filter learning materials">
+            <button type="button" class="is-active" data-material-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-material-filter="free" aria-pressed="false">Free</button>
+            <button type="button" data-material-filter="paid" aria-pressed="false">Paid</button>
+          </div>
         </div>
 
-        <div class="teaching-card-grid">
-          <article class="teaching-card teaching-card--featured teaching-reveal" id="university-course">
-            <div class="teaching-card-media teaching-card-media--university">
-              <img src="assets/images/teaching.jpeg" alt="Deep Network Developments lecture at ELTE" loading="lazy" />
-            </div>
-            <div class="teaching-card-content">
-              <div class="teaching-card-meta"><span>University</span><span>2021–2024</span></div>
-              <h3>Deep Network Developments</h3>
-              <p class="teaching-card-institution">Eötvös Loránd University · Faculty of Informatics</p>
-              <p class="teaching-card-description">A six-credit MSc course on the foundations of deep neural networks,
-                with a strong focus on supervised learning and the connection between mathematical ideas and working
-                systems.</p>
-              <ul class="teaching-topic-list" aria-label="Course focus">
-                <li>Deep learning foundations</li>
-                <li>Convolutional networks</li>
-                <li>Sequence models and transformers</li>
-                <li>Generative AI and large language models</li>
-                <li>Responsible real-world application</li>
-              </ul>
-              <p class="teaching-card-footnote">MSc level <span>·</span> 6 ECTS <span>·</span> Semester course</p>
-            </div>
+        <div class="material-list">
+          <article class="material-row teaching-reveal" data-material-access="free">
+            <div class="material-icon"><i class="far fa-file-pdf" aria-hidden="true"></i></div>
+            <div class="material-title"><h3>AI Foundations — Study Map</h3><p>PDF · Beginner</p></div>
+            <span class="material-access material-access--free">Free</span>
+            <strong>€0</strong>
+            <a class="material-action" href="https://github.com/BrunoMelicio" target="_blank" rel="noopener noreferrer">
+              View on GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
           </article>
+          <article class="material-row teaching-reveal" data-material-access="free">
+            <div class="material-icon"><i class="far fa-file-lines" aria-hidden="true"></i></div>
+            <div class="material-title"><h3>Prompt Design Worksheet</h3><p>PDF · All levels</p></div>
+            <span class="material-access material-access--free">Free</span>
+            <strong>€0</strong>
+            <a class="material-action" href="https://github.com/BrunoMelicio" target="_blank" rel="noopener noreferrer">
+              View on GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </article>
+          <article class="material-row teaching-reveal" data-material-access="paid">
+            <div class="material-icon"><i class="fas fa-book-open" aria-hidden="true"></i></div>
+            <div class="material-title"><h3>Neural Networks — Visual Guide</h3><p>eBook · Intermediate</p></div>
+            <span class="material-access material-access--paid">Paid</span>
+            <strong>€19</strong>
+            <button type="button" disabled>Coming soon</button>
+          </article>
+          <article class="material-row teaching-reveal" data-material-access="paid">
+            <div class="material-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+            <div class="material-title"><h3>Python for AI — Practice Pack</h3><p>Notebook bundle · Beginner</p></div>
+            <span class="material-access material-access--paid">Paid</span>
+            <strong>€29</strong>
+            <button type="button" disabled>Coming soon</button>
+          </article>
+          <article class="material-row teaching-reveal" data-material-access="paid">
+            <div class="material-icon"><i class="far fa-comments" aria-hidden="true"></i></div>
+            <div class="material-title"><h3>ChatGPT Workflow Library</h3><p>Templates · All levels</p></div>
+            <span class="material-access material-access--paid">Paid</span>
+            <strong>€24</strong>
+            <button type="button" disabled>Coming soon</button>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="teaching-card teaching-reveal" id="self-paced-course">
-            <div class="teaching-card-media teaching-card-media--portrait">
-              <img src="assets/images/profile_new_light.png" alt="Bruno Melício, presenter of the upcoming AI with Bruno series"
-                loading="lazy" />
-            </div>
-            <div class="teaching-card-content">
-              <div class="teaching-card-meta"><span>Self-paced</span><span>Coming soon</span></div>
-              <h3>AI with Bruno</h3>
-              <p class="teaching-card-description">A growing library of concise video courses, practical walkthroughs
-                and research explainers—from beginner concepts to modern AI methods.</p>
-              <a class="teaching-card-action" href="https://www.youtube.com/@brunomelicio2248" target="_blank"
-                rel="noopener noreferrer">
-                Visit YouTube <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-              </a>
-            </div>
-          </article>
+    <section class="university-teaching" id="university-teaching" aria-labelledby="university-title">
+      <div class="teaching-shell">
+        <div class="university-heading teaching-reveal">
+          <h2 id="university-title">University teaching</h2>
+          <p>Courses developed and delivered in academic settings.</p>
+        </div>
+        <div class="university-layout">
+          <figure class="university-media teaching-reveal">
+            <img src="assets/images/teaching.jpeg" alt="Deep Network Developments lecture at ELTE" loading="lazy" />
+          </figure>
+          <div class="university-copy teaching-reveal">
+          <p>Master's course · 2021–2024</p>
+          <h3>Deep Network Developments</h3>
+          <h4>Eötvös Loránd University · Faculty of Informatics</h4>
+          <p>A six-credit MSc course connecting the theory of deep neural networks with implementation, experimentation
+            and current artificial intelligence methods.</p>
+          <dl>
+            <div><dt>Level</dt><dd>Master's</dd></div>
+            <div><dt>Format</dt><dd>Semester course · 6 ECTS</dd></div>
+            <div><dt>Focus</dt><dd>Deep learning, transformers and generative AI</dd></div>
+          </dl>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <article class="teaching-card teaching-reveal" id="professional-teaching">
-            <div class="teaching-card-media teaching-card-media--classroom">
-              <img src="assets/images/events/UTA_2026_Workshop/uta-2026-5.jpg"
-                alt="Bruno Melício leading an applied artificial intelligence class" loading="lazy" />
-            </div>
-            <div class="teaching-card-content">
-              <div class="teaching-card-meta"><span>Professional</span><span>Selected engagements</span></div>
-              <h3>Workshops &amp; guest teaching</h3>
-              <p class="teaching-card-description">Research-led workshops and guest lectures for universities, teams
-                and professional audiences who need a clear, rigorous route through modern AI.</p>
-              <a class="teaching-card-action" href="services.html#invite">
-                Explore live engagements <i class="fas fa-arrow-right" aria-hidden="true"></i>
-              </a>
-            </div>
-          </article>
+    <section class="private-intensive" aria-labelledby="private-intensive-title">
+      <div class="teaching-shell private-intensive-panel teaching-reveal">
+        <div class="private-intensive-intro">
+          <p>Application only · Very limited availability</p>
+          <h2 id="private-intensive-title">Private AI Intensive</h2>
+          <p>A bespoke, high-touch learning engagement for people who need focused expertise and individual attention.</p>
+        </div>
+        <ul aria-label="Private intensive focus">
+          <li><i class="fas fa-check" aria-hidden="true"></i> Tailored AI learning</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Job-interview preparation</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> AI exam preparation</li>
+          <li><i class="fas fa-check" aria-hidden="true"></i> Advanced project support</li>
+        </ul>
+        <div class="private-intensive-price">
+          <span>From</span>
+          <strong>€1,250</strong>
+          <button type="button" disabled>Applications opening soon</button>
+          <small>Selective intake. Final scope and price depend on your goals.</small>
         </div>
       </div>
     </section>
@@ -150,25 +311,24 @@
     <section class="teaching-approach" id="teaching-approach" aria-labelledby="teaching-approach-title">
       <div class="teaching-shell">
         <div class="teaching-section-heading teaching-reveal">
-          <h2 id="teaching-approach-title">How I teach.</h2>
-          <p>Strong foundations first, then the judgment required to use AI well.</p>
+          <h2 id="teaching-approach-title">Teaching philosophy</h2>
+          <p>Modern tools change quickly. The principles behind them last.</p>
         </div>
-
         <div class="teaching-approach-grid">
           <article class="teaching-approach-item teaching-reveal">
             <span aria-hidden="true">01</span>
-            <h3>First principles.</h3>
-            <p>Understand why a method works before relying on a framework or tool.</p>
+            <h3>Foundations before shortcuts.</h3>
+            <p>Build an understanding of why a method works before relying on a framework or prompt.</p>
           </article>
           <article class="teaching-approach-item teaching-reveal">
             <span aria-hidden="true">02</span>
-            <h3>Build to understand.</h3>
-            <p>Turn theory into code, experiments and decisions using meaningful examples.</p>
+            <h3>Learn by building.</h3>
+            <p>Turn theory into code, experiments and useful systems through purposeful practice.</p>
           </article>
           <article class="teaching-approach-item teaching-reveal">
             <span aria-hidden="true">03</span>
-            <h3>Use AI responsibly.</h3>
-            <p>Question limitations, data, impact and ethics—not only performance.</p>
+            <h3>Current tools. Durable understanding.</h3>
+            <p>Use today's best tools while developing knowledge that remains useful when those tools change.</p>
           </article>
         </div>
       </div>
@@ -177,11 +337,11 @@
     <section class="teaching-workshops" aria-labelledby="teaching-workshops-title">
       <div class="teaching-shell teaching-workshops-layout">
         <div class="teaching-workshops-copy teaching-reveal">
-          <h2 id="teaching-workshops-title">For universities and teams</h2>
-          <p>Guest teaching, intensive workshops and tailored learning formats are available as professional services.</p>
+          <h2 id="teaching-workshops-title">Workshops &amp; guest teaching</h2>
+          <p>Live, focused learning for universities, organizations and professional audiences.</p>
         </div>
-        <a class="teaching-workshops-link teaching-reveal" href="services.html#invite">
-          <span>Explore workshops and teaching engagements</span>
+        <a class="teaching-workshops-link teaching-reveal" href="events.html">
+          <span>Explore events</span>
           <i class="fas fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
@@ -200,7 +360,7 @@
       <p>Creative AI Studio is my independent commercial practice for AI-generated imagery, video and brand work. It is
         separate from my academic research and teaching; my primary professional role is AI researcher and lecturer.</p>
       <div class="studio-disclosure-actions">
-        <a href="/studio/" class="studio-disclosure-primary">
+        <a href="https://studio.brunomelicio.com/" class="studio-disclosure-primary">
           Continue to Studio <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>
         <button type="button" data-studio-close class="studio-disclosure-secondary">Stay on this site</button>
@@ -208,9 +368,9 @@
     </div>
   </div>
 
-  <script src="assets/js/navigation.js?v=8.0"></script>
-  <script src="assets/js/main.js?v=8.0"></script>
-  <script src="assets/js/teaching.js?v=8.0"></script>
+  <script src="assets/js/navigation.js?v=9.0"></script>
+  <script src="assets/js/main.js?v=9.0"></script>
+  <script src="assets/js/teaching.js?v=9.1"></script>
 </body>
 
 </html>
