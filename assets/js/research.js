@@ -63,16 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const metrics = await response.json();
       Object.entries(metrics.display || {}).forEach(([key, value]) => {
         document.querySelectorAll(`[data-research-metric="${key}"]`).forEach(node => {
-          node.textContent = Number(value).toLocaleString('en-US');
+          node.textContent = typeof value === 'number'
+            ? value.toLocaleString('en-US')
+            : String(value);
         });
       });
 
-      const researchGateCitations = metrics.sources?.researchGate?.citations;
-      if (Number.isFinite(Number(researchGateCitations))) {
-        document.querySelectorAll('[data-research-citation-sources]').forEach(node => {
-          node.textContent = `Google Scholar · ${Number(researchGateCitations).toLocaleString('en-US')} on ResearchGate`;
+      Object.entries(metrics.publicationMetrics || {}).forEach(([key, metric]) => {
+        document.querySelectorAll(`[data-publication-metrics="${key}"]`).forEach(node => {
+          if (metric?.label) node.textContent = metric.label;
         });
-      }
+      });
 
       if (metrics.verifiedOn) {
         const verifiedDate = new Date(`${metrics.verifiedOn}T00:00:00`);

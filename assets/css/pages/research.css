@@ -182,8 +182,12 @@ body.research-page .theme-toggle:hover {
   padding-bottom: clamp(3rem, 7vh, 6rem);
 }
 
+.research-intro-copy {
+  min-width: 0;
+}
+
 .research-intro-copy h1 {
-  max-width: 720px;
+  max-width: 100%;
   margin: 0;
   color: var(--research-ink);
   font-size: clamp(4rem, 6.25vw, 7.4rem);
@@ -194,7 +198,7 @@ body.research-page .theme-toggle:hover {
 
 .research-intro-copy h1 span {
   display: block;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .research-intro-copy > p {
@@ -598,6 +602,21 @@ body.research-page .theme-toggle:hover {
   color: var(--research-muted);
   font-size: 0.82rem;
   line-height: 1.45;
+}
+
+.research-publication-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.7rem 0 0;
+  color: var(--research-ink);
+  font-size: 0.66rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.research-publication-stats span {
+  color: var(--research-soft);
 }
 
 .research-publication-authors {

@@ -935,27 +935,8 @@ body.studio-modal-open {
 }
 
 body.home-page .site-footer {
-  padding: 0;
   background: var(--home-bg);
   border-top: 1px solid var(--home-line);
-}
-
-body.home-page .footer-content {
-  display: none;
-}
-
-body.home-page .footer-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 64px;
-  padding: 0;
-  border: 0;
-}
-
-body.home-page .footer-bottom p {
-  color: var(--home-soft);
-  font-size: 0.65rem;
 }
 
 @media (max-width: 1180px) {

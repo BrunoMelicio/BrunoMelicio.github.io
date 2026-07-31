@@ -137,7 +137,8 @@ body.teaching-page .theme-toggle:hover {
 #free-learning,
 #materials,
 #university-teaching,
-#teaching-approach {
+#teaching-approach,
+#reviews {
   scroll-margin-top: 102px;
 }
 
@@ -370,10 +371,59 @@ body.teaching-page .theme-toggle:hover {
   text-transform: uppercase;
 }
 
+.course-status i {
+  margin-right: 0.45rem;
+  font-size: 0.78rem;
+}
+
 .course-product--creative .course-status {
-  color: var(--teaching-button-ink);
-  background: var(--teaching-button-bg);
-  border-color: var(--teaching-button-bg);
+  color: #111113;
+  background: #f5f5f7;
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.course-product--creative {
+  color: #f5f5f7;
+  background: #080808;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.course-product--creative .course-level,
+.course-product--creative .course-duration,
+.course-product--creative .course-product-body > p:not(.course-level):not(.course-duration):not(.course-specialty),
+.course-product--creative .course-product-footer span {
+  color: #a1a1a6;
+}
+
+.course-product.course-product--creative h3,
+.course-product--creative .course-product-footer strong {
+  color: #f5f5f7;
+}
+
+.course-product--creative .course-product-footer {
+  border-top-color: rgba(255, 255, 255, 0.16);
+}
+
+.course-product--creative .course-product-footer a {
+  color: #f5f5f7;
+  border-color: rgba(255, 255, 255, 0.34);
+}
+
+.course-specialty {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 1rem !important;
+  padding: 0.42rem 0.62rem;
+  color: #111113 !important;
+  background: #f5f5f7;
+  border-radius: 999px;
+  font-size: 0.56rem !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1 !important;
+  text-transform: uppercase;
 }
 
 .course-product-body {
@@ -401,11 +451,21 @@ body.teaching-page .theme-toggle:hover {
   letter-spacing: -0.052em;
 }
 
-.course-product-body > p:not(.course-level) {
+.course-product-body > p:not(.course-level):not(.course-duration):not(.course-specialty) {
   margin: 1.2rem 0 0;
   color: var(--teaching-muted);
   font-size: 0.84rem;
   line-height: 1.6;
+}
+
+.course-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.48rem;
+  margin: 1.25rem 0 0;
+  color: var(--teaching-soft);
+  font-size: 0.64rem;
+  font-weight: 600;
 }
 
 .course-product-footer {
@@ -462,106 +522,35 @@ body.teaching-page .theme-toggle:hover {
 
 /* Free learning */
 .free-learning {
-  padding: clamp(4rem, 7vw, 6.5rem) 0 !important;
+  padding: clamp(5rem, 9vw, 8rem) 0 !important;
   background: var(--teaching-panel);
   border-bottom: 1px solid var(--teaching-line);
 }
 
-.free-learning-panel {
-  display: grid;
-  grid-template-columns: minmax(230px, 0.72fr) minmax(0, 2.28fr);
-  gap: clamp(2rem, 4vw, 5rem);
-  padding: clamp(2rem, 4vw, 4rem);
-  background: var(--teaching-free-bg);
-  border: 1px solid color-mix(in srgb, var(--teaching-free) 24%, transparent);
-  border-radius: 22px;
+.free-catalog-heading {
+  margin-bottom: clamp(2.4rem, 4.8vw, 4rem);
 }
 
-.free-learning-lead {
-  padding-right: clamp(1.5rem, 3vw, 3rem);
-  border-right: 1px solid color-mix(in srgb, var(--teaching-free) 25%, transparent);
+.free-course-rail {
+  grid-auto-columns: minmax(280px, 23vw);
 }
 
-.free-learning-lead > strong {
-  display: block;
-  color: var(--teaching-ink);
-  font-size: clamp(3.5rem, 6.8vw, 7rem);
-  font-weight: 700;
-  line-height: 0.85;
-  letter-spacing: -0.07em;
+.course-product--free {
+  background: var(--teaching-card);
 }
 
-.free-learning-lead h2 {
-  margin: 1.5rem 0 0;
-  color: var(--teaching-ink);
-  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
-  font-weight: 600;
-  letter-spacing: -0.04em;
-}
-
-.free-learning-lead p {
-  margin: 0.7rem 0 0;
-  color: var(--teaching-muted);
-  font-size: 0.78rem;
-}
-
-.free-learning-options {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(1.5rem, 3vw, 3rem);
-}
-
-.free-learning-options article {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.free-learning-options article > i {
-  color: var(--teaching-ink);
-  font-size: 1.6rem;
-}
-
-.free-learning-options .free-learning-age {
-  margin: 0.75rem 0 0;
+.course-product--free .course-status {
   color: var(--teaching-free);
-  font-size: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  background: var(--teaching-free-bg);
+  border-bottom-color: color-mix(in srgb, var(--teaching-free) 28%, transparent);
 }
 
-.free-learning-options h3 {
-  margin: 1.3rem 0 0;
-  color: var(--teaching-ink);
-  font-size: clamp(1.15rem, 1.7vw, 1.6rem);
-  font-weight: 600;
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+.course-product--free:hover {
+  border-color: color-mix(in srgb, var(--teaching-free) 48%, var(--teaching-line));
 }
 
-.free-learning-options p {
-  margin: 0.8rem 0 0;
-  color: var(--teaching-muted);
-  font-size: 0.76rem;
-  line-height: 1.55;
-}
-
-.free-learning-options a,
-.free-learning-options article > span {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-top: auto;
-  padding-top: 1.3rem;
-  color: var(--teaching-ink);
-  font-size: 0.65rem;
-  font-weight: 600;
-}
-
-.free-learning-options article > span {
-  color: var(--teaching-muted);
+.course-product--free .course-product-footer strong {
+  color: var(--teaching-free);
 }
 
 /* Materials */
@@ -839,12 +828,16 @@ body.teaching-page .theme-toggle:hover {
   letter-spacing: -0.067em;
 }
 
-.private-intensive-intro > p:last-child {
+.private-intensive-intro > p:not(:first-child) {
   max-width: 520px;
   margin: 1.4rem 0 0;
   color: color-mix(in srgb, var(--teaching-bg) 68%, transparent);
   font-size: 0.82rem;
   line-height: 1.6;
+}
+
+.private-intensive-intro .private-intensive-detail {
+  color: color-mix(in srgb, var(--teaching-bg) 84%, transparent);
 }
 
 .private-intensive ul {
@@ -892,7 +885,29 @@ body.teaching-page .theme-toggle:hover {
   letter-spacing: -0.06em;
 }
 
-.private-intensive-price button {
+.private-intensive-rate {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  margin: 1.25rem 0 0;
+  padding-top: 1.1rem;
+  color: color-mix(in srgb, var(--teaching-bg) 64%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--teaching-bg) 18%, transparent);
+  font-size: 0.66rem;
+}
+
+.private-intensive-rate strong {
+  color: var(--teaching-bg);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.private-intensive-price a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
   min-height: 46px;
   margin-top: 1.4rem;
   padding: 0.75rem 1rem;
@@ -903,8 +918,9 @@ body.teaching-page .theme-toggle:hover {
   font-weight: 600;
 }
 
-.private-intensive-price button:disabled {
-  cursor: default;
+.private-intensive-price a:hover {
+  color: var(--teaching-ink);
+  opacity: 0.86;
 }
 
 .private-intensive-price small {
@@ -1016,6 +1032,229 @@ body.teaching-page .theme-toggle:hover {
 .teaching-workshops-link:hover {
   color: var(--teaching-ink);
   background: var(--teaching-bg);
+}
+
+/* Reviews */
+.course-reviews {
+  padding: clamp(5rem, 9vw, 8rem) 0 !important;
+  background: var(--teaching-bg);
+  border-top: 1px solid var(--teaching-line);
+  border-bottom: 1px solid var(--teaching-line);
+}
+
+.reviews-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+  gap: 2rem;
+  align-items: end;
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.reviews-heading > div > p {
+  margin: 0 0 1rem;
+  color: var(--teaching-soft);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.reviews-heading h2 {
+  margin: 0;
+  color: var(--teaching-ink);
+  font-size: clamp(3.2rem, 6.4vw, 6.7rem);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.067em;
+}
+
+.reviews-heading > p {
+  margin: 0 0 0.45rem;
+  color: var(--teaching-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.reviews-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  gap: clamp(2rem, 5vw, 6rem);
+  align-items: start;
+}
+
+.reviews-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.review-card {
+  padding: clamp(1.6rem, 3vw, 2.5rem);
+  background: var(--teaching-panel);
+  border: 1px solid var(--teaching-line);
+  border-radius: 16px;
+}
+
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.review-card-top > span {
+  color: var(--teaching-soft);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.review-card-top > div {
+  display: flex;
+  gap: 0.2rem;
+  color: var(--teaching-ink);
+  font-size: 0.62rem;
+}
+
+.review-card blockquote {
+  margin: 2.3rem 0 0;
+  color: var(--teaching-ink);
+  font-size: clamp(1.12rem, 1.6vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.025em;
+}
+
+.review-card > p {
+  margin: 1.8rem 0 0;
+  color: var(--teaching-muted);
+  font-size: 0.66rem;
+}
+
+.review-form {
+  padding: clamp(1.8rem, 4vw, 3.4rem);
+  background: var(--teaching-card);
+  border: 1px solid var(--teaching-line);
+  border-radius: 20px;
+  box-shadow: var(--teaching-shadow);
+}
+
+.review-form-heading > p {
+  margin: 0;
+  color: var(--teaching-soft);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.review-form-heading h3 {
+  margin: 0.85rem 0 0;
+  color: var(--teaching-ink);
+  font-size: clamp(2.1rem, 4vw, 4rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+}
+
+.review-form-heading > span {
+  display: block;
+  max-width: 520px;
+  margin-top: 1rem;
+  color: var(--teaching-muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.review-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.review-form label {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.review-form label > span {
+  color: var(--teaching-muted);
+  font-size: 0.62rem;
+  font-weight: 600;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  width: 100%;
+  color: var(--teaching-ink);
+  background: var(--teaching-bg);
+  border: 1px solid var(--teaching-line-strong);
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.8rem;
+}
+
+.review-form input,
+.review-form select {
+  min-height: 46px;
+  padding: 0 0.85rem;
+}
+
+.review-form textarea {
+  min-height: 132px;
+  padding: 0.8rem;
+  resize: vertical;
+}
+
+.review-form input:focus,
+.review-form select:focus,
+.review-form textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--teaching-ink) 30%, transparent);
+  outline-offset: 2px;
+}
+
+.review-form-message {
+  grid-column: 1 / -1;
+}
+
+.review-consent {
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  margin-top: 1.2rem;
+}
+
+.review-consent input {
+  width: 16px;
+  min-height: 16px;
+  margin-top: 0.05rem;
+  padding: 0;
+}
+
+.review-form > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 48px;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  color: var(--teaching-button-ink);
+  background: var(--teaching-button-bg);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.review-form > button:hover {
+  opacity: 0.86;
+}
+
+.review-form-status {
+  min-height: 1.2em;
+  margin: 0.8rem 0 0;
+  color: var(--teaching-muted);
+  font-size: 0.64rem;
 }
 
 /* Studio disclosure */
@@ -1163,18 +1402,13 @@ body.teaching-page .footer-content {
     grid-auto-columns: minmax(280px, 32vw);
   }
 
-  .free-learning-options {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 3rem;
-  }
-
   .private-intensive-panel {
     grid-template-columns: minmax(0, 1fr) minmax(240px, 0.7fr);
   }
 
   .private-intensive-price {
     grid-column: 1 / -1;
-    grid-template-columns: auto auto minmax(220px, 0.5fr) minmax(220px, 1fr);
+    grid-template-columns: auto auto minmax(160px, 0.55fr) minmax(220px, 1fr);
     gap: 1rem;
     align-items: center;
     padding: 1.8rem 0 0;
@@ -1182,9 +1416,24 @@ body.teaching-page .footer-content {
     border-left: 0;
   }
 
-  .private-intensive-price button,
-  .private-intensive-price small {
+  .private-intensive-rate {
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+  }
+
+  .private-intensive-price a {
     margin-top: 0;
+  }
+
+  .private-intensive-price small {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+
+  .reviews-layout {
+    grid-template-columns: minmax(0, 0.82fr) minmax(390px, 1.18fr);
+    gap: 2.5rem;
   }
 }
 
@@ -1235,16 +1484,6 @@ body.teaching-page .footer-content {
     grid-auto-columns: minmax(280px, 48vw);
   }
 
-  .free-learning-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .free-learning-lead {
-    padding: 0 0 2rem;
-    border-right: 0;
-    border-bottom: 1px solid color-mix(in srgb, var(--teaching-free) 25%, transparent);
-  }
-
   .university-layout {
     grid-template-columns: 1fr;
   }
@@ -1267,7 +1506,8 @@ body.teaching-page .footer-content {
     grid-template-columns: auto 1fr;
   }
 
-  .private-intensive-price button,
+  .private-intensive-rate,
+  .private-intensive-price a,
   .private-intensive-price small {
     grid-column: 1 / -1;
   }
@@ -1295,6 +1535,15 @@ body.teaching-page .footer-content {
   .teaching-workshops-layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .reviews-heading,
+  .reviews-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1371,26 +1620,6 @@ body.teaching-page .footer-content {
     min-height: 398px;
   }
 
-  .free-learning-panel {
-    padding: 1.5rem;
-    border-radius: 16px;
-  }
-
-  .free-learning-options {
-    grid-template-columns: 1fr;
-  }
-
-  .free-learning-options article {
-    min-height: 190px;
-    padding-top: 1.5rem;
-    border-top: 1px solid color-mix(in srgb, var(--teaching-free) 25%, transparent);
-  }
-
-  .free-learning-options article:first-child {
-    padding-top: 0;
-    border-top: 0;
-  }
-
   .material-filters {
     margin-top: 0.4rem;
   }
@@ -1439,13 +1668,26 @@ body.teaching-page .footer-content {
   }
 
   .private-intensive-price > strong,
-  .private-intensive-price button,
+  .private-intensive-price a,
   .private-intensive-price small {
     grid-column: auto;
   }
 
   .teaching-workshops-link {
     align-items: flex-start;
+  }
+
+  .reviews-list,
+  .review-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-form-message {
+    grid-column: auto;
+  }
+
+  .review-card blockquote {
+    font-size: 1.05rem;
   }
 
   .studio-disclosure-actions {

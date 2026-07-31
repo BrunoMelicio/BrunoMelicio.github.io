@@ -33,16 +33,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const courseRail = document.querySelector('[data-course-rail]');
-  document.querySelectorAll('[data-course-direction]').forEach(control => {
-    control.addEventListener('click', () => {
-      if (!courseRail) return;
-      const direction = Number(control.dataset.courseDirection) || 1;
-      const card = courseRail.querySelector('.course-product');
-      const distance = card ? card.getBoundingClientRect().width + 16 : 320;
-      courseRail.scrollBy({ left: direction * distance, behavior: reduceMotion ? 'auto' : 'smooth' });
+  const bindCatalogControls = (railSelector, controlSelector, directionKey) => {
+    const rail = document.querySelector(railSelector);
+
+    document.querySelectorAll(controlSelector).forEach(control => {
+      control.addEventListener('click', () => {
+        if (!rail) return;
+        const direction = Number(control.dataset[directionKey]) || 1;
+        const card = rail.querySelector('.course-product');
+        const distance = card ? card.getBoundingClientRect().width + 16 : 320;
+        rail.scrollBy({ left: direction * distance, behavior: reduceMotion ? 'auto' : 'smooth' });
+      });
     });
-  });
+  };
+
+  bindCatalogControls('[data-course-rail]', '[data-course-direction]', 'courseDirection');
+  bindCatalogControls('[data-free-course-rail]', '[data-free-course-direction]', 'freeCourseDirection');
 
   const materialFilters = [...document.querySelectorAll('[data-material-filter]')];
   const materials = [...document.querySelectorAll('[data-material-access]')];
@@ -62,6 +68,27 @@ document.addEventListener('DOMContentLoaded', () => {
         material.classList.toggle('is-filtered-out', !visible);
       });
     });
+  });
+
+  const reviewForm = document.getElementById('course-review-form');
+  reviewForm?.addEventListener('submit', event => {
+    event.preventDefault();
+
+    if (!reviewForm.reportValidity()) return;
+
+    const formData = new FormData(reviewForm);
+    const name = String(formData.get('name') || '').trim();
+    const course = String(formData.get('course') || '').trim();
+    const rating = String(formData.get('rating') || '').trim();
+    const review = String(formData.get('review') || '').trim();
+    const subject = encodeURIComponent(`Course review from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nCourse or event: ${course}\nRating: ${rating}/5\n\nReview:\n${review}\n\nPublication consent: Yes`
+    );
+    const status = reviewForm.querySelector('.review-form-status');
+
+    if (status) status.textContent = 'Opening your email app so you can send the review for verification…';
+    window.location.href = `mailto:brunomelicio.ai@gmail.com?subject=${subject}&body=${body}`;
   });
 
   const studioDisclosure = document.getElementById('studio-disclosure');

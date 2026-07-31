@@ -1,26 +1,40 @@
 {
-  "verifiedOn": "2026-07-21",
+  "verifiedOn": "2026-07-30",
   "display": {
     "publications": 6,
-    "citations": 49,
-    "hIndex": 3,
-    "reads": 601
+    "citations": 50,
+    "reads": "6,526+",
+    "hIndex": 3
   },
   "sources": {
     "googleScholar": {
-      "citations": 49,
+      "citations": 50,
       "hIndex": 3,
       "i10Index": 3,
-      "indexedRows": 7,
-      "uniquePublications": 6,
+      "profileRows": 8,
+      "publishedWorksShown": 6,
+      "duplicateRows": 1,
+      "additionalThesisEntries": 1,
       "url": "https://scholar.google.com/citations?user=fRrxUhsAAAAJ&hl=en"
-    },
-    "researchGate": {
-      "publications": 6,
-      "citations": 45,
-      "reads": 601,
-      "url": "https://www.researchgate.net/profile/Bruno-Carlos-Dos-Santos-Melicio"
     }
   },
-  "note": "Six unique works are shown; Google Scholar currently includes a duplicate record for one 2025 paper."
+  "publicationMetrics": {
+    "multimodal": {
+      "label": "3,397 Springer accesses · 4 Springer citations",
+      "source": "https://link.springer.com/article/10.1007/s12559-025-10481-7"
+    },
+    "composite": {
+      "label": "15 Google Scholar citations",
+      "source": "https://scholar.google.com/citations?user=fRrxUhsAAAAJ&hl=en"
+    },
+    "machineSupervision": {
+      "label": "18 Google Scholar citations",
+      "source": "https://scholar.google.com/citations?user=fRrxUhsAAAAJ&hl=en"
+    },
+    "deepRehab": {
+      "label": "3,129 Springer accesses · 9 Springer citations",
+      "source": "https://link.springer.com/chapter/10.1007/978-3-030-86365-4_31"
+    }
+  },
+  "note": "Six published works are shown. The reads total is a minimum derived from the 3,397 Springer accesses reported for the 2025 Cognitive Computation article and the 3,129 Springer accesses reported for DeepRehab. Google Scholar currently lists eight rows, including a duplicate record for the 2025 Cognitive Computation article and a separate 2026 thesis entry."
 }

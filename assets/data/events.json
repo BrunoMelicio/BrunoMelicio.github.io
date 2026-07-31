@@ -1,0 +1,261 @@
+[
+  {
+    "id": "phd-public-defense-2026",
+    "date": "2026-04-20",
+    "type": "academic",
+    "label": "PhD public defense",
+    "title": "PhD Public Defense",
+    "location": "Eötvös Loránd University · Budapest, Hungary",
+    "description": "Public defense of the PhD dissertation “Behavior Analysis using 3D Human Pose Estimation for Enhancing Medical Assessments,” presenting automated behavior analysis methods designed to support autism and other medical assessments.",
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/images/events/PhD_2026/1.png",
+        "alt": "Bruno Melício following his PhD public defense at Eötvös Loránd University"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/events/PhD_2026/2.png",
+        "alt": "Bruno Melício presenting the need for automated behavior analysis during his PhD defense"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/events/PhD_2026/6.png",
+        "alt": "Opening slide of Bruno Melício's PhD public defense"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/events/PhD_2026/7.png",
+        "alt": "Bruno Melício presenting his doctoral research at Eötvös Loránd University"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/events/PhD_2026/8.png",
+        "alt": "Audience view of Bruno Melício's PhD public defense"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/events/PhD_2026/9.png",
+        "alt": "PhD public defense presentation on behavior analysis and medical assessment"
+      }
+    ]
+  },
+  {
+    "id": "creative-ai-social-media-2026",
+    "date": "2026-02-28",
+    "type": "workshop",
+    "label": "Creative AI Studio workshop",
+    "title": "AI Image & Video Creation for Social Media",
+    "location": "Online",
+    "description": "A three-hour practical workshop on creating images, video and social content with generative AI.",
+    "media": []
+  },
+  {
+    "id": "ntnu-invited-talk-2026",
+    "date": "2026-02-11",
+    "type": "talk",
+    "label": "Invited talk",
+    "title": "Composite AI for Automated Detection of Behavioral Markers",
+    "location": "Norwegian University of Science and Technology · Norway",
+    "description": "An invited research talk on multimodal methods for behavioral marker detection during ADOS-2.",
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/images/events/NTNU_2026_Talk/ntnu-2026-1.png",
+        "alt": "Poster for Bruno Melício's invited talk at NTNU"
+      }
+    ]
+  },
+  {
+    "id": "uta-deep-learning-workshop-2026",
+    "date": "2026-02-03",
+    "type": "workshop",
+    "label": "Hands-on workshop",
+    "title": "Hands-on Deep Learning Workshop",
+    "location": "Atlantic Technical University · Mindelo, Cape Verde",
+    "description": "A practical deep learning workshop connecting foundations, code and real-world experimentation.",
+    "media": [
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-1.jpg", "alt": "Hands-on deep learning workshop at Atlantic Technical University" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-2.jpg", "alt": "Students participating in the deep learning workshop" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-3.jpg", "alt": "Bruno Melício teaching during the deep learning workshop" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-4.jpg", "alt": "Workshop presentation at Atlantic Technical University" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-5.jpg", "alt": "Bruno Melício leading a hands-on deep learning workshop" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-6.jpg", "alt": "Deep learning workshop session" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-7.jpg", "alt": "Participants at the deep learning workshop" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-8.jpg", "alt": "Practical exercise during the deep learning workshop" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-9.jpg", "alt": "Deep learning workshop audience" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-10.jpg", "alt": "Bruno Melício presenting deep learning methods" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-11.jpg", "alt": "Atlantic Technical University workshop" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-12.jpg", "alt": "Workshop participants working with deep learning" },
+      { "type": "image", "src": "assets/images/events/UTA_2026_Workshop/uta-2026-13.jpg", "alt": "Closing moment of the deep learning workshop" }
+    ]
+  },
+  {
+    "id": "insar-2025",
+    "date": "2025-05-07",
+    "type": "conference",
+    "label": "Conference presentations",
+    "title": "INSAR 2025 Annual Meeting",
+    "location": "International Society for Autism Research · Denver, USA",
+    "description": "Two presentations on automated behavior analysis during standardized autism assessment.",
+    "media": []
+  },
+  {
+    "id": "bosch-best-meetup-2024",
+    "date": "2024-12-10",
+    "type": "talk",
+    "label": "Research talk",
+    "title": "Automated Detection and Analysis of Delayed Object Play in ADOS-2",
+    "location": "BOSCH Best Meetup · Budapest, Hungary",
+    "description": "Research on the automatic analysis of delayed object-play behavior during ADOS-2.",
+    "media": [
+      { "type": "image", "src": "assets/images/events/BOSCH_Best_2023_Meetup/bosch-best-2024-1.png", "alt": "Bruno Melício presenting at the BOSCH Best Meetup" },
+      { "type": "image", "src": "assets/images/events/BOSCH_Best_2023_Meetup/bosch-best-2024-2.png", "alt": "Research presentation at BOSCH Best Meetup" },
+      { "type": "image", "src": "assets/images/events/BOSCH_Best_2023_Meetup/bosch-best-2024-3.png", "alt": "Audience view of the BOSCH Best Meetup presentation" },
+      { "type": "video", "src": "assets/images/events/BOSCH_Best_2023_Meetup/2.mp4", "alt": "Video from the BOSCH Best Meetup research talk" }
+    ]
+  },
+  {
+    "id": "milab-conference-2024",
+    "date": "2024-06-22",
+    "type": "conference",
+    "label": "Conference presentation",
+    "title": "Detecting Hand-Object Interaction and Child Play in ADOS-2 Videos",
+    "location": "Hungarian National AI Conference · Budapest, Hungary",
+    "description": "A presentation on computer-vision methods for analyzing hand-object interaction and child play.",
+    "media": [
+      { "type": "image", "src": "assets/images/events/MILAB_2024_Conference/milab-2024-1.jpg", "alt": "Research poster at the Hungarian National AI Conference" }
+    ]
+  },
+  {
+    "id": "tdk-first-place-2023",
+    "date": "2023-11-15",
+    "type": "academic",
+    "label": "Academic milestone",
+    "title": "Scientific Student Conference — 1st Place",
+    "location": "Eötvös Loránd University · Budapest, Hungary",
+    "description": "First place at the university Scientific Student Conference for research in artificial intelligence.",
+    "media": []
+  },
+  {
+    "id": "icmi-2023",
+    "date": "2023-10-09",
+    "type": "conference",
+    "label": "Conference presentation",
+    "title": "International Conference on Multimodal Interaction",
+    "location": "ICMI 2023 · Paris, France",
+    "description": "Presenting Composite AI research for behavior analysis in social interactions.",
+    "media": [
+      { "type": "image", "src": "assets/images/events/ICMI_2023_Conference/icmi-2023-1.jpg", "alt": "Bruno Melício presenting research at ICMI 2023" }
+    ]
+  },
+  {
+    "id": "jsalt-2023",
+    "date": "2023-08-01",
+    "type": "workshop",
+    "label": "Research workshop",
+    "title": "JSALT 2023 Workshop",
+    "location": "Johns Hopkins Summer Workshop · Le Mans, France",
+    "description": "A multidisciplinary summer workshop focused on advancing language and multimodal AI research.",
+    "media": [
+      { "type": "image", "src": "assets/images/events/JSALT_2023_Workshop/jsalt-2023-1.jpg", "alt": "JSALT 2023 workshop presentation" },
+      { "type": "image", "src": "assets/images/events/JSALT_2023_Workshop/jsalt-2023-2.jpg", "alt": "Research team at JSALT 2023" },
+      { "type": "image", "src": "assets/images/events/JSALT_2023_Workshop/jsalt-2023-3.jpg", "alt": "Bruno Melício presenting at JSALT 2023" },
+      { "type": "image", "src": "assets/images/events/JSALT_2023_Workshop/jsalt-2023-4.jpg", "alt": "Workshop discussion at JSALT 2023" },
+      { "type": "image", "src": "assets/images/events/JSALT_2023_Workshop/jsalt-2023-5.jpg", "alt": "JSALT 2023 research workshop" },
+      { "type": "image", "src": "assets/images/events/JSALT_2023_Workshop/jsalt-2023-6.jpg", "alt": "Closing session at JSALT 2023" },
+      { "type": "video", "src": "assets/images/events/JSALT_2023_Workshop/5.mp4", "alt": "Video from the JSALT 2023 workshop" }
+    ]
+  },
+  {
+    "id": "otdk-special-award-2023",
+    "date": "2023-04-12",
+    "type": "academic",
+    "label": "Academic milestone",
+    "title": "National Scientific Student Conference — Special Award",
+    "location": "OTDK · Hungary",
+    "description": "A special award at Hungary's National Scientific Student Conference.",
+    "media": [
+      { "type": "document", "src": "assets/images/events/OTDK_2022_Conference/Copy of Bruno OTDK certificate.pdf", "alt": "OTDK special award certificate" }
+    ]
+  },
+  {
+    "id": "bosch-deeprehab-2022",
+    "date": "2022-10-01",
+    "type": "conference",
+    "label": "Conference presentation",
+    "title": "DeepRehab: AI for Rehabilitation",
+    "location": "BOSCH Conference · Budapest, Hungary",
+    "description": "Presenting artificial intelligence methods developed for a rehabilitation scenario.",
+    "media": [
+      { "type": "image", "src": "assets/images/events/BOSCH_2022_Conference/bosch-2022-1.jpg", "alt": "DeepRehab presentation at the BOSCH conference" }
+    ]
+  },
+  {
+    "id": "uta-modern-ai-talk-2022",
+    "date": "2022-07-21",
+    "type": "talk",
+    "label": "Public talk",
+    "title": "Modern Artificial Intelligence",
+    "location": "Atlantic Technical University · Cape Verde",
+    "description": "A public introduction to the foundations, methods and applications shaping modern AI.",
+    "media": [
+      { "type": "image", "src": "assets/images/events/UTA_2022_Talk/uta-2022-1.jpg", "alt": "Modern AI talk at Atlantic Technical University" },
+      { "type": "image", "src": "assets/images/events/UTA_2022_Talk/uta-2022-2.jpg", "alt": "Audience at the Modern AI talk" },
+      { "type": "image", "src": "assets/images/events/UTA_2022_Talk/uta-2022-3.jpg", "alt": "Bruno Melício presenting modern artificial intelligence" },
+      { "type": "image", "src": "assets/images/events/UTA_2022_Talk/uta-2022-4.jpg", "alt": "Artificial intelligence presentation in Cape Verde" },
+      { "type": "image", "src": "assets/images/events/UTA_2022_Talk/uta-2022-5.jpg", "alt": "Modern AI talk presentation slide" },
+      { "type": "image", "src": "assets/images/events/UTA_2022_Talk/uta-2022-6.jpg", "alt": "Questions during the Modern AI talk" },
+      { "type": "image", "src": "assets/images/events/UTA_2022_Talk/uta-2022-7.jpg", "alt": "Atlantic Technical University event" },
+      { "type": "image", "src": "assets/images/events/UTA_2022_Talk/uta-2022-8.jpg", "alt": "Closing moment of the Modern AI talk" }
+    ]
+  },
+  {
+    "id": "icann-2021",
+    "date": "2021-09-14",
+    "type": "conference",
+    "label": "Conference presentation",
+    "title": "International Conference on Artificial Neural Networks",
+    "location": "ICANN 2021 · Bratislava, Slovakia",
+    "description": "Presenting research on artificial intelligence technologies for machine supervision in rehabilitation.",
+    "media": []
+  },
+  {
+    "id": "msc-thesis-defense-2021",
+    "date": "2021-06-25",
+    "type": "academic",
+    "label": "Thesis defense",
+    "title": "Master's Thesis Defense",
+    "location": "Eötvös Loránd University · Budapest, Hungary",
+    "description": "The defense of a master's thesis in computer science and artificial intelligence.",
+    "media": [
+      { "type": "image", "src": "assets/images/events/ELTE_2022_MSc_Thesis/elte-msc-2021-1.jpg", "alt": "Bruno Melício during his master's thesis defense" }
+    ]
+  },
+  {
+    "id": "nokia-mask-detector-2020",
+    "date": "2020-01-25",
+    "type": "project",
+    "label": "Proof of concept",
+    "title": "Face Mask Detector",
+    "location": "Nokia · Budapest, Hungary",
+    "description": "A computer-vision proof of concept developed to detect face-mask usage.",
+    "media": [
+      { "type": "video", "src": "assets/images/events/Nokia_2021_PoC/nokia-2020-video.mp4", "alt": "Demonstration of the Nokia face mask detector proof of concept" }
+    ]
+  },
+  {
+    "id": "bsc-thesis-defense-2019",
+    "date": "2019-07-24",
+    "type": "academic",
+    "label": "Thesis defense",
+    "title": "Bachelor's Thesis Defense — GDNet",
+    "location": "University of Cape Verde · Praia, Cape Verde",
+    "description": "The defense of GDNet, a deep-learning system developed as a bachelor's thesis.",
+    "media": [
+      { "type": "image", "src": "assets/images/events/UNICV_2019_BSc_Thesis/unicv-2019-1.jpg", "alt": "Bruno Melício presenting his bachelor's thesis" },
+      { "type": "image", "src": "assets/images/events/UNICV_2019_BSc_Thesis/unicv-2019-2.jpg", "alt": "Bachelor's thesis defense at the University of Cape Verde" },
+      { "type": "video", "src": "assets/images/events/UNICV_2019_BSc_Thesis/unicv-2019-video.mp4", "alt": "Video from Bruno Melício's bachelor's thesis defense" }
+    ]
+  }
+]
