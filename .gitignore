@@ -11,3 +11,8 @@ gradio-apps/
 assets/images/new.jpeg
 assets/images/new\ Background\ Removed.png
 assets/videos/*.mp4
+
+# Local browser QA artifacts
+.playwright-cli/
+tmp/
+about-mobile-dark-final.png
