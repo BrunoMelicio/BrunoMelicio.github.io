@@ -31,8 +31,28 @@ Before production email confirmation and password reset, configure Supabase Auth
   - `http://127.0.0.1:4176/studio/login.html`
   - `http://127.0.0.1:4176/studio/reset-password.html`
 
-## Current scope
+## Accounts and administration
 
-Working now: email/password signup, email confirmation flow, login, persistent sessions, logout, password reset, and protected studio routes.
+Working now:
+
+- Email/password registration, confirmation, login and reset flows
+- Verified protected routes and persistent sessions
+- Editable creator profiles in `public.profiles`
+- Email and password changes
+- Global sign-out and self-service account deletion
+- Admin-only account listing, search, role changes, suspension and deletion
+- RLS-protected profile data and server-side administrative Edge Functions
+
+The first account created with `brunomelicio.ai@gmail.com` receives the administrator role automatically. Confirm that email and log in; **Admin dashboard** will then appear in the account menu. All later role changes are made from that dashboard. Authorization is stored in protected Auth `app_metadata`, never in user-editable profile fields.
+
+Relevant files:
+
+- Profile UI: `profile.html`
+- Admin UI: `admin.html`
+- Account behavior: `assets/account.js`
+- Database migration: `supabase/migrations/20260808000000_braids_user_profiles_and_admin_roles.sql`
+- Edge Functions: `supabase/functions/admin-users` and `supabase/functions/delete-account`
+
+## Current product scope
 
 UI-only for now: model generation, uploads, gallery persistence, purchases, usage metering, and billing. These require server-side functions so provider keys and payment logic never reach the browser.
