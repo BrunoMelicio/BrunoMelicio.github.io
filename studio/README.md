@@ -24,10 +24,10 @@ The publishable key in the browser is intentionally public. Never put a Supabase
 
 Before production email confirmation and password reset, configure Supabase Authentication URL settings:
 
-- Site URL: `https://braids.ai`
+- Site URL: `https://studio.brunomelicio.com`
 - Redirect URLs:
-  - `https://braids.ai/login.html`
-  - `https://braids.ai/reset-password.html`
+  - `https://studio.brunomelicio.com/login.html`
+  - `https://studio.brunomelicio.com/reset-password.html`
   - `http://127.0.0.1:4176/studio/login.html`
   - `http://127.0.0.1:4176/studio/reset-password.html`
 

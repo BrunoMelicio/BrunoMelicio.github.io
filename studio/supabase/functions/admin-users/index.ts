@@ -2,14 +2,12 @@ import { createClient } from "npm:@supabase/supabase-js@2.102.0";
 
 const corsHeaders = (origin: string | null) => {
   const allowed = new Set([
-    "https://braids.ai",
-    "https://www.braids.ai",
     "https://studio.brunomelicio.com",
     "http://127.0.0.1:4176",
     "http://localhost:4176"
   ]);
   return {
-    "Access-Control-Allow-Origin": origin && allowed.has(origin) ? origin : "https://braids.ai",
+    "Access-Control-Allow-Origin": origin && allowed.has(origin) ? origin : "https://studio.brunomelicio.com",
     "Access-Control-Allow-Headers": "authorization, apikey, content-type, x-client-info",
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     Vary: "Origin"
