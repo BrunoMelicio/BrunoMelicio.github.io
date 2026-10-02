@@ -180,7 +180,7 @@ body.services-page .theme-toggle:hover {
   max-width: 760px;
   margin: 0;
   color: var(--services-ink);
-  font-size: clamp(3.6rem, 5.8vw, 7rem);
+  font-size: clamp(2.88rem, 4.64vw, 5.6rem);
   font-weight: 600;
   line-height: 0.92;
   letter-spacing: -0.07em;
@@ -1102,7 +1102,7 @@ body.studio-modal-open {
   }
 
   .services-hero-copy h1 {
-    font-size: clamp(3.5rem, 6.8vw, 5.8rem);
+    font-size: clamp(2.8rem, 5.44vw, 4.64rem);
   }
 
   .services-boundary-grid,
@@ -1193,7 +1193,7 @@ body.studio-modal-open {
   }
 
   .services-hero-copy h1 {
-    font-size: clamp(3.7rem, 16.5vw, 5.7rem);
+    font-size: clamp(2.96rem, 13.2vw, 4.56rem);
   }
 
   .services-hero-copy > p {

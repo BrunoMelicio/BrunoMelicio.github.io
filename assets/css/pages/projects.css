@@ -176,7 +176,7 @@ body.projects-page.theme-light .nav-list .studio-entry {
 
 .projects-intro-copy h1 {
   margin: 0 0 1.5rem;
-  font-size: clamp(2.5rem, 5.6vw, 4.8rem);
+  font-size: clamp(2.0rem, 4.48vw, 3.84rem);
   font-weight: 600;
   line-height: 1.04;
   letter-spacing: -0.05em;

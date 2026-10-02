@@ -196,7 +196,7 @@ body.events-page .theme-toggle:hover {
   max-width: 100%;
   margin: 0;
   color: var(--events-ink);
-  font-size: clamp(4rem, 6.25vw, 7.4rem);
+  font-size: clamp(3.2rem, 5.0vw, 5.92rem);
   font-weight: 600;
   line-height: 0.88;
   letter-spacing: -0.075em;
@@ -924,7 +924,7 @@ button.event-card-media {
   }
 
   .events-intro-copy h1 {
-    font-size: clamp(4rem, 13vw, 7rem);
+    font-size: clamp(3.2rem, 10.4vw, 5.6rem);
   }
 
   .events-section-heading,
@@ -951,7 +951,7 @@ button.event-card-media {
   }
 
   .events-intro-copy h1 {
-    font-size: clamp(3.7rem, 16vw, 5.3rem);
+    font-size: clamp(2.96rem, 12.8vw, 4.24rem);
     line-height: 0.9;
   }
 

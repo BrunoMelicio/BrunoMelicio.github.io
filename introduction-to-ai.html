@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How AI Actually Works | Bruno Melício</title>
+  <meta name="description"
+    content="A 10-minute introduction to artificial intelligence for every level: learning from examples, neural networks, and how chatbots like ChatGPT write." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="How AI Actually Works | Bruno Melício" />
+  <meta property="og:description"
+    content="Start with no background. Finish understanding how chatbots write. A 10-minute visual guide." />
+  <meta property="og:type" content="article" />
+  <link rel="icon" type="image/png" href="assets/images/logo2.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/base.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/components.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/animations.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/navigation.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/footer.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/pages/learn.css?v=9.3" />
+  <link rel="stylesheet" href="assets/css/pages/introduction-to-ai.css?v=1.0" />
+</head>
+
+<body class="theme-light teaching-page guide-page">
+  <div class="guide-progress" aria-hidden="true"><span id="guide-progress-bar"></span></div>
+
+  <main class="guide-main">
+    <article class="guide">
+
+      <header class="guide-header">
+        <a href="learn.html#free-learning" class="guide-back"><i class="fas fa-arrow-left" aria-hidden="true"></i>
+          Courses</a>
+        <p class="guide-kicker">Free guide · All levels · 10 min read</p>
+        <h1>How AI actually works</h1>
+        <p class="guide-lede">No maths or coding needed. Start with one simple idea, build on it step by step,
+          and by the end you will understand how a chatbot like ChatGPT writes its answers.</p>
+        <p class="guide-byline">By <strong>Bruno Melício</strong>, AI Researcher &amp; Lecturer at Eötvös Loránd
+          University (ELTE)</p>
+      </header>
+
+      <!-- Route map -->
+      <nav class="guide-route" aria-label="The three parts of this guide">
+        <a href="#part-1" class="route-step">
+          <span class="route-num">1</span>
+          <span class="route-text"><strong>The big idea</strong><span>Learning from examples. For everyone.</span></span>
+        </a>
+        <a href="#part-2" class="route-step">
+          <span class="route-num">2</span>
+          <span class="route-text"><strong>Inside a neural network</strong><span>What the computer is actually
+              doing.</span></span>
+        </a>
+        <a href="#part-3" class="route-step">
+          <span class="route-num">3</span>
+          <span class="route-text"><strong>How chatbots write</strong><span>Next-word prediction and
+              attention.</span></span>
+        </a>
+      </nav>
+      <p class="guide-note">Each part uses the one before it. If you already know some AI, still read Part 1. It
+        only takes two minutes, and everything after it is built on that one example.</p>
+
+      <!-- ===================== PART 1 ===================== -->
+      <section class="guide-part" id="part-1" aria-labelledby="part-1-title">
+        <p class="part-label">Part 1 · For everyone</p>
+        <h2 id="part-1-title">The big idea: learning from examples</h2>
+
+        <p>A normal computer program follows rules that a person wrote down. A calculator, a banking app or a
+          spreadsheet does exactly what it was told, step by step.</p>
+
+        <p>That works well until you meet a problem nobody can write rules for. Try writing rules to recognise
+          a cat in a photo. <em>“Has pointy ears.”</em> So does a fox. <em>“Has whiskers.”</em> So does a seal.
+          The cat might be curled up with its ears hidden. You would never finish the list.</p>
+
+        <p>AI turns the problem around. Instead of writing the rules, we show the computer thousands of examples
+          <strong>with the right answers</strong>, and it works out the rules by itself.</p>
+
+        <figure class="guide-figure">
+          <div class="flip">
+            <div class="flip-row">
+              <span class="flip-tag">Normal program</span>
+              <div class="flip-flow">
+                <span class="chip chip--you">Rules <small>written by a person</small></span>
+                <span class="chip-op">+</span>
+                <span class="chip">Data</span>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                <span class="chip chip--out">Answers</span>
+              </div>
+            </div>
+            <div class="flip-row flip-row--ai">
+              <span class="flip-tag">AI (machine learning)</span>
+              <div class="flip-flow">
+                <span class="chip">Data</span>
+                <span class="chip-op">+</span>
+                <span class="chip chip--you">Answers <small>given by a person</small></span>
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                <span class="chip chip--out">Rules</span>
+              </div>
+            </div>
+          </div>
+          <figcaption><strong>Figure 1.</strong> Same ingredients, flipped around. In machine learning, the
+            computer produces the rules.</figcaption>
+        </figure>
+
+        <h3>A tiny AI you can train yourself</h3>
+
+        <p>Let's make this concrete with the simplest problem I can think of. You have five pizzas, and you know
+          the size and price of each one. You want a rule that guesses the price of <em>any</em> pizza.</p>
+
+        <p>Our “AI” is just a straight line. It has two <strong>knobs</strong>: how steep the line is (how much
+          each extra centimetre costs), and how high it sits. Every combination of knob settings is a different
+          guess. The red lines show how far off the guess is for each pizza. That distance is the
+          <strong>error</strong>.</p>
+
+        <p class="try"><i class="fas fa-hand-pointer" aria-hidden="true"></i> Try it: move the two knobs and
+          make the red lines as short as you can. Then press <strong>Let the computer learn</strong>.</p>
+
+        <figure class="guide-figure guide-figure--wide" id="pizza-lab">
+          <div class="lab">
+            <svg class="lab-chart" viewBox="0 0 560 342" role="img"
+              aria-label="Chart of pizza size against price, with five pizzas, an adjustable line, and red error lines">
+              <g class="axis">
+                <line x1="60" y1="280" x2="540" y2="280" />
+                <line x1="60" y1="20" x2="60" y2="280" />
+                <text x="300" y="336" text-anchor="middle">Pizza size (cm)</text>
+                <text x="18" y="150" text-anchor="middle" transform="rotate(-90 18 150)">Price (€)</text>
+              </g>
+              <g class="ticks" id="pizza-ticks"></g>
+              <g id="pizza-errors" class="err-lines"></g>
+              <line id="pizza-line" class="model-line" x1="60" y1="200" x2="540" y2="100" />
+              <g id="pizza-points"></g>
+            </svg>
+
+            <div class="lab-panel">
+              <label class="knob">
+                <span class="knob-name">Knob 1 · Steepness <output id="knob-w-out">0.10</output></span>
+                <span class="knob-hint">Extra € for each extra cm</span>
+                <input type="range" id="knob-w" min="0" max="1" step="0.01" value="0.10" />
+              </label>
+              <label class="knob">
+                <span class="knob-name">Knob 2 · Height <output id="knob-b-out">€6.00</output></span>
+                <span class="knob-hint">Price of a 30 cm pizza</span>
+                <input type="range" id="knob-b" min="2" max="18" step="0.1" value="6" />
+              </label>
+
+              <div class="score" aria-live="polite">
+                <span class="score-label">Average error</span>
+                <span class="score-value" id="pizza-error">€0.00</span>
+                <span class="score-bar"><span id="pizza-error-bar"></span></span>
+                <span class="score-msg" id="pizza-msg">Move the knobs to shrink the red lines.</span>
+              </div>
+
+              <div class="lab-actions">
+                <button type="button" class="btn-learn" id="pizza-train"><i class="fas fa-play"
+                    aria-hidden="true"></i> Let the computer learn</button>
+                <button type="button" class="btn-ghost" id="pizza-reset">Reset</button>
+              </div>
+            </div>
+          </div>
+          <figcaption><strong>Figure 2.</strong> When the computer learns, it repeats one small loop: guess, measure
+            the error, nudge each knob a little in the direction that makes the error smaller.</figcaption>
+        </figure>
+
+        <p>Once the knobs are set, the line can price a pizza it has never seen: just read off any size. That is
+          what people mean when they say an AI model makes a <strong>prediction</strong>.</p>
+
+        <aside class="takeaway">
+          <p class="takeaway-title"><i class="fas fa-check" aria-hidden="true"></i> What you now know</p>
+          <ul>
+            <li>An AI <strong>model</strong> is a guessing machine with knobs.</li>
+            <li><strong>Training</strong> means turning the knobs, a little at a time, until the errors are small.</li>
+            <li>The knob settings are what the model has “learned”.</li>
+          </ul>
+          <p class="takeaway-next">The rest of this guide is the same idea at a much bigger size. Keep the pizza
+            line in mind.</p>
+        </aside>
+      </section>
+
+      <!-- ===================== PART 2 ===================== -->
+      <section class="guide-part" id="part-2" aria-labelledby="part-2-title">
+        <p class="part-label">Part 2 · Going deeper</p>
+        <h2 id="part-2-title">Inside a neural network</h2>
+
+        <p>A straight line is fine for pizza prices. But recognising a cat or translating a sentence needs a much
+          more flexible guessing machine. The one that powers almost all modern AI is called a <strong>neural
+            network</strong>. Here it is in three steps.</p>
+
+        <h3>Step 1: everything becomes numbers</h3>
+
+        <p>Our pizza model took a number (size) and gave back a number (price). A computer can only work with
+          numbers, so everything else has to be turned into numbers first. A photo, for example, is a grid of
+          tiny squares called pixels, and each pixel is just a number for how bright it is.</p>
+
+        <figure class="guide-figure">
+          <div class="pixels">
+            <div class="pixel-grid" id="pixel-picture" aria-hidden="true"></div>
+            <i class="fas fa-arrow-right pixels-arrow" aria-hidden="true"></i>
+            <div class="pixel-grid pixel-grid--numbers" id="pixel-numbers" aria-hidden="true"></div>
+          </div>
+          <figcaption><strong>Figure 3.</strong> What you see (left) and what the computer sees (right): 0 is
+            black, 255 is white. A phone photo has about 12 million of these numbers, three per pixel for red,
+            green and blue.</figcaption>
+        </figure>
+
+        <h3>Step 2: a neuron is the pizza line, plus a bend</h3>
+
+        <p>The building block of a neural network is the artificial <strong>neuron</strong>. You already know
+          how it works. Imagine our pizza model taking more than one input: size, number of toppings, and
+          whether it is delivered. Each input is multiplied by its own knob, and the results are added up.
+          These knobs are called <strong>weights</strong>.</p>
+
+        <p>Then comes one extra step, a small <strong>bend</strong>: if the total is below zero, the neuron
+          outputs zero. That's all. The bend sounds trivial, but it matters a lot. Stacking straight lines only
+          ever gives you another straight line. Adding bends lets the network build curves, corners, and,
+          with enough of them, almost any shape it needs.</p>
+
+        <figure class="guide-figure">
+          <svg class="diagram" viewBox="0 0 560 250" role="img"
+            aria-label="A neuron: three inputs, each multiplied by a weight, summed, passed through a bend, giving one output">
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
+                orient="auto-start-reverse">
+                <path d="M0,0 L10,5 L0,10 z" class="arrowhead" />
+              </marker>
+            </defs>
+            <g class="d-input">
+              <rect x="10" y="22" width="120" height="44" rx="10" /><text x="70" y="50">Size</text>
+              <rect x="10" y="103" width="120" height="44" rx="10" /><text x="70" y="131">Toppings</text>
+              <rect x="10" y="184" width="120" height="44" rx="10" /><text x="70" y="212">Delivery</text>
+            </g>
+            <g class="d-wire">
+              <path d="M130 44 L262 112" marker-end="url(#arrow)" />
+              <path d="M130 125 L258 125" marker-end="url(#arrow)" />
+              <path d="M130 206 L262 138" marker-end="url(#arrow)" />
+            </g>
+            <g class="d-knob">
+              <text x="200" y="64">× knob</text>
+              <text x="194" y="117">× knob</text>
+              <text x="200" y="198">× knob</text>
+            </g>
+            <circle cx="300" cy="125" r="38" class="d-neuron" />
+            <text x="300" y="133" class="d-sum">add</text>
+            <path d="M338 125 L392 125" class="d-wire-solo" marker-end="url(#arrow)" />
+            <rect x="398" y="96" width="62" height="58" rx="10" class="d-bend-box" />
+            <path d="M408 136 L430 136 L452 108" class="d-bend" />
+            <text x="429" y="178" class="d-label">bend</text>
+            <path d="M460 125 L498 125" class="d-wire-solo" marker-end="url(#arrow)" />
+            <text x="528" y="131" class="d-out">Price</text>
+          </svg>
+          <figcaption><strong>Figure 4.</strong> One neuron: multiply each input by its knob, add them up,
+            apply the bend. It's the pizza line with more inputs.</figcaption>
+        </figure>
+
+        <h3>Step 3: stack many neurons in layers</h3>
+
+        <p>A neural network is many of these neurons arranged in <strong>layers</strong>. The outputs of one
+          layer become the inputs of the next. Every line in the picture below is one knob.</p>
+
+        <figure class="guide-figure">
+          <svg class="diagram" viewBox="0 0 560 300" role="img" id="network-svg"
+            aria-label="A neural network: pixel inputs, two hidden layers that find edges and then shapes, and an output layer answering cat or dog">
+            <g id="net-wires" class="net-wires"></g>
+            <g id="net-nodes"></g>
+            <g class="net-labels">
+              <text x="60" y="292">Pixels</text>
+              <text x="210" y="292">Edges</text>
+              <text x="360" y="292">Shapes</text>
+              <text x="470" y="292">Answer</text>
+            </g>
+            <text x="494" y="108" class="net-answer">cat 0.94</text>
+            <text x="494" y="198" class="net-answer net-answer--low">dog 0.06</text>
+          </svg>
+          <figcaption><strong>Figure 5.</strong> Nobody tells the layers what to look for. After training,
+            early layers tend to react to simple edges, and later layers to bigger shapes like ears and eyes.
+          </figcaption>
+        </figure>
+
+        <p>Our pizza line had 2 knobs. A small network that reads handwritten digits has about 100,000. The
+          largest AI models today have <strong>hundreds of billions</strong>. That's the only real difference
+          in kind: far more knobs, so far more patterns they can capture.</p>
+
+        <h3>How a network learns: walking downhill in the fog</h3>
+
+        <p>Training a neural network is exactly the loop you saw in Figure 2. Show it an example, let it guess,
+          measure the error, nudge every knob a little. Repeat millions of times.</p>
+
+        <p>The tricky part is knowing which way to nudge each knob. Picture yourself on a hillside in thick fog,
+          trying to reach the bottom of the valley. You can't see the valley, but you can feel which way the
+          ground slopes under your feet. So you take a small step downhill, and feel again. Height is the error,
+          and your position is the knob settings.</p>
+
+        <figure class="guide-figure">
+          <svg class="diagram" viewBox="0 0 560 260" role="img"
+            aria-label="An error curve shaped like a valley, with a ball taking small steps downhill to the lowest point">
+            <path d="M40 40 C 140 40, 180 215, 300 215 S 470 70, 530 50" class="hill" id="hill-path" />
+            <g class="hill-steps" id="hill-steps"></g>
+            <text x="78" y="25" class="d-label" text-anchor="middle">start: big error</text>
+            <text x="300" y="248" class="d-label" text-anchor="middle">lowest error</text>
+            <text x="460" y="200" class="d-label d-label--muted" text-anchor="middle">← knob setting →</text>
+            <text x="20" y="140" class="d-label d-label--muted" text-anchor="middle"
+              transform="rotate(-90 20 140)">error</text>
+          </svg>
+          <figcaption><strong>Figure 6.</strong> Feel the slope, step downhill, repeat. With billions of knobs the
+            “hill” has billions of directions, but the rule is the same.</figcaption>
+        </figure>
+
+        <p>This method is called <strong>gradient descent</strong> (the gradient is the slope). Working out the
+          slope for every knob in a deep network uses a clever bookkeeping trick called
+          <strong>backpropagation</strong>: it starts from the error at the output and works backwards
+          through the layers, figuring out how much each knob contributed to the mistake.</p>
+
+        <aside class="takeaway">
+          <p class="takeaway-title"><i class="fas fa-check" aria-hidden="true"></i> What you now know</p>
+          <ul>
+            <li>Everything (images, sound, text) gets turned into numbers.</li>
+            <li>A <strong>neuron</strong> is the pizza line with more inputs plus a bend. A <strong>neural
+                network</strong> is layers of them.</li>
+            <li>Training is walking downhill on the error: <strong>gradient descent</strong>, with
+              <strong>backpropagation</strong> working out the slopes.</li>
+          </ul>
+          <p class="takeaway-next">Now we use exactly these pieces to explain the AI most people meet every day:
+            chatbots.</p>
+        </aside>
+      </section>
+
+      <!-- ===================== PART 3 ===================== -->
+      <section class="guide-part" id="part-3" aria-labelledby="part-3-title">
+        <p class="part-label">Part 3 · How chatbots write</p>
+        <h2 id="part-3-title">How chatbots like ChatGPT write</h2>
+
+        <p>Chatbots such as ChatGPT, Claude and Gemini are built on <strong>large language models</strong>
+          (LLMs). “Large” means many knobs. “Language model” means a model of text. Under the hood, it's a
+          neural network like the one in Part 2, with one twist in how its layers talk to each other.</p>
+
+        <h3>Words become numbers too</h3>
+
+        <p>Text is first split into small pieces called <strong>tokens</strong>: whole words, or parts of longer
+          words. Then, just like the pixels, each token is turned into a list of numbers. You can think of these
+          numbers as a position on a map. This position is called an <strong>embedding</strong>.</p>
+
+        <p>Nobody draws this map by hand. The positions are knobs too, set during training. And because the
+          model is trying to predict text, words used in similar ways end up close together.</p>
+
+        <figure class="guide-figure">
+          <svg class="diagram word-map" viewBox="0 0 560 300" role="img"
+            aria-label="A map of words where animals, foods and sports each form their own group, with the word bat sitting between animals and sports">
+            <g class="cluster cluster--a">
+              <ellipse cx="130" cy="95" rx="100" ry="62" />
+              <text x="130" y="28" class="cluster-name">animals</text>
+              <text x="92" y="88">cat</text><text x="160" y="80">dog</text><text x="118" y="125">horse</text>
+            </g>
+            <g class="cluster cluster--b">
+              <ellipse cx="430" cy="90" rx="100" ry="60" />
+              <text x="430" y="23" class="cluster-name">food</text>
+              <text x="395" y="85">pizza</text><text x="468" y="76">bread</text><text x="440" y="120">apple</text>
+            </g>
+            <g class="cluster cluster--c">
+              <ellipse cx="300" cy="225" rx="105" ry="55" />
+              <text x="300" y="296" class="cluster-name">sports</text>
+              <text x="262" y="222">ball</text><text x="335" y="215">goal</text><text x="300" y="255">racket</text>
+            </g>
+            <circle cx="210" cy="165" r="6" class="bat-dot" />
+            <text x="222" y="170" class="bat-word">bat?</text>
+          </svg>
+          <figcaption><strong>Figure 7.</strong> A word map, squashed to two dimensions (real models use
+            thousands). Similar words sit close together. Notice “bat”: is it the animal or the thing you
+            swing? We'll come back to it.</figcaption>
+        </figure>
+
+        <h3>The only job: guess the next word</h3>
+
+        <p>Here is the part that surprises most people. A language model is trained on one simple task: given
+          some text, <strong>guess the next token</strong>. It gives each possible next word a probability.</p>
+
+        <figure class="guide-figure">
+          <div class="nextword">
+            <p class="nextword-prompt">The pizza came out of the <span class="blank">___</span></p>
+            <ul class="bars">
+              <li><span class="bar-word">oven</span><span class="bar"><span style="--v: 71%"></span></span><span
+                  class="bar-num">71%</span></li>
+              <li><span class="bar-word">box</span><span class="bar"><span style="--v: 13%"></span></span><span
+                  class="bar-num">13%</span></li>
+              <li><span class="bar-word">kitchen</span><span class="bar"><span style="--v: 8%"></span></span><span
+                  class="bar-num">8%</span></li>
+              <li><span class="bar-word">freezer</span><span class="bar"><span style="--v: 4%"></span></span><span
+                  class="bar-num">4%</span></li>
+              <li><span class="bar-word">sky</span><span class="bar"><span style="--v: 0.5%"></span></span><span
+                  class="bar-num">&lt;1%</span></li>
+            </ul>
+          </div>
+          <figcaption><strong>Figure 8.</strong> The model's output is a list of likely next words. (Numbers are
+            illustrative.)</figcaption>
+        </figure>
+
+        <p>To write a whole answer, the chatbot picks a word from this list, adds it to the text, and guesses
+          again. Word by word, sentence by sentence. Training is our familiar loop: take real text from books,
+          websites and code, hide the next word, let the model guess, and measure the error as <em>how
+            surprised was it by the real word?</em> Then nudge the knobs downhill. Do this over trillions of
+          words.</p>
+
+        <p>To get good at guessing the next word in any text, the model is pushed to pick up grammar, facts,
+          styles of writing and even patterns of reasoning, because all of those help it guess better.</p>
+
+        <h3>Context changes meaning: attention</h3>
+
+        <p>Back to “bat”. Its meaning depends on the words around it, so the model needs a way for words to
+          influence each other. This is what <strong>attention</strong> does. In each layer, every word looks at
+          the other words in the text, decides which ones matter most to it, and updates its own numbers using
+          them. In effect, it moves to a better spot on the map.</p>
+
+        <p class="try"><i class="fas fa-hand-pointer" aria-hidden="true"></i> Try it: switch sentences and watch
+          what “bat” pays attention to, and where it moves on the map.</p>
+
+        <figure class="guide-figure guide-figure--wide" id="attention-lab">
+          <div class="attn">
+            <div class="attn-switch" role="group" aria-label="Choose a sentence">
+              <button type="button" class="is-active" data-sentence="0">Sentence A</button>
+              <button type="button" data-sentence="1">Sentence B</button>
+            </div>
+            <p class="attn-sentence" id="attn-sentence" aria-live="polite"></p>
+            <div class="attn-map">
+              <svg viewBox="0 0 560 150" role="img" aria-label="The word bat moves toward animals or sports depending on the sentence">
+                <g class="cluster cluster--a">
+                  <ellipse cx="95" cy="75" rx="80" ry="52" />
+                  <text x="95" y="80" class="cluster-name">animals</text>
+                </g>
+                <g class="cluster cluster--c">
+                  <ellipse cx="465" cy="75" rx="80" ry="52" />
+                  <text x="465" y="80" class="cluster-name">sports</text>
+                </g>
+                <line x1="185" y1="75" x2="375" y2="75" class="attn-track" />
+                <g id="attn-bat" class="attn-bat">
+                  <circle cx="280" cy="75" r="9" />
+                  <text x="280" y="55">bat</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <figcaption><strong>Figure 9.</strong> Darker words get more of “bat's” attention. The same word ends up
+            in a different place depending on its context.</figcaption>
+        </figure>
+
+        <p>A modern model stacks dozens of these attention layers, each followed by ordinary neuron layers like
+          the ones in Part 2. This design is called the <strong>Transformer</strong>, introduced by Google
+          researchers in 2017 in a paper titled <em>Attention Is All You Need</em>. It is the “T” in ChatGPT.</p>
+
+        <h3>From word guesser to helpful assistant</h3>
+
+        <p>A model that only predicts the next word would happily continue your question with more questions.
+          Turning it into an assistant takes two more rounds of training, using the same knob-nudging loop:</p>
+
+        <ol class="stages">
+          <li><span class="stage-num">1</span><div><strong>Pre-training.</strong> Predict the next word across a
+              huge amount of text. This is where almost all the knowledge comes from.</div></li>
+          <li><span class="stage-num">2</span><div><strong>Fine-tuning.</strong> Keep training on example
+              conversations written by people, so it learns the shape of a helpful answer.</div></li>
+          <li><span class="stage-num">3</span><div><strong>Learning from feedback.</strong> People (and other
+              models) rate different answers, and the knobs are nudged towards the preferred ones.</div></li>
+        </ol>
+
+        <h3>Why chatbots sometimes make things up</h3>
+
+        <p>You now know enough to understand this one yourself. The model was trained to produce text that is
+          <em>likely</em>, not text that is <em>checked</em>. Most of the time, likely and true are the same.
+          When the model has seen little about a topic, the most likely-sounding answer can be confidently wrong.
+          This is called a <strong>hallucination</strong>. So use chatbots like a smart colleague, not an
+          encyclopedia: check important facts, and give them the source material when accuracy matters.</p>
+      </section>
+
+      <!-- ===================== RECAP ===================== -->
+      <section class="guide-recap" aria-labelledby="recap-title">
+        <h2 id="recap-title">The whole guide in one picture</h2>
+        <div class="recap-chain">
+          <div class="recap-card">
+            <span class="recap-num">1</span>
+            <p><strong>Pizza line</strong>2 knobs, learns a price from examples.</p>
+          </div>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          <div class="recap-card">
+            <span class="recap-num">2</span>
+            <p><strong>Neural network</strong>Thousands of knobs, learns to recognise images.</p>
+          </div>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          <div class="recap-card">
+            <span class="recap-num">3</span>
+            <p><strong>Language model</strong>Billions of knobs, learns to predict the next word.</p>
+          </div>
+        </div>
+        <p class="recap-loop">Same loop every time: <span>guess</span> → <span>measure the error</span> →
+          <span>nudge the knobs</span> → repeat.</p>
+
+        <details class="glossary">
+          <summary>Words you now know</summary>
+          <dl>
+            <dt>Model</dt><dd>A guessing machine with knobs.</dd>
+            <dt>Weights (parameters)</dt><dd>The knobs. What the model has learned.</dd>
+            <dt>Training</dt><dd>Adjusting the knobs to make errors smaller, using examples.</dd>
+            <dt>Neural network</dt><dd>Layers of neurons; each neuron is weighted inputs, added up, then a bend.</dd>
+            <dt>Gradient descent</dt><dd>Taking small steps downhill on the error.</dd>
+            <dt>Backpropagation</dt><dd>Working backwards from the error to find how each knob should change.</dd>
+            <dt>Token</dt><dd>A word or piece of a word.</dd>
+            <dt>Embedding</dt><dd>A token's position on the word map, as a list of numbers.</dd>
+            <dt>Attention</dt><dd>How each word looks at the other words to update its meaning.</dd>
+            <dt>Transformer</dt><dd>The design behind modern language models: attention layers plus neuron layers.</dd>
+            <dt>Hallucination</dt><dd>A confident answer that is likely-sounding but wrong.</dd>
+          </dl>
+        </details>
+      </section>
+
+      <footer class="guide-end">
+        <p>Want to go further? My free videos and courses build on exactly these ideas, from first principles to
+          working code.</p>
+        <a href="learn.html#free-learning" class="teaching-primary-action">
+          <span>Keep learning</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </footer>
+    </article>
+  </main>
+
+  <script src="assets/js/navigation.js?v=9.0"></script>
+  <script src="assets/js/main.js?v=9.0"></script>
+  <script src="assets/js/introduction-to-ai.js?v=1.0"></script>
+</body>
+
+</html>

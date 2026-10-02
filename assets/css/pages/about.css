@@ -185,7 +185,7 @@ body.about-page .theme-toggle:hover {
   max-width: 720px;
   margin: 0;
   color: var(--about-ink);
-  font-size: clamp(3.7rem, 5.9vw, 6.7rem);
+  font-size: clamp(2.96rem, 4.72vw, 5.36rem);
   font-weight: 600;
   line-height: 0.94;
   letter-spacing: -0.067em;
@@ -748,7 +748,7 @@ body.studio-modal-open { overflow: hidden; }
   .about-shell { padding-right: 1.2rem; padding-left: 1.2rem; }
   .about-hero-grid { grid-template-rows: auto minmax(390px, 50svh); }
   .about-hero-copy { padding: 2.8rem 1.2rem 3.5rem; }
-  .about-hero-copy h1 { font-size: clamp(3.2rem, 15vw, 4.25rem); }
+  .about-hero-copy h1 { font-size: clamp(2.56rem, 12vw, 3.4rem); }
   .about-hero-copy > p { font-size: 0.96rem; }
   .about-actions { align-items: flex-start; gap: 1.1rem; margin-top: 1.75rem; }
   .about-hero-portrait { min-height: 390px; }
