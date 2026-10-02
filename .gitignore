@@ -11,8 +11,22 @@ gradio-apps/
 assets/images/new.jpeg
 assets/images/new\ Background\ Removed.png
 assets/videos/*.mp4
+!assets/videos/abstract-bg.mp4
+!assets/videos/desktop-optimized-cut.mp4
 
 # Local browser QA artifacts
 .playwright-cli/
 tmp/
 about-mobile-dark-final.png
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Braids source material and full prompt catalogue are private working files.
+# GitHub Pages and the repository must only receive the curated public JSON.
+studio/.private/
+studio/assets/gallery/**/*.docx
+studio/assets/gallery/**/*.md
+studio/assets/gallery/**/*.pdf

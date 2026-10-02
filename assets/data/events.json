@@ -1,5 +1,21 @@
 [
   {
+    "id": "innofair-workshop-2026",
+    "date": "2026-10-01",
+    "type": "workshop",
+    "label": "INNOFAIR workshop",
+    "title": "Precision Psychiatry, Translated: Speech, Avatars, and the Path to Clinical AI",
+    "location": "ELTE Lágymányos Campus · Budapest, Hungary (Hybrid)",
+    "description": "Invited speaker at the ELTE INNOFAIR 2026 workshop presenting “Multimodal Behaviour Analysis for Clinical Assessment,” exploring how speech, social interaction, and behavioural AI complement clinical expertise in mental and cognitive health.",
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/images/events/INNOFAIR_2026/innofair-2026-poster.png",
+        "alt": "Official poster for the INNOFAIR 2026 Workshop: Precision Psychiatry, Translated: Speech, Avatars, and the Path to Clinical AI"
+      }
+    ]
+  },
+  {
     "id": "phd-public-defense-2026",
     "date": "2026-04-20",
     "type": "academic",

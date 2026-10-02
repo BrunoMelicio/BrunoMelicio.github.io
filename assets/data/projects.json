@@ -1,0 +1,161 @@
+[
+  {
+    "id": "ados-multimodal-framework",
+    "category": "research",
+    "badge": "Research Project",
+    "tag": "Multimodal AI · Autism Assessment",
+    "year": "2025",
+    "title": "ADOS-2 Multimodal Behavior Analysis System",
+    "description": "An end-to-end clinical AI system integrating 3D computer vision, speech acoustics, and interaction cues to automatically assess child-clinician behaviors during standardized ADOS-2 sessions.",
+    "recruiting": true,
+    "recruitingRole": "Research Interns & Data Annotators",
+    "recruitingUrl": "services.html?service=research-collaboration#enquiry",
+    "publicationLink": "research.html#publications",
+    "publicationLabel": "View publication",
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/images/research-card-01.png",
+        "alt": "ADOS-2 Multimodal Framework for Automatic Behavior Analysis"
+      }
+    ]
+  },
+  {
+    "id": "deeprehab-pose-estimation",
+    "category": "research",
+    "badge": "Research Project",
+    "tag": "Edge AI · Computer Vision · Rehabilitation",
+    "year": "2024",
+    "title": "DeepRehab: Real-Time Edge Pose Estimation",
+    "description": "Real-time 3D pose estimation and exercise repetition validation running directly on edge hardware for knee injury rehabilitation and physical therapy monitoring.",
+    "recruiting": false,
+    "publicationLink": "research.html#publications",
+    "publicationLabel": "View publication",
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/images/teaching.jpeg",
+        "alt": "DeepRehab real-time edge pose estimation framework"
+      }
+    ]
+  },
+  {
+    "id": "composite-ai-behavior-markers",
+    "category": "research",
+    "badge": "Research Project",
+    "tag": "Composite AI · Social Interaction",
+    "year": "2023",
+    "title": "Composite AI for Behavioral Marker Detection",
+    "description": "A hybrid AI architecture fusing rule-based reasoning, temporal modeling, and deep learning to identify subtle behavioral markers during social and object play interactions.",
+    "recruiting": true,
+    "recruitingRole": "Computer Vision & Multimodal ML Engineers",
+    "recruitingUrl": "services.html?service=research-collaboration#enquiry",
+    "publicationLink": "research.html#publications",
+    "publicationLabel": "View publication",
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/videos/hf_20260322_001644_d46d53ea-9508-49a2-91d9-62aec49cd014.mp4",
+        "poster": "assets/images/presentation1.JPG",
+        "alt": "Composite AI video demo for automated behavioral marker detection"
+      }
+    ]
+  },
+  {
+    "id": "speech-gap-biomarkers",
+    "category": "research",
+    "badge": "Research Project",
+    "tag": "Digital Biomarkers · Precision Psychiatry",
+    "year": "2026",
+    "title": "Speech-GAP & Precision Psychiatry Pipeline",
+    "description": "Clinical acoustic pipeline analyzing temporal speech characteristics and digital biomarkers for early detection and longitudinal monitoring of cognitive and mental health changes.",
+    "recruiting": false,
+    "publicationLink": "research.html#publications",
+    "publicationLabel": "View publication",
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/images/research_card_bg.jpg",
+        "alt": "Speech-GAP digital biomarker analysis pipeline"
+      }
+    ]
+  },
+  {
+    "id": "braids-generative-studio",
+    "category": "side-project",
+    "badge": "Side Project",
+    "tag": "Generative AI · Creative Direction",
+    "year": "2026",
+    "title": "Braids AI Studio & Cinematic Video Engine",
+    "description": "An independent creative practice exploring state-of-the-art generative imagery, short-form AI cinematic video synthesis, and prompt engineering systems for modern visual storytelling.",
+    "recruiting": false,
+    "publicationLink": null,
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/videos/hf_20260322_002834_8d1ea5a6-0143-4c23-b589-b08bc4f574f3.mp4",
+        "poster": "assets/images/creative_card_bg.jpg",
+        "alt": "Braids AI Studio generative cinematic video demonstration"
+      }
+    ]
+  },
+  {
+    "id": "kriol-nlp-lab",
+    "category": "side-project",
+    "badge": "Side Project",
+    "tag": "NLP · Low-Resource Languages",
+    "year": "2025",
+    "title": "Kriol NLP & Computational Linguistics Lab",
+    "description": "An open-source initiative developing NLP toolkits, translation benchmarks, and acoustic speech datasets for Cape Verdean Creole (Kriolu) to promote cultural and linguistic preservation.",
+    "recruiting": true,
+    "recruitingRole": "NLP Researchers & Creole Language Contributors",
+    "recruitingUrl": "services.html?service=research-collaboration#enquiry",
+    "publicationLink": null,
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/images/creative_portal_bg.png",
+        "alt": "Kriol NLP language models and computational linguistic toolkit"
+      }
+    ]
+  },
+  {
+    "id": "ai-stylist-persona",
+    "category": "side-project",
+    "badge": "Side Project",
+    "tag": "Interactive AI · Character Continuity",
+    "year": "2026",
+    "title": "AI Stylist & Interactive Persona Generator",
+    "description": "An experimental framework for consistent avatar generation, multi-turn aesthetic prompt chaining, and continuous character design across diverse cinematic styles.",
+    "recruiting": false,
+    "publicationLink": null,
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/images/artist.png",
+        "alt": "AI Stylist character consistency and visual synthesis system"
+      }
+    ]
+  },
+  {
+    "id": "neural-motion-sandbox",
+    "category": "side-project",
+    "badge": "Side Project",
+    "tag": "Motion Analysis · WebGL & Vision",
+    "year": "2025",
+    "title": "Neural Motion & Gestural Analysis Sandbox",
+    "description": "A browser-based experimental tool for visualizing real-time kinematic markers, joint angle dynamics, and spatial trajectory tracking without external sensor hardware.",
+    "recruiting": true,
+    "recruitingRole": "Creative Technologists & WebGL Developers",
+    "recruitingUrl": "services.html?service=research-collaboration#enquiry",
+    "publicationLink": null,
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/videos/abstract-bg.mp4",
+        "poster": "assets/images/background2.png",
+        "alt": "Neural motion kinematics and trajectory tracking sandbox"
+      }
+    ]
+  }
+]

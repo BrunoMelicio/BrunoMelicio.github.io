@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Bruno Melício</title>
+  <meta name="description"
+    content="Research systems, clinical AI frameworks, and independent creative engineering projects by Bruno Melício." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:title" content="Projects | Bruno Melício" />
+  <meta property="og:description"
+    content="A curated portfolio of clinical AI research systems and independent creative projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/research-card-01.png" />
+  <link rel="icon" type="image/png" href="assets/images/logo2.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=9.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/base.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/components.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/animations.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/navigation.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/footer.css?v=9.0" />
+  <link rel="stylesheet" href="assets/css/pages/projects.css?v=1.0" />
+</head>
+
+<body class="theme-light projects-page">
+  <main class="projects-main">
+    <section class="projects-intro" aria-labelledby="projects-page-title">
+      <div class="projects-shell projects-intro-grid">
+        <div class="projects-intro-copy projects-reveal">
+          <p class="projects-eyebrow">Portfolio &amp; Engineering</p>
+          <h1 id="projects-page-title"><span>Interactive AI</span> <span>Projects &amp; Systems.</span></h1>
+          <p>A portfolio bridging clinical AI research frameworks with independent creative tools, computer vision prototypes, and multimodal pipelines.</p>
+
+          <div class="projects-intro-actions" aria-label="Explore projects">
+            <a href="#projects" class="projects-primary-action">
+              <span>Explore projects</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="research.html#publications" class="projects-secondary-action">
+              <span>View publications</span>
+              <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="projects-intro-visual projects-reveal">
+          <figure>
+            <img src="assets/images/research-card-01.png"
+              alt="Visual demonstration of multimodal AI project architecture" fetchpriority="high"
+              decoding="async" />
+          </figure>
+          <p aria-label="Project domains">clinical ai <span>·</span> computer vision <span>·</span> creative systems</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-metrics" aria-labelledby="projects-metrics-title">
+      <div class="projects-shell">
+        <h2 id="projects-metrics-title" class="visually-hidden">Project statistics</h2>
+        <div class="projects-metrics-grid projects-reveal">
+          <article class="projects-metric">
+            <strong>4+</strong>
+            <span>Research Systems</span>
+            <small>Peer-reviewed prototypes</small>
+          </article>
+          <article class="projects-metric">
+            <strong>4+</strong>
+            <span>Side Projects</span>
+            <small>Creative &amp; open-source</small>
+          </article>
+          <article class="projects-metric">
+            <strong>Vision &amp; Audio</strong>
+            <span>Multimodal Input</span>
+            <small>3D kinematics &amp; speech</small>
+          </article>
+          <article class="projects-metric">
+            <strong>Edge &amp; Web</strong>
+            <span>Deployment Ready</span>
+            <small>Real-time execution</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-archive" id="projects" aria-labelledby="projects-archive-title">
+      <div class="projects-shell">
+        <div class="projects-section-heading projects-reveal">
+          <div>
+            <p class="projects-kicker">Curated Works</p>
+            <h2 id="projects-archive-title">Projects.</h2>
+          </div>
+          <p>Explore clinical research pipelines directly linked to academic publications alongside independent creative systems and exploratory toolkits.</p>
+        </div>
+
+        <div class="project-controls projects-reveal">
+          <div class="project-filters" role="group" aria-label="Filter projects by category">
+            <button type="button" class="project-filter is-active" data-project-filter="all"
+              aria-pressed="true">All Projects</button>
+            <button type="button" class="project-filter" data-project-filter="research"
+              aria-pressed="false">Research Projects</button>
+            <button type="button" class="project-filter" data-project-filter="side-project"
+              aria-pressed="false">Independent Projects</button>
+            <button type="button" class="project-filter project-filter--recruiting" data-project-filter="recruiting"
+              aria-pressed="false">
+              <span class="project-filter-dot" aria-hidden="true"></span>
+              Recruiting
+            </button>
+          </div>
+
+          <div class="project-selects">
+            <label>
+              <span class="visually-hidden">Sort projects</span>
+              <select data-project-sort aria-label="Sort projects">
+                <option value="recent">Most recent</option>
+                <option value="title">Alphabetical</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <p class="projects-results-status projects-reveal" data-project-status aria-live="polite">Loading projects…</p>
+        <div class="project-card-grid" data-project-grid aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="projects-invite" aria-labelledby="projects-invite-title">
+      <div class="projects-shell projects-invite-layout">
+        <div class="projects-reveal">
+          <p class="projects-kicker">Collaboration &amp; Innovation</p>
+          <h2 id="projects-invite-title">Have a project<br />in mind?</h2>
+        </div>
+        <div class="projects-invite-copy projects-reveal">
+          <p>Whether you're developing clinical AI architectures, multimodal prototypes, or exploratory generative systems, let's explore how we can collaborate.</p>
+          <a href="services.html">Explore services &amp; consulting <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Media Lightbox -->
+  <div class="project-lightbox" id="project-lightbox" role="dialog" aria-modal="true" aria-hidden="true"
+    aria-labelledby="project-lightbox-title" hidden>
+    <div class="project-lightbox-panel">
+      <div class="project-lightbox-header">
+        <div>
+          <p>Project media</p>
+          <h2 id="project-lightbox-title" data-lightbox-title>Project Preview</h2>
+        </div>
+        <button type="button" class="project-lightbox-close" data-lightbox-close aria-label="Close project media">
+          <i class="fas fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="project-lightbox-stage" data-lightbox-stage></div>
+      <div class="project-lightbox-footer">
+        <p data-lightbox-counter>1 of 1</p>
+        <div>
+          <button type="button" data-lightbox-previous aria-label="Previous media">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <button type="button" data-lightbox-next aria-label="Next media">
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/navigation.js?v=9.0"></script>
+  <script src="assets/js/main.js?v=9.0"></script>
+  <script src="assets/js/projects.js?v=1.0"></script>
+</body>
+
+</html>
