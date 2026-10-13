@@ -197,8 +197,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleHashNavigation = () => {
     let hash = window.location.hash.replace('#', '');
     if (!hash) return;
-    if (hash === 'deeprehab' || hash === 'deeprehab-pose-estimation') {
-      hash = 'footposenet';
+    if (hash === 'footposenet' || hash === 'deeprehab-pose-estimation' || hash === 'deep_rehab') {
+      hash = 'deeprehab';
     }
     if (hash === 'nakedfood' || hash === 'naked-food') {
       hash = 'nakedfood-mobile-ai';

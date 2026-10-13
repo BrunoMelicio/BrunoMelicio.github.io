@@ -50,26 +50,26 @@
     ]
   },
   {
-    "id": "footposenet",
+    "id": "deeprehab",
     "category": "research",
     "badge": "Edge AI & Clinical Pose",
-    "tag": "Foot-PoseNet · 23 Keypoints · Edge TPU · Physical Therapy",
+    "tag": "DeepRehab · 23 Keypoints · Edge TPU · Physical Therapy",
     "year": "2020 – 2021",
     "timeline": "Sep 2020 – Jan 2021",
     "institution": "Eötvös Loránd University (ELTE)",
-    "title": "FootPoseNet: Multi-Person Pose Estimation for Knee Injury Rehabilitation",
-    "description": "A modified PersonLab deep convolutional architecture trained for bottom-up multi-person pose estimation, predicting heatmaps and offsets for 23 anatomical keypoints (17 standard body joints plus 6 specialized feet keypoints). Optimized for low-latency edge inference on Google Coral TPU USB Accelerator at 20 FPS, refined with Median, Savitzky-Golay and Chebyshev temporal filters to eliminate kinematic jitter, reducing knee angle root-mean-square error (RMSE) by 10.7% during physical rehabilitation exercises.",
+    "title": "DeepRehab: Real-Time Pose Estimation on the Edge for Knee Injury Rehabilitation",
+    "description": "A Keras implementation of a modified PersonLab deep convolutional architecture called DeepRehab for bottom-up multi-person pose estimation and kinematic refinement on the edge. The network predicts heatmaps and offsets to identify 23 anatomical keypoints (17 standard body joints plus 6 feet keypoints), trained on COCO 2017 and COCO Whole-Body datasets with ResNet-101. Exported as a frozen graph, converted to TensorFlow Lite (.tflite), and compiled for Google Coral Edge TPU USB Accelerator for high-speed edge inference at 20 FPS, refined with temporal filtering methods (Median, Savitzky-Golay, and Chebyshev) to eliminate kinematic jitter, reducing knee angle root-mean-square error (RMSE) by 10.7% during physical rehabilitation exercises.",
     "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/FootPoseNet",
+    "githubLink": "https://github.com/BrunoMelicio/Deep_Rehab",
     "publicationLink": "https://link.springer.com/chapter/10.1007/978-3-030-86365-4_31",
-    "publicationLabel": "Springer paper",
+    "publicationLabel": "Springer paper (ICANN 2021)",
     "researchPageLink": "research.html#publication-deeprehab",
     "researchPageLabel": "View in Research",
     "media": [
       {
         "type": "image",
         "src": "assets/images/projects/footposenet.png",
-        "alt": "FootPoseNet pose estimation and knee joint angle tracking demonstration"
+        "alt": "DeepRehab multi-person pose estimation and knee joint angle tracking demonstration"
       }
     ]
   },
