@@ -40,28 +40,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (media.type === 'gif') {
-      const fitStyle = media.fit === 'contain' ? ' style="object-fit: contain; background: #0a0e14;"' : '';
       return `
         <button class="project-card-media" type="button" data-project-media="${escapeHtml(project.id)}"
           aria-label="View animated demo for ${escapeHtml(project.title)}">
-          <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" loading="lazy"${fitStyle} />
+          <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" loading="lazy" />
           <span class="project-card-media-badge"><i class="fas fa-play" aria-hidden="true"></i>Animated GIF</span>
+          <span class="project-card-media-zoom" aria-hidden="true"><i class="fas fa-expand"></i></span>
         </button>`;
     }
 
-    const fitStyle = media.fit === 'contain' ? ' style="object-fit: contain; background: #0a0e14;"' : '';
     return `
       <button class="project-card-media" type="button" data-project-media="${escapeHtml(project.id)}"
         aria-label="View media for ${escapeHtml(project.title)}">
-        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" loading="lazy" decoding="async"${fitStyle} />
+        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" loading="lazy" decoding="async" />
         <span class="project-card-media-badge"><i class="far fa-images" aria-hidden="true"></i>Preview</span>
+        <span class="project-card-media-zoom" aria-hidden="true"><i class="fas fa-expand"></i></span>
       </button>`;
   };
 
   const cardMarkup = (project, index) => {
     const isResearch = project.category === 'research';
     const badgeClass = isResearch ? 'project-badge--research' : 'project-badge--side';
-    const isFeatured = index === 0;
 
     let recruitingBadge = '';
     let recruitingCallout = '';
@@ -83,20 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>`;
     }
 
-    let githubAction = '';
-    if (project.githubLink) {
-      githubAction = `
-        <a href="${escapeHtml(project.githubLink)}" target="_blank" rel="noopener noreferrer" class="project-card-github-link" title="View repository on GitHub">
-          <i class="fab fa-github" aria-hidden="true"></i>
-          <span>GitHub</span>
-        </a>`;
-    }
-
     let publicationAction = '';
     if (isResearch && project.publicationLink) {
       publicationAction = `
         <a href="${escapeHtml(project.publicationLink)}" target="_blank" rel="noopener noreferrer" class="project-card-link" title="Open peer-reviewed publication">
-          <span>${escapeHtml(project.publicationLabel || 'View publication')}</span>
+          <span>${escapeHtml(project.publicationLabel || 'View paper')}</span>
           <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>`;
     }
@@ -110,21 +100,35 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>`;
     }
 
+    let primaryActionBtn = '';
+    if (project.githubLink) {
+      primaryActionBtn = `
+        <a href="${escapeHtml(project.githubLink)}" target="_blank" rel="noopener noreferrer" class="project-card-primary-btn" title="Check out ${escapeHtml(project.title)} on GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span>Check on GitHub</span>
+          <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>`;
+    } else if (project.publicationLink) {
+      primaryActionBtn = `
+        <a href="${escapeHtml(project.publicationLink)}" target="_blank" rel="noopener noreferrer" class="project-card-primary-btn" title="Read publication">
+          <i class="fas fa-book-open" aria-hidden="true"></i>
+          <span>Read Paper</span>
+          <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>`;
+    }
+
     const actionFooter = `
       <div class="project-card-actions">
         ${publicationAction}
         ${researchPageAction}
-        ${githubAction}
       </div>
-      <button type="button" class="project-card-preview-btn" data-project-media="${escapeHtml(project.id)}">
-        <i class="fas fa-expand" aria-hidden="true"></i> Preview media
-      </button>`;
+      ${primaryActionBtn}`;
 
     const timeline = escapeHtml(project.timeline || project.year);
     const institution = project.institution ? `<span class="project-card-institution">${escapeHtml(project.institution)}</span>` : '';
 
     return `
-      <article class="project-card${isFeatured ? ' project-card--feature' : ''}" id="${escapeHtml(project.id)}" data-project-id="${escapeHtml(project.id)}">
+      <article class="project-card" id="${escapeHtml(project.id)}" data-project-id="${escapeHtml(project.id)}">
         <div class="project-card-inner">
           ${mediaMarkup(project)}
           <div class="project-card-body">

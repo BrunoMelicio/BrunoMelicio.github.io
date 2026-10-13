@@ -543,13 +543,8 @@ body.projects-page .nav-list .studio-entry:hover {
 
 .project-card-inner {
   display: grid;
-  grid-template-columns: minmax(360px, 0.8fr) minmax(0, 1.2fr);
-  min-height: 360px;
-}
-
-.project-card--feature .project-card-inner {
-  grid-template-columns: minmax(460px, 0.85fr) minmax(0, 1.15fr);
-  min-height: 400px;
+  grid-template-columns: 400px minmax(0, 1fr);
+  min-height: 350px;
 }
 
 .project-card-media {
@@ -557,11 +552,11 @@ body.projects-page .nav-list .studio-entry:hover {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 280px;
+  min-height: 350px;
   overflow: hidden;
   padding: 0;
   border: 0;
-  background: #0a0a0a;
+  background: #07090e;
   cursor: zoom-in;
   text-align: left;
 }
@@ -572,7 +567,34 @@ body.projects-page .nav-list .studio-entry:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 25%;
   transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card-media-zoom {
+  position: absolute;
+  bottom: 0.9rem;
+  right: 0.9rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 0.78rem;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+}
+
+.project-card-media:hover .project-card-media-zoom {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .project-card:hover .project-card-media img,
@@ -779,10 +801,14 @@ body.projects-page.theme-light .project-recruiting-callout-action {
 }
 
 .project-card-description {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.25rem;
   color: var(--projects-muted);
-  font-size: 1.08rem;
-  line-height: 1.68;
+  font-size: 1.02rem;
+  line-height: 1.62;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .project-card-footer {
@@ -803,8 +829,7 @@ body.projects-page.theme-light .project-recruiting-callout-action {
   flex-wrap: wrap;
 }
 
-.project-card-link,
-.project-card-github-link {
+.project-card-link {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
@@ -814,19 +839,6 @@ body.projects-page.theme-light .project-recruiting-callout-action {
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.project-card-github-link {
-  color: var(--projects-muted);
-}
-
-.project-card-github-link i {
-  font-size: 1.1rem;
-}
-
-.project-card-github-link:hover {
-  color: var(--projects-ink);
-  transform: translateY(-1px);
 }
 
 .project-card-link i {
@@ -849,26 +861,60 @@ body.projects-page.theme-light .project-recruiting-callout-action {
   font-weight: 500;
 }
 
-.project-card-preview-btn {
+.project-card-primary-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 1rem;
-  color: var(--projects-muted);
-  background: transparent;
-  border: 1px solid var(--projects-line);
+  gap: 0.55rem;
+  padding: 0.62rem 1.25rem;
   border-radius: 999px;
+  background: #ffffff;
+  color: #09090b;
+  border: 1px solid #ffffff;
   font: inherit;
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.12);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              background 200ms ease,
+              color 200ms ease;
   cursor: pointer;
-  transition: all 180ms ease;
+  flex-shrink: 0;
 }
 
-.project-card-preview-btn:hover {
-  color: var(--projects-ink);
-  border-color: var(--projects-line-strong);
-  background: var(--projects-panel);
+.project-card-primary-btn i.fa-github {
+  font-size: 1.05rem;
+}
+
+.project-card-primary-btn i.fa-arrow-up-right-from-square {
+  font-size: 0.72rem;
+  transition: transform 200ms ease;
+}
+
+.project-card-primary-btn:hover {
+  background: #f4f4f5;
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.24);
+}
+
+.project-card-primary-btn:hover i.fa-arrow-up-right-from-square {
+  transform: translate(2px, -2px);
+}
+
+body.projects-page.theme-light .project-card-primary-btn {
+  background: #111113;
+  color: #ffffff;
+  border-color: #111113;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+}
+
+body.projects-page.theme-light .project-card-primary-btn:hover {
+  background: #27272a;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
 }
 
 /* Empty state */
@@ -1083,14 +1129,15 @@ body.projects-page.theme-light .project-recruiting-callout-action {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .project-card-inner,
-  .project-card--feature .project-card-inner {
+  .project-card-inner {
     grid-template-columns: 1fr;
+    min-height: unset;
   }
 
   .project-card-media {
-    min-height: 240px;
-    aspect-ratio: 16/9;
+    min-height: unset;
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 }
 

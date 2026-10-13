@@ -57,8 +57,7 @@
     "year": "2020 – 2021",
     "timeline": "Sep 2020 – Jan 2021",
     "institution": "Eötvös Loránd University (ELTE)",
-    "title": "DeepRehab: Real-Time Pose Estimation on the Edge for Knee Injury Rehabilitation",
-    "description": "A Keras implementation of a modified PersonLab deep convolutional architecture called DeepRehab for bottom-up multi-person pose estimation and kinematic refinement on the edge. The network predicts heatmaps and offsets to identify 23 anatomical keypoints (17 standard body joints plus 6 feet keypoints), trained on COCO 2017 and COCO Whole-Body datasets with ResNet-101. Exported as a frozen graph, converted to TensorFlow Lite (.tflite), and compiled for Google Coral Edge TPU USB Accelerator for high-speed edge inference at 20 FPS, refined with temporal filtering methods (Median, Savitzky-Golay, and Chebyshev) to eliminate kinematic jitter, reducing knee angle root-mean-square error (RMSE) by 10.7% during physical rehabilitation exercises.",
+    "description": "A Keras implementation of a modified PersonLab architecture for bottom-up multi-person pose estimation on the edge. Predicts heatmaps and offsets for 23 anatomical keypoints (17 body + 6 feet), optimized for Google Coral Edge TPU at 20 FPS with temporal filtering to reduce knee angle RMSE by 10.7%.",
     "recruiting": false,
     "githubLink": "https://github.com/BrunoMelicio/Deep_Rehab",
     "publicationLink": "https://link.springer.com/chapter/10.1007/978-3-030-86365-4_31",
@@ -293,7 +292,7 @@
     "timeline": "Oct 2019 – Jan 2020",
     "institution": "Eötvös Loránd University (ELTE)",
     "title": "NakedFood: AI Mobile App for Automated Food Ingredient Recognition",
-    "description": "An end-to-end mobile computer vision application engineered to help individuals with food allergies, dietary restrictions, religious observance, or medical conditions avoid harmful food items. Users capture a picture of their dish using a smartphone camera, and deep convolutional neural networks predict the food classification in real-time before querying an ingredient database to present the full ingredient breakdown. Features custom CNN architectures with 1x1 shortcut connections, MobileNet (101 food classes) and ResNet (10 food classes) trained in Keras/TensorFlow and converted to TensorFlow Lite (.tflite) for low-latency on-device mobile inference, with CI testing on Google Cloud SDK and Firebase Test Lab across real Android devices.",
+    "description": "An end-to-end Android mobile computer vision app helping users with food allergies, medical conditions, or dietary restrictions avoid harmful ingredients. Powered by MobileNet (101 food classes) and ResNet converted to TensorFlow Lite for real-time camera inference and instant ingredient lookup.",
     "recruiting": false,
     "githubLink": "https://github.com/BrunoMelicio/NakedFood",
     "publicationLink": null,
@@ -301,8 +300,7 @@
       {
         "type": "gif",
         "src": "assets/gifs/naked_food.gif",
-        "alt": "NakedFood Android mobile app animated demonstration predicting spaghetti bolognese and displaying full ingredient breakdown",
-        "fit": "contain"
+        "alt": "NakedFood Android mobile app animated demonstration predicting spaghetti bolognese and displaying full ingredient breakdown"
       }
     ]
   },
