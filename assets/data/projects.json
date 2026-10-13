@@ -67,8 +67,8 @@
     "researchPageLabel": "View in Research",
     "media": [
       {
-        "type": "gif",
-        "src": "assets/gifs/deep_rehab.gif",
+        "type": "image",
+        "src": "assets/images/projects/footposenet.png",
         "alt": "FootPoseNet pose estimation and knee joint angle tracking demonstration"
       }
     ]
