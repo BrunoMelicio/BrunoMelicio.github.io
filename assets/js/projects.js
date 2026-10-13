@@ -39,10 +39,21 @@ document.addEventListener('DOMContentLoaded', () => {
         </button>`;
     }
 
+    if (media.type === 'gif') {
+      const fitStyle = media.fit === 'contain' ? ' style="object-fit: contain; background: #0a0e14;"' : '';
+      return `
+        <button class="project-card-media" type="button" data-project-media="${escapeHtml(project.id)}"
+          aria-label="View animated demo for ${escapeHtml(project.title)}">
+          <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" loading="lazy"${fitStyle} />
+          <span class="project-card-media-badge"><i class="fas fa-play" aria-hidden="true"></i>Animated GIF</span>
+        </button>`;
+    }
+
+    const fitStyle = media.fit === 'contain' ? ' style="object-fit: contain; background: #0a0e14;"' : '';
     return `
       <button class="project-card-media" type="button" data-project-media="${escapeHtml(project.id)}"
         aria-label="View media for ${escapeHtml(project.title)}">
-        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" loading="lazy" decoding="async" />
+        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" loading="lazy" decoding="async"${fitStyle} />
         <span class="project-card-media-badge"><i class="far fa-images" aria-hidden="true"></i>Preview</span>
       </button>`;
   };
@@ -188,6 +199,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!hash) return;
     if (hash === 'deeprehab' || hash === 'deeprehab-pose-estimation') {
       hash = 'footposenet';
+    }
+    if (hash === 'nakedfood' || hash === 'naked-food') {
+      hash = 'nakedfood-mobile-ai';
     }
     const targetProject = projects.find(p => p.id === hash);
     if (targetProject) {

@@ -287,21 +287,22 @@
   {
     "id": "nakedfood-mobile-ai",
     "category": "side-project",
-    "badge": "Mobile & Vision AI",
-    "tag": "Computer Vision · Mobile App · Dietary Health",
+    "badge": "Mobile Edge AI & Computer Vision",
+    "tag": "Computer Vision · MobileNet · ResNet · TFLite · Android App",
     "year": "2019 – 2020",
     "timeline": "Oct 2019 – Jan 2020",
-    "institution": "Eötvös Loránd University",
-    "title": "NakedFood: AI Ingredient Recognition from Camera Pictures",
-    "description": "Mobile application powered by Artificial Intelligence that identifies food items and reveals their complete ingredient profile from phone camera pictures. Built to protect individuals with food allergies, religious dietary restrictions, or health conditions from consuming harmful ingredients by matching predicted foods with detailed ingredient databases.",
+    "institution": "Eötvös Loránd University (ELTE)",
+    "title": "NakedFood: AI Mobile App for Automated Food Ingredient Recognition",
+    "description": "An end-to-end mobile computer vision application engineered to help individuals with food allergies, dietary restrictions, religious observance, or medical conditions avoid harmful food items. Users capture a picture of their dish using a smartphone camera, and deep convolutional neural networks predict the food classification in real-time before querying an ingredient database to present the full ingredient breakdown. Features custom CNN architectures with 1x1 shortcut connections, MobileNet (101 food classes) and ResNet (10 food classes) trained in Keras/TensorFlow and converted to TensorFlow Lite (.tflite) for low-latency on-device mobile inference, with CI testing on Google Cloud SDK and Firebase Test Lab across real Android devices.",
     "recruiting": false,
     "githubLink": "https://github.com/BrunoMelicio/NakedFood",
     "publicationLink": null,
     "media": [
       {
-        "type": "image",
-        "src": "assets/images/project-nakedfood.jpg",
-        "alt": "NakedFood mobile app interface scanning food and revealing ingredients and allergen warnings"
+        "type": "gif",
+        "src": "assets/gifs/naked_food.gif",
+        "alt": "NakedFood Android mobile app animated demonstration predicting spaghetti bolognese and displaying full ingredient breakdown",
+        "fit": "contain"
       }
     ]
   },
