@@ -39,11 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
         </button>`;
     }
 
+    const isGif = media.type === 'gif' || (media.src && media.src.toLowerCase().endsWith('.gif'));
+    const badgeText = isGif ? 'Live Demo' : 'Preview';
+    const badgeIcon = isGif ? 'fa-play' : 'fa-images';
+
     return `
       <button class="project-card-media" type="button" data-project-media="${escapeHtml(project.id)}"
         aria-label="View media for ${escapeHtml(project.title)}">
-        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" loading="lazy" decoding="async" />
-        <span class="project-card-media-badge"><i class="far fa-images" aria-hidden="true"></i>Preview</span>
+        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" ${isGif ? '' : 'loading="lazy" '}decoding="async" />
+        <span class="project-card-media-badge"><i class="fas ${badgeIcon}" aria-hidden="true"></i>${badgeText}</span>
       </button>`;
   };
 
@@ -84,15 +88,25 @@ document.addEventListener('DOMContentLoaded', () => {
     let publicationAction = '';
     if (isResearch && project.publicationLink) {
       publicationAction = `
-        <a href="${escapeHtml(project.publicationLink)}" class="project-card-link">
+        <a href="${escapeHtml(project.publicationLink)}" target="_blank" rel="noopener noreferrer" class="project-card-link" title="Open peer-reviewed publication">
           <span>${escapeHtml(project.publicationLabel || 'View publication')}</span>
           <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>`;
+    }
+
+    let researchPageAction = '';
+    if (isResearch && project.researchPageLink) {
+      researchPageAction = `
+        <a href="${escapeHtml(project.researchPageLink)}" class="project-card-link" title="View details on Research page">
+          <span>${escapeHtml(project.researchPageLabel || 'In Research')}</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
         </a>`;
     }
 
     const actionFooter = `
       <div class="project-card-actions">
         ${publicationAction}
+        ${researchPageAction}
         ${githubAction}
       </div>
       <button type="button" class="project-card-preview-btn" data-project-media="${escapeHtml(project.id)}">
@@ -103,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const institution = project.institution ? `<span class="project-card-institution">${escapeHtml(project.institution)}</span>` : '';
 
     return `
-      <article class="project-card${isFeatured ? ' project-card--feature' : ''}" data-project-id="${escapeHtml(project.id)}">
+      <article class="project-card${isFeatured ? ' project-card--feature' : ''}" id="${escapeHtml(project.id)}" data-project-id="${escapeHtml(project.id)}">
         <div class="project-card-inner">
           ${mediaMarkup(project)}
           <div class="project-card-body">
@@ -173,12 +187,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  const handleHashNavigation = () => {
+    let hash = window.location.hash.replace('#', '');
+    if (!hash) return;
+    if (hash === 'deeprehab' || hash === 'deeprehab-pose-estimation') {
+      hash = 'footposenet';
+    }
+    const targetProject = projects.find(p => p.id === hash);
+    if (targetProject) {
+      if (activeFilter !== 'all' && targetProject.category !== activeFilter && !(activeFilter === 'recruiting' && targetProject.recruiting)) {
+        activeFilter = 'all';
+        filterButtons.forEach(btn => {
+          btn.classList.toggle('is-active', btn.dataset.projectFilter === 'all');
+          btn.setAttribute('aria-pressed', btn.dataset.projectFilter === 'all' ? 'true' : 'false');
+        });
+        renderProjects();
+      }
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.add('project-card--highlight');
+          setTimeout(() => el.classList.remove('project-card--highlight'), 2500);
+        }
+      }, 180);
+    }
+  };
+
   const loadProjects = async () => {
     try {
       const response = await fetch('assets/data/projects.json', { cache: 'no-store' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       projects = await response.json();
       renderProjects();
+      handleHashNavigation();
     } catch (error) {
       console.error('Unable to load projects:', error);
       if (projectGrid) {
@@ -322,5 +364,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  window.addEventListener('hashchange', handleHashNavigation);
   loadProjects();
 });
