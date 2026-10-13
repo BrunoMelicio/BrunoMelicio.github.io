@@ -61,29 +61,29 @@
         <h2 id="research-metrics-title" class="visually-hidden">Current research metrics</h2>
         <div class="research-metrics-grid research-reveal" aria-live="polite">
           <article class="research-metric">
-            <strong data-research-metric="publications">6</strong>
+            <strong data-research-metric="publications">7</strong>
             <span>Publications</span>
             <small>Published works</small>
           </article>
           <article class="research-metric">
-            <strong data-research-metric="citations">50</strong>
+            <strong data-research-metric="citations">50+</strong>
             <span>Citations</span>
             <small>Google Scholar</small>
           </article>
           <article class="research-metric">
-            <strong data-research-metric="reads">6,526+</strong>
+            <strong data-research-metric="reads">7,058+</strong>
             <span>Reads</span>
             <small>Verified publisher accesses</small>
           </article>
           <article class="research-metric">
-            <strong data-research-metric="hIndex">3</strong>
+            <strong data-research-metric="hIndex">4</strong>
             <span>h-index</span>
             <small>Google Scholar</small>
           </article>
         </div>
         <p class="research-metrics-note research-reveal">
           Google Scholar and individual publisher records <span aria-hidden="true">·</span>
-          <span data-research-verified>Verified 30 July 2026</span>
+          <span data-research-verified>Verified 13 October 2026</span>
         </p>
       </div>
     </section>
@@ -122,11 +122,13 @@
 
         <div class="publication-filters research-reveal" role="group" aria-label="Filter publications">
           <button type="button" class="publication-filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="publication-filter" data-filter="thesis" aria-pressed="false">Dissertation</button>
           <button type="button" class="publication-filter" data-filter="journal" aria-pressed="false">Journal
             articles</button>
           <button type="button" class="publication-filter" data-filter="conference" aria-pressed="false">Conference
             papers</button>
           <span class="publication-filter-divider" aria-hidden="true"></span>
+          <button type="button" class="publication-filter" data-filter="2026" aria-pressed="false">2026</button>
           <button type="button" class="publication-filter" data-filter="2025" aria-pressed="false">2025</button>
           <button type="button" class="publication-filter" data-filter="earlier" aria-pressed="false">Earlier</button>
         </div>
@@ -142,11 +144,31 @@
                 <div class="research-publication-meta"><span>2025</span><span>Journal article</span></div>
                 <h3>Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2</h3>
                 <p class="research-publication-venue">Cognitive Computation, 17(4), 137</p>
-                <p class="research-publication-stats" data-publication-metrics="multimodal">3,397 Springer accesses
+                <p class="research-publication-stats" data-publication-metrics="multimodal">3,872 Springer accesses
                   <span>·</span> 4 Springer citations</p>
                 <p class="research-publication-authors">B. C. D. S. Melício, K. Karakose, A. Fodor, L. Xiang, V. Varga,
                   L. Soorya, E. Dillon, P. Kun, A. Sarkany, M. Chetouani, K. Fenech &amp; A. Lorincz</p>
                 <span class="research-publication-link">View paper <i class="fas fa-arrow-up-right-from-square"
+                    aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="research-publication-card research-reveal" data-type="thesis" data-year="2026">
+            <a href="https://doi.org/10.15476/ELTE.2026.017" target="_blank" rel="noopener noreferrer">
+              <div class="research-publication-image research-publication-image--dark">
+                <img src="assets/images/research-dissertation.jpg"
+                  alt="Behavior Analysis Using 3D Human Pose Estimation for Enhancing Medical Assessments"
+                  loading="lazy" />
+              </div>
+              <div class="research-publication-content">
+                <div class="research-publication-meta"><span>2026</span><span>PhD Dissertation</span></div>
+                <h3>Behavior Analysis Using 3D Human Pose Estimation for Enhancing Medical Assessments</h3>
+                <p class="research-publication-venue">Eötvös Loránd University (ELTE) · Doctoral School of Informatics</p>
+                <p class="research-publication-stats" data-publication-metrics="dissertation">Open access dissertation
+                  <span>·</span> DOI: 10.15476/ELTE.2026.017</p>
+                <p class="research-publication-authors">B. C. D. S. Melício (Supervised by A. Lőrincz)</p>
+                <span class="research-publication-link">View dissertation <i class="fas fa-arrow-up-right-from-square"
                     aria-hidden="true"></i></span>
               </div>
             </a>
@@ -200,7 +222,7 @@
                 <h3>Composite AI for Behavior Analysis in Social Interactions</h3>
                 <p class="research-publication-venue">Companion Publication of the 25th ACM International Conference on
                   Multimodal Interaction</p>
-                <p class="research-publication-stats" data-publication-metrics="composite">15 Google Scholar citations</p>
+                <p class="research-publication-stats" data-publication-metrics="composite">16 Google Scholar citations</p>
                 <p class="research-publication-authors">B. C. D. S. Melício, L. Xiang, E. Dillon, L. Soorya, M.
                   Chetouani and collaborators</p>
                 <span class="research-publication-link">View paper <i class="fas fa-arrow-up-right-from-square"
@@ -240,8 +262,8 @@
                 <div class="research-publication-meta"><span>2021</span><span>Conference paper</span></div>
                 <h3>DeepRehab: Real Time Pose Estimation on the Edge for Knee Injury Rehabilitation</h3>
                 <p class="research-publication-venue">International Conference on Artificial Neural Networks (ICANN)</p>
-                <p class="research-publication-stats" data-publication-metrics="deepRehab">3,129 Springer accesses
-                  <span>·</span> 9 Springer citations</p>
+                <p class="research-publication-stats" data-publication-metrics="deepRehab">3,186 Springer accesses
+                  <span>·</span> 12 Springer citations</p>
                 <p class="research-publication-authors">B. C. D. S. Melício, G. Baranyi, Z. Gaal, S. Zidan &amp; A.
                   Lorincz</p>
                 <span class="research-publication-link">View paper <i class="fas fa-arrow-up-right-from-square"
@@ -282,25 +304,6 @@
     </section>
   </main>
 
-  <div class="studio-disclosure" id="studio-disclosure" role="dialog" aria-modal="true" aria-hidden="true"
-    aria-labelledby="studio-disclosure-title" hidden>
-    <div class="studio-disclosure-panel">
-      <button class="studio-disclosure-close" type="button" data-studio-close
-        aria-label="Close Braids notice">
-        <i class="fas fa-xmark" aria-hidden="true"></i>
-      </button>
-      <p class="studio-disclosure-kicker">Braids</p>
-      <h2 id="studio-disclosure-title">A separate creative practice.</h2>
-      <p>Braids is my independent commercial practice for AI-generated imagery, video and brand work. It is
-        separate from my academic research and teaching; my primary professional role is AI researcher and lecturer.</p>
-      <div class="studio-disclosure-actions">
-        <a href="https://studio.brunomelicio.com/" class="studio-disclosure-primary">
-          Continue to Braids <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-        </a>
-        <button type="button" data-studio-close class="studio-disclosure-secondary">Stay on this site</button>
-      </div>
-    </div>
-  </div>
 
   <script src="assets/js/navigation.js?v=8.0"></script>
   <script src="assets/js/main.js?v=8.0"></script>

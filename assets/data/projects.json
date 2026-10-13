@@ -81,13 +81,13 @@
     ]
   },
   {
-    "id": "braids-generative-studio",
+    "id": "cinematic-ai-video-engine",
     "category": "side-project",
     "badge": "Side Project",
     "tag": "Generative AI · Creative Direction",
     "year": "2026",
-    "title": "Braids AI Studio & Cinematic Video Engine",
-    "description": "An independent creative practice exploring state-of-the-art generative imagery, short-form AI cinematic video synthesis, and prompt engineering systems for modern visual storytelling.",
+    "title": "Cinematic AI Video & Synthetic Media Engine",
+    "description": "An independent creative research project exploring state-of-the-art generative imagery, short-form AI cinematic video synthesis, and prompt engineering systems for modern visual storytelling.",
     "recruiting": false,
     "publicationLink": null,
     "media": [
@@ -95,7 +95,7 @@
         "type": "video",
         "src": "assets/videos/hf_20260322_002834_8d1ea5a6-0143-4c23-b589-b08bc4f574f3.mp4",
         "poster": "assets/images/creative_card_bg.jpg",
-        "alt": "Braids AI Studio generative cinematic video demonstration"
+        "alt": "Generative AI cinematic video demonstration"
       }
     ]
   },

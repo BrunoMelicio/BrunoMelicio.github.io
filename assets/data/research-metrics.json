@@ -1,30 +1,34 @@
 {
-  "verifiedOn": "2026-07-30",
+  "verifiedOn": "2026-10-13",
   "display": {
-    "publications": 6,
-    "citations": 50,
-    "reads": "6,526+",
-    "hIndex": 3
+    "publications": 7,
+    "citations": "50+",
+    "reads": "7,058+",
+    "hIndex": 4
   },
   "sources": {
     "googleScholar": {
-      "citations": 50,
-      "hIndex": 3,
+      "citations": 56,
+      "hIndex": 4,
       "i10Index": 3,
       "profileRows": 8,
-      "publishedWorksShown": 6,
+      "publishedWorksShown": 7,
       "duplicateRows": 1,
-      "additionalThesisEntries": 1,
+      "additionalThesisEntries": 0,
       "url": "https://scholar.google.com/citations?user=fRrxUhsAAAAJ&hl=en"
     }
   },
   "publicationMetrics": {
+    "dissertation": {
+      "label": "Open access dissertation · DOI: 10.15476/ELTE.2026.017",
+      "source": "https://doi.org/10.15476/ELTE.2026.017"
+    },
     "multimodal": {
-      "label": "3,397 Springer accesses · 4 Springer citations",
+      "label": "3,872 Springer accesses · 4 Springer citations",
       "source": "https://link.springer.com/article/10.1007/s12559-025-10481-7"
     },
     "composite": {
-      "label": "15 Google Scholar citations",
+      "label": "16 Google Scholar citations",
       "source": "https://scholar.google.com/citations?user=fRrxUhsAAAAJ&hl=en"
     },
     "machineSupervision": {
@@ -32,9 +36,9 @@
       "source": "https://scholar.google.com/citations?user=fRrxUhsAAAAJ&hl=en"
     },
     "deepRehab": {
-      "label": "3,129 Springer accesses · 9 Springer citations",
+      "label": "3,186 Springer accesses · 12 Springer citations",
       "source": "https://link.springer.com/chapter/10.1007/978-3-030-86365-4_31"
     }
   },
-  "note": "Six published works are shown. The reads total is a minimum derived from the 3,397 Springer accesses reported for the 2025 Cognitive Computation article and the 3,129 Springer accesses reported for DeepRehab. Google Scholar currently lists eight rows, including a duplicate record for the 2025 Cognitive Computation article and a separate 2026 thesis entry."
+  "note": "Seven published works are shown, including Bruno Melício's 2026 doctoral dissertation at Eötvös Loránd University (ELTE). The reads total is a minimum derived from the 3,872 Springer accesses reported for the 2025 Cognitive Computation article and the 3,186 Springer accesses reported for DeepRehab."
 }

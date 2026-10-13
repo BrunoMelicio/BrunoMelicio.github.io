@@ -141,6 +141,28 @@ document.addEventListener('DOMContentLoaded', () => {
   bindCatalogControls('[data-course-rail]', '[data-course-direction]', 'courseDirection');
   bindCatalogControls('[data-free-course-rail]', '[data-free-course-direction]', 'freeCourseDirection');
 
+  // Clickable course cards navigation (for available cards)
+  document.querySelectorAll('.course-product[data-course-url]').forEach(card => {
+    card.addEventListener('click', event => {
+      if (event.target.closest('a, button')) return;
+      const targetUrl = card.dataset.courseUrl;
+      if (targetUrl) {
+        window.location.href = targetUrl;
+      }
+    });
+
+    card.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        if (event.target.closest('a, button')) return;
+        event.preventDefault();
+        const targetUrl = card.dataset.courseUrl;
+        if (targetUrl) {
+          window.location.href = targetUrl;
+        }
+      }
+    });
+  });
+
   const materialFilters = [...document.querySelectorAll('[data-material-filter]')];
   const materials = [...document.querySelectorAll('[data-material-access]')];
 
