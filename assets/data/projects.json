@@ -69,12 +69,7 @@
       {
         "type": "gif",
         "src": "assets/gifs/deep_rehab.gif",
-        "alt": "FootPoseNet animated real-time pose estimation and knee joint angle tracking demonstration"
-      },
-      {
-        "type": "image",
-        "src": "assets/images/project-deeprehab.jpg",
-        "alt": "FootPoseNet keypoint heatmaps and Google Coral TPU edge pipeline"
+        "alt": "FootPoseNet pose estimation and knee joint angle tracking demonstration"
       }
     ]
   },

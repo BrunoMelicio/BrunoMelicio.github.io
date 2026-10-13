@@ -39,15 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
         </button>`;
     }
 
-    const isGif = media.type === 'gif' || (media.src && media.src.toLowerCase().endsWith('.gif'));
-    const badgeText = isGif ? 'Live Demo' : 'Preview';
-    const badgeIcon = isGif ? 'fa-play' : 'fa-images';
-
     return `
       <button class="project-card-media" type="button" data-project-media="${escapeHtml(project.id)}"
         aria-label="View media for ${escapeHtml(project.title)}">
-        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" ${isGif ? '' : 'loading="lazy" '}decoding="async" />
-        <span class="project-card-media-badge"><i class="fas ${badgeIcon}" aria-hidden="true"></i>${badgeText}</span>
+        <img src="${escapeHtml(media.src)}" alt="${escapeHtml(media.alt || project.title)}" loading="lazy" decoding="async" />
+        <span class="project-card-media-badge"><i class="far fa-images" aria-hidden="true"></i>Preview</span>
       </button>`;
   };
 
