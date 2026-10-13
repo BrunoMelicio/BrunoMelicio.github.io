@@ -159,6 +159,10 @@ body.projects-page .nav-list .studio-entry:hover {
   overflow: hidden;
 }
 
+.projects-main section {
+  padding: 0;
+}
+
 /* Scroll reveal */
 .projects-reveal {
   opacity: 0;
@@ -178,6 +182,7 @@ body.projects-page .nav-list .studio-entry:hover {
 
 .projects-intro {
   display: block;
+  padding: 0 !important;
   background: var(--projects-bg);
   border-bottom: 1px solid var(--projects-line);
 }
@@ -187,8 +192,8 @@ body.projects-page .nav-list .studio-entry:hover {
   grid-template-columns: minmax(430px, 0.88fr) minmax(520px, 1.12fr);
   gap: clamp(2.5rem, 6vw, 6rem);
   align-items: center;
-  padding-top: clamp(1rem, 2.2vw, 2rem);
-  padding-bottom: clamp(2rem, 3.8vw, 3.2rem);
+  padding-top: clamp(1.6rem, 3vw, 2.5rem);
+  padding-bottom: clamp(2.5rem, 4.5vw, 4rem);
 }
 
 .projects-eyebrow {
