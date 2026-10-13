@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Bruno Melício</title>
   <meta name="description"
-    content="Research systems, clinical AI frameworks, and independent creative engineering projects by Bruno Melício." />
+    content="Clinical AI frameworks, edge-optimized deep learning models, and computer vision systems by Bruno Melício." />
   <meta name="theme-color" content="#ffffff" />
   <meta property="og:title" content="Projects | Bruno Melício" />
   <meta property="og:description"
-    content="A curated portfolio of clinical AI research systems and independent creative projects." />
+    content="A curated portfolio of clinical AI research systems, edge deep learning architectures, and independent computer vision projects." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/images/research-card-01.png" />
+  <meta property="og:image" content="assets/images/projects-hero.png" />
   <link rel="icon" type="image/png" href="assets/images/logo2.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="assets/css/animations.css?v=9.0" />
   <link rel="stylesheet" href="assets/css/navigation.css?v=9.0" />
   <link rel="stylesheet" href="assets/css/footer.css?v=9.0" />
-  <link rel="stylesheet" href="assets/css/pages/projects.css?v=1.0" />
+  <link rel="stylesheet" href="assets/css/pages/projects.css?v=3.0" />
 </head>
 
 <body class="theme-light projects-page">
@@ -33,9 +33,13 @@
     <section class="projects-intro" aria-labelledby="projects-page-title">
       <div class="projects-shell projects-intro-grid">
         <div class="projects-intro-copy projects-reveal">
-          <p class="projects-eyebrow">Portfolio &amp; Engineering</p>
-          <h1 id="projects-page-title"><span>Interactive AI</span> <span>Projects &amp; Systems.</span></h1>
-          <p>A portfolio bridging clinical AI research frameworks with independent creative tools, computer vision prototypes, and multimodal pipelines.</p>
+          <p class="projects-eyebrow">Projects &amp; Engineering</p>
+          <h1 id="projects-page-title">
+            <span>Building intelligent</span>
+            <span>systems &amp;</span>
+            <span>interfaces.</span>
+          </h1>
+          <p>Clinical AI research frameworks, edge-optimized deep learning models, and computer vision systems bridging academic research with real-world applications.</p>
 
           <div class="projects-intro-actions" aria-label="Explore projects">
             <a href="#projects" class="projects-primary-action">
@@ -43,48 +47,51 @@
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
             <a href="research.html#publications" class="projects-secondary-action">
-              <span>View publications</span>
-              <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+              View research publications
             </a>
           </div>
         </div>
 
         <div class="projects-intro-visual projects-reveal">
           <figure>
-            <img src="assets/images/research-card-01.png"
-              alt="Visual demonstration of multimodal AI project architecture" fetchpriority="high"
-              decoding="async" />
+            <img src="assets/images/projects-hero.png"
+              alt="Bruno Melício working on multimodal perception, 3D face mesh, hand tracking, and Virtual Furhat robot interaction"
+              fetchpriority="high" decoding="async" />
           </figure>
-          <p aria-label="Project domains">clinical ai <span>·</span> computer vision <span>·</span> creative systems</p>
+          <p aria-label="Project domains">perception <span>·</span> computer vision <span>·</span> edge ai</p>
         </div>
       </div>
     </section>
 
     <section class="projects-metrics" aria-labelledby="projects-metrics-title">
       <div class="projects-shell">
-        <h2 id="projects-metrics-title" class="visually-hidden">Project statistics</h2>
-        <div class="projects-metrics-grid projects-reveal">
+        <h2 id="projects-metrics-title" class="visually-hidden">Project statistics and pillars</h2>
+        <div class="projects-metrics-grid projects-reveal" aria-live="polite">
           <article class="projects-metric">
-            <strong>4+</strong>
-            <span>Research Systems</span>
-            <small>Peer-reviewed prototypes</small>
+            <strong>15+</strong>
+            <span>Projects</span>
+            <small>Research systems &amp; open-source repositories</small>
           </article>
           <article class="projects-metric">
-            <strong>4+</strong>
-            <span>Side Projects</span>
-            <small>Creative &amp; open-source</small>
+            <strong>01</strong>
+            <span>Edge AI &amp;<br />Real-Time.</span>
+            <small>Optimizing deep convolutional and pose estimation architectures for edge TPUs and low-latency on-device processing.</small>
           </article>
           <article class="projects-metric">
-            <strong>Vision &amp; Audio</strong>
-            <span>Multimodal Input</span>
-            <small>3D kinematics &amp; speech</small>
+            <strong>02</strong>
+            <span>Multimodal<br />Perception.</span>
+            <small>Synchronizing 3D spatial pose, facial micro-expressions, speech acoustics, and conversational robotics for behavioral assessment.</small>
           </article>
           <article class="projects-metric">
-            <strong>Edge &amp; Web</strong>
-            <span>Deployment Ready</span>
-            <small>Real-time execution</small>
+            <strong>03</strong>
+            <span>Human-Centric<br />Solutions.</span>
+            <small>Engineering accessible, privacy-conscious solutions spanning physical rehabilitation, autism screening, and dietary safety.</small>
           </article>
         </div>
+        <p class="projects-metrics-note projects-reveal">
+          Clinical AI research systems alongside open-source repositories and decision models <span aria-hidden="true">·</span>
+          <span>Updated October 2026</span>
+        </p>
       </div>
     </section>
 
@@ -92,10 +99,9 @@
       <div class="projects-shell">
         <div class="projects-section-heading projects-reveal">
           <div>
-            <p class="projects-kicker">Curated Works</p>
             <h2 id="projects-archive-title">Projects.</h2>
           </div>
-          <p>Explore clinical research pipelines directly linked to academic publications alongside independent creative systems and exploratory toolkits.</p>
+          <p>Explore clinical research pipelines directly linked to academic publications alongside applied engineering systems and open-source toolkits.</p>
         </div>
 
         <div class="project-controls projects-reveal">
@@ -105,7 +111,7 @@
             <button type="button" class="project-filter" data-project-filter="research"
               aria-pressed="false">Research Projects</button>
             <button type="button" class="project-filter" data-project-filter="side-project"
-              aria-pressed="false">Independent Projects</button>
+              aria-pressed="false">Applied &amp; Independent</button>
             <button type="button" class="project-filter project-filter--recruiting" data-project-filter="recruiting"
               aria-pressed="false">
               <span class="project-filter-dot" aria-hidden="true"></span>
@@ -173,7 +179,7 @@
 
   <script src="assets/js/navigation.js?v=9.0"></script>
   <script src="assets/js/main.js?v=9.0"></script>
-  <script src="assets/js/projects.js?v=1.0"></script>
+  <script src="assets/js/projects.js?v=3.0"></script>
 </body>
 
 </html>

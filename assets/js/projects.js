@@ -72,39 +72,54 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>`;
     }
 
-    let actionFooter = '';
+    let githubAction = '';
+    if (project.githubLink) {
+      githubAction = `
+        <a href="${escapeHtml(project.githubLink)}" target="_blank" rel="noopener noreferrer" class="project-card-github-link" title="View repository on GitHub">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
+        </a>`;
+    }
+
+    let publicationAction = '';
     if (isResearch && project.publicationLink) {
-      actionFooter = `
+      publicationAction = `
         <a href="${escapeHtml(project.publicationLink)}" class="project-card-link">
           <span>${escapeHtml(project.publicationLabel || 'View publication')}</span>
           <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-        </a>
-        <button type="button" class="project-card-preview-btn" data-project-media="${escapeHtml(project.id)}">
-          <i class="fas fa-expand" aria-hidden="true"></i> Preview
-        </button>`;
-    } else {
-      actionFooter = `
-        <span class="project-card-tag"><i class="fas fa-cube" aria-hidden="true"></i> Independent Project</span>
-        <button type="button" class="project-card-preview-btn" data-project-media="${escapeHtml(project.id)}">
-          <i class="fas fa-expand" aria-hidden="true"></i> Preview media
-        </button>`;
+        </a>`;
     }
+
+    const actionFooter = `
+      <div class="project-card-actions">
+        ${publicationAction}
+        ${githubAction}
+      </div>
+      <button type="button" class="project-card-preview-btn" data-project-media="${escapeHtml(project.id)}">
+        <i class="fas fa-expand" aria-hidden="true"></i> Preview media
+      </button>`;
+
+    const timeline = escapeHtml(project.timeline || project.year);
+    const institution = project.institution ? `<span class="project-card-institution">${escapeHtml(project.institution)}</span>` : '';
 
     return `
       <article class="project-card${isFeatured ? ' project-card--feature' : ''}" data-project-id="${escapeHtml(project.id)}">
-        ${mediaMarkup(project)}
-        <div class="project-card-body">
-          <div class="project-card-meta">
-            <span class="project-badge ${badgeClass}">${escapeHtml(project.badge)}</span>
-            ${recruitingBadge}
-            <span class="project-card-tag">${escapeHtml(project.tag)}</span>
-            <span class="project-card-year">${escapeHtml(project.year)}</span>
-          </div>
-          <h3>${escapeHtml(project.title)}</h3>
-          <p class="project-card-description">${escapeHtml(project.description)}</p>
-          ${recruitingCallout}
-          <div class="project-card-footer">
-            ${actionFooter}
+        <div class="project-card-inner">
+          ${mediaMarkup(project)}
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="project-badge ${badgeClass}">${escapeHtml(project.badge)}</span>
+              ${recruitingBadge}
+              <span class="project-card-timeline">${timeline}</span>
+              ${institution}
+            </div>
+            <h3>${escapeHtml(project.title)}</h3>
+            <p class="project-card-tagline">${escapeHtml(project.tag)}</p>
+            <p class="project-card-description">${escapeHtml(project.description)}</p>
+            ${recruitingCallout}
+            <div class="project-card-footer">
+              ${actionFooter}
+            </div>
           </div>
         </div>
       </article>`;
@@ -115,13 +130,15 @@ document.addEventListener('DOMContentLoaded', () => {
       .filter(project => {
         if (activeFilter === 'all') return true;
         if (activeFilter === 'recruiting') return Boolean(project.recruiting);
+        if (activeFilter === 'research') return project.category === 'research';
+        if (activeFilter === 'side-project') return project.category === 'side-project' || project.category === 'applied-ai';
         return project.category === activeFilter;
       })
       .sort((a, b) => {
         if (activeSort === 'title') {
           return a.title.localeCompare(b.title);
         }
-        return Number(b.year) - Number(a.year);
+        return 0; // preserve curated chronological order in json
       });
   };
 
