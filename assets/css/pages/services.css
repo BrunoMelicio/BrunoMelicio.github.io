@@ -250,7 +250,7 @@ body.services-page .theme-toggle:hover {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
-  border-radius: 14px;
+  border-radius: 18px;
   box-shadow: var(--services-shadow);
 }
 
