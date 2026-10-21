@@ -316,7 +316,16 @@ body.theme-light .about-portrait--light { display: block; }
 }
 
 .about-experience-row {
-  grid-template-columns: 145px minmax(0, 1fr);
+  grid-template-columns: 145px minmax(0, 1fr) auto;
+}
+
+.about-experience-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+  color: var(--about-soft);
+  font-size: 0.78rem;
 }
 
 .about-resume-row time,
@@ -501,6 +510,65 @@ body.theme-light .about-portrait--light { display: block; }
   font-size: 0.74rem;
   font-weight: 600;
   border-bottom: 1px solid var(--about-line-strong);
+}
+
+.about-institutional-card {
+  margin: 1.8rem 0;
+  padding: 1.35rem 1.5rem;
+  background: var(--about-card);
+  border: 1px solid var(--about-line);
+  border-radius: 14px;
+}
+
+.about-institutional-card h4 {
+  margin: 0 0 0.5rem;
+  color: var(--about-ink);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-institutional-card p {
+  margin: 0 0 0.35rem;
+  color: var(--about-muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.about-institutional-card p.about-address {
+  margin-top: 0.55rem;
+  color: var(--about-soft);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-institutional-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 0.95rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--about-line);
+}
+
+.about-institutional-contacts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--about-ink);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 180ms ease;
+}
+
+.about-institutional-contacts a:hover {
+  opacity: 0.8;
 }
 
 .about-social-grid {
@@ -760,14 +828,15 @@ body.studio-modal-open { overflow: hidden; }
   .about-list-title { margin-bottom: 1.8rem; }
   .about-resume-row,
   .about-experience-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr auto;
     gap: 0.55rem;
     min-height: 0;
     padding: 1.45rem 0;
   }
-  .about-resume-row { grid-template-columns: 1fr auto; }
   .about-resume-row time,
-  .about-resume-content { grid-column: 1; }
+  .about-resume-content,
+  .about-experience-row time,
+  .about-experience-row > div { grid-column: 1; }
   .about-row-link { grid-column: 2; grid-row: 1 / span 2; align-self: center; }
   .about-resume-content h3,
   .about-experience-row h3 { font-size: 1.12rem; }
