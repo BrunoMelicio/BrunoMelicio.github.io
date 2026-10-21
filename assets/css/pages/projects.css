@@ -1032,53 +1032,74 @@ body.projects-page.theme-light .project-card-primary-btn:hover {
    ============================================ */
 
 .projects-invite {
-  padding-block: clamp(4.5rem, 8vw, 7.5rem);
+  padding-block: clamp(6.5rem, 11vw, 10.5rem);
   border-top: 1px solid var(--projects-line);
   background: var(--projects-bg);
 }
 
 .projects-invite-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
-  gap: clamp(2rem, 5vw, 5rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
   align-items: center;
+}
+
+.projects-kicker {
+  margin: 0 0 1.25rem;
+  color: var(--projects-soft);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .projects-invite h2 {
   margin: 0;
   color: var(--projects-ink);
-  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+  font-size: clamp(2.5rem, 4.6vw, 4rem);
   font-weight: 600;
-  line-height: 1.02;
+  line-height: 1.08;
   letter-spacing: -0.045em;
 }
 
 .projects-invite-copy p {
-  margin: 0 0 1.8rem;
+  margin: 0 0 2.2rem;
   color: var(--projects-muted);
-  font-size: clamp(1.08rem, 1.25vw, 1.22rem);
-  line-height: 1.62;
+  font-size: clamp(1.1rem, 1.3vw, 1.25rem);
+  line-height: 1.7;
+  max-width: 52ch;
 }
 
 .projects-invite-copy a {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  min-height: 52px;
-  padding: 0 1.8rem;
+  gap: 0.85rem;
+  min-height: 54px;
+  padding: 0 2.2rem;
   color: var(--projects-button-ink);
   background: var(--projects-button-bg);
   border-radius: 999px;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 600;
+  letter-spacing: 0.01em;
   text-decoration: none;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  transition: transform 200ms ease, opacity 200ms ease;
+  transition: transform 200ms ease, box-shadow 200ms ease, opacity 200ms ease;
 }
 
 .projects-invite-copy a:hover {
   transform: translateY(-2px);
-  opacity: 0.9;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+  opacity: 0.95;
+}
+
+.projects-invite-copy a i {
+  font-size: 0.82rem;
+  transition: transform 200ms ease;
+}
+
+.projects-invite-copy a:hover i {
+  transform: translateX(3px);
 }
 
 /* ============================================
