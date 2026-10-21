@@ -100,16 +100,26 @@ document.addEventListener('DOMContentLoaded', () => {
         </a>`;
     }
 
-    let primaryActionBtn = '';
+    let demoActionBtn = '';
+    if (project.demoLink) {
+      demoActionBtn = `
+        <a href="${escapeHtml(project.demoLink)}" target="_blank" rel="noopener noreferrer" class="project-card-demo-btn" title="Watch demonstration on YouTube">
+          <i class="fab fa-youtube" aria-hidden="true"></i>
+          <span>Watch Demo</span>
+          <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>`;
+    }
+
+    let githubActionBtn = '';
     if (project.githubLink) {
-      primaryActionBtn = `
+      githubActionBtn = `
         <a href="${escapeHtml(project.githubLink)}" target="_blank" rel="noopener noreferrer" class="project-card-primary-btn" title="Check out ${escapeHtml(project.title)} on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i>
           <span>Check on GitHub</span>
           <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>`;
-    } else if (project.publicationLink) {
-      primaryActionBtn = `
+    } else if (!project.demoLink && project.publicationLink) {
+      githubActionBtn = `
         <a href="${escapeHtml(project.publicationLink)}" target="_blank" rel="noopener noreferrer" class="project-card-primary-btn" title="Read publication">
           <i class="fas fa-book-open" aria-hidden="true"></i>
           <span>Read Paper</span>
@@ -122,7 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ${publicationAction}
         ${researchPageAction}
       </div>
-      ${primaryActionBtn}`;
+      <div class="project-card-btns">
+        ${demoActionBtn}
+        ${githubActionBtn}
+      </div>`;
 
     const timeline = escapeHtml(project.timeline || project.year);
     const institution = project.institution ? `<span class="project-card-institution">${escapeHtml(project.institution)}</span>` : '';
@@ -206,6 +219,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (hash === 'nakedfood' || hash === 'naked-food') {
       hash = 'nakedfood-mobile-ai';
+    }
+    if (hash === 'furhat' || hash === 'multimodal-furhat' || hash === 'social-robotics') {
+      hash = 'real-time-multimodal-furhat';
+    }
+    if (hash === 'ados' || hash === 'ados-2' || hash === 'ados-framework') {
+      hash = 'ados-multimodal-framework';
+    }
+    if (hash === 'kriol' || hash === 'kriolu' || hash === 'kriol-nlp') {
+      hash = 'kriol-nlp-lab';
+    }
+    if (hash === 'gaze' || hash === 'eye-gaze' || hash === 'eyegaze') {
+      hash = 'eye-gaze-direction-recognition';
     }
     const targetProject = projects.find(p => p.id === hash);
     if (targetProject) {

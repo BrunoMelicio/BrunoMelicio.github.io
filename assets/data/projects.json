@@ -1,18 +1,42 @@
 [
   {
+    "id": "real-time-multimodal-furhat",
+    "category": "research",
+    "badge": "Social Robotics",
+    "tag": "Furhat Robotics · Computer Vision · Conversational AI",
+    "year": "2026 – Present",
+    "timeline": "2026 – Present",
+    "institution": "ISIR Sorbonne University",
+    "title": "Real-Time Social Interaction with Furhat",
+    "description": "A lightweight Python toolkit for natural multimodal interaction with Furhat social robots, synchronizing computer vision (facial mesh, 3D pose, gaze estimation), speech acoustics, and local language models (Llama 3.2 via Ollama) with sub-second response times for clinical and interactive settings.",
+    "recruiting": false,
+    "githubLink": "https://github.com/BrunoMelicio/real-time-multimodal-furhat",
+    "demoLink": "https://youtu.be/QbNbL_190zA?si=uGk0Tj5f77dZWu3M",
+    "publicationLink": null,
+    "publicationLabel": null,
+    "researchPageLink": null,
+    "researchPageLabel": null,
+    "media": [
+      {
+        "type": "image",
+        "src": "assets/images/projects/projects-furhat-perception.png",
+        "alt": "Real-Time Social Interaction with Furhat robot featuring multimodal perception and facial mesh tracking"
+      }
+    ]
+  },
+  {
     "id": "ados-multimodal-framework",
     "category": "research",
     "badge": "Clinical AI System",
     "tag": "Multimodal AI · Autism Assessment",
-    "year": "2021 – 2026",
-    "timeline": "PhD Research · 2021 – 2026",
+    "year": "2022 – 2025",
+    "timeline": "PhD Research · 2022 – 2025",
     "institution": "Eötvös Loránd University",
-    "title": "ADOS-2 Multimodal Behavior Analysis System",
-    "description": "An end-to-end clinical AI system integrating 3D computer vision, speech acoustics, and interaction cues to automatically assess child-clinician behaviors during standardized ADOS-2 sessions, featuring virtual Furhat conversational agents and real-time kinematic tracking.",
-    "recruiting": true,
-    "recruitingRole": "Research Interns & Data Annotators",
-    "recruitingUrl": "services.html?service=research-collaboration#enquiry",
-    "githubLink": "https://github.com/BrunoMelicio/real-time-multimodal-furhat",
+    "title": "ADOS-2 Multimodal Behavior Analysis Framework",
+    "description": "An end-to-end clinical AI framework designed to support clinicians during standardized ADOS-2 diagnostic evaluations by automatically analyzing child-clinician interactions. Integrates 3D body and hand pose tracking, object manipulation detection, acoustic speech processing, and smart glasses for gaze and blink dynamics, combining deep learning representations with rule-based models to objectively detect verbal and non-verbal communicative requests.",
+    "recruiting": false,
+    "githubLink": null,
+    "demoLink": null,
     "publicationLink": "https://doi.org/10.1007/s12559-025-10481-7",
     "publicationLabel": "Cognitive Computation paper",
     "researchPageLink": "research.html#publication-ados",
@@ -20,32 +44,8 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/images/projects-furhat-perception.png",
-        "alt": "ADOS-2 Multimodal Behavior Analysis System with 3D pose, facial mesh, and Virtual Furhat robot"
-      }
-    ]
-  },
-  {
-    "id": "real-time-multimodal-furhat",
-    "category": "research",
-    "badge": "Social Robotics & Vision",
-    "tag": "Furhat Robotics · 3D Pose · Computer Vision · Local LLMs",
-    "year": "2024 – 2026",
-    "timeline": "2024 – Present",
-    "institution": "Sorbonne University & ELTE",
-    "title": "Real-Time Multimodal Interaction with Furhat",
-    "description": "A lightweight Python toolkit for natural multimodal interaction with Furhat social robots, synchronizing computer vision (facial mesh, 3D pose, gaze estimation), speech acoustics, and local language models with sub-second response times for clinical and interactive settings.",
-    "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/real-time-multimodal-furhat",
-    "publicationLink": "https://dl.acm.org/doi/abs/10.1145/3610661.3616237",
-    "publicationLabel": "ACM ICMI paper",
-    "researchPageLink": "research.html#publication-composite",
-    "researchPageLabel": "View in Research",
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/images/projects-hero.jpg",
-        "alt": "Bruno Melício assembling Furhat robot hardware and integrating multimodal perception systems"
+        "src": "assets/images/projects/ados_2_multimodal_ai_framework.png",
+        "alt": "ADOS-2 Multimodal Behavior Analysis Framework child-clinician evaluation pipeline"
       }
     ]
   },
@@ -53,13 +53,15 @@
     "id": "deeprehab",
     "category": "research",
     "badge": "Edge AI & Clinical Pose",
-    "tag": "DeepRehab · 23 Keypoints · Edge TPU · Physical Therapy",
+    "tag": "DeepRehab · 2D Human Pose Estimation · Edge TPU · Physical Therapy",
     "year": "2020 – 2021",
-    "timeline": "Sep 2020 – Jan 2021",
+    "timeline": "2020 – 2021",
     "institution": "Eötvös Loránd University (ELTE)",
-    "description": "A Keras implementation of a modified PersonLab architecture for bottom-up multi-person pose estimation on the edge. Predicts heatmaps and offsets for 23 anatomical keypoints (17 body + 6 feet), optimized for Google Coral Edge TPU at 20 FPS with temporal filtering to reduce knee angle RMSE by 10.7%.",
+    "title": "DeepRehab: 2D Human Pose Estimation on the Edge",
+    "description": "A real-time edge AI system for home-based knee injury telerehabilitation, enabling patients to perform physical therapy exercises with automated joint tracking and biofeedback. Implements a modified PersonLab architecture predicting heatmaps and offsets for 23 anatomical keypoints (17 body + 6 feet), optimized for Google Coral Edge TPU at 20 FPS with temporal filtering to reduce knee angle RMSE by 10.7%.",
     "recruiting": false,
     "githubLink": "https://github.com/BrunoMelicio/Deep_Rehab",
+    "demoLink": null,
     "publicationLink": "https://link.springer.com/chapter/10.1007/978-3-030-86365-4_31",
     "publicationLabel": "Springer paper (ICANN 2021)",
     "researchPageLink": "research.html#publication-deeprehab",
@@ -78,208 +80,22 @@
     "badge": "Computer Vision Research",
     "tag": "Computer Vision · CNNs · Eye Gaze Tracking",
     "year": "2018 – 2019",
-    "timeline": "Nov 2018 – Jun 2019",
-    "institution": "Universidade de Cabo Verde",
+    "timeline": "2018 – 2019",
+    "institution": "University of Cape Verde",
     "title": "Eye Gaze Direction Recognition using Convolutional Neural Networks on Low-Resolution Cameras",
     "description": "A deep learning framework answering how to effectively recognize eye gaze direction by maximizing performance while reducing hardware costs. Developed ESGDset (156,000 images under diverse illumination, head postures, and scenarios) and GDNet, a two-phase architecture that segments candidate eye regions before classification, achieving 98.32% accuracy with an error rate of 0.087 on low-resolution cameras.",
     "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio?tab=repositories",
-    "publicationLink": "research.html#publications",
+    "githubLink": null,
+    "demoLink": "https://www.youtube.com/watch?v=PuTCq_eBznY",
+    "publicationLink": "https://drive.google.com/file/d/1C0Tx4dcN2hnj1ZpIkNqQJ75IgJ8aLSn4/view",
     "publicationLabel": "View publication",
+    "researchPageLink": null,
+    "researchPageLabel": null,
     "media": [
       {
         "type": "image",
-        "src": "assets/images/project-eyegaze.jpg",
-        "alt": "Eye Gaze Direction Recognition system with candidate eye segmentation and 3D gaze vector estimation"
-      }
-    ]
-  },
-  {
-    "id": "podclaw",
-    "category": "side-project",
-    "badge": "Interactive Audio AI",
-    "tag": "Audio AI · Podcast Q&A · LLM Summaries · Web",
-    "year": "2025 – 2026",
-    "timeline": "2025 – Present",
-    "institution": "Independent Project",
-    "title": "Podclaw: Interactive Podcast Learning Experience",
-    "description": "Stop listening, start learning. Paste any podcast episode link from Spotify or Apple Podcasts to generate instant AI-curated chapter summaries, viral soundbites, key takeaway quotes, and an interactive Q&A assistant with an audio player that automatically seeks to matching moments in the recording.",
-    "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/podclaw",
-    "publicationLink": null,
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/images/projects/podclaw.jpg",
-        "alt": "Podclaw interactive podcast player and AI transcript learning application"
-      }
-    ]
-  },
-  {
-    "id": "video-footage-search",
-    "category": "side-project",
-    "badge": "Multimodal Retrieval",
-    "tag": "Video Retrieval · Multimodal Embeddings · FFmpeg · Semantic Search",
-    "year": "2025",
-    "timeline": "2025",
-    "institution": "Codex Labs",
-    "title": "Framefind: Local Text-to-Video-Frame Semantic Search",
-    "description": "Local text-to-video-frame search powered by multimodal embeddings. Upload a video file or load sample footage; FFmpeg extracts candidate frames while local Ollama multimodal models embed both video frames and text queries into a shared cosine metric space, providing instant jump-to-moment video seeking.",
-    "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/video-footage-search",
-    "publicationLink": null,
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/images/projects/video-footage-search.jpg",
-        "alt": "Framefind video footage semantic search and keyframe timeline indexing"
-      }
-    ]
-  },
-  {
-    "id": "lookmatch",
-    "category": "side-project",
-    "badge": "Visual Embeddings",
-    "tag": "Visual Similarity · Ollama · Multimodal Search · Local AI",
-    "year": "2025",
-    "timeline": "2025",
-    "institution": "Codex Labs",
-    "title": "Lookmatch: Local Multimodal Product Image Similarity",
-    "description": "A lightweight, local image embedding experiment and product similarity search engine. Upload a product photo to rank and match catalog images using Ollama multimodal embeddings (EmbeddingGemma-2:440m) with zero cloud databases, zero external APIs, and strict local inference.",
-    "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/lookmatch",
-    "publicationLink": null,
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/images/projects/lookmatch.jpg",
-        "alt": "Lookmatch local image embedding and product similarity ranking"
-      }
-    ]
-  },
-  {
-    "id": "photo-explorer",
-    "category": "side-project",
-    "badge": "Semantic Photo Search",
-    "tag": "Image Retrieval · Personal Photo Search · Local Embeddings",
-    "year": "2025",
-    "timeline": "2025",
-    "institution": "Codex Labs",
-    "title": "Photofind: Personal Photo Explorer with Multimodal Embeddings",
-    "description": "Personal photo explorer enabling visual semantic search across local image archives by natural language description, uploaded reference photos, or image-to-image similarity using local EmbeddingGemma models without third-party cloud indexing.",
-    "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/photo-explorer",
-    "publicationLink": null,
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/images/projects/photo-explorer.jpg",
-        "alt": "Photofind personal photo explorer and multimodal similarity matching"
-      }
-    ]
-  },
-  {
-    "id": "email-triage-decision-models",
-    "category": "side-project",
-    "badge": "Fast Decision Models",
-    "tag": "ModernBERT · Security & Phishing · Fast Inference · Decision Models",
-    "year": "2025",
-    "timeline": "2025",
-    "institution": "Antigravity Research",
-    "title": "Email Triage with Decision Models",
-    "description": "An ultra-fast, local email triage and security filtering engine powered by Laya (421M) and Tev1 (0.8B) decision models. Runs in 15–25 ms on Apple Silicon M3 with zero hallucination and calibrated risk probabilities for automated spam classification, phishing detection, and department routing.",
-    "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/email-triage-decision-models",
-    "publicationLink": null,
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/images/projects/email-triage-decision-models.jpg",
-        "alt": "Email triage cybersecurity analytics dashboard with calibrated risk scoring"
-      }
-    ]
-  },
-  {
-    "id": "bruno-ai",
-    "category": "side-project",
-    "badge": "Local RAG Assistant",
-    "tag": "Local RAG · Citation Engine · Academic Search · Ollama",
-    "year": "2025",
-    "timeline": "2025",
-    "institution": "Codex Labs",
-    "title": "Bruno AI: Academic Paper & Research RAG Assistant",
-    "description": "A local retrieval-augmented research assistant indexing Bruno Melício's academic papers, research findings, and technical background. Powered by Ollama, nomic-embed-text, and Qwen, answering queries with retrieved source passages and clickable citations that jump directly to PDF pages.",
-    "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/bruno-ai",
-    "publicationLink": null,
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/images/projects/bruno-ai.jpg",
-        "alt": "Bruno AI local academic research assistant and citation engine"
-      }
-    ]
-  },
-  {
-    "id": "zero-waste-fridge",
-    "category": "side-project",
-    "badge": "Vision-Language Assistant",
-    "tag": "Vision-Language Models · Moondream · Food Waste Prevention",
-    "year": "2025",
-    "timeline": "2025",
-    "institution": "Antigravity Research",
-    "title": "Zero Waste Fridge: VLM-Powered Kitchen Inspection",
-    "description": "A minimal, vision-powered fridge inspection and zero-waste recipe assistant powered by local Moondream (1.8B VLM). Audits pantry and refrigerator photos in sub-second inference on Apple Silicon, flags expiring perishables, and generates delicious zero-waste recipes using strictly available items.",
-    "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/zero-waste-fridge",
-    "publicationLink": null,
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/images/projects/zero-waste-fridge.jpg",
-        "alt": "Zero Waste Fridge VLM food detection and expiring ingredient audit"
-      }
-    ]
-  },
-  {
-    "id": "smart-plant-pathologist",
-    "category": "side-project",
-    "badge": "Botanical Diagnostics VLM",
-    "tag": "Plant Pathology · Moondream VLM · Foliar Diagnosis · Edge AI",
-    "year": "2025",
-    "timeline": "2025",
-    "institution": "Antigravity Research",
-    "title": "Smart Plant Pathologist: Foliar Disease Diagnostics",
-    "description": "A local botanical disease and foliar distress diagnostic lab powered by Moondream VLM running on Apple Silicon Metal. Identifies plant species, diagnoses foliar distress patterns (chlorosis, fungal lesions, necrosis, spider mites), and outputs actionable 3-step remediation guides.",
-    "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/smart-plant-pathologist",
-    "publicationLink": null,
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/images/projects/smart-plant-pathologist.jpg",
-        "alt": "Smart Plant Pathologist foliar distress diagnostic and plant disease assessment"
-      }
-    ]
-  },
-  {
-    "id": "receipt-expense-auditor",
-    "category": "side-project",
-    "badge": "Document Intelligence VLM",
-    "tag": "Document AI · Expense Audit · Mathematical Reconciliation · Local VLM",
-    "year": "2025",
-    "timeline": "2025",
-    "institution": "Antigravity Research",
-    "title": "Receipt & Expense Line-Item Auditor",
-    "description": "Ultra-lightweight visual document audit engine running locally on Apple Silicon Metal using Moondream (1.8B VLM). Extracts receipt line items, mathematically reconciles taxes and tips, flags cashier register discrepancies, and exports one-click CSV accounting ledgers.",
-    "recruiting": false,
-    "githubLink": "https://github.com/BrunoMelicio/receipt-expense-auditor",
-    "publicationLink": null,
-    "media": [
-      {
-        "type": "image",
-        "src": "assets/images/projects/receipt-expense-auditor.jpg",
-        "alt": "Receipt and expense line-item auditor with mathematical reconciliation"
+        "src": "assets/images/projects/gaze-direction-network.png",
+        "alt": "Eye Gaze Direction Recognition candidate eye segmentation and gaze classification architecture"
       }
     ]
   },
@@ -289,18 +105,22 @@
     "badge": "Mobile Edge AI & Computer Vision",
     "tag": "Computer Vision · MobileNet · ResNet · TFLite · Android App",
     "year": "2019 – 2020",
-    "timeline": "Oct 2019 – Jan 2020",
+    "timeline": "2019 – 2020",
     "institution": "Eötvös Loránd University (ELTE)",
     "title": "NakedFood: AI Mobile App for Automated Food Ingredient Recognition",
     "description": "An end-to-end Android mobile computer vision app helping users with food allergies, medical conditions, or dietary restrictions avoid harmful ingredients. Powered by MobileNet (101 food classes) and ResNet converted to TensorFlow Lite for real-time camera inference and instant ingredient lookup.",
     "recruiting": false,
     "githubLink": "https://github.com/BrunoMelicio/NakedFood",
+    "demoLink": null,
     "publicationLink": null,
+    "publicationLabel": null,
+    "researchPageLink": null,
+    "researchPageLabel": null,
     "media": [
       {
         "type": "gif",
         "src": "assets/gifs/naked_food.gif",
-        "alt": "NakedFood Android mobile app animated demonstration predicting spaghetti bolognese and displaying full ingredient breakdown"
+        "alt": "NakedFood Android mobile app animated demonstration predicting food items and displaying ingredient breakdown"
       }
     ]
   },
@@ -309,7 +129,7 @@
     "category": "side-project",
     "badge": "Open-Source Initiative",
     "tag": "NLP · Low-Resource Languages · Cape Verde",
-    "year": "2024 – 2026",
+    "year": "2024 – Present",
     "timeline": "2024 – Present",
     "institution": "Independent Open-Source",
     "title": "Kriol NLP & Computational Linguistics Toolkit",
@@ -317,13 +137,17 @@
     "recruiting": true,
     "recruitingRole": "NLP Researchers & Creole Language Contributors",
     "recruitingUrl": "services.html?service=research-collaboration#enquiry",
-    "githubLink": "https://github.com/BrunoMelicio?tab=repositories",
+    "githubLink": "https://github.com/BrunoMelicio",
+    "demoLink": null,
     "publicationLink": null,
+    "publicationLabel": null,
+    "researchPageLink": null,
+    "researchPageLabel": null,
     "media": [
       {
         "type": "image",
-        "src": "assets/images/creative_portal_bg.png",
-        "alt": "Kriol NLP linguistic models and cultural preservation toolkit"
+        "src": "assets/images/projects/kriol-nlp-toolkit.jpg",
+        "alt": "Kriol NLP and Computational Linguistics Toolkit for Cape Verdean Creole"
       }
     ]
   }
