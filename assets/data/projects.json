@@ -44,8 +44,8 @@
     "media": [
       {
         "type": "image",
-        "src": "assets/images/projects-hero.png",
-        "alt": "Real-time multimodal interaction with Furhat social robot"
+        "src": "assets/images/projects-hero.jpg",
+        "alt": "Bruno Melício assembling Furhat robot hardware and integrating multimodal perception systems"
       }
     ]
   },
