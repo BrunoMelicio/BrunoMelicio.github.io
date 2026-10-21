@@ -224,7 +224,7 @@ body.projects-page .nav-list .studio-entry:hover {
   white-space: normal;
 }
 
-.projects-intro-copy > p {
+.projects-intro-copy>p {
   max-width: 590px;
   margin: clamp(1.6rem, 3vw, 2.8rem) 0 0;
   color: var(--projects-muted);
@@ -313,7 +313,7 @@ body.projects-page .nav-list .studio-entry:hover {
   transform: scale(1.025);
 }
 
-.projects-intro-visual > p {
+.projects-intro-visual>p {
   display: flex;
   justify-content: center;
   gap: clamp(0.75rem, 2vw, 2rem);
@@ -325,7 +325,7 @@ body.projects-page .nav-list .studio-entry:hover {
   text-transform: lowercase;
 }
 
-.projects-intro-visual > p span {
+.projects-intro-visual>p span {
   color: var(--projects-soft);
 }
 
@@ -411,7 +411,7 @@ body.projects-page .nav-list .studio-entry:hover {
   text-align: right;
 }
 
-.projects-metrics-note > span[aria-hidden] {
+.projects-metrics-note>span[aria-hidden] {
   margin: 0 0.5rem;
 }
 
@@ -442,7 +442,7 @@ body.projects-page .nav-list .studio-entry:hover {
   letter-spacing: -0.07em;
 }
 
-.projects-section-heading > p {
+.projects-section-heading>p {
   margin: 0 0 0.45rem;
   color: var(--projects-muted);
   font-size: 1.05rem;
@@ -916,10 +916,10 @@ body.projects-page.theme-light .project-recruiting-callout-action {
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(220, 38, 38, 0.32);
   transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
-              background 200ms ease,
-              border-color 200ms ease,
-              color 200ms ease;
+    box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -977,9 +977,9 @@ body.projects-page.theme-light .project-card-demo-btn:hover {
   text-decoration: none;
   box-shadow: 0 4px 16px rgba(255, 255, 255, 0.12);
   transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
-              background 200ms ease,
-              color 200ms ease;
+    box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 200ms ease,
+    color 200ms ease;
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -1032,20 +1032,20 @@ body.projects-page.theme-light .project-card-primary-btn:hover {
    ============================================ */
 
 .projects-invite {
-  padding-block: clamp(6.5rem, 11vw, 10.5rem);
+  padding-block: clamp(7.5rem, 13vw, 12rem);
   border-top: 1px solid var(--projects-line);
   background: var(--projects-bg);
 }
 
 .projects-invite-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
-  gap: clamp(2.5rem, 6vw, 6rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(3rem, 6vw, 6.5rem);
   align-items: center;
 }
 
 .projects-kicker {
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.35rem;
   color: var(--projects-soft);
   font-size: 0.82rem;
   font-weight: 600;
@@ -1056,17 +1056,17 @@ body.projects-page.theme-light .project-card-primary-btn:hover {
 .projects-invite h2 {
   margin: 0;
   color: var(--projects-ink);
-  font-size: clamp(2.5rem, 4.6vw, 4rem);
+  font-size: clamp(2.6rem, 4.8vw, 4.2rem);
   font-weight: 600;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.045em;
 }
 
 .projects-invite-copy p {
-  margin: 0 0 2.2rem;
+  margin: 0 0 2.4rem;
   color: var(--projects-muted);
-  font-size: clamp(1.1rem, 1.3vw, 1.25rem);
-  line-height: 1.7;
+  font-size: clamp(1.12rem, 1.3vw, 1.28rem);
+  line-height: 1.72;
   max-width: 52ch;
 }
 
@@ -1240,6 +1240,7 @@ body.projects-page.theme-light .project-card-primary-btn:hover {
    ============================================ */
 
 @media (max-width: 1024px) {
+
   .projects-intro-grid,
   .projects-invite-layout {
     grid-template-columns: 1fr;
