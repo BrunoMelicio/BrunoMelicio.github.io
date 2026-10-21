@@ -159,10 +159,6 @@ body.projects-page .nav-list .studio-entry:hover {
   overflow: hidden;
 }
 
-.projects-main section {
-  padding: 0;
-}
-
 /* Scroll reveal */
 .projects-reveal {
   opacity: 0;
@@ -1031,8 +1027,10 @@ body.projects-page.theme-light .project-card-primary-btn:hover {
    COLLABORATION / CALL TO ACTION
    ============================================ */
 
+.projects-main .projects-invite,
 .projects-invite {
-  padding-block: clamp(7.5rem, 13vw, 12rem);
+  padding-top: clamp(6rem, 10vw, 9.5rem) !important;
+  padding-bottom: clamp(6rem, 10vw, 9.5rem) !important;
   border-top: 1px solid var(--projects-line);
   background: var(--projects-bg);
 }
