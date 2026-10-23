@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let demoActionBtn = '';
     if (project.demoLink) {
       demoActionBtn = `
-        <a href="${escapeHtml(project.demoLink)}" target="_blank" rel="noopener noreferrer" class="project-card-demo-btn" title="Watch demonstration on YouTube">
-          <i class="fab fa-youtube" aria-hidden="true"></i>
+        <a href="${escapeHtml(project.demoLink)}" target="_blank" rel="noopener noreferrer" class="project-card-demo-btn" title="Watch demonstration">
+          <i class="${/youtu\.?be/.test(project.demoLink) ? 'fab fa-youtube' : 'fas fa-play'}" aria-hidden="true"></i>
           <span>Watch Demo</span>
           <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>`;
@@ -141,10 +141,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const institution = project.institution ? `<span class="project-card-institution">${escapeHtml(project.institution)}</span>` : '';
 
     return `
-      <article class="project-card" id="${escapeHtml(project.id)}" data-project-id="${escapeHtml(project.id)}">
+      <article class="project-card${project.featured ? ' is-featured' : ''}" id="${escapeHtml(project.id)}" data-project-id="${escapeHtml(project.id)}">
         <div class="project-card-inner">
           ${mediaMarkup(project)}
           <div class="project-card-body">
+            ${project.featured ? '<span class="featured-label"><span aria-hidden="true">★</span> Featured</span>' : ''}
             <div class="project-card-meta">
               <span class="project-badge ${badgeClass}">${escapeHtml(project.badge)}</span>
               ${recruitingBadge}
@@ -183,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const renderProjects = () => {
     if (!projectGrid) return;
     const matches = filteredProjects();
+    projectGrid.scrollLeft = 0;
 
     if (!matches.length) {
       projectGrid.innerHTML = '<p class="projects-empty-state">No projects match this filter.</p>';
@@ -245,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         const el = document.getElementById(hash);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.scrollIntoView({ behavior: reduceMotion ? 'instant' : 'smooth', block: 'center' });
           el.classList.add('project-card--highlight');
           setTimeout(() => el.classList.remove('project-card--highlight'), 2500);
         }

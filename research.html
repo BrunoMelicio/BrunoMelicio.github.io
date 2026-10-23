@@ -16,19 +16,19 @@
   <link rel="icon" type="image/png" href="assets/images/logo2.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=8.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css?v=8.0" />
   <link rel="stylesheet" href="assets/css/base.css?v=8.0" />
   <link rel="stylesheet" href="assets/css/components.css?v=8.0" />
   <link rel="stylesheet" href="assets/css/animations.css?v=8.0" />
-  <link rel="stylesheet" href="assets/css/navigation.css?v=8.0" />
-  <link rel="stylesheet" href="assets/css/footer.css?v=8.0" />
   <link rel="stylesheet" href="assets/css/pages/research.css?v=8.2" />
+  <link rel="stylesheet" href="assets/css/redesign.css?v=10.1" />
+  <link rel="stylesheet" href="assets/css/refinements.css?v=10.3" />
 </head>
 
-<body class="theme-light research-page">
+<body class="theme-light research-page redesign refined">
   <main class="research-main">
     <section class="research-intro" aria-labelledby="research-page-title">
       <div class="research-shell research-intro-grid">
@@ -138,11 +138,12 @@
             <div class="research-publication-card-inner">
               <a href="https://doi.org/10.1007/s12559-025-10481-7" target="_blank" rel="noopener noreferrer" class="research-publication-media-link" aria-label="Multimodal Framework journal article in Cognitive Computation">
                 <div class="research-publication-image research-publication-image--photo">
-                  <img src="assets/images/research.JPG" alt="Bruno Melício with research colleagues at a scientific poster"
+                  <img class="publication-cover" src="assets/images/research/multimodal_framework.png" alt="Multimodal Framework article in Cognitive Computation"
                     loading="lazy" />
                 </div>
               </a>
               <div class="research-publication-content">
+                <span class="featured-label"><span aria-hidden="true">★</span> Featured</span>
                 <div class="research-publication-meta"><span>2025</span><span>Journal article</span></div>
                 <h3><a href="https://doi.org/10.1007/s12559-025-10481-7" target="_blank" rel="noopener noreferrer">Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2</a></h3>
                 <p class="research-publication-venue">Cognitive Computation, 17(4), 137</p>
@@ -165,7 +166,7 @@
           <article class="research-publication-card research-reveal" data-type="thesis" data-year="2026">
             <a href="https://doi.org/10.15476/ELTE.2026.017" target="_blank" rel="noopener noreferrer">
               <div class="research-publication-image research-publication-image--dark">
-                <img src="assets/images/research-dissertation.jpg"
+                <img class="publication-cover" src="assets/images/research/behavior analysis.png"
                   alt="Behavior Analysis Using 3D Human Pose Estimation for Enhancing Medical Assessments"
                   loading="lazy" />
               </div>
@@ -201,13 +202,14 @@
             </a>
           </article>
 
-          <article class="research-publication-card research-reveal" data-type="conference" data-year="2025">
+          <article class="research-publication-card is-featured research-reveal" data-type="conference" data-year="2025">
             <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50927" target="_blank"
               rel="noopener noreferrer">
               <div class="research-publication-image research-publication-image--dark">
-                <img src="assets/images/research-card-01.png" alt="Abstract monochrome particle wave" loading="lazy" />
+                <img src="assets/images/research.JPG" alt="Bruno Melício with research colleagues at a scientific poster" loading="lazy" />
               </div>
               <div class="research-publication-content">
+                <span class="featured-label"><span aria-hidden="true">★</span> Featured</span>
                 <div class="research-publication-meta"><span>2025</span><span>Conference paper</span></div>
                 <h3>Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI</h3>
                 <p class="research-publication-venue">International Society for Autism Research (INSAR)</p>
@@ -250,7 +252,7 @@
           <article class="research-publication-card research-reveal" data-type="journal" data-year="2022">
             <a href="https://www.mdpi.com/2414-4088/6/7/48" target="_blank" rel="noopener noreferrer">
               <div class="research-publication-image research-publication-image--light">
-                <img src="assets/images/research_card_bg.jpg" alt="Abstract interconnected neural structure"
+                <img class="publication-cover" src="assets/images/research/AI Supervision.png" alt="AI Technologies for Machine Supervision and Help in a Rehabilitation Scenario"
                   loading="lazy" />
               </div>
               <div class="research-publication-content">
@@ -272,7 +274,7 @@
               <a href="https://link.springer.com/chapter/10.1007/978-3-030-86365-4_31" target="_blank"
                 rel="noopener noreferrer" class="research-publication-media-link" aria-label="DeepRehab conference paper on Springer">
                 <div class="research-publication-image research-publication-image--photo">
-                  <img src="assets/images/teaching.jpeg" alt="Bruno Melício in front of an artificial intelligence lecture"
+                  <img class="publication-cover" src="assets/images/research/deeprehab.png" alt="DeepRehab: edge pose estimation for knee injury rehabilitation"
                     loading="lazy" />
                 </div>
               </a>
@@ -332,8 +334,8 @@
   </main>
 
 
-  <script src="assets/js/navigation.js?v=8.0"></script>
-  <script src="assets/js/main.js?v=8.0"></script>
+  <script src="assets/js/navigation.js?v=10.2"></script>
+  <script src="assets/js/main.js?v=10.3"></script>
   <script src="assets/js/research.js?v=8.1"></script>
 </body>
 

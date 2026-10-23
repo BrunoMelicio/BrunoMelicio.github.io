@@ -1,164 +1,91 @@
-document.addEventListener('DOMContentLoaded', function () {
-  // Load navigation
-  fetch('/includes/nav.html')
-    .then(response => response.text())
-    .then(html => {
-      document.body.insertAdjacentHTML('afterbegin', html);
-      initNavigation();
-      initScrolledNav();
-      initThemeToggle();
-    })
-    .catch(error => console.error('Error loading navigation:', error));
+/* Shared navigation. Content stays readable while the small includes load. */
+(() => {
+  const savedTheme = (() => { try { return localStorage.getItem('theme'); } catch { return null; } })();
+  const initialTheme = savedTheme === 'dark' ? 'dark' : 'light';
+  document.body.classList.toggle('theme-dark', initialTheme === 'dark');
+  document.body.classList.toggle('theme-light', initialTheme !== 'dark');
 
-  // Load footer
-  fetch('/includes/footer.html')
-    .then(response => response.text())
-    .then(html => {
-      document.body.insertAdjacentHTML('beforeend', html);
-      const yearEl = document.getElementById('current-year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-    })
-    .catch(error => console.error('Error loading footer:', error));
-
-  // Initialize scroll animations
-  initScrollAnimations();
-
-  // --- Navigation ---
-  function initNavigation() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const path = window.location.pathname;
-
-    // Active page
-    document.querySelectorAll('.nav-list a').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === path || (href === '/' && (path === '/' || path === '/index.html'))) {
-        link.classList.add('active');
-      } else if (href !== '/' && path.startsWith(href.replace('.html', ''))) {
-        link.classList.add('active');
-      }
-    });
-
-    // Mobile toggle
-    if (menuToggle && navMenu) {
-      menuToggle.addEventListener('click', function () {
-        this.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
-      });
-
-      // Close on link click
-      document.querySelectorAll('.nav-list a').forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.innerWidth <= 768) {
-            menuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            document.body.classList.remove('no-scroll');
-          }
-        });
-      });
-
-      // Close on outside click
-      document.addEventListener('click', function (e) {
-        if (window.innerWidth <= 768 &&
-          !e.target.closest('.nav-menu') &&
-          !e.target.closest('.menu-toggle')) {
-          menuToggle.classList.remove('active');
-          navMenu.classList.remove('active');
-          document.body.classList.remove('no-scroll');
-        }
-      });
-    }
-  }
-
-  // --- Dark Mode Toggle ---
-  function initThemeToggle() {
-    const themeToggle = document.querySelector('.theme-toggle');
-    if (!themeToggle) return;
-
-    const icon = themeToggle.querySelector('i');
-    
-    // The homepage always opens in its light presentation. Other pages can
-    // continue to respect a visitor's explicit theme choice.
-    const savedTheme = localStorage.getItem('theme');
-    const isHomepage = document.body.classList.contains('home-page');
-    const initialTheme = isHomepage ? 'light' : (savedTheme || 'light');
-
-    const portrait = document.querySelector('.home-portrait img[data-light-src]');
-    const syncThemeAssets = theme => {
-      if (!portrait) return;
-      portrait.src = theme === 'dark' ? portrait.dataset.darkSrc : portrait.dataset.lightSrc;
+  document.addEventListener('DOMContentLoaded', async () => {
+    const main = document.querySelector('main');
+    if (main) { main.id = 'main-content'; main.tabIndex = -1; }
+    const getInclude = async path => {
+      const response = await fetch(path);
+      if (!response.ok) throw new Error(`Unable to load ${path}`);
+      const source = await response.text();
+      const parsed = new DOMParser().parseFromString(source, 'text/html');
+      // Development servers may append live-reload scripts to HTML includes.
+      parsed.querySelectorAll('script').forEach(script => script.remove());
+      return parsed.body.innerHTML;
     };
-
-    document.body.classList.toggle('theme-dark', initialTheme === 'dark');
-    document.body.classList.toggle('theme-light', initialTheme === 'light');
-    icon.className = initialTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-    themeToggle.setAttribute('aria-label', initialTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-    syncThemeAssets(initialTheme);
-
-    if (portrait?.dataset.darkSrc) {
-      const darkPortrait = new Image();
-      darkPortrait.src = portrait.dataset.darkSrc;
+    const includes = await Promise.allSettled([getInclude('/includes/nav.html'), getInclude('/includes/footer.html')]);
+    if (includes[0].status === 'fulfilled') {
+      document.body.insertAdjacentHTML('afterbegin', includes[0].value);
+      initializeNavigation();
     }
+    if (includes[1].status === 'fulfilled') {
+      document.body.insertAdjacentHTML('beforeend', includes[1].value);
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    }
+    document.querySelectorAll('.animate-on-scroll').forEach(item => item.classList.add('is-visible'));
+  });
 
-    const themeMeta = document.querySelector('meta[name="theme-color"]');
-    if (themeMeta) themeMeta.setAttribute('content', initialTheme === 'dark' ? '#000000' : '#ffffff');
-
-    themeToggle.addEventListener('click', () => {
-      if (document.body.classList.contains('theme-light')) {
-        document.body.classList.replace('theme-light', 'theme-dark');
-        icon.classList.replace('fa-moon', 'fa-sun');
-        localStorage.setItem('theme', 'dark');
-        themeToggle.setAttribute('aria-label', 'Switch to light mode');
-        if (themeMeta) themeMeta.setAttribute('content', '#000000');
-        syncThemeAssets('dark');
-      } else {
-        document.body.classList.replace('theme-dark', 'theme-light');
-        icon.classList.replace('fa-sun', 'fa-moon');
-        localStorage.setItem('theme', 'light');
-        themeToggle.setAttribute('aria-label', 'Switch to dark mode');
-        if (themeMeta) themeMeta.setAttribute('content', '#ffffff');
-        syncThemeAssets('light');
-      }
+  function initializeNavigation() {
+    const header = document.querySelector('.global-header');
+    const nav = document.querySelector('.global-nav');
+    const triggers = [...document.querySelectorAll('.menu-button, .dock-menu')];
+    const themeButton = document.querySelector('.theme-toggle');
+    const mobile = matchMedia('(max-width: 900px)');
+    let returnFocus;
+    const path = location.pathname;
+    document.querySelectorAll('.global-nav a, .mobile-dock a').forEach(link => {
+      const href = link.getAttribute('href');
+      const active = href === path || (href === '/' && path === '/index.html') ||
+        (href === '/learn.html' && /\/((courses|introduction-to-ai)\.html|blog\/)/.test(path));
+      if (active) link.setAttribute('aria-current', 'page');
     });
+    const setMenu = (open, trigger) => {
+      if (open) returnFocus = trigger;
+      header.classList.toggle('menu-open', open);
+      document.body.classList.toggle('no-scroll', open);
+      triggers.forEach(button => button.setAttribute('aria-expanded', String(open)));
+      triggers.forEach(button => button.setAttribute('aria-label', open ? 'Close menu' : 'Toggle menu'));
+      if (mobile.matches) nav.inert = !open;
+      if (open) nav.querySelector('a').focus();
+      else returnFocus?.focus();
+    };
+    triggers.forEach(button => button.addEventListener('click', () => setMenu(!header.classList.contains('menu-open'), button)));
+    nav.addEventListener('click', event => { if (event.target.closest('a') && mobile.matches) setMenu(false); });
+    document.addEventListener('keydown', event => {
+      if (!header.classList.contains('menu-open')) return;
+      if (event.key === 'Escape') { event.preventDefault(); setMenu(false); }
+      if (event.key !== 'Tab') return;
+      const focusable = [...header.querySelectorAll('a, button')];
+      const first = focusable[0], last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    });
+    mobile.addEventListener('change', () => { if (header.classList.contains('menu-open')) setMenu(false); nav.inert = mobile.matches; });
+    nav.inert = mobile.matches;
+    const syncTheme = () => {
+      const dark = document.body.classList.contains('theme-dark');
+      themeButton.setAttribute('aria-label', `Switch to ${dark ? 'light' : 'dark'} mode`);
+      themeButton.setAttribute('aria-pressed', String(dark));
+      const icon = themeButton.querySelector('i');
+      if (icon) icon.className = dark ? 'fas fa-sun' : 'fas fa-moon';
+      const portrait = document.querySelector('.home-portrait img[data-light-src]');
+      if (portrait) portrait.src = dark ? portrait.dataset.darkSrc : portrait.dataset.lightSrc;
+      document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#101010' : '#f4f6f8');
+    };
+    syncTheme();
+    themeButton.addEventListener('click', () => {
+      const dark = !document.body.classList.contains('theme-dark');
+      document.body.classList.toggle('theme-dark', dark);
+      document.body.classList.toggle('theme-light', !dark);
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch { /* Theme remains usable without storage. */ }
+      syncTheme();
+    });
+    const syncScroll = () => header.classList.toggle('is-scrolled', scrollY > 16);
+    window.addEventListener('scroll', syncScroll, {passive: true});
+    syncScroll();
   }
-
-  // --- Transparent → solid nav on scroll ---
-  function initScrolledNav() {
-    const header = document.querySelector('.site-header');
-    if (!header) return;
-
-    const threshold = 100;
-
-    function checkScroll() {
-      if (window.scrollY > threshold) {
-        header.classList.add('nav-scrolled');
-      } else {
-        header.classList.remove('nav-scrolled');
-      }
-    }
-
-    window.addEventListener('scroll', checkScroll, { passive: true });
-    checkScroll();
-  }
-
-  // --- Intersection Observer for scroll animations ---
-  function initScrollAnimations() {
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    if (!elements.length) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-    );
-
-    elements.forEach(el => observer.observe(el));
-  }
-});
+})();

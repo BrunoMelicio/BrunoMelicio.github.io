@@ -15,45 +15,48 @@
   <link rel="icon" type="image/png" href="assets/images/logo2.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css?v=7.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css?v=9.0" />
   <link rel="stylesheet" href="assets/css/base.css?v=7.0" />
   <link rel="stylesheet" href="assets/css/components.css?v=7.0" />
   <link rel="stylesheet" href="assets/css/animations.css?v=7.0" />
-  <link rel="stylesheet" href="assets/css/navigation.css?v=7.1" />
-  <link rel="stylesheet" href="assets/css/footer.css?v=7.0" />
-  <link rel="stylesheet" href="assets/css/pages/index.css?v=8.3" />
+  <link rel="stylesheet" href="assets/css/pages/landing.css?v=10.1" />
+  <link rel="stylesheet" href="assets/css/redesign.css?v=10.1" />
+  <link rel="stylesheet" href="assets/css/refinements.css?v=10.3" />
 </head>
 
-<body class="theme-light home-page">
+<body class="theme-light home-page redesign refined">
   <main class="home-main">
-    <section class="home-hero" id="home" aria-labelledby="home-title">
-      <div class="home-hero-inner">
-        <div class="home-hero-copy">
+    <section class="home-hero landing-hero" id="home" aria-labelledby="home-title">
+      <div class="home-hero-inner hero-layout landing-shell">
+        <div class="home-hero-copy hero-copy">
           <p class="home-eyebrow">Bruno Melício</p>
           <h1 id="home-title">AI Researcher<br />&amp; Lecturer.</h1>
           <p class="home-affiliation">Postdoctoral Researcher at <a href="https://www.isir.upmc.fr/personnel/melicio/" target="_blank" rel="noopener noreferrer">ISIR, Sorbonne Université</a></p>
           <p class="home-intro">Advancing autism assessment with AI<br />&amp; Teaching modern AI through real-world applications.</p>
 
-          <div class="home-actions" aria-label="Explore Bruno Melício's work">
-            <a href="learn.html" class="home-primary-action">
+          <div class="home-actions hero-actions" aria-label="Explore Bruno Melício's work">
+            <a href="learn.html" class="home-primary-action button-primary">
               <span>Start Learning</span>
               <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
-            <a href="services.html" class="home-secondary-action">Explore My Services</a>
+            <a href="services.html" class="home-secondary-action text-action">Explore My Services</a>
           </div>
         </div>
 
-        <figure class="home-portrait" aria-label="Portrait of Bruno Melício">
-          <img src="assets/images/profile_home_v3_frontal_light Background Removed.png"
-            data-light-src="assets/images/profile_home_v3_frontal_light Background Removed.png"
-            data-dark-src="assets/images/profile_home_v3_frontal_dark.png"
-            alt="Bruno Melício, AI researcher and lecturer"
-            fetchpriority="high"
-            decoding="async" />
-        </figure>
+        <div class="portrait-visual">
+          <figure class="home-portrait" aria-label="Portrait of Bruno Melício">
+            <img src="assets/images/profile_home_v3_frontal_light Background Removed.png"
+              data-light-src="assets/images/profile_home_v3_frontal_light Background Removed.png"
+              data-dark-src="assets/images/profile_home_v3_frontal_dark Background Removed.png"
+              alt="Bruno Melício, AI researcher and lecturer"
+              fetchpriority="high"
+              decoding="async" />
+          </figure>
+          <p class="hero-caption">researcher <span aria-hidden="true">·</span> lecturer <span aria-hidden="true">·</span> creator</p>
+        </div>
       </div>
 
       <a href="#research" class="home-scroll-cue" aria-label="Scroll to research">
@@ -64,7 +67,7 @@
 
     <section class="research-showcase" id="research" aria-labelledby="research-title">
       <div class="research-shell">
-        <div class="research-heading home-reveal">
+        <div class="research-heading home-reveal landing-section-heading">
           <div>
             <p class="research-kicker">Selected work</p>
             <h2 id="research-title">Research</h2>
@@ -87,15 +90,31 @@
         </div>
 
         <div class="publication-grid" aria-live="polite">
-          <article class="publication-card home-reveal" data-type="journal">
+          <article class="publication-card home-reveal is-featured" data-type="journal">
             <a href="https://doi.org/10.1007/s12559-025-10481-7" target="_blank" rel="noopener noreferrer" aria-label="Read Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2">
               <div class="publication-image publication-image-wave">
-                <img src="assets/images/research-card-01.png" alt="Abstract particle wave visualization" loading="lazy" />
+                <img class="publication-cover" src="assets/images/research/multimodal_framework.png" alt="Multimodal Framework article in Cognitive Computation" loading="lazy" />
               </div>
               <div class="publication-content">
+                <span class="featured-label"><span aria-hidden="true">★</span> Featured</span>
                 <div class="publication-meta"><span>Journal Article</span><span>2025</span></div>
                 <h3>Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2</h3>
                 <p>Cognitive Computation</p>
+                <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="publication-card home-reveal is-featured" data-type="conference">
+            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50927" target="_blank" rel="noopener noreferrer" aria-label="Read Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI">
+              <div class="publication-image publication-image-milab">
+                <img src="assets/images/research.JPG" alt="Bruno Melício with research colleagues at a scientific poster" loading="lazy" />
+              </div>
+              <div class="publication-content">
+                <span class="featured-label"><span aria-hidden="true">★</span> Featured</span>
+                <div class="publication-meta"><span>Conference Paper</span><span>2025</span></div>
+                <h3>Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI</h3>
+                <p>INSAR Annual Meeting</p>
                 <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
               </div>
             </a>
@@ -116,23 +135,9 @@
           </article>
 
           <article class="publication-card home-reveal" data-type="conference">
-            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50927" target="_blank" rel="noopener noreferrer" aria-label="Read Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI">
-              <div class="publication-image publication-image-milab">
-                <img src="assets/images/events/MILAB_2024_Conference/milab-2024-1.jpg" alt="Bruno Melício and colleagues in front of the research poster at MILAB Conference" loading="lazy" />
-              </div>
-              <div class="publication-content">
-                <div class="publication-meta"><span>Conference Paper</span><span>2025</span></div>
-                <h3>Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI</h3>
-                <p>INSAR Annual Meeting</p>
-                <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
-              </div>
-            </a>
-          </article>
-
-          <article class="publication-card home-reveal" data-type="conference">
             <a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer" aria-label="Read Composite AI for Behavior Analysis in Social Interactions">
               <div class="publication-image publication-image-brain">
-                <img src="assets/images/research_portal_bg.png" alt="Abstract illuminated brain network" loading="lazy" />
+                <img src="assets/images/presentation1.JPG" alt="Bruno Melício presenting Composite AI research" loading="lazy" />
               </div>
               <div class="publication-content">
                 <div class="publication-meta"><span>Conference Paper</span><span>2023</span></div>
@@ -151,7 +156,7 @@
     </section>
 
     <section class="profile-showcase" id="more" aria-labelledby="more-title">
-      <div class="home-section-shell profile-layout">
+      <div class="home-section-shell profile-layout landing-shell">
         <div class="profile-introduction home-reveal">
           <p class="showcase-kicker">Beyond the publications</p>
           <h2 id="more-title">Research translated into knowledge people can use.</h2>
@@ -205,9 +210,9 @@
 
   </main>
 
-  <script src="assets/js/navigation.js?v=7.1"></script>
-  <script src="assets/js/main.js?v=7.0"></script>
-  <script src="assets/js/homepage.js?v=7.5"></script>
+  <script src="assets/js/navigation.js?v=10.2"></script>
+  <script src="assets/js/main.js?v=10.3"></script>
+  <script src="assets/js/homepage.js?v=10.3"></script>
 </body>
 
 </html>

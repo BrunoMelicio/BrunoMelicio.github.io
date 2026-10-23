@@ -17,6 +17,7 @@
   },
   {
     "id": "phd-public-defense-2026",
+    "featured": true,
     "date": "2026-04-20",
     "type": "academic",
     "label": "PhD public defense",
@@ -246,18 +247,6 @@
     "description": "The defense of a master's thesis in computer science and artificial intelligence.",
     "media": [
       { "type": "image", "src": "assets/images/events/ELTE_2022_MSc_Thesis/elte-msc-2021-1.jpg", "alt": "Bruno Melício during his master's thesis defense" }
-    ]
-  },
-  {
-    "id": "nokia-mask-detector-2020",
-    "date": "2020-01-25",
-    "type": "project",
-    "label": "Proof of concept",
-    "title": "Face Mask Detector",
-    "location": "Nokia · Budapest, Hungary",
-    "description": "A computer-vision proof of concept developed to detect face-mask usage.",
-    "media": [
-      { "type": "video", "src": "assets/images/events/Nokia_2021_PoC/nokia-2020-video.mp4", "alt": "Demonstration of the Nokia face mask detector proof of concept" }
     ]
   },
   {

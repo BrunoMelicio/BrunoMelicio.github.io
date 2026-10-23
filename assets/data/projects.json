@@ -22,7 +22,8 @@
         "src": "assets/images/projects/projects-furhat-perception.png",
         "alt": "Real-Time Social Interaction with Furhat robot featuring multimodal perception and facial mesh tracking"
       }
-    ]
+    ],
+    "featured": true
   },
   {
     "id": "ados-multimodal-framework",
@@ -148,6 +149,31 @@
         "type": "image",
         "src": "assets/images/projects/kriol-project.jpg",
         "alt": "Kriol NLP and Computational Linguistics Toolkit for Cape Verdean Creole"
+      }
+    ]
+  },
+  {
+    "id": "nokia-mask-detector-2020",
+    "category": "applied-ai",
+    "badge": "Proof of concept",
+    "tag": "Computer Vision · Edge TPU · Nokia",
+    "year": "2020",
+    "timeline": "2020",
+    "institution": "Nokia · Budapest, Hungary",
+    "title": "Face Mask Detector",
+    "description": "A computer-vision proof of concept developed at Nokia, using trained convolutional neural networks to classify whether a person is wearing a face mask correctly, wearing it incorrectly, or not wearing one. Optimized for an Edge TPU device to run locally at 30 FPS.",
+    "recruiting": false,
+    "githubLink": null,
+    "demoLink": "assets/images/events/Nokia_2021_PoC/nokia-2020-video.mp4",
+    "publicationLink": null,
+    "publicationLabel": null,
+    "researchPageLink": null,
+    "researchPageLabel": null,
+    "media": [
+      {
+        "type": "video",
+        "src": "assets/images/events/Nokia_2021_PoC/nokia-2020-video.mp4",
+        "alt": "Demonstration of the Nokia face mask detector proof of concept"
       }
     ]
   }

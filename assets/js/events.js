@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeFilter = 'all';
   let activeYear = 'all';
   let activeSort = 'recent';
-  let expanded = false;
 
   const escapeHtml = value => String(value ?? '')
     .replaceAll('&', '&amp;')
@@ -74,14 +73,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     return `
       <div class="event-card-media event-card-media--type" aria-hidden="true">
-        <strong>${escapeHtml(event.type)}</strong><small>${escapeHtml(event.date.slice(0, 4))}</small>
+        <svg class="preview-symbol" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="9" y="11" width="30" height="29" rx="4"/><path d="M9 20h30M17 7v8M31 7v8M17 27h6M17 33h12"/></svg><small>No preview</small>
       </div>`;
   };
 
-  const cardMarkup = (event, index) => `
-    <article class="event-card${index < 2 ? ' event-card--feature' : ''}" data-event-id="${escapeHtml(event.id)}">
+  const cardMarkup = event => `
+    <article class="event-card${event.featured ? ' event-card--feature is-featured' : ''}" data-event-id="${escapeHtml(event.id)}">
       ${mediaMarkup(event)}
       <div class="event-card-body">
+        ${event.featured ? '<span class="featured-label"><span aria-hidden="true">★</span> Featured</span>' : ''}
         <div class="event-card-meta">
           <span>${escapeHtml(formatDate(event.date))}</span>
           <span>${escapeHtml(event.label)}</span>
@@ -101,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return year === Number(activeYear);
     })
     .sort((a, b) => {
+      // The explicitly featured event stays above the chronological archive.
+      if (Boolean(a.featured) !== Boolean(b.featured)) return a.featured ? -1 : 1;
       const difference = parseDate(b.date) - parseDate(a.date);
       return activeSort === 'recent' ? difference : -difference;
     });
@@ -108,7 +110,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const renderEvents = () => {
     if (!archiveGrid) return;
     const matches = filteredEvents();
-    const visibleEvents = expanded ? matches : matches.slice(0, 6);
+    archiveGrid.scrollLeft = 0;
+    const visibleEvents = matches;
 
     if (!matches.length) {
       archiveGrid.innerHTML = '<p class="events-empty-state">No events match these filters.</p>';
@@ -123,14 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         : 'No matching events';
     }
 
-    if (showMoreButton) {
-      showMoreButton.hidden = matches.length <= 6;
-      showMoreButton.setAttribute('aria-expanded', String(expanded));
-      const label = showMoreButton.querySelector('span');
-      const icon = showMoreButton.querySelector('i');
-      if (label) label.textContent = expanded ? 'Show fewer events' : `Show ${matches.length - 6} more events`;
-      if (icon) icon.className = expanded ? 'fas fa-minus' : 'fas fa-plus';
-    }
+    if (showMoreButton) showMoreButton.hidden = true;
   };
 
   const loadEvents = async () => {
@@ -151,8 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
       activeFilter = button.dataset.eventFilter;
-      expanded = false;
-      filterButtons.forEach(filter => {
+        filterButtons.forEach(filter => {
         const isActive = filter === button;
         filter.classList.toggle('is-active', isActive);
         filter.setAttribute('aria-pressed', String(isActive));
@@ -163,20 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   yearSelect?.addEventListener('change', () => {
     activeYear = yearSelect.value;
-    expanded = false;
     renderEvents();
   });
 
   sortSelect?.addEventListener('change', () => {
     activeSort = sortSelect.value;
-    expanded = false;
     renderEvents();
   });
 
-  showMoreButton?.addEventListener('click', () => {
-    expanded = !expanded;
-    renderEvents();
-  });
+
 
   const revealItems = document.querySelectorAll('.events-reveal');
   if (reduceMotion || !('IntersectionObserver' in window)) {

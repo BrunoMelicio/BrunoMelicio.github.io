@@ -1,19 +1,20 @@
-<header class="site-header">
-  <div class="nav-container">
-    <a href="/" class="logo">
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Site navigation</title></head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="global-header">
+  <div class="global-nav-shell">
+    <a href="/" class="brand">
       <img src="/assets/images/logo3.png" alt="Bruno Melício" />
     </a>
-    <div class="nav-controls" style="display: flex; align-items: center; gap: var(--space-md);">
-      <button class="theme-toggle" aria-label="Toggle dark mode" style="font-size: 1.25rem; color: var(--text-primary); transition: color 0.3s; padding: 0.5rem;">
+    <div class="global-nav-controls">
+      <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
       </button>
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <button class="menu-button" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-navigation"><span class="menu-lines" aria-hidden="true"></span></button>
     </div>
-    <nav class="nav-menu">
+    <nav class="global-nav" id="site-navigation" aria-label="Main navigation">
       <ul class="nav-list">
         <li class="nav-home-item"><a href="/">Home</a></li>
         <li><a href="/learn.html">Courses</a></li>
@@ -26,3 +27,12 @@
     </nav>
   </div>
 </header>
+
+<nav class="mobile-dock" aria-label="Mobile navigation">
+  <a href="/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10H14v-6h-4v6H3Z"/></svg><span>Home</span></a>
+  <a href="/learn.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5Zm4 2v7q6 5 12 0v-7m4-2v9"/></svg><span>Courses</span></a>
+  <a href="/services.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v12h-8l-5 4v-4H4ZM8 9h8M8 13h5"/></svg><span>Services</span></a>
+  <button type="button" class="dock-menu" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>More</span></button>
+</nav>
+</body>
+</html>
