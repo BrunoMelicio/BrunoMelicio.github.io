@@ -78,6 +78,11 @@ body.redesign.refined :is(.project-card-body,.event-card-body,.research-publicat
 body.redesign.refined :is(.project-card-description,.event-card-description) { font-size: var(--font-body); line-height: 1.65; }
 body.redesign.refined .project-card-description { display: block; -webkit-line-clamp: unset; overflow: visible; }
 body.redesign.refined :is(.project-card-footer,.research-publication-actions) { margin-top: auto; padding-top: 24px; }
+/* The body follows the preview; a 100% body height pushes links outside
+   the card's clipped boundary when cards are arranged vertically. */
+body.redesign.refined .project-card-inner { height: auto; flex: 1 0 auto; }
+body.redesign.refined .project-card-body { height: auto; }
+body.redesign.refined .project-card-footer { flex-shrink: 0; }
 body.redesign.refined .event-card-location { margin-top: auto; padding-top: 20px; }
 body.redesign.refined .research-publication-media-link { display: block; width: 100%; height: auto; flex-shrink: 0; }
 body.redesign.refined .research-publication-card.is-filtered-out { display: none; }
