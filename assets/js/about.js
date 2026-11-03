@@ -19,19 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  const credentialsToggle = document.getElementById('credentials-toggle');
-  const extraCredentials = document.querySelectorAll('.about-credential-row.is-extra');
-
-  credentialsToggle?.addEventListener('click', () => {
-    const expanded = credentialsToggle.getAttribute('aria-expanded') === 'true';
-    credentialsToggle.setAttribute('aria-expanded', String(!expanded));
-    credentialsToggle.textContent = expanded ? 'View all' : 'Show less';
-    extraCredentials.forEach(item => {
-      item.hidden = expanded;
-      if (!expanded) item.classList.add('is-visible');
-    });
-  });
-
   const studioDisclosure = document.getElementById('studio-disclosure');
   let studioTrigger = null;
 
@@ -87,52 +74,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const hireForm = document.getElementById('about-hire-form');
-  const hireStatus = document.getElementById('about-hire-status');
-  const hireSubject = document.getElementById('about-hire-subject');
-  const opportunitySelect = document.getElementById('about-opportunity');
-
-  const updateHireSubject = () => {
-    if (!hireSubject) return;
-    hireSubject.value = opportunitySelect?.value
-      ? `New hiring enquiry — ${opportunitySelect.value}`
-      : 'New professional hiring enquiry';
-  };
-
-  opportunitySelect?.addEventListener('change', updateHireSubject);
-
-  hireForm?.addEventListener('submit', async event => {
-    event.preventDefault();
-    if (!hireStatus) return;
-
-    const submitButton = hireForm.querySelector('button[type="submit"]');
-    const submitLabel = submitButton?.querySelector('span');
-    const originalLabel = submitLabel?.textContent || 'Send hiring enquiry';
-
-    hireStatus.className = 'about-form-status';
-    hireStatus.textContent = '';
-    if (submitButton) submitButton.disabled = true;
-    if (submitLabel) submitLabel.textContent = 'Sending…';
-
-    try {
-      const response = await fetch(hireForm.action, {
-        method: 'POST',
-        body: new FormData(hireForm),
-        headers: { Accept: 'application/json' }
-      });
-
-      if (!response.ok) throw new Error('Submission failed');
-
-      hireForm.reset();
-      updateHireSubject();
-      hireStatus.classList.add('is-success');
-      hireStatus.textContent = 'Thank you. Your enquiry has been sent. I will review the opportunity and reply if there is a strong fit.';
-    } catch (error) {
-      hireStatus.classList.add('is-error');
-      hireStatus.innerHTML = 'The form could not be sent. Please email <a href="mailto:brunomelicio.ai@gmail.com">brunomelicio.ai@gmail.com</a>.';
-    } finally {
-      if (submitButton) submitButton.disabled = false;
-      if (submitLabel) submitLabel.textContent = originalLabel;
-    }
-  });
 });

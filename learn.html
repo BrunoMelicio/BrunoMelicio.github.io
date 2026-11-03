@@ -21,9 +21,9 @@
   <link rel="stylesheet" href="assets/css/base.css?v=9.0" />
   <link rel="stylesheet" href="assets/css/components.css?v=9.0" />
   <link rel="stylesheet" href="assets/css/animations.css?v=9.0" />
-  <link rel="stylesheet" href="assets/css/pages/learn.css?v=9.3" />
-  <link rel="stylesheet" href="assets/css/redesign.css?v=10.1" />
-  <link rel="stylesheet" href="assets/css/refinements.css?v=10.3" />
+  <link rel="stylesheet" href="assets/css/pages/learn.css?v=10.9" />
+  <link rel="stylesheet" href="assets/css/redesign.css?v=10.9" />
+  <link rel="stylesheet" href="assets/css/refinements.css?v=10.10" />
 </head>
 
 <body class="theme-light teaching-page redesign refined">
@@ -38,7 +38,6 @@
           <div class="teaching-intro-actions" aria-label="Explore courses and free learning">
             <a href="#free-learning" class="teaching-primary-action">
               <span>Start free</span>
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
             <a href="#online-courses" class="teaching-secondary-action">Browse courses</a>
           </div>
@@ -49,7 +48,6 @@
             <img src="assets/images/teaching.jpeg" alt="Bruno Melício teaching Deep Network Developments at ELTE"
               fetchpriority="high" decoding="async" />
           </figure>
-          <p aria-label="Teaching principles">theory <span>·</span> code <span>·</span> application</p>
         </div>
       </div>
     </section>
@@ -59,7 +57,6 @@
       <div class="teaching-shell">
         <div class="university-heading teaching-reveal">
           <h2 id="university-title">University teaching</h2>
-          <p>Courses developed and delivered in academic settings.</p>
         </div>
         <div class="university-layout">
           <figure class="university-media teaching-reveal">
@@ -101,7 +98,6 @@
         <div class="catalog-heading free-catalog-heading teaching-reveal">
           <div>
             <h2 id="free-learning-title">Start learning for free.</h2>
-            <p>Foundational courses, practical tutorials and concise explainers, open to everyone.</p>
           </div>
           <div class="catalog-controls" aria-label="Scroll free course catalog">
             <button type="button" data-free-course-direction="-1" aria-label="Previous free courses">
@@ -115,13 +111,14 @@
 
         <div class="course-rail free-course-rail" data-free-course-rail>
           <article class="course-product course-product--free teaching-reveal">
-            <div class="course-status"><i class="fab fa-youtube" aria-hidden="true"></i> Free video course</div>
+            <div class="course-status"><span class="course-access">€0 · Free</span><span>Video course</span></div>
+            <div class="learning-format"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="13" width="52" height="38" rx="10"/><path d="m27 23 16 9-16 9Z"/></svg><span>Video course</span></div>
             <div class="course-product-body">
               <p class="course-level">Beginner · Foundations</p>
               <h3>Learn AI Foundations</h3>
               <p>Understand the core ideas behind modern AI, from machine learning and neural networks to generative
                 systems.</p>
-              <p class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 1.5 hours</p>
+              <p class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 1 hour</p>
               <div class="course-product-footer">
                 <div><strong>Free</strong><span>Open access</span></div>
                 <button type="button" disabled>Video coming soon</button>
@@ -130,9 +127,10 @@
           </article>
 
           <article class="course-product course-product--free teaching-reveal">
-            <div class="course-status"><i class="fab fa-youtube" aria-hidden="true"></i> Free video course</div>
+            <div class="course-status"><span class="course-access">€0 · Free</span><span>Video course</span></div>
+            <div class="learning-format"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="13" width="52" height="38" rx="10"/><path d="m27 23 16 9-16 9Z"/></svg><span>Video course</span></div>
             <div class="course-product-body">
-              <p class="course-level">Ages 8–15 · Beginner</p>
+              <p class="course-level">Ages 6–12 · Beginner</p>
               <h3>AI for Kids</h3>
               <p>A friendly introduction to how AI learns, creates and solves problems, designed for curious young
                 learners.</p>
@@ -145,7 +143,8 @@
           </article>
 
           <article class="course-product course-product--free teaching-reveal">
-            <div class="course-status"><i class="fab fa-youtube" aria-hidden="true"></i> Free video course</div>
+            <div class="course-status"><span class="course-access">€0 · Free</span><span>Video course</span></div>
+            <div class="learning-format"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="6" y="13" width="52" height="38" rx="10"/><path d="m27 23 16 9-16 9Z"/></svg><span>Video course</span></div>
             <div class="course-product-body">
               <p class="course-level">Beginner · Practical</p>
               <h3>Create Real-World Apps</h3>
@@ -161,16 +160,17 @@
           <article class="course-product course-product--free course-product--available teaching-reveal"
             data-course-url="introduction-to-ai.html" tabindex="0" role="link"
             aria-label="Read Introduction to AI blog post">
-            <div class="course-status"><i class="far fa-newspaper" aria-hidden="true"></i> Free blog post</div>
+            <div class="course-status"><span class="course-access">€0 · Free</span><span>Blog post</span></div>
+            <div class="learning-format"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="12" y="7" width="40" height="50" rx="6"/><path d="M22 20h20M22 28h20M22 36h20M22 44h12"/></svg><span>Blog post</span></div>
             <div class="course-product-body">
-              <p class="course-level">All levels · Reading</p>
+              <p class="course-level">Beginner · Reading</p>
               <h3>Introduction to AI</h3>
               <p>A clear, grounded explainer connecting the essential concepts of artificial intelligence with
                 real-world intuition.</p>
               <p class="course-duration"><i class="far fa-clock" aria-hidden="true"></i> 10 min read</p>
               <div class="course-product-footer">
                 <div><strong>Free</strong><span>Open access</span></div>
-                <a href="introduction-to-ai.html">Read post <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="introduction-to-ai.html">Read post</a>
               </div>
             </div>
           </article>
@@ -184,7 +184,6 @@
         <div class="catalog-heading teaching-reveal">
           <div>
             <h2 id="online-courses-title">Online courses</h2>
-            <p>Structured, self-paced learning. Buy once and return whenever you need.</p>
           </div>
           <div class="catalog-header-actions">
             <button type="button" class="catalog-expand-btn" id="course-expand-toggle" aria-expanded="false"
@@ -239,7 +238,7 @@
         <div class="course-rail" id="course-rail-catalog" data-course-rail>
           <article class="course-product teaching-reveal" data-course-item data-initial-order="0" data-level="beginner"
             data-level-rank="1" data-price="29" data-duration="1">
-            <div class="course-status">Paid course</div>
+            <div class="course-status"><span class="course-access">€ · Paid course</span></div>
             <div class="course-product-body">
               <p class="course-level">Beginner · Overview</p>
               <h3>Learn AI Basics</h3>
@@ -254,7 +253,7 @@
 
           <article class="course-product teaching-reveal" data-course-item data-initial-order="1" data-level="beginner"
             data-level-rank="1" data-price="49" data-duration="2.5">
-            <div class="course-status">Paid course</div>
+            <div class="course-status"><span class="course-access">€ · Paid course</span></div>
             <div class="course-product-body">
               <p class="course-level">Beginner · Applied</p>
               <h3>Master ChatGPT</h3>
@@ -269,7 +268,7 @@
 
           <article class="course-product teaching-reveal" data-course-item data-initial-order="2" data-level="beginner"
             data-level-rank="1" data-price="49" data-duration="2.5">
-            <div class="course-status">Paid course</div>
+            <div class="course-status"><span class="course-access">€ · Paid course</span></div>
             <div class="course-product-body">
               <p class="course-level">Beginner · Applied</p>
               <h3>Master Claude</h3>
@@ -284,7 +283,7 @@
 
           <article class="course-product teaching-reveal" data-course-item
             data-initial-order="3" data-level="creative" data-level-rank="4" data-price="0" data-duration="3">
-            <div class="course-status">Creative AI course</div>
+            <div class="course-status"><span class="course-access">€ · Paid course</span><span>Creative AI</span></div>
             <div class="course-product-body">
               <p class="course-specialty"><i class="fas fa-sparkles" aria-hidden="true"></i> Specialized application</p>
               <p class="course-level">All levels · Creative AI</p>
@@ -300,7 +299,7 @@
 
           <article class="course-product teaching-reveal" data-course-item
             data-initial-order="4" data-level="creative" data-level-rank="4" data-price="0" data-duration="3">
-            <div class="course-status">Creative AI course</div>
+            <div class="course-status"><span class="course-access">€ · Paid course</span><span>Creative AI</span></div>
             <div class="course-product-body">
               <p class="course-specialty"><i class="fas fa-sparkles" aria-hidden="true"></i> Specialized application</p>
               <p class="course-level">All levels · Creative AI</p>
@@ -317,7 +316,7 @@
 
           <article class="course-product teaching-reveal" data-course-item data-initial-order="5"
             data-level="intermediate" data-level-rank="2" data-price="69" data-duration="3.5">
-            <div class="course-status">Paid course</div>
+            <div class="course-status"><span class="course-access">€ · Paid course</span></div>
             <div class="course-product-body">
               <p class="course-level">Intermediate · Coding</p>
               <h3>Build with Codex</h3>
@@ -332,7 +331,7 @@
 
           <article class="course-product teaching-reveal" data-course-item data-initial-order="6"
             data-level="intermediate" data-level-rank="2" data-price="69" data-duration="3.5">
-            <div class="course-status">Paid course</div>
+            <div class="course-status"><span class="course-access">€ · Paid course</span></div>
             <div class="course-product-body">
               <p class="course-level">Intermediate · Coding</p>
               <h3>Build with Claude Code</h3>
@@ -347,7 +346,7 @@
 
           <article class="course-product teaching-reveal" data-course-item data-initial-order="7" data-level="advanced"
             data-level-rank="3" data-price="89" data-duration="5">
-            <div class="course-status">Paid course</div>
+            <div class="course-status"><span class="course-access">€ · Paid course</span></div>
             <div class="course-product-body">
               <p class="course-level">Advanced · Systems</p>
               <h3>Build AI Agents</h3>
@@ -362,7 +361,7 @@
 
           <article class="course-product teaching-reveal" data-course-item data-initial-order="8"
             data-level="beginner intermediate" data-level-rank="1.5" data-price="99" data-duration="6">
-            <div class="course-status">Paid course</div>
+            <div class="course-status"><span class="course-access">€ · Paid course</span></div>
             <div class="course-product-body">
               <p class="course-level">Beginner–Intermediate · Foundations</p>
               <h3>Master AI Foundations</h3>
@@ -382,27 +381,13 @@
     <section class="private-intensive" id="private-intensive" aria-labelledby="private-intensive-title">
       <div class="teaching-shell private-intensive-panel teaching-reveal">
         <div class="private-intensive-intro">
-          <p>Application only · Very limited availability</p>
           <h2 id="private-intensive-title">Private AI Intensive</h2>
-          <p>A private 1-on-1 engagement built around your background, objectives and pace.</p>
-          <p class="private-intensive-detail">We begin with a conversation about what you need to understand, build or
-            prepare for. I then shape the curriculum, examples and working sessions around that specific outcome.</p>
+          <p>One-to-one AI learning tailored to your goals — from interview and exam preparation to research and projects.</p>
+          <p class="private-intensive-availability">By application · Limited availability</p>
         </div>
-        <ul aria-label="Private intensive focus">
-          <li><i class="fas fa-check" aria-hidden="true"></i> A curriculum tailored to you</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Private learning materials</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Job-interview preparation</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> AI exam preparation</li>
-          <li><i class="fas fa-check" aria-hidden="true"></i> Research or project guidance</li>
-        </ul>
         <div class="private-intensive-price">
-          <span>It starts with</span>
-          <strong>Let's talk.</strong>
-          <p class="private-intensive-rate"><span>Starting from</span> <strong>€499</strong></p>
-          <a href="services.html?service=private-ai-intensive#enquiry">
-            Start a conversation <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-          <small>Selective intake. Scope, schedule and pricing are defined around your goals.</small>
+          <p class="private-intensive-rate"><span>From</span> <strong>€499</strong></p>
+          <a href="about.html?profile=individual&amp;service=private-ai-intensive&amp;course=Private%20AI%20Intensive#hire">Start a conversation</a>
         </div>
       </div>
     </section>
@@ -478,40 +463,13 @@
     </section>
     -->
 
-    <section class="teaching-approach" id="teaching-approach" aria-labelledby="teaching-approach-title">
-      <div class="teaching-shell">
-        <div class="teaching-section-heading teaching-reveal">
-          <h2 id="teaching-approach-title">Teaching philosophy</h2>
-          <p>Modern tools change quickly. The principles behind them last.</p>
-        </div>
-        <div class="teaching-approach-grid">
-          <article class="teaching-approach-item teaching-reveal">
-            <span aria-hidden="true">01</span>
-            <h3>Foundations before shortcuts.</h3>
-            <p>Build an understanding of why a method works before relying on a framework or prompt.</p>
-          </article>
-          <article class="teaching-approach-item teaching-reveal">
-            <span aria-hidden="true">02</span>
-            <h3>Learn by building.</h3>
-            <p>Turn theory into code, experiments and useful systems through purposeful practice.</p>
-          </article>
-          <article class="teaching-approach-item teaching-reveal">
-            <span aria-hidden="true">03</span>
-            <h3>Current tools. Durable understanding.</h3>
-            <p>Use today's best tools while developing knowledge that remains useful when those tools change.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
     <section class="course-reviews" id="reviews" aria-labelledby="course-reviews-title">
       <div class="teaching-shell">
         <div class="reviews-heading teaching-reveal">
           <div>
-            <p>Learner feedback</p>
             <h2 id="course-reviews-title">Reviews</h2>
           </div>
-          <p>Feedback from earlier university courses and private teaching.</p>
         </div>
 
         <div class="reviews-layout">
@@ -605,7 +563,7 @@
               <input type="checkbox" name="consent" required />
               <span>I allow this review and my name to be considered for publication on this website.</span>
             </label>
-            <button type="submit">Send review <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            <button type="submit">Send review</button>
             <p class="review-form-status" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -615,8 +573,8 @@
 
 
   <script src="assets/js/navigation.js?v=10.2"></script>
-  <script src="assets/js/main.js?v=10.3"></script>
-  <script src="assets/js/teaching.js?v=9.3"></script>
+  <script src="assets/js/main.js?v=10.8"></script>
+  <script src="assets/js/teaching.js?v=10.5"></script>
 </body>
 
 </html>

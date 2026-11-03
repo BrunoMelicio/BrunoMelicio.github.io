@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     rail.classList.add('swipe-rail');
     rail.setAttribute('tabindex', '0');
     const title = rail.closest('section')?.querySelector('h2')?.textContent || 'Items';
-    rail.setAttribute('aria-label', `${title.trim()}, horizontally scrollable`);
+    const label = title.trim();
+    rail.setAttribute('aria-label', `${label}, horizontally scrollable`);
     const toolbar = document.createElement('div');
     toolbar.className = 'rail-toolbar';
     toolbar.setAttribute('role', 'group');
@@ -27,12 +28,40 @@ document.addEventListener('DOMContentLoaded', () => {
       rail.before(group);
       group.append(toolbar, rail);
     }
-    const [previous, next] = toolbar.querySelectorAll('button');
-    const visibleItems = () => [...rail.children].filter(item => !item.hidden && !item.classList.contains('is-filtered-out'));
+    const [previous, next] = toolbar.querySelectorAll('.rail-buttons button');
+    const existingToggle = document.querySelector(`[aria-controls="${rail.id}"].catalog-expand-btn`);
+    const collectionHref = rail.dataset.viewAllHref;
+    const toggle = existingToggle || document.createElement(collectionHref ? 'a' : 'button');
+    if (!existingToggle) {
+      if (collectionHref) toggle.href = collectionHref;
+      else toggle.type = 'button';
+      toggle.className = 'catalog-expand-btn rail-view-toggle';
+      if (!collectionHref) {
+        toggle.setAttribute('aria-controls', rail.id);
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+      toggle.innerHTML = `${collectionHref ? '' : '<i class="fas fa-th-large" aria-hidden="true"></i>'}<span class="expand-btn-text"></span>`;
+    }
+    const oldToggleContainer = existingToggle?.parentElement;
+    toolbar.prepend(toggle);
+    if (oldToggleContainer?.classList.contains('catalog-header-actions')) oldToggleContainer.remove();
+    const visibleItems = () => [...rail.children].filter(item => !item.hidden && !item.classList.contains('is-filtered-out') && !item.matches('.projects-empty-state,.events-empty-state'));
     const sync = () => {
       const items = visibleItems();
       const overflow = rail.scrollWidth > rail.clientWidth + 4;
-      toolbar.hidden = !overflow;
+      const expanded = rail.classList.contains('is-grid-view');
+      toolbar.hidden = !items.length;
+      toolbar.querySelector('.rail-buttons').hidden = expanded || !overflow;
+      if (collectionHref) {
+        toggle.querySelector('.expand-btn-text').textContent = `View all (${rail.dataset.viewAllCount || items.length})`;
+        toolbar.querySelector('.rail-position').hidden = true;
+      } else {
+        toggle.setAttribute('aria-expanded', String(expanded));
+        toggle.querySelector('.expand-btn-text').textContent = expanded ? 'Carousel View' : `See All (${items.length})`;
+        toggle.querySelector('i').className = expanded ? 'fas fa-arrows-left-right' : 'fas fa-th-large';
+      }
+      rail.setAttribute('aria-label', `${label}, ${expanded ? 'all items' : 'horizontally scrollable'}`);
+      toolbar.setAttribute('aria-label', `${label} view controls`);
       const left = rail.getBoundingClientRect().left;
       let nearest = 0, distance = Infinity;
       items.forEach((item, i) => { const d = Math.abs(item.getBoundingClientRect().left - left); if (d < distance) { distance = d; nearest = i; } });
@@ -41,10 +70,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return rect.left >= left - 4 && rect.right <= left + rail.clientWidth + 4;
       }).length;
       const last = Math.min(nearest + Math.max(visibleCount, 1), items.length);
-      toolbar.querySelector('.rail-position').textContent = items.length ? `${nearest + 1}${last > nearest + 1 ? `–${last}` : ''} / ${items.length}` : '0 / 0';
+      toolbar.querySelector('.rail-position').textContent = expanded ? `${items.length} items` : items.length ? `${nearest + 1}${last > nearest + 1 ? `–${last}` : ''} / ${items.length}` : '0 / 0';
       previous.disabled = rail.scrollLeft < 4;
       next.disabled = rail.scrollLeft >= rail.scrollWidth - rail.clientWidth - 4;
     };
+    if (!existingToggle && !collectionHref) toggle.addEventListener('click', () => {
+      rail.classList.toggle('is-grid-view');
+      toggle.classList.toggle('is-active', rail.classList.contains('is-grid-view'));
+      rail.scrollLeft = 0;
+      sync();
+    });
     const move = direction => {
       const card = visibleItems()[0];
       const gap = parseFloat(getComputedStyle(rail).gap) || 20;
@@ -60,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     rail.addEventListener('scroll', () => { cancelAnimationFrame(frame); frame = requestAnimationFrame(sync); }, {passive:true});
     if ('ResizeObserver' in window) new ResizeObserver(sync).observe(rail);
     else window.addEventListener('resize', sync);
-    new MutationObserver(sync).observe(rail, {childList:true, subtree:true, attributes:true, attributeFilter:['class','hidden']});
+    new MutationObserver(sync).observe(rail, {childList:true, subtree:true, attributes:true, attributeFilter:['class','hidden','data-view-all-count']});
     rail.addEventListener('focusin', event => {
       const item = event.target.closest('.swipe-rail > *');
       if (!item) return;
@@ -69,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     sync();
   };
-  document.querySelectorAll('[data-swipe-rail], .publication-grid, .research-publication-grid, .project-card-grid, .event-card-grid, .course-rail, .materials-rail, .services-card-grid, .research-focus-grid, .profile-pathways, .teaching-approach-grid, .reviews-list, .blog-posts-grid, .studio-featured-grid, .studio-collabs-grid, .studio-gallery-grid').forEach(enhanceRail);
+  document.querySelectorAll('[data-swipe-rail], .publication-grid, .research-publication-grid, .project-card-grid, .event-card-grid, .course-rail, .materials-rail, .services-card-grid, .research-focus-grid, .teaching-approach-grid, .reviews-list, .blog-posts-grid, .studio-featured-grid, .studio-collabs-grid, .studio-gallery-grid').forEach(enhanceRail);
 
   // Media dialogs keep keyboard focus with their controls until dismissed.
   document.addEventListener('keydown', event => {

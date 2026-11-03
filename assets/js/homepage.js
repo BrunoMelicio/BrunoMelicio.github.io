@@ -1,14 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const filters = [...document.querySelectorAll('.research-filter')];
-  const cards = [...document.querySelectorAll('.publication-card')];
-  const rail = document.querySelector('.publication-grid');
-  filters.forEach(button => button.addEventListener('click', () => {
-    filters.forEach(filter => {
-      const selected = filter === button;
-      filter.classList.toggle('is-active', selected);
-      filter.setAttribute('aria-pressed', String(selected));
-    });
-    cards.forEach(card => { card.hidden = button.dataset.filter !== 'all' && card.dataset.type !== button.dataset.filter; });
-    rail?.scrollTo({left: 0, behavior: 'instant'});
-  }));
+document.addEventListener('DOMContentLoaded', async () => {
+  const rail = document.querySelector('.publication-grid[data-view-all-href]');
+  if (!rail) return;
+  try {
+    const response = await fetch('assets/data/research-metrics.json');
+    if (!response.ok) return;
+    const metrics = await response.json();
+    const total = metrics.display?.publications;
+    if (Number.isInteger(total) && total > 0) rail.dataset.viewAllCount = String(total);
+  } catch { /* Keep the published total if the metrics file is unavailable. */ }
 });

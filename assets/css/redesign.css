@@ -180,7 +180,7 @@ body.redesign .brand { display: inline-flex; gap: 12px; align-items: center; col
 .global-nav ul { display: flex; align-items: center; gap: clamp(16px,1.8vw,26px); margin: 0; }
 body.redesign .global-nav li a { position: relative; display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); font-size: 13px; font-weight: 600; text-transform: none; letter-spacing: -.01em; }
 body.redesign .global-nav li a:hover, body.redesign .global-nav li a[aria-current] { color: var(--blue); }
-.global-nav li a[aria-current]::after { content: ''; position: absolute; bottom: 2px; left: 0; right: 0; height: 2px; background: var(--blue); }
+body.redesign .global-nav li a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 8px; }
 body.redesign .nav-contact { display: inline-flex; align-items: center; gap: 24px; padding: 10px 18px; background: var(--ink); color: var(--paper); border-radius: 8px; white-space: nowrap; font-size: 13px; font-weight: 650; min-height: 44px; transition: background 180ms; }
 body.redesign .nav-contact:hover { background: var(--blue); color: var(--canvas); }
 .global-nav-controls { display: flex; align-items: center; gap: 8px; }
@@ -321,7 +321,6 @@ body.redesign .glass-panel::before { display: none; }
   .global-header.menu-open .global-nav { visibility: visible; opacity: 1; transform: none; }
   .global-nav ul { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 24px; }
   body.redesign .global-nav li a { font-size: 25px; min-height: 68px; display: flex; border-bottom: 1px solid var(--line); letter-spacing: -.04em; }
-  .global-nav li a[aria-current]::after { display: none; }
   body.redesign .nav-contact { margin-top: 16px; padding: 18px 20px; justify-content: space-between; font-size: 17px; }
   .mobile-menu-note { display: block; font-size: 14px; margin-top: 16px; }
   .menu-button { display: flex; align-items: center; gap: 10px; padding: 8px 0 8px 12px; height: 44px; color: var(--ink); font-size: 13px; }
@@ -499,7 +498,7 @@ body.redesign .global-nav { order: 2; }
 body.redesign .global-nav-controls { order: 3; }
 body.redesign .brand img { width: auto; height: 44px; }
 body.redesign.theme-dark .brand img { filter: brightness(0) invert(1); }
-body.redesign .global-nav .nav-home-item { display: none; }
+body.redesign .global-nav .nav-home-item { display: block; }
 body.redesign .global-header .menu-button { padding: 10px; width: 44px; justify-content: center; }
 body.redesign .research-focus-number { display: block; color: var(--muted); margin-bottom: 16px; }
 body.redesign .research-focus-item br { display: initial; }

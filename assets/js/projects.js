@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let recruitingBadge = '';
     let recruitingCallout = '';
     if (project.recruiting) {
-      const url = escapeHtml(project.recruitingUrl || 'services.html?service=research-collaboration#enquiry');
+      const url = escapeHtml(project.recruitingUrl || 'about.html?profile=university&service=research-collaboration#hire');
       const roleText = escapeHtml(project.recruitingRole || 'Open positions available');
       recruitingBadge = `
         <a href="${url}" class="project-badge project-badge--recruiting" title="We are recruiting! Click to apply or get in touch.">
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span class="project-recruiting-callout-label"><span class="project-recruiting-dot" aria-hidden="true"></span> Open roles</span>
             <span class="project-recruiting-callout-role">${roleText}</span>
           </div>
-          <span class="project-recruiting-callout-action"><span>Apply to join</span> <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+          <span class="project-recruiting-callout-action"><span>Apply to join</span></span>
         </a>`;
     }
 
@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
       publicationAction = `
         <a href="${escapeHtml(project.publicationLink)}" target="_blank" rel="noopener noreferrer" class="project-card-link" title="Open peer-reviewed publication">
           <span>${escapeHtml(project.publicationLabel || 'View paper')}</span>
-          <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>`;
     }
 
@@ -96,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
       researchPageAction = `
         <a href="${escapeHtml(project.researchPageLink)}" class="project-card-link" title="View details on Research page">
           <span>${escapeHtml(project.researchPageLabel || 'In Research')}</span>
-          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+
         </a>`;
     }
 
@@ -106,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="${escapeHtml(project.demoLink)}" target="_blank" rel="noopener noreferrer" class="project-card-demo-btn" title="Watch demonstration">
           <i class="${/youtu\.?be/.test(project.demoLink) ? 'fab fa-youtube' : 'fas fa-play'}" aria-hidden="true"></i>
           <span>Watch Demo</span>
-          <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>`;
     }
 
@@ -116,14 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="${escapeHtml(project.githubLink)}" target="_blank" rel="noopener noreferrer" class="project-card-primary-btn" title="Check out ${escapeHtml(project.title)} on GitHub">
           <i class="fab fa-github" aria-hidden="true"></i>
           <span>Check on GitHub</span>
-          <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>`;
     } else if (!project.demoLink && project.publicationLink) {
       githubActionBtn = `
         <a href="${escapeHtml(project.publicationLink)}" target="_blank" rel="noopener noreferrer" class="project-card-primary-btn" title="Read publication">
           <i class="fas fa-book-open" aria-hidden="true"></i>
           <span>Read Paper</span>
-          <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>`;
     }
 

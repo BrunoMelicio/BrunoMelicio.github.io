@@ -22,9 +22,9 @@
   <link rel="stylesheet" href="assets/css/base.css?v=7.0" />
   <link rel="stylesheet" href="assets/css/components.css?v=7.0" />
   <link rel="stylesheet" href="assets/css/animations.css?v=7.0" />
-  <link rel="stylesheet" href="assets/css/pages/landing.css?v=10.1" />
-  <link rel="stylesheet" href="assets/css/redesign.css?v=10.1" />
-  <link rel="stylesheet" href="assets/css/refinements.css?v=10.3" />
+  <link rel="stylesheet" href="assets/css/pages/landing.css?v=10.8" />
+  <link rel="stylesheet" href="assets/css/redesign.css?v=10.9" />
+  <link rel="stylesheet" href="assets/css/refinements.css?v=10.10" />
 </head>
 
 <body class="theme-light home-page redesign refined">
@@ -34,15 +34,13 @@
         <div class="home-hero-copy hero-copy">
           <p class="home-eyebrow">Bruno Melício</p>
           <h1 id="home-title">AI Researcher<br />&amp; Lecturer.</h1>
-          <p class="home-affiliation">Postdoctoral Researcher at <a href="https://www.isir.upmc.fr/personnel/melicio/" target="_blank" rel="noopener noreferrer">ISIR, Sorbonne Université</a></p>
-          <p class="home-intro">Advancing autism assessment with AI<br />&amp; Teaching modern AI through real-world applications.</p>
+          <p class="home-intro">Multimodal AI for Social Robotics and Autism.<br />Postdoctoral Researcher at <a class="home-institution-link" href="https://www.isir.upmc.fr/personnel/melicio/" target="_blank" rel="noopener noreferrer">ISIR, Sorbonne Université <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7m0-7L10 14M10 3H3v18h18v-7" /></svg></a>.</p>
 
           <div class="home-actions hero-actions" aria-label="Explore Bruno Melício's work">
             <a href="learn.html" class="home-primary-action button-primary">
-              <span>Start Learning</span>
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              <span>Start learning</span>
             </a>
-            <a href="services.html" class="home-secondary-action text-action">Explore My Services</a>
+            <a href="services.html" class="home-secondary-action">Explore services</a>
           </div>
         </div>
 
@@ -55,11 +53,9 @@
               fetchpriority="high"
               decoding="async" />
           </figure>
-          <p class="hero-caption">researcher <span aria-hidden="true">·</span> lecturer <span aria-hidden="true">·</span> creator</p>
         </div>
       </div>
-
-      <a href="#research" class="home-scroll-cue" aria-label="Scroll to research">
+      <a href="#research" class="home-scroll-cue" aria-label="Scroll to featured research">
         <span class="home-scroll-mouse" aria-hidden="true"><span></span></span>
         <span>Scroll to explore</span>
       </a>
@@ -69,27 +65,11 @@
       <div class="research-shell">
         <div class="research-heading home-reveal landing-section-heading">
           <div>
-            <p class="research-kicker">Selected work</p>
-            <h2 id="research-title">Research</h2>
-          </div>
-
-          <div class="research-filters" role="group" aria-label="Filter featured publications">
-            <button class="research-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
-            <button class="research-filter" type="button" data-filter="journal" aria-pressed="false">Journal Articles</button>
-            <button class="research-filter" type="button" data-filter="conference" aria-pressed="false">Conference Papers</button>
-          </div>
-
-          <div class="research-rail-controls" aria-label="Navigate featured publications">
-            <button type="button" data-publication-direction="-1" aria-label="Previous publications">
-              <i class="fas fa-arrow-left" aria-hidden="true"></i>
-            </button>
-            <button type="button" data-publication-direction="1" aria-label="Next publications">
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </button>
+            <h2 id="research-title">Featured Research</h2>
           </div>
         </div>
 
-        <div class="publication-grid" aria-live="polite">
+        <div class="publication-grid" aria-live="polite" data-view-all-href="research.html" data-view-all-count="7">
           <article class="publication-card home-reveal is-featured" data-type="journal">
             <a href="https://doi.org/10.1007/s12559-025-10481-7" target="_blank" rel="noopener noreferrer" aria-label="Read Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2">
               <div class="publication-image publication-image-wave">
@@ -100,7 +80,7 @@
                 <div class="publication-meta"><span>Journal Article</span><span>2025</span></div>
                 <h3>Multimodal Framework for Automatic Behavior Analysis of Children with Autism During ADOS-2</h3>
                 <p>Cognitive Computation</p>
-                <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                <span class="publication-link">View paper</span>
               </div>
             </a>
           </article>
@@ -115,42 +95,26 @@
                 <div class="publication-meta"><span>Conference Paper</span><span>2025</span></div>
                 <h3>Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI</h3>
                 <p>INSAR Annual Meeting</p>
-                <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                <span class="publication-link">View paper</span>
               </div>
             </a>
           </article>
 
-          <article class="publication-card home-reveal" data-type="conference">
-            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50833" target="_blank" rel="noopener noreferrer" aria-label="Read Examining Object Play Initiation Delays during ADOS-2 Make-Believe Play Task">
-              <div class="publication-image publication-image-photo">
-                <img src="assets/images/event.png" alt="Bruno Melício presenting autism behavior research" loading="lazy" />
-              </div>
-              <div class="publication-content">
-                <div class="publication-meta"><span>Conference Paper</span><span>2025</span></div>
-                <h3>Examining Object Play Initiation Delays during ADOS-2 Make-Believe Play Task</h3>
-                <p>INSAR Annual Meeting</p>
-                <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
-              </div>
-            </a>
-          </article>
 
-          <article class="publication-card home-reveal" data-type="conference">
+          <article class="publication-card is-featured home-reveal" data-type="conference">
             <a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer" aria-label="Read Composite AI for Behavior Analysis in Social Interactions">
               <div class="publication-image publication-image-brain">
                 <img src="assets/images/presentation1.JPG" alt="Bruno Melício presenting Composite AI research" loading="lazy" />
               </div>
               <div class="publication-content">
+                <span class="featured-label"><span aria-hidden="true">★</span> Featured</span>
                 <div class="publication-meta"><span>Conference Paper</span><span>2023</span></div>
                 <h3>Composite AI for Behavior Analysis in Social Interactions</h3>
                 <p>ACM ICMI</p>
-                <span class="publication-link">View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                <span class="publication-link">View paper</span>
               </div>
             </a>
           </article>
-        </div>
-
-        <div class="research-footer home-reveal">
-          <a href="research.html" class="research-all-link">View all publications <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
@@ -158,51 +122,33 @@
     <section class="profile-showcase" id="more" aria-labelledby="more-title">
       <div class="home-section-shell profile-layout landing-shell">
         <div class="profile-introduction home-reveal">
-          <p class="showcase-kicker">Beyond the publications</p>
-          <h2 id="more-title">Research translated into knowledge people can use.</h2>
-          <p>Explore my courses, services, projects, public events and the experience behind my work.</p>
+          <h2 id="more-title">Discover more</h2>
         </div>
 
         <nav class="profile-pathways" aria-label="Explore more of Bruno Melício's work">
-          <a href="learn.html" class="profile-pathway home-reveal">
-            <span class="profile-pathway-number">01</span>
-            <span class="profile-pathway-copy">
-              <strong>Courses</strong>
-              <small>Structured learning, tutorials and practical AI resources.</small>
-            </span>
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          <a href="learn.html" class="profile-pathway">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 8 10-5 10 5-10 5Zm4 2v7q6 5 12 0v-7m4-2v9" /></svg>
+            <span>Courses</span>
           </a>
-          <a href="services.html" class="profile-pathway home-reveal">
-            <span class="profile-pathway-number">02</span>
-            <span class="profile-pathway-copy">
-              <strong>Services</strong>
-              <small>Digital resources, expert workshops and invited talks.</small>
-            </span>
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          <a href="services.html" class="profile-pathway">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v12h-8l-5 4v-4H4ZM8 9h8M8 13h5" /></svg>
+            <span>Services</span>
           </a>
-          <a href="projects.html" class="profile-pathway home-reveal">
-            <span class="profile-pathway-number">03</span>
-            <span class="profile-pathway-copy">
-              <strong>Projects</strong>
-              <small>Research systems, multimodal pipelines and independent tools.</small>
-            </span>
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          <a href="research.html" class="profile-pathway">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6m-5 0v7L4 19a1.3 1.3 0 0 0 1.1 2h13.8A1.3 1.3 0 0 0 20 19l-6-9V3M7 15h10M10 18h.01" /></svg>
+            <span>Research</span>
           </a>
-          <a href="events.html" class="profile-pathway home-reveal">
-            <span class="profile-pathway-number">04</span>
-            <span class="profile-pathway-copy">
-              <strong>Events</strong>
-              <small>Talks, workshops, conferences and public conversations.</small>
-            </span>
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          <a href="projects.html" class="profile-pathway">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h7l2 2h9v11H3ZM3 7V4h7l2 3" /></svg>
+            <span>Projects</span>
           </a>
-          <a href="about.html" class="profile-pathway home-reveal">
-            <span class="profile-pathway-number">05</span>
-            <span class="profile-pathway-copy">
-              <strong>About</strong>
-              <small>Background, experience and research focus.</small>
-            </span>
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          <a href="events.html" class="profile-pathway">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14a2 2 0 0 1 2 2v13H3V7a2 2 0 0 1 2-2ZM7 3v4m10-4v4M3 11h18M7 15h2m4 0h2" /></svg>
+            <span>Events</span>
+          </a>
+          <a href="about.html" class="profile-pathway">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM4 21v-2a8 8 0 0 1 16 0v2" /></svg>
+            <span>About</span>
           </a>
         </nav>
       </div>
@@ -211,8 +157,8 @@
   </main>
 
   <script src="assets/js/navigation.js?v=10.2"></script>
-  <script src="assets/js/main.js?v=10.3"></script>
-  <script src="assets/js/homepage.js?v=10.3"></script>
+  <script src="assets/js/main.js?v=10.8"></script>
+  <script src="assets/js/homepage.js?v=10.8"></script>
 </body>
 
 </html>

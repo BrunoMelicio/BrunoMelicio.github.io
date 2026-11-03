@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCourseFiltering();
       } else {
         if (btnIcon) btnIcon.className = 'fas fa-th-large';
-        if (btnText) btnText.textContent = 'See All (9)';
+        if (btnText) btnText.textContent = `See All (${rail.querySelectorAll('[data-course-item]').length})`;
         resetCourseView();
       }
     });

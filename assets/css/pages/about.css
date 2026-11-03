@@ -47,91 +47,6 @@ body.about-page :focus-visible {
   outline-offset: 3px;
 }
 
-body.about-page .site-header {
-  height: 76px;
-  background: var(--about-header);
-  border-bottom: 1px solid var(--about-line);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-
-body.about-page .nav-container {
-  width: 100%;
-  max-width: none;
-  height: 100%;
-  padding-right: clamp(1.4rem, 4.2vw, 5.5rem);
-  padding-left: clamp(1.4rem, 4.2vw, 5.5rem);
-}
-
-body.about-page .logo img {
-  width: auto;
-  height: 42px;
-  filter: grayscale(1) brightness(0) invert(1);
-}
-
-body.about-page.theme-light .logo img {
-  filter: grayscale(1) brightness(0);
-}
-
-body.about-page .nav-menu {
-  margin-right: 1rem;
-}
-
-body.about-page .nav-list {
-  gap: clamp(1.15rem, 2vw, 2.25rem);
-}
-
-body.about-page .nav-list a {
-  color: var(--about-muted);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-body.about-page .nav-list a:hover,
-body.about-page .nav-list a.active {
-  color: var(--about-ink);
-}
-
-body.about-page .nav-list a::after {
-  display: none;
-}
-
-body.about-page .nav-list .studio-entry {
-  display: inline-flex;
-  align-items: center;
-  min-height: 39px;
-  padding: 0 1rem;
-  color: var(--about-button-ink);
-  background: var(--about-button-bg);
-  border-radius: 999px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
-}
-
-body.about-page .nav-list .studio-entry:hover {
-  color: var(--about-button-ink);
-  transform: translateY(-1px);
-}
-
-body.about-page .theme-toggle {
-  display: grid;
-  place-items: center;
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  color: var(--about-muted);
-  border: 1px solid var(--about-line);
-  border-radius: 50%;
-  font-size: 0.76rem;
-}
-
-body.about-page .theme-toggle:hover {
-  color: var(--about-ink);
-  border-color: var(--about-line-strong);
-  transform: none;
-}
-
 .about-main {
   padding-top: 76px;
   overflow: clip;
@@ -796,9 +711,6 @@ body.studio-modal-open { overflow: hidden; }
 }
 
 @media (max-width: 900px) {
-  body.about-page .site-header { height: 72px; }
-  body.about-page .nav-menu { margin-right: 0; }
-  body.about-page .nav-list .studio-entry { display: flex; }
   .about-main { padding-top: 72px; }
   .about-hero { min-height: 0; }
   .about-hero-grid {

@@ -23,6 +23,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = [...document.querySelectorAll('.research-publication-card')];
   const emptyState = document.querySelector('.publication-empty');
 
+  const rail = document.querySelector('.research-publication-grid');
+  const sortSelect = document.getElementById('publication-sort');
+  const originalOrder = new Map(cards.map((card, index) => [card, index]));
+  const typeOrder = { journal: 0, conference: 1, thesis: 2 };
+  const sortPublications = () => {
+    if (!rail) return;
+    const mode = sortSelect?.value || 'featured';
+    const ordered = [...cards].sort((a, b) => {
+      const byDate = Number(b.dataset.year) - Number(a.dataset.year);
+      if (mode === 'oldest') return -byDate || originalOrder.get(a) - originalOrder.get(b);
+      if (mode === 'newest') return byDate || originalOrder.get(a) - originalOrder.get(b);
+      if (mode === 'type') return (typeOrder[a.dataset.type] ?? 3) - (typeOrder[b.dataset.type] ?? 3) || byDate || originalOrder.get(a) - originalOrder.get(b);
+      return Number(b.classList.contains('is-featured')) - Number(a.classList.contains('is-featured')) || byDate || originalOrder.get(a) - originalOrder.get(b);
+    });
+    ordered.forEach(card => rail.append(card));
+    rail.scrollLeft = 0;
+  };
+  sortSelect?.addEventListener('change', sortPublications);
+  sortPublications();
+
   const matchesFilter = (card, selected) => {
     if (selected === 'all') return true;
     if (selected === 'earlier') return Number(card.dataset.year) < 2025;
@@ -51,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
+      if (rail) rail.scrollLeft = 0;
       if (emptyState) emptyState.hidden = visibleCount !== 0;
     });
   });

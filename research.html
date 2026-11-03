@@ -23,9 +23,9 @@
   <link rel="stylesheet" href="assets/css/base.css?v=8.0" />
   <link rel="stylesheet" href="assets/css/components.css?v=8.0" />
   <link rel="stylesheet" href="assets/css/animations.css?v=8.0" />
-  <link rel="stylesheet" href="assets/css/pages/research.css?v=8.2" />
-  <link rel="stylesheet" href="assets/css/redesign.css?v=10.1" />
-  <link rel="stylesheet" href="assets/css/refinements.css?v=10.3" />
+  <link rel="stylesheet" href="assets/css/pages/research.css?v=10.9" />
+  <link rel="stylesheet" href="assets/css/redesign.css?v=10.9" />
+  <link rel="stylesheet" href="assets/css/refinements.css?v=10.10" />
 </head>
 
 <body class="theme-light research-page redesign refined">
@@ -34,13 +34,12 @@
       <div class="research-shell research-intro-grid">
         <div class="research-intro-copy research-reveal">
           <h1 id="research-page-title"><span>Advancing autism</span><span>assessment</span><span>with AI.</span></h1>
-          <p>I develop multimodal AI systems that detect visual, verbal and behavioral markers during standardized
+          <p>I develop multimodal AI systems that detect potential visual and verbal behavioral markers during standardized
             autism assessments.</p>
 
           <div class="research-intro-actions" aria-label="Explore the research page">
             <a href="#publications" class="research-primary-action">
               <span>Explore publications</span>
-              <i class="fas fa-arrow-right" aria-hidden="true"></i>
             </a>
             <a href="#profiles" class="research-secondary-action">View research profiles</a>
           </div>
@@ -51,7 +50,6 @@
             <img src="assets/images/event.png" alt="Bruno Melício presenting autism research at a scientific event"
               fetchpriority="high" decoding="async" />
           </figure>
-          <p aria-label="Research areas">AI <span>·</span> autism assessment <span>·</span> behavior analysis</p>
         </div>
       </div>
     </section>
@@ -117,7 +115,15 @@
       <div class="research-shell">
         <div class="research-section-heading research-reveal">
           <h2 id="publications-title">Publications</h2>
-          <p>A curated record of peer-reviewed papers and conference work.</p>
+          <label class="publication-sort" for="publication-sort">
+            <span>Sort by</span>
+            <select id="publication-sort">
+              <option value="featured">Featured first</option>
+              <option value="newest">Date: newest first</option>
+              <option value="oldest">Date: oldest first</option>
+              <option value="type">Publication type</option>
+            </select>
+          </label>
         </div>
 
         <div class="publication-filters research-reveal" role="group" aria-label="Filter publications">
@@ -153,10 +159,57 @@
                   L. Soorya, E. Dillon, P. Kun, A. Sarkany, M. Chetouani, K. Fenech &amp; A. Lorincz</p>
                 <div class="research-publication-actions">
                   <a href="https://doi.org/10.1007/s12559-025-10481-7" target="_blank" rel="noopener noreferrer" class="research-publication-link">
-                    View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    View paper
                   </a>
                   <a href="projects.html#ados-multimodal-framework" class="research-publication-link research-publication-project-action" title="View associated ADOS-2 project">
                     <i class="fas fa-layer-group" aria-hidden="true"></i> View project (ADOS-2 System)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="research-publication-card is-featured research-reveal" data-type="conference" data-year="2025">
+            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50927" target="_blank"
+              rel="noopener noreferrer">
+              <div class="research-publication-image research-publication-image--dark">
+                <img src="assets/images/research.JPG" alt="Bruno Melício with research colleagues at a scientific poster" loading="lazy" />
+              </div>
+              <div class="research-publication-content">
+                <span class="featured-label"><span aria-hidden="true">★</span> Featured</span>
+                <div class="research-publication-meta"><span>2025</span><span>Conference paper</span></div>
+                <h3>Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI</h3>
+                <p class="research-publication-venue">International Society for Autism Research (INSAR)</p>
+                <p class="research-publication-authors">K. Karakose, P. G. Molnar, B. C. D. S. Melício, K. Kamal and
+                  collaborators</p>
+                <span class="research-publication-link">View abstract</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="research-publication-card is-featured research-reveal" data-type="conference" data-year="2023" id="publication-composite">
+            <div class="research-publication-card-inner">
+              <a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer" class="research-publication-media-link" aria-label="Composite AI conference paper in ACM ICMI">
+                <div class="research-publication-image research-publication-image--photo">
+                  <img src="assets/images/presentation1.JPG" alt="Bruno Melício presenting Composite AI research"
+                    loading="lazy" />
+                </div>
+              </a>
+              <div class="research-publication-content">
+                <span class="featured-label"><span aria-hidden="true">★</span> Featured</span>
+                <div class="research-publication-meta"><span>2023</span><span>Conference paper</span></div>
+                <h3><a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer">Composite AI for Behavior Analysis in Social Interactions</a></h3>
+                <p class="research-publication-venue">Companion Publication of the 25th ACM International Conference on
+                  Multimodal Interaction</p>
+                <p class="research-publication-stats" data-publication-metrics="composite">16 Google Scholar citations</p>
+                <p class="research-publication-authors">B. C. D. S. Melício, L. Xiang, E. Dillon, L. Soorya, M.
+                  Chetouani and collaborators</p>
+                <div class="research-publication-actions">
+                  <a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer" class="research-publication-link">
+                    View paper
+                  </a>
+                  <a href="projects.html#real-time-multimodal-furhat" class="research-publication-link research-publication-project-action" title="View associated Furhat project">
+                    <i class="fas fa-layer-group" aria-hidden="true"></i> View project (Furhat Robotics)
                   </a>
                 </div>
               </div>
@@ -177,8 +230,7 @@
                 <p class="research-publication-stats" data-publication-metrics="dissertation">Open access dissertation
                   <span>·</span> DOI: 10.15476/ELTE.2026.017</p>
                 <p class="research-publication-authors">B. C. D. S. Melício (Supervised by A. Lőrincz)</p>
-                <span class="research-publication-link">View dissertation <i class="fas fa-arrow-up-right-from-square"
-                    aria-hidden="true"></i></span>
+                <span class="research-publication-link">View dissertation</span>
               </div>
             </a>
           </article>
@@ -187,7 +239,7 @@
             <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50833" target="_blank"
               rel="noopener noreferrer">
               <div class="research-publication-image">
-                <img src="assets/images/event.png" alt="Bruno Melício presenting research on autism spectrum disorder"
+                <img class="publication-cover" src="assets/images/insar.png" alt="INSAR 2025 Annual Meeting in Seattle, Washington"
                   loading="lazy" />
               </div>
               <div class="research-publication-content">
@@ -196,57 +248,9 @@
                 <p class="research-publication-venue">International Society for Autism Research (INSAR)</p>
                 <p class="research-publication-authors">B. C. D. S. Melício, K. Karakose, P. G. Molnar, K. Kamal and
                   collaborators</p>
-                <span class="research-publication-link">View abstract <i class="fas fa-arrow-up-right-from-square"
-                    aria-hidden="true"></i></span>
+                <span class="research-publication-link">View abstract</span>
               </div>
             </a>
-          </article>
-
-          <article class="research-publication-card is-featured research-reveal" data-type="conference" data-year="2025">
-            <a href="https://insar.confex.com/insar/2025/meetingapp.cgi/Paper/50927" target="_blank"
-              rel="noopener noreferrer">
-              <div class="research-publication-image research-publication-image--dark">
-                <img src="assets/images/research.JPG" alt="Bruno Melício with research colleagues at a scientific poster" loading="lazy" />
-              </div>
-              <div class="research-publication-content">
-                <span class="featured-label"><span aria-hidden="true">★</span> Featured</span>
-                <div class="research-publication-meta"><span>2025</span><span>Conference paper</span></div>
-                <h3>Automated Detection of Play Behavior in the ADOS-2 Make-Believe Play Task Using Composite AI</h3>
-                <p class="research-publication-venue">International Society for Autism Research (INSAR)</p>
-                <p class="research-publication-authors">K. Karakose, P. G. Molnar, B. C. D. S. Melício, K. Kamal and
-                  collaborators</p>
-                <span class="research-publication-link">View abstract <i class="fas fa-arrow-up-right-from-square"
-                    aria-hidden="true"></i></span>
-              </div>
-            </a>
-          </article>
-
-          <article class="research-publication-card research-reveal" data-type="conference" data-year="2023" id="publication-composite">
-            <div class="research-publication-card-inner">
-              <a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer" class="research-publication-media-link" aria-label="Composite AI conference paper in ACM ICMI">
-                <div class="research-publication-image research-publication-image--photo">
-                  <img src="assets/images/presentation1.JPG" alt="Bruno Melício presenting Composite AI research"
-                    loading="lazy" />
-                </div>
-              </a>
-              <div class="research-publication-content">
-                <div class="research-publication-meta"><span>2023</span><span>Conference paper</span></div>
-                <h3><a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer">Composite AI for Behavior Analysis in Social Interactions</a></h3>
-                <p class="research-publication-venue">Companion Publication of the 25th ACM International Conference on
-                  Multimodal Interaction</p>
-                <p class="research-publication-stats" data-publication-metrics="composite">16 Google Scholar citations</p>
-                <p class="research-publication-authors">B. C. D. S. Melício, L. Xiang, E. Dillon, L. Soorya, M.
-                  Chetouani and collaborators</p>
-                <div class="research-publication-actions">
-                  <a href="https://dl.acm.org/doi/abs/10.1145/3610661.3616237" target="_blank" rel="noopener noreferrer" class="research-publication-link">
-                    View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                  </a>
-                  <a href="projects.html#real-time-multimodal-furhat" class="research-publication-link research-publication-project-action" title="View associated Furhat project">
-                    <i class="fas fa-layer-group" aria-hidden="true"></i> View project (Furhat Robotics)
-                  </a>
-                </div>
-              </div>
-            </div>
           </article>
 
           <article class="research-publication-card research-reveal" data-type="journal" data-year="2022">
@@ -263,8 +267,7 @@
                   citations</p>
                 <p class="research-publication-authors">G. Baranyi, B. C. D. S. Melício, Z. Gaal, L. Hajder, A.
                   Simonyi and collaborators</p>
-                <span class="research-publication-link">View paper <i class="fas fa-arrow-up-right-from-square"
-                    aria-hidden="true"></i></span>
+                <span class="research-publication-link">View paper</span>
               </div>
             </a>
           </article>
@@ -274,7 +277,7 @@
               <a href="https://link.springer.com/chapter/10.1007/978-3-030-86365-4_31" target="_blank"
                 rel="noopener noreferrer" class="research-publication-media-link" aria-label="DeepRehab conference paper on Springer">
                 <div class="research-publication-image research-publication-image--photo">
-                  <img class="publication-cover" src="assets/images/research/deeprehab.png" alt="DeepRehab: edge pose estimation for knee injury rehabilitation"
+                  <img class="publication-cover" src="assets/images/deep_rehab.jpg" alt="Bruno Melício beside a DeepRehab robot-assisted rehabilitation research poster"
                     loading="lazy" />
                 </div>
               </a>
@@ -288,7 +291,7 @@
                   Lorincz</p>
                 <div class="research-publication-actions">
                   <a href="https://link.springer.com/chapter/10.1007/978-3-030-86365-4_31" target="_blank" rel="noopener noreferrer" class="research-publication-link">
-                    View paper <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                    View paper
                   </a>
                   <a href="https://github.com/BrunoMelicio/Deep_Rehab" target="_blank" rel="noopener noreferrer" class="research-publication-link" title="DeepRehab GitHub Repository">
                     Code <i class="fab fa-github" aria-hidden="true"></i>
@@ -317,12 +320,10 @@
           <a href="https://scholar.google.com/citations?user=fRrxUhsAAAAJ&amp;hl=en" target="_blank"
             rel="noopener noreferrer">
             <span><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</span>
-            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </a>
           <a href="https://www.researchgate.net/profile/Bruno-Carlos-Dos-Santos-Melicio" target="_blank"
             rel="noopener noreferrer">
             <span><i class="ai ai-researchgate" aria-hidden="true"></i>ResearchGate</span>
-            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </a>
         </div>
 
@@ -335,8 +336,8 @@
 
 
   <script src="assets/js/navigation.js?v=10.2"></script>
-  <script src="assets/js/main.js?v=10.3"></script>
-  <script src="assets/js/research.js?v=8.1"></script>
+  <script src="assets/js/main.js?v=10.8"></script>
+  <script src="assets/js/research.js?v=10.9"></script>
 </body>
 
 </html>
